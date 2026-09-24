@@ -1,6 +1,6 @@
 # Optional model setup
 
-**Run on the shared Linux workstation.** Complete the [mock check](setup.md) first. You can finish the [live camera check](robot-bridge.md) and [first supervised direct movement](first-run.md) without a model. Return here for language/image planning or offline evaluation.
+**Run on the shared Linux workstation.** Replace directory placeholders using the [folder guide](../getting-started/paths.md). Complete the [mock check](setup.md) first. You can finish the [live camera check](robot-bridge.md) and [first supervised direct movement](first-run.md) without a model. Return here for language/image planning or offline evaluation.
 
 **Validation status:** package versions and launcher settings were checked against the source workstation on 24 September 2026. Neither Qwen nor NaVILA has been validated on a fresh RTX PRO 6000 installation by this handbook review.
 
@@ -8,7 +8,7 @@
 
 | Model | Purpose | Environment |
 |---|---|---|
-| Qwen3-VL | Current language/image planning and voice workflows | `~/unidog_nav/agent_ai/.venv`, Python 3.12 |
+| Qwen3-VL | Current language/image planning and voice workflows | `<NAV_DIR>/agent_ai/.venv`, Python 3.12 |
 | NaVILA | Navigation predictions and existing offline evaluations | Conda environment `navila`, Python 3.10 |
 
 You do not need either model to check the real camera bridge or send a supervised direct command. Install the model used by your intended workflow. The selected GPU is RTX PRO 6000 Blackwell with 96 GB memory. Validate one model at a time before planning concurrent services.
@@ -18,7 +18,7 @@ You do not need either model to check the real camera bridge or send a supervise
 Select the card using [GPU selection](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs). The launcher expects a specific CUDA package layout in Python 3.12. The source environment reports Torch **2.11.0+cu130**. These are **observed versions, not a validated Blackwell lockfile**; obtain the maintainer's full dependency snapshot if installation or the GPU check fails.
 
 ```bash
-cd ~/unidog_nav/agent_ai
+cd "<NAV_DIR>/agent_ai"
 uv venv --python 3.12
 uv pip install --python .venv/bin/python \
   'vllm==0.24.0' 'torch==2.11.0' 'transformers==5.13.0' \
@@ -37,7 +37,7 @@ Expect the listed versions, `CUDA available: True`, and the compiler path. If th
 Before starting, finish any VLA Pipeline model session and stop its openpi server; it also uses port 8000. Follow the [shared-workstation handover](../getting-started/hardware.md#using-the-shared-workstation). Start the Qwen server in **Terminal A**:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 export CUDA_VISIBLE_DEVICES="<RTX_PRO_6000_GPU_UUID>"
 bash agent_ai/start_vllm.sh
 ```
@@ -71,19 +71,19 @@ python -c "import torch, transformers, llava; print(torch.__version__, transform
 Obtain the `navila-llama3-8b-8f` checkpoint through the model handoff and place its contents at:
 
 ```text
-~/unidog_nav/models/navila-llama3-8b-8f/
+<NAV_DIR>/models/navila-llama3-8b-8f/
   llm/
   mm_projector/
   vision_tower/
 ```
 
-With Qwen stopped and sample images available:
+With Qwen stopped, replace `<TEST_IMAGES_DIR>` with the supplied sample JPEG folder:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 export CUDA_VISIBLE_DEVICES="<RTX_PRO_6000_GPU_UUID>"
 bash scripts/eval_vla.sh \
-  --images "$HOME/unidog_nav/test_frames/real_front_wall1" \
+  --images "<TEST_IMAGES_DIR>" \
   --query "Turn left." --history episode-start
 ```
 

@@ -3,7 +3,7 @@
 !!! note "Advanced reference"
     For an installed system. Complete [bridge setup](robot-bridge.md) and [first supervised movement](first-run.md) before using hardware commands. Earlier lab results do not validate a new installation.
 
-Run workstation commands in `~/unidog_nav`. Robot commands use the deployed `~/LLM_guided_RL` checkout. Select the [RTX PRO 6000](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs) and follow the [shared-workstation handover](../getting-started/hardware.md#using-the-shared-workstation) before starting a model. Commands using `navila` need its [Blackwell-compatible environment](models.md#navila-installation-and-saved-image-check).
+Run workstation commands in `<NAV_DIR>`. Robot commands use the deployed `<ROBOT_SKILLS_DIR>` checkout. Select the [RTX PRO 6000](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs) and follow the [shared-workstation handover](../getting-started/hardware.md#using-the-shared-workstation) before starting a model. Commands using `navila` need its [Blackwell-compatible environment](models.md#navila-installation-and-saved-image-check).
 
 ## 1. Voice control
 
@@ -25,7 +25,7 @@ The launcher defaults to the **Qwen** backend. The raw listener also supports th
 **Workstation:**
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/start_voice_pipeline.sh up --real
 ```
 
@@ -34,7 +34,7 @@ This starts the model, tunnels, robot bridge, and gateway; the gateway restarts 
 **Robot, inside the lab-provided `vtt` environment:**
 
 ```bash
-cd ~/LLM_guided_RL
+cd "<ROBOT_SKILLS_DIR>"
 bash scripts/start_voice_listener.sh
 ```
 
@@ -58,7 +58,7 @@ Examples include “move forward one meter” and “turn right forty-five degre
 On the workstation:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/start_voice_pipeline.sh status
 ```
 
@@ -67,12 +67,12 @@ bash scripts/start_voice_pipeline.sh status
 | Transcripts, plans, results, and timing | `logs/voice_gateway/commands_<date>.jsonl` |
 | Camera frames used for planning | `logs/voice_gateway/frames/` |
 | Gateway output | `logs/voice_gateway/gateway.log` |
-| Voice launcher's robot executor log | `~/unidog_nav_tools/primitive_server.log` on the robot |
+| Voice launcher's robot executor log | `<ROBOT_TOOLS_DIR>/primitive_server.log` on the robot |
 
 Stop the robot and listener before shutting down the workstation pipeline:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/start_voice_pipeline.sh down
 ```
 
@@ -83,7 +83,7 @@ This leaves vLLM running. Stop the model separately only when no other user need
 Start the [mock bridge on port 18766](setup.md#2-run-a-mock-bridge-with-no-robot), then use another workstation terminal:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 conda run -n navila python scripts/voice_command_gateway.py \
   --planner dummy --robot-url http://127.0.0.1:18766 --once "walk forward"
 conda run -n navila python scripts/test_voice_command_gateway.py
@@ -101,7 +101,7 @@ Start Qwen using [model setup](models.md#qwen-installation-and-check), and compl
 In another workstation terminal, replace `<OPERATOR_NAME>` with your name:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/prepare_real_robot.sh --check
 conda run -n navila python -m planner_benchmark.run_live \
   --scenario L1-QWEN-V1-NORMAL-1M \
@@ -123,7 +123,7 @@ Keep operator confirmation and annotation enabled: do not add `--yes`, `--no-con
 Use [First supervised movement](first-run.md) for workstation commands through the bridge, including startup and shutdown. For diagnostics **on the robot**, the approved skill entry point provides a list and a dry run:
 
 ```bash
-cd ~/LLM_guided_RL
+cd "<ROBOT_SKILLS_DIR>"
 conda run -n walk python scripts/run_skill.py --list
 conda run -n walk python scripts/run_skill.py move_forward \
   --params '{"distance_m": 0.25}'

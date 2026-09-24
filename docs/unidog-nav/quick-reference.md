@@ -1,15 +1,15 @@
 # Dog quick reference
 
-Use this page **after** completing [workstation setup](setup.md) and [robot connection](robot-bridge.md). All commands below run on the workstation in `~/unidog_nav`.
+Use this page **after** completing [workstation setup](setup.md) and [robot connection](robot-bridge.md). All commands below run on the workstation in `<NAV_DIR>`. Replace paths using your [folder choices](../getting-started/paths.md).
 
 ## Read status or view the camera
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/robot_tunnel.sh status
 python3 scripts/robot_client.py health
-python3 scripts/robot_client.py image /tmp/unidog-live.jpg
-ssh unitree 'tail -50 ~/logs/primitive_server.log'
+python3 scripts/robot_client.py image "<LIVE_IMAGE_PATH>"
+ssh unitree 'tail -50 "<ROBOT_LOG_DIR>/primitive_server.log"'
 ```
 
 Health: `ok` means the bridge answered; `real` tells you whether physical actions are enabled; `busy` means a plan is running. Check the actual values.
@@ -17,7 +17,7 @@ Health: `ok` means the bridge answered; `real` tells you whether physical action
 ## Open a connection without requesting real mode
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/robot_tunnel.sh up --start-server
 python3 scripts/robot_client.py health
 ```
@@ -27,7 +27,7 @@ This reuses an existing server if present, even if it is already in real mode. I
 ## Prepare a supervised real session
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/prepare_real_robot.sh --check
 ```
 
@@ -36,7 +36,7 @@ Follow [First supervised movement](first-run.md) for the real-mode startup, depe
 ## Request a software stop
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 python3 scripts/robot_client.py stop
 ```
 
@@ -45,7 +45,7 @@ For unexpected physical motion, use the robot's physical stop procedure. The com
 ## Close your tunnel
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/robot_tunnel.sh down
 ```
 

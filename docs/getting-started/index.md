@@ -59,6 +59,8 @@ A new workstation can complete the mock check while robot preparation is pending
 
 ## 4. Read command blocks correctly
 
+Choose your installation locations using [Choose your folders](paths.md). Directory placeholders such as `<RECORDING_DIR>` and `<NAV_DIR>` always refer to those choices, not the original lab desktops.
+
 - Copy one block at a time, then read the result before continuing.
 - `cd` changes the folder. `~` means your home folder on the current computer.
 - Text such as `<ARM_IP>` is a placeholder. Replace it, including the angle brackets, before running a command.

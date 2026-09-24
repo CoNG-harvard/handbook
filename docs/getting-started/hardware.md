@@ -82,7 +82,7 @@ NVIDIA lists 96 GB GPU memory for the [RTX PRO 6000 Blackwell family](https://ww
 
 ## Using the shared workstation
 
-Keep separate folders and [software environments](computer.md): `~/lerobot` for arm recording, `~/robocoop` for arm inference, and `~/unidog_nav` for the dog.
+Keep separate folders and [software environments](computer.md): `<RECORDING_DIR>` for arm recording, `<INFERENCE_DIR>` for arm inference, and `<NAV_DIR>` for the dog.
 
 **Run one model service at a time initially.** Both openpi and Qwen use port **8000** by default. GPU capacity alone does not prevent that conflict.
 

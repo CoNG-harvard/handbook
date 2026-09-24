@@ -5,7 +5,7 @@
 ## 1. Fill in the rig configuration
 
 ```bash
-nano ~/lerobot/scripts/configs/rig_a.yaml
+nano "<RECORDING_DIR>/scripts/configs/rig_a.yaml"
 ```
 
 This file has two main sections: **`rig`** identifies the headset/cameras, and **`record`** contains the recording settings. Edit the supplied complete file. The abbreviated example below shows the structure; it is **not a replacement for the whole file**.
@@ -50,7 +50,7 @@ The launcher reads **all** `scripts/configs/*.yaml` files when synchronizing cam
 Open:
 
 ```bash
-nano ~/lerobot/xr_teleoperate/teleop/teleimager/cam_config_server.yaml
+nano "<RECORDING_DIR>/xr_teleoperate/teleop/teleimager/cam_config_server.yaml"
 ```
 
 Keep the supplied full configuration and update the relevant camera sections. Each enabled camera needs the correct serial and supported image settings. For cameras you do not have, disable both `enable_zmq` and `enable_webrtc`, and remove references to them in the recording configuration.
@@ -87,14 +87,14 @@ Do not run an inference client or a second teleoperation session for the same ar
 In **Terminal A**:
 
 ```bash
-cd ~/lerobot
+cd "<RECORDING_DIR>"
 conda activate lerobot
 bash scripts/run_teleop.sh a "Pick a red cube and put it in the basket"
 ```
 
 The launcher starts/reuses the camera server, connects the headset to the web page over USB, resets the arm, and starts recording software. It prints the rig, task, and dataset folder. Keep this terminal open.
 
-**Expected:** rig A is selected, the reset completes, and a dataset path similar to `~/lerobot/datasets/test_a_<timestamp>` appears. Note the **actual printed path** for later.
+**Expected:** rig A is selected, the reset completes, and a dataset path similar to `<RECORDING_DIR>/datasets/test_a_<timestamp>` appears. Note the **actual printed path** for later.
 
 On the Quest, open its browser and enter:
 
@@ -123,14 +123,14 @@ The launcher makes this address work through USB using `adb reverse`. Use this h
 After rig A works, configure `rig_b.yaml` for the second installed arm, with its own headset, cameras, and workstation Vuer port. Repeat the camera, home-pose, and recording checks for rig B. The launcher's two-headset mode maps each headset's local port 8012 to its configured workstation port.
 
 ```bash
-cd ~/lerobot
+cd "<RECORDING_DIR>"
 bash scripts/run_teleop.sh b "Your task description"
 ```
 
 Two-arm control from one headset uses `bimanual.yaml`:
 
 ```bash
-cd ~/lerobot
+cd "<RECORDING_DIR>"
 BIMANUAL=1 bash scripts/run_teleop.sh "Your task description"
 ```
 

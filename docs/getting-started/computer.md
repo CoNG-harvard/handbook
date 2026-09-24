@@ -53,16 +53,16 @@ git --version
 
 ## 3. Install Conda
 
-Conda lets the projects use different Python versions. Follow the [official Miniconda installation guide](https://www.anaconda.com/docs/getting-started/installation) and choose **Linux x86-64**. Use `~/miniconda3` as the installation folder: the Self Improvement Learning evaluation wrapper expects this location. Allow the installer to initialize your shell, then close and reopen Terminal.
+Conda lets the projects use different Python versions. Follow the [official Miniconda installation guide](https://www.anaconda.com/docs/getting-started/installation) and choose **Linux x86-64**. Choose an installation folder and record its full path as `<CONDA_DIR>` in the [folder guide](paths.md). The Self Improvement Learning evaluation wrapper contains a deployment-specific Conda path; have the maintainer update it to this location before using that wrapper. Allow the installer to initialize your shell, then close and reopen Terminal.
 
 ```bash
 conda --version
 ```
 
-**Expected:** a version number. If the command is missing but you installed in `~/miniconda3`, run:
+**Expected:** a version number. If the command is missing but you installed in `<CONDA_DIR>`, run:
 
 ```bash
-source ~/miniconda3/etc/profile.d/conda.sh
+source "<CONDA_DIR>/etc/profile.d/conda.sh"
 ```
 
 ## 4. Install uv

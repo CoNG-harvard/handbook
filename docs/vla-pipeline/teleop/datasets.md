@@ -4,7 +4,7 @@ A **dataset** contains saved episodes, camera images, and recorded robot informa
 
 ## 1. Locate a saved session
 
-Use the exact dataset path printed by the launcher. The current launcher writes new recordings under `~/lerobot/datasets/`; older sessions may be under `~/lerobot/xr_teleoperate/datasets/`.
+Use the exact dataset path printed by the launcher. The current launcher writes new recordings under `<RECORDING_DIR>/datasets/`; older sessions may be under `<RECORDING_DIR>/xr_teleoperate/datasets/`.
 
 ```bash
 ls "<RECORDED_DATASET>/meta"
@@ -17,7 +17,7 @@ Replace the placeholder with your session folder. Confirm that at least one epis
 The lab conversion script prepares LeRobot v3 data for its Cartesian-action training workflow. Check with the model owner whether this converter matches the intended checkpoint/training configuration; waypoint and other workflows can use different converters.
 
 ```bash
-cd ~/lerobot
+cd "<RECORDING_DIR>"
 conda activate lerobot
 python scripts/convert_data_for_finetune.py \
   --dataset-path "<RECORDED_DATASET>" \
@@ -35,7 +35,7 @@ python scripts/convert_data_for_finetune.py --help
 ## 3. Merge compatible processed sessions, if needed
 
 ```bash
-cd ~/lerobot
+cd "<RECORDING_DIR>"
 conda activate lerobot
 python scripts/merge_v3_datasets.py \
   --inputs "<PROCESSED_SESSION_1>" "<PROCESSED_SESSION_2>" \

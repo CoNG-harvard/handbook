@@ -39,7 +39,7 @@ First complete the current [supervised bring-up](first-run.md), including the re
 Before a NaVILA run, coordinate stopping Qwen so the GPU is available. Then, on the workstation:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 conda activate navila
 python scripts/rollout.py --planner navila --max-steps 10 \
     --tag my-test --instruction "Turn right and walk to the orange chair. Stop in front of it."
@@ -55,7 +55,7 @@ semantic `speed_level`, safe-bin quantization, F3 image history, executed
 action history, operator gate, and robot execution together, use:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 conda run -n navila python -m planner_benchmark.run_live \
   --scenario L1-QWEN-V1-NORMAL-1M \
   --planner qwen \

@@ -5,29 +5,29 @@
 
 Use a [Blackwell-compatible NaVILA environment](models.md#navila-installation-and-saved-image-check) and select the RTX PRO 6000 before running these examples.
 
-`scripts/batch_navila_eval.py` evaluates saved scene/instruction pairs without moving the robot. It loads the model once, prints predictions, and saves JSON results in `logs/`. Run on the workstation in `~/unidog_nav`; obtain the example image folders from the lab.
+`scripts/batch_navila_eval.py` evaluates saved scene/instruction pairs without moving the robot. It loads the model once, prints predictions, and saves JSON results in `logs/`. Run on the workstation in `<NAV_DIR>`; obtain the example images from the lab. Replace `<TEST_IMAGES_DIR>` and `<SECOND_IMAGES_DIR>` with scene folders, `<SCENES_DIR>` with their parent folder, and `<TEST_IMAGE_PATH>` with a single JPEG. `<CASES_JSON>` is your custom case-list file.
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 conda activate navila
 
 # Single scene, single instruction — the standard single-shot test
 python scripts/batch_navila_eval.py \
-    --images frames/real_conjested_room1 \
+    --images "<TEST_IMAGES_DIR>" \
     --query "Move toward the orange chair and stop at a safe distance." \
     --history episode-start
 
 # All scenes under frames/ with one instruction (parent dir auto-expands)
-python scripts/batch_navila_eval.py --images frames --history episode-start \
+python scripts/batch_navila_eval.py --images "<SCENES_DIR>" --history episode-start \
     --query "Turn right toward the open space."
 
 # Cross product: several scenes x several instructions, model loaded once
 python scripts/batch_navila_eval.py --history episode-start \
-    --images frames/real_conjested_room1 --images frames/real_front_wall1 \
+    --images "<TEST_IMAGES_DIR>" --images "<SECOND_IMAGES_DIR>" \
     --query "Turn left." --query "Turn around."
 
 # Fully custom pairs from JSON: [{"scene": ..., "instruction": ...}, ...]
-python scripts/batch_navila_eval.py --cases my_cases.json --history episode-start
+python scripts/batch_navila_eval.py --cases "<CASES_JSON>" --history episode-start
 ```
 
 `--images` accepts paths or bare folder names under `frames/`. Without conda activated, wrap any of the above with `scripts/eval_vla.sh` (same arguments).
@@ -39,7 +39,7 @@ There is also `scripts/run_navila_test.sh <frames_dir> "<instruction>"`, a thin 
 `scripts/vqa_probe.py` asks the model plain perception questions (no navigation prompt) — use it to rule out image quality before blaming a bad action:
 
 ```bash
-python scripts/vqa_probe.py frames/real_conjested_room1/0007.jpg \
+python scripts/vqa_probe.py "<TEST_IMAGE_PATH>" \
     "Is there an orange chair in this image? Left, center, or right?"
 ```
 

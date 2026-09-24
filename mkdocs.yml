@@ -73,6 +73,7 @@ nav:
   - Shared setup:
       - Before you begin: getting-started/index.md
       - Shared computer and hardware: getting-started/hardware.md
+      - Choose your folders: getting-started/paths.md
       - Prepare a new computer: getting-started/computer.md
       - Source files and handoff: getting-started/sources.md
   - VLA Pipeline:

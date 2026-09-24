@@ -4,10 +4,10 @@
 
 ## 1. Put the lab source files in place
 
-Obtain the [arm setup handoff](../getting-started/sources.md#arm-platform-files) and unpack it into your home folder. Preserve this structure:
+Obtain the [arm setup handoff](../getting-started/sources.md#arm-platform-files) and unpack it into your chosen `<RECORDING_DIR>` and `<INFERENCE_DIR>` folders. Replace placeholders using the [folder guide](../getting-started/paths.md). Preserve the folders inside each workspace:
 
 ```text
-~/lerobot/
+<RECORDING_DIR>/
   lerobot/                         modified LeRobot source
   lerobot_robot_xarm/               arm plugin
   lerobot_camera_imageclient/       camera plugin
@@ -15,7 +15,7 @@ Obtain the [arm setup handoff](../getting-started/sources.md#arm-platform-files)
   xr_teleoperate/teleop/teleimager/  camera server
   xr_teleoperate/teleop/televuer/    headset web interface
   scripts/                         launcher, reset, and rig configurations
-~/robocoop/
+<INFERENCE_DIR>/
   run_xarm_inference.py
   run_xarm_inference.yaml
   models/download_model.py
@@ -25,9 +25,9 @@ Obtain the [arm setup handoff](../getting-started/sources.md#arm-platform-files)
 The upstream LeRobot repository alone does not contain the lab's changes to recording and recovery. Use the supplied version and its accompanying dependency snapshot.
 
 ```bash
-ls ~/lerobot/scripts/run_teleop.sh
-ls ~/lerobot/lerobot_robot_xarm/pyproject.toml
-ls ~/robocoop/run_xarm_inference.yaml
+ls "<RECORDING_DIR>/scripts/run_teleop.sh"
+ls "<RECORDING_DIR>/lerobot_robot_xarm/pyproject.toml"
+ls "<INFERENCE_DIR>/run_xarm_inference.yaml"
 ```
 
 **Expected:** all three paths are printed without `No such file`.
@@ -47,7 +47,7 @@ python --version
 Use the maintainer's exported package constraints if supplied. The commands below follow the inspected package manifests, but have not been tested together on an empty workstation. If pip reports incompatible requirements, save the error and use the maintainer's known-working dependency set; do not remove version constraints at random.
 
 ```bash
-cd ~/lerobot
+cd "<RECORDING_DIR>"
 python -m pip install -e ./lerobot \
   -e './xr_teleoperate/teleop/teleimager[server]' \
   -e ./xr_teleoperate/teleop/televuer \
@@ -84,12 +84,12 @@ teleimager-server --cf --rs
 
 ## 4. Connect the headset
 
-Enable developer mode for your Quest account/headset through Meta's current developer setup flow. Download **Android SDK Platform Tools for Linux** from the [official Platform Tools page](https://developer.android.com/tools/releases/platform-tools). Extract the `platform-tools` folder to `~/lerobot/platform-tools`.
+Enable developer mode for your Quest account/headset through Meta's current developer setup flow. Download **Android SDK Platform Tools for Linux** from the [official Platform Tools page](https://developer.android.com/tools/releases/platform-tools). Extract the `platform-tools` folder to `<RECORDING_DIR>/platform-tools`.
 
 Connect the headset over USB, put it on, and accept the USB debugging prompt for your workstation. Then run:
 
 ```bash
-~/lerobot/platform-tools/adb devices
+"<RECORDING_DIR>/platform-tools/adb" devices
 ```
 
 **Expected:** one line per headset, with its serial and the word `device`. `unauthorized` means you still need to approve the prompt in the headset. A charging-only cable may produce no device at all. See [Android's connection instructions](https://developer.android.com/tools/adb).
@@ -115,16 +115,22 @@ The inspected TeleVuer and TeleImager packages can read this folder. Keep `key.p
 Open the script in an editor:
 
 ```bash
-nano ~/lerobot/scripts/run_teleop.sh
+nano "<RECORDING_DIR>/scripts/run_teleop.sh"
 ```
 
 Near the top, replace the original account-specific paths with:
 
 ```bash
-ADB_PATH="$HOME/lerobot/platform-tools"
-DATASETS_DIR="$HOME/lerobot/datasets"
+ADB_PATH="<RECORDING_DIR>/platform-tools"
+DATASETS_DIR="<RECORDING_DIR>/datasets"
 ```
 
-In nano, press **Ctrl+O**, then **Enter** to save; **Ctrl+X** exits. Keep the workspace at `~/lerobot` because the launcher also changes into that folder.
+Also replace the launcher's existing workspace `cd` line with:
+
+```bash
+cd "<RECORDING_DIR>"
+```
+
+Use the same full path in all three settings. In nano, press **Ctrl+O**, then **Enter** to save; **Ctrl+X** exits. Have the maintainer review other supplied scripts and configuration files for old absolute paths before launching them.
 
 **Installation checkpoint:** plugins import, both command-line tools exist, cameras are discovered, and `adb devices` reports your headset. You are ready to [configure the station](teleop/setup.md). Model-server installation is covered separately in [Run a trained model](inference/index.md).

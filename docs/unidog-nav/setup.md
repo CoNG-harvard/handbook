@@ -4,12 +4,11 @@
 
 ## 1. Download the workstation repository
 
-Using your authorized GitHub account:
+Choose `<NAV_DIR>` using the [folder guide](../getting-started/paths.md). Use an empty destination and your authorized GitHub account:
 
 ```bash
-cd ~
-git clone --recurse-submodules https://github.com/CoNG-harvard/unidog_nav.git
-cd ~/unidog_nav
+git clone --recurse-submodules https://github.com/CoNG-harvard/unidog_nav.git "<NAV_DIR>"
+cd "<NAV_DIR>"
 git submodule status
 ```
 
@@ -28,22 +27,22 @@ A mock bridge uses stored images and pretend actions. Use port **18766** for thi
 **Terminal A:**
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 python3 robot/primitive_server.py --mock --port 18766 \
-  --mock-frames test_frames/real_front_wall1
+  --mock-frames "<TEST_IMAGES_DIR>"
 ```
 
-This uses Python's standard library; a GPU model is not needed. If that image folder is absent from your handoff, obtain a sample JPEG folder and use its path after `--mock-frames`.
+This uses Python's standard library; a GPU model is not needed. Use the sample JPEG folder from your handoff as `<TEST_IMAGES_DIR>`.
 
 **Terminal B:**
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 python3 scripts/robot_client.py --url http://127.0.0.1:18766 health
-python3 scripts/robot_client.py --url http://127.0.0.1:18766 image /tmp/unidog-mock.jpg
+python3 scripts/robot_client.py --url http://127.0.0.1:18766 image "<MOCK_IMAGE_PATH>"
 ```
 
-**Expected:** health reports `"ok": true`, `"backend": "mock"`, and `"real": false`; the second command saves an image. Open `/tmp/unidog-mock.jpg` in the workstation's image viewer. It should show a saved scene, not a live feed.
+**Expected:** health reports `"ok": true`, `"backend": "mock"`, and `"real": false`; the second command saves an image. Open `<MOCK_IMAGE_PATH>` in the workstation's image viewer. It should show a saved scene, not a live feed.
 
 Stop Terminal A with **Ctrl+C** when finished. Success here checks the client/bridge connection only.
 

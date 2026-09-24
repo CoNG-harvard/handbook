@@ -11,7 +11,7 @@ Configure the client through its YAML file and the **`--config`** option. Older 
 **On the arm workstation, in a new terminal:**
 
 ```bash
-cd ~/robocoop/openpi
+cd "<INFERENCE_DIR>/openpi"
 uv venv --python 3.11
 GIT_LFS_SKIP_SMUDGE=1 uv sync --frozen
 GIT_LFS_SKIP_SMUDGE=1 uv pip install -e . --no-deps
@@ -23,7 +23,7 @@ Install the lightweight client into the **separate** recording environment:
 
 ```bash
 conda activate lerobot
-python -m pip install -e ~/robocoop/openpi/packages/openpi-client
+python -m pip install -e "<INFERENCE_DIR>/openpi/packages/openpi-client"
 python -c "from openpi_client import websocket_client_policy; print('Policy client found')"
 ```
 
@@ -36,7 +36,7 @@ Ask the model owner for the checkpoint, the openpi configuration name, its task,
 If the checkpoint is stored on Hugging Face, use the included downloader with the supplied repository and folder:
 
 ```bash
-cd ~/robocoop
+cd "<INFERENCE_DIR>"
 conda activate lerobot
 python models/download_model.py \
   --repo-id "<MODEL_REPOSITORY>" \
@@ -50,7 +50,7 @@ python models/download_model.py \
 Use the full GPU identifier found in [computer preparation](../../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs).
 
 ```bash
-cd ~/robocoop/openpi
+cd "<INFERENCE_DIR>/openpi"
 export CUDA_VISIBLE_DEVICES="<RTX_PRO_6000_GPU_UUID>"
 uv run scripts/serve_policy.py policy:checkpoint \
   --policy.config="<POLICY_CONFIG_NAME>" \
@@ -64,7 +64,7 @@ The shared workstation also runs Self Improvement Learning. Its Qwen server uses
 ## 4. Make a saved-data configuration — Terminal B
 
 ```bash
-cd ~/robocoop
+cd "<INFERENCE_DIR>"
 conda activate lerobot
 cp run_xarm_inference.yaml first-check.yaml
 nano first-check.yaml
@@ -106,7 +106,7 @@ Check the live images as in [camera setup](../teleop/setup.md#3-test-the-cameras
 Make a separate live configuration:
 
 ```bash
-cd ~/robocoop
+cd "<INFERENCE_DIR>"
 cp first-check.yaml first-live.yaml
 nano first-live.yaml
 ```
@@ -129,7 +129,7 @@ With the operator, review:
 In **Terminal B**:
 
 ```bash
-cd ~/robocoop
+cd "<INFERENCE_DIR>"
 conda activate lerobot
 python run_xarm_inference.py --config first-live.yaml
 ```

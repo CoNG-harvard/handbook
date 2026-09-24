@@ -10,10 +10,10 @@ The inspected workstation scripts expect:
 
 | On the robot | Requirement |
 |---|---|
-| `~/LLM_guided_RL/` | Approved robot-control checkout; preflight expects branch `offline-rl-vlm-policy` |
+| `<ROBOT_SKILLS_DIR>/` | Approved robot-control checkout; preflight expects branch `offline-rl-vlm-policy` |
 | `scripts/run_skill.py` inside that checkout | Entry point for supported robot skills |
-| Hardware Python environment | Reference deployment uses `~/miniforge3/envs/walk/bin/python` with the robot SDK |
-| `~/unidog_nav_tools/` | Bridge program and its helper files |
+| Hardware Python environment | Full path `<ROBOT_PYTHON>` to the approved environment's Python executable, with the robot SDK |
+| `<ROBOT_TOOLS_DIR>/` | Bridge program and its helper files |
 | Camera | Default in the current bridge is a USB RealSense D435i; built-in front camera is an explicit alternative |
 | Network interface | Reference scripts use `eth0`; this is a device name, not an IP address |
 
@@ -48,22 +48,22 @@ If this fails, resolve login/key access before proceeding.
 **On the workstation, with the owner's approved robot checkout in place:**
 
 ```bash
-cd ~/unidog_nav
-ssh unitree 'mkdir -p ~/unidog_nav_tools'
+cd "<NAV_DIR>"
+ssh unitree 'mkdir -p "<ROBOT_TOOLS_DIR>"'
 scp robot/primitive_server.py robot/run_plan.py \
-  robot/grab_realsense_frame.py unitree:unidog_nav_tools/
+  robot/grab_realsense_frame.py "unitree:<ROBOT_TOOLS_DIR>/"
 ```
 
 Do this for a new installation or a coordinated update, not while another operator is running the robot. The bridge uses the companion skills repository; copying these files alone does not install that repository or its SDK.
 
-If the robot account, environment path, or network interface differs from the reference, the owner must adapt the bridge arguments and helper scripts consistently before continuing. `primitive_server.py --help` documents `--skills-repo`, `--walk-python`, `--iface`, and `--camera`.
+Before running the helper scripts, have the owner update their robot-side tools, log, skills, and Python paths to your chosen locations. In particular, `robot_tunnel.sh` must start the bridge from `<ROBOT_TOOLS_DIR>`, write its log under `<ROBOT_LOG_DIR>`, and pass your `--skills-repo` and `--walk-python` values. The service and voice launchers must use the same choices; replacing paths in this manual does not change their built-in defaults. `primitive_server.py --help` documents `--skills-repo`, `--walk-python`, `--iface`, and `--camera`.
 
 ## 4. Start the bridge without real motion
 
 **On the workstation:**
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/robot_tunnel.sh status
 bash scripts/robot_tunnel.sh up --start-server
 python3 scripts/robot_client.py health
@@ -77,11 +77,11 @@ The helper opens an SSH tunnel: requests to workstation port **8766** reach the 
 ## 5. Capture and inspect a live image
 
 ```bash
-cd ~/unidog_nav
-python3 scripts/robot_client.py image /tmp/unidog-live.jpg
+cd "<NAV_DIR>"
+python3 scripts/robot_client.py image "<LIVE_IMAGE_PATH>"
 ```
 
-Open `/tmp/unidog-live.jpg` in the workstation's image viewer. **Expected:** the current view from the selected robot camera. Change something visible in the scene and capture again to confirm it is fresh.
+Open `<LIVE_IMAGE_PATH>` in the workstation's image viewer. **Expected:** the current view from the selected robot camera. Change something visible in the scene and capture again to confirm it is fresh.
 
 A healthy bridge does not guarantee that its camera works. The current default is RealSense; older notes describing the built-in camera refer to `--camera front`. Ask the owner to select the intended camera rather than swapping blindly between feeds.
 
@@ -93,14 +93,14 @@ A healthy bridge does not guarantee that its camera works. The current default i
 | SSH timeout | Robot power, network connection, and robot address |
 | `Permission denied` | Login account and authorized SSH key |
 | Local port 8766 occupied | Use `robot_tunnel.sh status`; do not kill an unknown process |
-| Server fails to start | Read `ssh unitree 'tail -50 ~/logs/primitive_server.log'` |
+| Server fails to start | Read `ssh unitree 'tail -50 "<ROBOT_LOG_DIR>/primitive_server.log"'` |
 | Image request fails | Camera selection, USB access, helper file, and robot Python dependencies |
 | `real: true` during a no-motion check | An existing real-mode server is running; coordinate with the owner |
 
 ## Finish the camera-only session
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/robot_tunnel.sh down
 ```
 

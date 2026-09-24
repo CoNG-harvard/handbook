@@ -13,7 +13,7 @@ For the first trial, ask the operator to choose one supported short command, suc
 **On the shared workstation:**
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/prepare_real_robot.sh --check
 ```
 
@@ -42,15 +42,16 @@ ssh unitree
 After the robot login prompt appears, run **on the robot**:
 
 ```bash
-python3 ~/unidog_nav_tools/primitive_server.py --real --per-call
+python3 "<ROBOT_TOOLS_DIR>/primitive_server.py" --real --per-call \
+  --skills-repo "<ROBOT_SKILLS_DIR>" --walk-python "<ROBOT_PYTHON>"
 ```
 
-This command runs **on the robot**. It enables real execution; keep Terminal A open. It uses the reference deployment paths and camera settings checked during [bridge setup](robot-bridge.md). Use the owner's reviewed arguments if those differ.
+This command runs **on the robot**. It enables real execution; keep Terminal A open. The path arguments must match your [bridge setup](robot-bridge.md); use the camera settings approved there. Use the owner's reviewed arguments if those differ.
 
 In **Terminal B**, on the workstation:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 bash scripts/robot_tunnel.sh up
 python3 scripts/robot_client.py health
 ```
@@ -64,7 +65,7 @@ The alternative all-services launcher, `bash scripts/prepare_real_robot.sh`, sta
 Prepare **Terminal C** on the workstation with the same repository open so the software abort command is ready:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 ```
 
 During a session, the abort command is:
@@ -78,7 +79,7 @@ It depends on a working tunnel and executor; the operator's physical stop remain
 In **Terminal B**, with the operator's agreement:
 
 ```bash
-cd ~/unidog_nav
+cd "<NAV_DIR>"
 python3 scripts/robot_client.py start-episode
 python3 scripts/robot_client.py exec "The next action is turn left 15 degrees."
 ```
@@ -95,4 +96,4 @@ A command succeeding once does not validate autonomous navigation. Continue to b
 4. Close your tunnel with `bash scripts/robot_tunnel.sh down`.
 5. Stop model services you started only after confirming nobody else is using them.
 
-For problems, retain the foreground bridge output from Terminal A and the client output. Background helper launches write their robot log at `~/logs/primitive_server.log`; this foreground launch prints to Terminal A instead. Describe the requested command and observed motion to the platform owner.
+For problems, retain the foreground bridge output from Terminal A and the client output. Background helper launches write their robot log at `<ROBOT_LOG_DIR>/primitive_server.log`; this foreground launch prints to Terminal A instead. Describe the requested command and observed motion to the platform owner.

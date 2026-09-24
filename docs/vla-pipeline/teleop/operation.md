@@ -48,7 +48,7 @@ If you choose the left trigger, that episode is discarded. Previously saved epis
 
 ## 4. Find the saved recording
 
-Use the dataset path printed when the launcher started. New sessions created by the inspected launcher go under `~/lerobot/datasets/test_a_<timestamp>/`; older sessions may be under `~/lerobot/xr_teleoperate/datasets/`.
+Use the dataset path printed when the launcher started. New sessions created by the inspected launcher go under `<RECORDING_DIR>/datasets/test_a_<timestamp>/`; older sessions may be under `<RECORDING_DIR>/xr_teleoperate/datasets/`.
 
 After ending the session normally, inspect the folder:
 

@@ -65,3 +65,5 @@ Project display names are **VLA Pipeline** and **Self Improvement Learning**. Ke
 Keep the same four top-level navigation tabs on every page. Tabs remain in the header while scrolling and use two rows on narrow screens. Each project sidebar begins with **Overview**, followed by numbered setup pages and a **Reference** section.
 
 Keep required handoff items ahead of installation, and optional model setup outside the first camera/movement path. Hardware inventories use short equipment-and-quantity tables with selection details below. Mark incomplete commissioning procedures explicitly; existing source code alone does not establish a reproducible installation.
+
+Use the directory placeholders defined in `docs/getting-started/paths.md` for installation roots, robot deployments, and custom output locations. Quote path placeholders in shell examples, preserve source-relative filenames, and explain any launcher defaults that must be adapted; do not imply that documentation placeholders automatically reconfigure the original scripts.

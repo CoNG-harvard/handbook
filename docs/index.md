@@ -44,6 +44,7 @@ Both projects use **one RTX PRO 6000 workstation**, with separate robot hardware
 
 - [Before you begin](getting-started/index.md) — equipment, lab access, and essential terms.
 - [Shared computer and hardware](getting-started/hardware.md) — equipment lists and workstation specifications.
+- [Choose your folders](getting-started/paths.md) — replace directory placeholders with your own locations.
 - [Prepare a new computer](getting-started/computer.md) — common tools to install once.
 
 ## Quick links

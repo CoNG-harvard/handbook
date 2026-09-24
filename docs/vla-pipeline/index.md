@@ -41,8 +41,8 @@ Use the [shared RTX PRO 6000 workstation](../getting-started/hardware.md) for th
 
 | Folder on your new workstation | Purpose |
 |---|---|
-| `~/lerobot/` | Lab recording workspace, launch scripts, custom arm/headset/camera plugins |
-| `~/robocoop/` | Lab inference script and its settings |
-| `~/robocoop/openpi/` | The model server, with its own Python environment |
+| `<RECORDING_DIR>/` | Lab recording workspace, launch scripts, custom arm/headset/camera plugins |
+| `<INFERENCE_DIR>/` | Lab inference script and its settings |
+| `<INFERENCE_DIR>/openpi/` | The model server, with its own Python environment |
 
-These names describe the lab's installed layout. `~/robocoop` itself is **not a Git repository** in the inspected installation. Follow the [source handoff](../getting-started/sources.md) rather than guessing a clone URL.
+These placeholders stand for the folders you choose in the [folder guide](../getting-started/paths.md); the internal source layout stays the same. `<INFERENCE_DIR>` itself is **not a Git repository** in the inspected installation. Follow the [source handoff](../getting-started/sources.md) rather than guessing a clone URL.
