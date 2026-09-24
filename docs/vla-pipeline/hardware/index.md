@@ -21,19 +21,29 @@ VLA Pipeline lab station with two xArm 7 robots. Validate each rig separately be
 
 Quantities below describe the **two-arm lab station**. The [shared workstation, GPU, display/input devices, and network equipment](../../getting-started/hardware.md#shared-equipment-prepare-once) are counted once for both projects. Two independent operators use two headset sets; the one-headset, two-arm mode is a separate software configuration.
 
-| Item and quantity | Why you need it | Selection notes |
-|---|---|---|
-| **2 UFACTORY xArm 7 robots** | Moves the gripper | Match the lab arm type and software; see [UFACTORY's xArm overview](https://help.ufactory.cc/en/articles/4491842-the-difference-between-ufactory-xarm5-ufactory-xarm6-and-ufactory-xarm7) |
-| **2 matching control boxes**, each with arm/controller cables, power supply and mains lead | Powers and controls the arm | Check what is included in the robot package; follow [UFACTORY's hardware installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html) |
-| **2 compatible xArm grippers**, each with an adapter/mount and cable set | Grasps objects | Confirm the lab's finger/pad geometry and gripper calibration with the model owner; exact custom mount/soft-finger part numbers are not established here |
-| **2 rigid arm mounting assemblies/stands**, with a shared work table | Holds the arm base securely | Base plate, mounting surface, and fasteners must be specified for this robot; the old notes do not provide a complete stand bill of materials |
-| **2 Meta Quest 3 headsets + 4 controllers** | Tracks the operator's hand movement | One headset set per operator; include chargers and controller batteries; [Meta product reference](https://www.meta.com/quest/quest-3/) |
-| **2 headset USB data cables** | Connects the headset page to the workstation | Must carry data, fit the ports, and allow comfortable operator movement |
-| **2 RealSense D405 wrist cameras** | Shows the gripper and nearby object | One per arm, each with a wrist bracket and USB data cable; [D405 reference](https://www.realsenseai.com/product-family/d405-series/) |
-| **3 RealSense D415 scene cameras** | Shows the whole work area | Three were connected in the inspected lab setup. Include stands/clamps and USB data cables; [camera family reference](https://www.realsenseai.com/products/) |
-| **1 wired network connection per device** | Connects the arm controller and workstation | Provide 2 arm-controller-to-switch cables, one per control box; the workstation-to-switch cable is counted in the shared setup. Use the selected network design for any additional cables |
-| **1 set of task objects and a tray/basket** (example task) | Provides the scene being recorded or manipulated | Use objects/camera positions appropriate for the model; a red-cube model is not a general-purpose object handler |
-| **Cable management, labels, and suitable lighting** | Keeps connections identifiable and views usable | Route cables away from joints; maintain camera views and consistent lighting |
+| Equipment | Quantity |
+|---|---|
+| UFACTORY xArm 7 robot | 2 |
+| Matching control box and cable/power set | 2 sets |
+| Compatible xArm gripper and mounting/cable set | 2 sets |
+| Rigid arm mount or stand | 2 |
+| Shared work table | 1 |
+| Meta Quest 3 headset | 2 |
+| Quest controller | 4 |
+| Headset USB data cable | 2 |
+| RealSense D405 wrist camera, bracket, and USB cable | 2 sets |
+| RealSense D415 scene camera, stand, and USB cable | 3 sets |
+| Arm-controller-to-switch Ethernet cable | 2 |
+| Task objects and tray/basket | 1 task set |
+| Cable labels, cable management, and suitable lighting | As needed |
+
+### Selection details
+
+- **Arms and controllers:** match the lab's [xArm 7](https://help.ufactory.cc/en/articles/4491842-the-difference-between-ufactory-xarm5-ufactory-xarm6-and-ufactory-xarm7). Confirm included power supplies, mains leads, and arm/controller cables against [UFACTORY's installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
+- **Grippers and stands:** obtain the approved finger geometry, adapters, calibration, base plates, and fasteners from the owner. Exact custom part numbers and the stand bill of materials remain to be specified.
+- **Headsets:** include [Quest 3](https://www.meta.com/quest/quest-3/) chargers, controller batteries, and data-capable USB cables long enough for the operator.
+- **Cameras:** use one [D405](https://www.realsenseai.com/product-family/d405-series/) per wrist and three [D415 scene cameras](https://www.realsenseai.com/products/) for the full station. Confirm mounting, view, and USB bandwidth before using all five.
+- **Network and task area:** the workstation cable and switch are counted in [shared equipment](../../getting-started/hardware.md#shared-equipment-prepare-once). Choose objects and camera positions for the model's supported task; keep cables away from moving joints.
 
 Both arms' stop controls must be accessible and clearly labeled. Confirm which button stops which arm before powering or resetting either robot.
 

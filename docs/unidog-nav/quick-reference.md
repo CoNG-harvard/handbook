@@ -57,4 +57,4 @@ This does not stop the robot or shut down its server. Follow the [session shutdo
 curl --fail http://127.0.0.1:8000/v1/models
 ```
 
-For installation and startup, see [model setup](setup.md#3-choose-which-model-you-need). Coordinate GPU use before switching between Qwen and NaVILA.
+For installation and startup, see [model setup](models.md#choose-a-model). Coordinate GPU use before switching between Qwen and NaVILA.

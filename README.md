@@ -61,3 +61,7 @@ Keep visual rules in `docs/stylesheets/handbook.css`; avoid page-specific fonts,
 Wrap images in `figure.handbook-figure` with a plain-text `figcaption` and a `.figure-links` paragraph. Use **View full-size image** and, when available, **Source photograph** or **Source PDF**. Follow the markup in `docs/unidog-nav/index.md`. Preserve each real image's aspect ratio and existing labels.
 
 Project display names are **VLA Pipeline** and **Self Improvement Learning**. Keep software identifiers (`robocoop`, `unidog_nav`), existing documentation paths, and the configured “Hey UniDog” wake word unchanged unless those underlying systems are renamed.
+
+Keep the same four top-level navigation tabs on every page. Tabs remain in the header while scrolling and use two rows on narrow screens. Each project sidebar begins with **Overview**, followed by numbered setup pages and a **Reference** section.
+
+Keep required handoff items ahead of installation, and optional model setup outside the first camera/movement path. Hardware inventories use short equipment-and-quantity tables with selection details below. Mark incomplete commissioning procedures explicitly; existing source code alone does not establish a reproducible installation.

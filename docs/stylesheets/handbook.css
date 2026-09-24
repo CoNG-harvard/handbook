@@ -154,3 +154,58 @@
     padding: 1rem;
   }
 }
+
+/* Keep project navigation in the header at every screen width. */
+@media screen {
+  .md-typeset :target {
+    --md-scroll-margin: 6rem;
+  }
+  .md-header .md-tabs {
+    display: block;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  }
+  .md-tabs__list {
+    gap: 0.3rem;
+  }
+  .md-tabs__item {
+    height: auto;
+  }
+  .md-tabs__link {
+    align-items: center;
+    min-height: 2.4rem;
+    margin-top: 0;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    transition: none;
+  }
+  .md-tabs__item--active .md-tabs__link {
+    border-bottom-color: currentColor;
+    font-weight: 600;
+  }
+  .md-tabs__link:focus-visible {
+    outline: 2px solid var(--md-accent-fg-color);
+    outline-offset: -3px;
+  }
+}
+@media screen and (max-width: 40em) {
+  .md-typeset :target {
+    --md-scroll-margin: 8.4rem;
+  }
+  .md-header .md-tabs__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    white-space: normal;
+  }
+  .md-tabs__item {
+    padding: 0 0.6rem;
+  }
+  .md-tabs__link {
+    justify-content: center;
+    height: 100%;
+    min-height: 2.4rem;
+    font-size: 0.65rem;
+    text-align: center;
+  }
+}

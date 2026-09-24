@@ -8,6 +8,8 @@ hide:
 
 Practical guides to the lab's robotics projects. Each guide covers equipment, installation, and a first working session, with explanations for new users.
 
+**Setting up a new computer?** Start with the [setup handoff checklist](getting-started/index.md#2-get-a-setup-handoff-from-the-lab), then prepare the shared computer and follow your project guide.
+
 <div class="project-grid" markdown="1">
 
 <div class="project-card" markdown="1">

@@ -3,7 +3,7 @@
 !!! note "Advanced reference"
     For an installed system. Historical results below describe earlier lab experiments, not validation of the new setup. Start with the [project guide](index.md) if you are installing for the first time.
 
-Use a [Blackwell-compatible NaVILA environment](setup.md#navila-installation-and-saved-image-check) and select the RTX PRO 6000 before running these examples.
+Use a [Blackwell-compatible NaVILA environment](models.md#navila-installation-and-saved-image-check) and select the RTX PRO 6000 before running these examples.
 
 `scripts/batch_navila_eval.py` evaluates saved scene/instruction pairs without moving the robot. It loads the model once, prints predictions, and saves JSON results in `logs/`. Run on the workstation in `~/unidog_nav`; obtain the example image folders from the lab.
 

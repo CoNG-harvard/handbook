@@ -113,3 +113,15 @@ Before a fresh RTX PRO 6000 installation is signed off, validate the Qwen and op
 The handbook build can check page structure and links. It cannot verify USB permissions, GPU compatibility, headset certificate behavior, robot calibration, or successful movement.
 
 Before calling this a fully validated installation release, a maintainer should install the supplied bundle on a fresh workstation, resolve and save dependency locks, run both no-motion checks, and record a supervised hardware acceptance test. The missing robot-image/environment release and lab-specific source distribution are explicit handoff requirements, not steps a beginner is expected to guess.
+
+## Follow-up source check
+
+On **24 September 2026**, the handbook was checked again against the original remote working trees. The arm openpi checkout remains at `b7a2912`; the active `unidog_nav` checkout remains at `edee63b` with local changes. The companion `LLM_guided_RL` workstation checkout reports `459bceb`; this does not establish the revision deployed on the robot.
+
+- **Arm setup:** `scripts/run_teleop.sh` confirms separate rig A/B manifests, the shared camera server, USB forwarding, and resets before recording. The TeleImager manifest requires Python below 3.11; the arm plugin requires at least 3.10. The current inference script accepts `--config`, and its `from_dataset` handler avoids robot connection. The older `robocoop/setup.md` still shows superseded CLI flags, so the handbook follows executable source.
+- **Arm hardware:** USB enumeration again reported two D405 and three D415 cameras. The source contains rig A, rig B, and bimanual configurations. Enumeration and configuration files do not replace a physical inventory of mounts, cables, and controllers.
+- **Dog setup:** the bridge source confirms a fully local `--mock` mode, the RealSense default for the robot deployment, and the separate `--real` execution flag. The tunnel helper can reuse a running server without changing its mode.
+- **Models:** installed package metadata reports vLLM 0.24.0, Torch 2.11.0+cu130, Transformers 5.13.0, CUDA nvcc 13.2.78, and CUDA runtime 13.0.96. The Qwen launcher uses Python 3.12 CUDA paths and port 8000. The legacy NaVILA installer still selects a CUDA 12/Torch 2.3 FlashAttention wheel. These observations do not validate either model on a fresh RTX PRO 6000 installation; see [optional model setup](../unidog-nav/models.md).
+- **D1:** the companion D1 interface and `unidog_nav/robot/arm_reach.py` establish the SDK, robot deployment, and camera-to-arm calibration dependencies. They do not supply a complete tested installation handoff. The [D1 readiness page](../unidog-nav/d1-arm.md) records the outstanding items.
+
+**Executed check:** copies of the original `primitive_server.py`, `primitive_specs_snapshot.json`, `robot_client.py`, and one supplied JPEG were used for a local mock test on port 18766. Health returned `ok: true`, `backend: mock`, `real: false`, and `busy: false`; the retrieved JPEG matched the input byte-for-byte. The test server was then stopped. No robot commands or model servers were started, and the remote working trees were not modified.

@@ -4,12 +4,14 @@ Both projects use **one Linux workstation with one RTX PRO 6000 Blackwell Workst
 
 ## Shared equipment — prepare once
 
-| Equipment | Quantity | Purpose |
-|---|---|---|
-| Complete Linux workstation with RTX PRO 6000 | 1 workstation, 1 GPU | Runs either project's software and model |
-| Monitor, keyboard, and mouse | 1 set, or arranged remote access | Installs and operates the software |
-| Storage and backup destination | Sized for both projects | Stores models, recordings, and separate source folders |
-| Network switch/router, power adapter, and workstation cable | Reuse suitable existing equipment | Connects the workstation and robot equipment |
+| Shared equipment | Quantity |
+|---|---|
+| Complete Linux workstation with RTX PRO 6000 | 1 workstation, 1 GPU |
+| Monitor, keyboard, and mouse | 1 set, or arranged remote access |
+| Storage and backup destination | Capacity for both projects |
+| Network switch/router, power adapter, and workstation cable | 1 suitable set; reuse existing equipment |
+
+The workstation runs either project's software and model. Its storage holds separate source folders, model files, and recordings. The shared network connects the workstation to the selected robot equipment.
 
 Have the supplier include a compatible motherboard, power supply, case, cooling, and mains lead. The inventory does not establish exact parts for these components.
 
@@ -75,7 +77,7 @@ NVIDIA lists 96 GB GPU memory for the [RTX PRO 6000 Blackwell family](https://ww
 ## Choosing a new computer
 
 - **Recording:** check USB bandwidth with the cameras and headsets used in the session connected; the full lab station has two D405 cameras, three D415 cameras, and two headsets. Extra ports do not necessarily add bandwidth. The dog's camera connects to its onboard computer.
-- **Running models:** validate openpi and Qwen on the selected GPU. NaVILA needs a [Blackwell-compatible environment](../unidog-nav/setup.md#navila-installation-and-saved-image-check).
+- **Running models:** validate openpi and Qwen on the selected GPU. NaVILA needs a [Blackwell-compatible environment](../unidog-nav/models.md#navila-installation-and-saved-image-check).
 - **Training:** confirm model, dataset, memory, and storage requirements with the model owner before ordering.
 
 ## Using the shared workstation

@@ -3,7 +3,7 @@
 !!! note "Advanced reference"
     For an installed system. Historical results below describe earlier lab experiments, not validation of the new setup. Start with the [project guide](index.md) if you are installing for the first time.
 
-Before starting any model service or GPU evaluation here, select the RTX PRO 6000 using [computer preparation](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs). NaVILA examples additionally require the [Blackwell-compatible environment](setup.md#navila-installation-and-saved-image-check).
+Before starting any model service or GPU evaluation here, select the RTX PRO 6000 using [computer preparation](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs). NaVILA examples additionally require the [Blackwell-compatible environment](models.md#navila-installation-and-saved-image-check).
 
 This loop remains for historical reproduction. The current V1
 planner-specific parser, safe-bin quantization, continuous capture and exact

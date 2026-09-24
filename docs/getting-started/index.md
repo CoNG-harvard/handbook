@@ -12,18 +12,31 @@ Use the [hardware checklist](hardware.md) to gather the full station, including 
 
 ## 2. Get a setup handoff from the lab
 
-Ask the person responsible for the platform for the items below. Save the answers in a **private setup note**. Passwords, access tokens, addresses, and device serial numbers do not belong in this public handbook.
+Get these items **before starting the project installation**. Ask the project owner to check each item with you and save the details in a private setup note.
 
-| Information | VLA Pipeline | Self Improvement Learning |
-|---|---|---|
-| Source files | VLA Pipeline scripts, the modified LeRobot workspace, and the lab openpi fork | `unidog_nav`, its NaVILA submodule, and the robot-side `LLM_guided_RL` code |
-| Access | Permission to download lab code, model, and a sample dataset | Permission to download lab code and model; SSH access to the robot |
-| Network details | Arm address and camera-server address | Robot computer address, login name, and confirmed SSH host fingerprint |
-| Device details | Which arm is rig A; headset and camera serials | Go2 variant, onboard computer, selected camera, and network interface |
-| Calibration | Mounting, home position, camera view, gripper setup | Robot readiness/stop procedure; any attached arm's calibration |
-| First test | A matching checkpoint and a small processed dataset | A sample image folder and a clear, supervised test area |
+### For both projects
 
-The [handoff inventory](sources.md) lists the actual folders. **There is no verified public `robocoop` clone command for the complete workspace.** Obtain the lab files before proceeding; an unrelated repository with the same name will not work.
+- [ ] A named lab contact who can provide files and help with the first session.
+- [ ] Access to the shared workstation, permission to install software, and access to the required code.
+- [ ] The [project equipment](hardware.md), network details, and an operator for the first hardware check.
+
+### Before installing VLA Pipeline
+
+- [ ] A dated bundle of the modified `lerobot` workspace, `robocoop` scripts, and lab `openpi` source, including its lockfile.
+- [ ] The recording environment's dependency snapshot and instructions for recreating it. A fresh installation is still pending validation.
+- [ ] Separate rig A/B settings: arm addresses, camera/headset serials, and reviewed home positions.
+
+A model checkpoint and matching sample dataset are needed only for **Run a trained model**, not for the first headset recording. There is no verified public clone command for the complete `robocoop` workspace.
+
+### Before installing Self Improvement Learning
+
+- [ ] Access to `unidog_nav`, its submodule, and a dated copy of intended local source changes.
+- [ ] A sample JPEG folder for the first mock check. This check needs no robot or model.
+- [ ] Before connecting real hardware: the owner-provided robot image/environment, `LLM_guided_RL` deployment, SSH access, camera settings, and demonstrated stop procedure.
+
+A new workstation can complete the mock check while robot preparation is pending. Qwen and NaVILA are [optional model installations](../unidog-nav/models.md). The D1 arm is included in the platform, but its [commissioning guide is pending](../unidog-nav/d1-arm.md).
+
+**Missing something?** Ask your lab contact for the items above before the affected step. The [maintainer's handoff inventory](sources.md) gives the exact folders and unresolved requirements. Keep credentials and device identities in the private setup note.
 
 ## 3. Learn the few terms used in the steps
 

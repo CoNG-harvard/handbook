@@ -21,17 +21,27 @@ Self Improvement Learning platform with a D1 arm and D435i camera. The first nav
 
 ## 1. Core platform hardware {#1-core-equipment-for-navigation}
 
-| Item and quantity | Why you need it | Selection notes |
-|---|---|---|
-| **1 Unitree Go2 research robot** | The mobile robot | The companion lab source describes **Go2 Edu Plus**. Confirm the exact edition, control SDK access, and supplied accessories with the owner/vendor; [Unitree Go2 reference](https://www.unitree.com/go2/) |
-| **1 Unitree D1 arm with gripper**, robot mounting kit, and matching power/data cables | Adds manipulation to the Go2 | Part of the Self Improvement Learning platform shown above; confirm the complete kit, D1 software interface, and calibration with the lab owner |
-| **1 compatible onboard computer** | Runs the bridge and hardware-control software | The source identifies a **Jetson**, but its exact module/RAM/carrier-board model was not verified. It may already be included in the robot package |
-| **1 compatible robot battery + charger** | Powers the robot | Confirm inclusion, connector, and charging instructions for the supplied robot. A spare battery is optional |
-| **1 manufacturer-supported operator controller/stop interface** | Lets the trained operator control and stop the robot | Confirm the actual supplied controller and demonstrated stop procedure; an SSH terminal is not a physical stop device |
-| **1 RealSense D435i camera**, matching USB data cable, and robot mount | Supplies the camera image to the workstation | The supplied platform photo labels this camera as D435i, matching the bridge helper. Confirm its connection and serial during setup; [RealSense camera reference](https://www.realsenseai.com/compare-all-cameras/) |
-| **A network connection** between workstation and robot computer | Carries SSH, images, and commands | Provide Ethernet cables and/or the approved wireless network equipment for the chosen deployment |
-| **Approved power and mounting for onboard accessories** | Keeps the computer/camera securely powered on the robot | Confirm robot-compatible power connectors, mounts, cable strain relief, and payload arrangement |
-| **Clear test area and floor markings** | Makes a supervised short movement test observable | Leave room for the robot to stand and turn; secure loose cables |
+| Equipment | Quantity |
+|---|---|
+| Unitree Go2 research robot | 1 |
+| Unitree D1 arm and gripper | 1 set |
+| D1 mounting kit and power/data cables | 1 set |
+| Compatible onboard computer | 1 |
+| Robot battery and charger | 1 set |
+| Supported operator controller/stop interface | 1 |
+| RealSense D435i, USB data cable, and mount | 1 set |
+| Robot network connection | 1 |
+| Approved accessory power, mounts, and cable restraints | As needed |
+| Clear test area and floor markings | 1 area |
+
+### Selection details
+
+- **Robot:** the companion source describes [Go2 Edu Plus](https://www.unitree.com/go2/). Confirm the exact edition, SDK access, and included accessories with the owner/vendor.
+- **D1 arm:** include its complete mounting and cable kit. **Arm commissioning is pending**; obtain the [D1 software and calibration handoff](d1-arm.md) before manipulation.
+- **Onboard computer:** the source identifies a Jetson, but its exact module, memory, and carrier board were not verified. Check whether it is included with the robot.
+- **Battery and controller:** confirm the approved charger, connectors, and demonstrated stop procedure. A workstation terminal does not replace the operator's stop interface.
+- **Camera:** the supplied photo identifies a [D435i](https://www.realsenseai.com/compare-all-cameras/), matching the bridge helper. Record its serial and verify its USB connection on the robot.
+- **Connections and mounts:** use the approved Ethernet or wireless deployment. Confirm accessory power, payload arrangement, cable strain relief, and space to stand and turn.
 
 The Go2's built-in front camera is an **alternative image source** selected with `--camera front`. It is not automatically selected when a USB camera is absent. Use the same view expected by the model/workflow.
 
@@ -41,13 +51,15 @@ The robot's existing sensing and control interfaces, including the perception in
 
 The Go2 and D1 arm are both included in the main list above. Add the accessories below for the intended manipulation, voice, or recording workflow.
 
-| Addition | Quantity | Used for |
-|---|---|---|
-| Arm/wrist camera and calibration target | As specified by the manipulation configuration | Locating and grasping objects; exact camera and bracket specifications require the manipulation handoff |
-| DJI Mic Mini transmitter and receiver with USB connection | 1 set | The companion voice guide describes this microphone; its receiver appears as a USB audio device |
-| Working audio output | 1 route through the robot or an approved speaker | Spoken feedback; verify the actual output device in the voice setup |
-| Spare robot battery and approved storage/charging accessories | According to session length | Longer sessions without waiting for charging |
-| Additional logging/backup storage | According to recording volume | Keeping camera frames and experiment logs |
+| Additional equipment | Quantity |
+|---|---|
+| Manipulation camera and calibration target | Specified by owner |
+| DJI Mic Mini transmitter/receiver with USB connection | 1 set for voice |
+| Robot audio output or approved speaker | 1 route for voice |
+| Spare battery and approved charging/storage accessories | As needed |
+| Extra logging and backup storage | As needed |
+
+The manipulation handoff must specify the camera, bracket, and calibration target. The companion voice guide describes the DJI microphone as a USB audio device; verify both audio input and output during voice setup. Size spare batteries and storage for the session length and recording volume.
 
 Navigation-only setup does not require arm control, a microphone, or a Quest headset. Before using the installed D1 arm, complete its mounting, calibration, software, and supervised checks.
 

@@ -3,7 +3,7 @@
 !!! note "Advanced reference"
     For an installed system. Complete [bridge setup](robot-bridge.md) and [first supervised movement](first-run.md) before using hardware commands. Earlier lab results do not validate a new installation.
 
-Run workstation commands in `~/unidog_nav`. Robot commands use the deployed `~/LLM_guided_RL` checkout. Select the [RTX PRO 6000](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs) and follow the [shared-workstation handover](../getting-started/hardware.md#using-the-shared-workstation) before starting a model. Commands using `navila` need its [Blackwell-compatible environment](setup.md#navila-installation-and-saved-image-check).
+Run workstation commands in `~/unidog_nav`. Robot commands use the deployed `~/LLM_guided_RL` checkout. Select the [RTX PRO 6000](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs) and follow the [shared-workstation handover](../getting-started/hardware.md#using-the-shared-workstation) before starting a model. Commands using `navila` need its [Blackwell-compatible environment](models.md#navila-installation-and-saved-image-check).
 
 ## 1. Voice control
 
@@ -93,7 +93,7 @@ These checks do not load a GPU model or move a robot. Stop the mock bridge after
 
 ## 2. Run a benchmark scenario
 
-Start Qwen using [model setup](setup.md#qwen-installation-and-check), and complete the supervised real-mode bridge startup. The preflight below reports status; it does not start the bridge.
+Start Qwen using [model setup](models.md#qwen-installation-and-check), and complete the supervised real-mode bridge startup. The preflight below reports status; it does not start the bridge.
 
 !!! warning "This scenario can move the robot"
     Use a measured, clear test area and an operator at the stop control. Run the normal-speed case before any fast case.

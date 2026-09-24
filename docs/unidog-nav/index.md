@@ -37,6 +37,8 @@ First complete [Before you begin](../getting-started/index.md) and [computer pre
 | 3 | [Connect the robot](robot-bridge.md) | You can retrieve a live camera image |
 | 4 | [First supervised movement](first-run.md) | The dog completes one short command and the session ends |
 
+Model installation is [optional](models.md); it is not required for these four steps. **D1 arm commissioning is pending**—see the [D1 readiness checklist](d1-arm.md) before planning manipulation.
+
 After setup, use the [quick reference](quick-reference.md). The remaining pages describe advanced experiments: [offline model evaluation](vla-eval.md), [voice and benchmarks](operator-cookbook.md), and the [legacy rollout](rollout.md). They are not the initial installation path.
 
 ## What is required beyond this repository?

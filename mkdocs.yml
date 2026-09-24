@@ -12,7 +12,7 @@ theme:
     code: Roboto Mono
   features:
     - navigation.tabs
-    - navigation.indexes
+    - navigation.tabs.sticky
     - navigation.top            # back-to-top button
     - navigation.tracking       # URL tracks the scrolled section
     - navigation.footer         # prev/next links at the bottom of each page
@@ -57,7 +57,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - stylesheets/handbook.css
+  - stylesheets/handbook.css?v=4
 
 plugins:
   - search
@@ -71,12 +71,12 @@ validation:
 nav:
   - Projects: index.md
   - Shared setup:
-      - getting-started/index.md
+      - Before you begin: getting-started/index.md
       - Shared computer and hardware: getting-started/hardware.md
       - Prepare a new computer: getting-started/computer.md
       - Source files and handoff: getting-started/sources.md
   - VLA Pipeline:
-      - vla-pipeline/index.md
+      - Overview: vla-pipeline/index.md
       - "1. Hardware and connections": vla-pipeline/hardware/index.md
       - "2. Install the software": vla-pipeline/install.md
       - "3. Configure and start": vla-pipeline/teleop/setup.md
@@ -87,13 +87,15 @@ nav:
           - Prepare recordings: vla-pipeline/teleop/datasets.md
           - Model handoff and training: vla-pipeline/training/index.md
   - Self Improvement Learning:
-      - unidog-nav/index.md
+      - Overview: unidog-nav/index.md
       - "1. Hardware and connections": unidog-nav/hardware.md
       - "2. Install the software": unidog-nav/setup.md
       - "3. Connect the robot": unidog-nav/robot-bridge.md
       - "4. First supervised movement": unidog-nav/first-run.md
+      - Optional model setup: unidog-nav/models.md
+      - D1 arm readiness: unidog-nav/d1-arm.md
       - Quick reference: unidog-nav/quick-reference.md
-      - Advanced reference:
+      - Reference:
           - Offline model evaluation: unidog-nav/vla-eval.md
           - Voice and benchmarks: unidog-nav/operator-cookbook.md
           - Legacy closed-loop rollout: unidog-nav/rollout.md
