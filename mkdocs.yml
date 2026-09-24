@@ -1,0 +1,85 @@
+site_name: CoNG Handbook
+site_description: Manuals for CoNG lab projects
+site_url: https://cong-harvard.github.io/handbook/
+repo_url: https://github.com/CoNG-harvard/handbook
+repo_name: CoNG-harvard/handbook
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  font:
+    text: Inter                 # GitBook-like clean sans
+    code: Roboto Mono
+  features:
+    - navigation.tabs           # one top tab per project
+    - navigation.indexes        # click a section -> its overview page (GitBook style)
+    - navigation.expand         # left sidebar shows the full tree expanded
+    - navigation.top            # back-to-top button
+    - navigation.tracking       # URL tracks the scrolled section
+    - navigation.footer         # prev/next links at the bottom of each page
+    - toc.follow
+    - content.action.edit       # pencil icon -> edit the page on GitHub
+    - content.code.copy         # copy button on code blocks
+    - content.code.annotate
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white            # minimal header like GitBook
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - VLA Pipeline:
+      - vla-pipeline/index.md
+      - Hardware: vla-pipeline/hardware/index.md
+      - Teleoperation:
+          - vla-pipeline/teleop/index.md
+          - Setup: vla-pipeline/teleop/setup.md
+          - Operation: vla-pipeline/teleop/operation.md
+          - Datasets: vla-pipeline/teleop/datasets.md
+      - Training:
+          - vla-pipeline/training/index.md
+      - Inference:
+          - vla-pipeline/inference/index.md
+  - UniDog Nav:
+      - unidog-nav/index.md
+      - Quick reference: unidog-nav/quick-reference.md
+      - Robot bridge: unidog-nav/robot-bridge.md
+      - Operator cookbook: unidog-nav/operator-cookbook.md
+      - VLA evaluation: unidog-nav/vla-eval.md
+      - Closed-loop rollout: unidog-nav/rollout.md
+      - Status and roadmap: unidog-nav/roadmap.md

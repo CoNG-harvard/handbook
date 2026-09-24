@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2026-06-15T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="hardware-architecture" name="CoNG VLA Hardware Architecture">
+    <mxGraphModel dx="1280" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="CoNG VLA Data Collection Hardware" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#182536;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="25" width="540" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="USB carries headset and camera data. Ethernet carries xArm control traffic. The workstation hosts teleop, recording, training, and inference." style="text;html=1;strokeColor=none;fillColor=none;fontSize=15;fontColor=#46566a;align=left;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="1100" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="quest-a" value="&lt;b&gt;Rig A Quest 3&lt;/b&gt;&lt;br&gt;Serial &amp;lt;QUEST_A_SERIAL&amp;gt;&lt;br&gt;Browser: localhost:8012&lt;br&gt;ADB reverse to host :8012" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf7ff;strokeColor=#7a4ab8;strokeWidth=3;fontSize=15;align=left;spacingLeft=18;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="145" width="245" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="quest-b" value="&lt;b&gt;Rig B Quest 3&lt;/b&gt;&lt;br&gt;Serial &amp;lt;QUEST_B_SERIAL&amp;gt;&lt;br&gt;Browser: localhost:8012&lt;br&gt;ADB reverse to host :8013" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf7ff;strokeColor=#7a4ab8;strokeWidth=3;fontSize=15;align=left;spacingLeft=18;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="465" width="245" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="workstation" value="&lt;b&gt;Linux workstation&lt;/b&gt;&lt;br&gt;&amp;lt;WORKSTATION_IP&amp;gt;&lt;br&gt;&lt;br&gt;Teleop web servers: :8012, :8013&lt;br&gt;teleimager-server: :60000 config&lt;br&gt;lerobot-record + imageclient cameras&lt;br&gt;Training/inference GPUs&lt;br&gt;&lt;br&gt;RTX PRO 6000 Blackwell 96 GB&lt;br&gt;GeForce RTX 4090 24 GB&lt;br&gt;Ryzen 9 7950X, 94 GiB RAM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fbff;strokeColor=#2166a5;strokeWidth=3;fontSize=15;align=left;spacingLeft=25;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="160" width="420" height="440" as="geometry"/>
+        </mxCell>
+        <mxCell id="cam-a-wrist" value="&lt;b&gt;Rig A wrist&lt;/b&gt;&lt;br&gt;RealSense D405&lt;br&gt;&amp;lt;WRIST_CAM_A_SERIAL&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3fbf6;strokeColor=#2b7a4b;strokeWidth=3;fontSize=15;align=left;spacingLeft=18;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="112" width="240" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="cam-a-scene" value="&lt;b&gt;Rig A scene&lt;/b&gt;&lt;br&gt;RealSense D415&lt;br&gt;&amp;lt;SCENE_CAM_A_SERIAL&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3fbf6;strokeColor=#2b7a4b;strokeWidth=3;fontSize=15;align=left;spacingLeft=18;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="248" width="240" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="cam-b-wrist" value="&lt;b&gt;Rig B wrist&lt;/b&gt;&lt;br&gt;RealSense D405&lt;br&gt;&amp;lt;WRIST_CAM_B_SERIAL&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3fbf6;strokeColor=#2b7a4b;strokeWidth=3;fontSize=15;align=left;spacingLeft=18;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="384" width="240" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="robots" value="&lt;b&gt;xArm 7 robots&lt;/b&gt;&lt;br&gt;Rig A: &amp;lt;ARM_A_IP&amp;gt;&lt;br&gt;Rig B: &amp;lt;ARM_B_IP&amp;gt;&lt;br&gt;UMI soft grippers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8f1;strokeColor=#b85c00;strokeWidth=3;fontSize=15;align=left;spacingLeft=18;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="555" width="275" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="usb-a" value="USB + adb reverse" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#2166a5;fontColor=#27364a;fontStyle=1;" edge="1" parent="1" source="quest-a" target="workstation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="usb-b" value="USB + adb reverse" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#2166a5;fontColor=#27364a;fontStyle=1;" edge="1" parent="1" source="quest-b" target="workstation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cam-a-edge" value="USB 3.x" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#2b7a4b;fontColor=#27364a;fontStyle=1;" edge="1" parent="1" source="cam-a-wrist" target="workstation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cam-scene-edge" value="USB 3.x" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#2b7a4b;fontColor=#27364a;fontStyle=1;" edge="1" parent="1" source="cam-a-scene" target="workstation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="cam-b-edge" value="USB 3.x" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#2b7a4b;fontColor=#27364a;fontStyle=1;" edge="1" parent="1" source="cam-b-wrist" target="workstation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="robot-edge" value="Ethernet LAN" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#27364a;fontColor=#27364a;fontStyle=1;" edge="1" parent="1" source="workstation" target="robots">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="data" value="Data path: Quest controller poses -&gt; xr_teleoperator -&gt; xArm. Camera frames -&gt; teleimager-server -&gt; headset display and LeRobot dataset." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d1d9e6;fontSize=13;fontColor=#637086;align=left;spacingLeft=18;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="64" y="668" width="720" height="48" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
