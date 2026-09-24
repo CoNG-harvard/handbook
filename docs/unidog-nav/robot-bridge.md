@@ -1,34 +1,109 @@
-# Workstation ↔ robot bridge
+# Connect the workstation to the dog
 
-`robot/primitive_server.py` runs on the Go2's onboard PC (stdlib-only) and exposes the camera and the primitive executor over HTTP; `scripts/robot_client.py` is the workstation side. Transport is an SSH tunnel, so nothing is exposed on the WiFi:
+**Goal:** retrieve a live camera image without issuing a movement command. Finish the [mock bridge check](setup.md#2-run-a-mock-bridge-with-no-robot) first.
 
-```bash
-# one-time deploy (dog reachable as `ssh unitree`, <DOG_IP>)
-scp robot/primitive_server.py unitree:unidog_nav_tools/
+## 1. Prepare the robot computer with the platform owner
 
-# on the dog: start the server next to the executor (LLM_guided_RL) repo
-python3 unidog_nav_tools/primitive_server.py --iface eth0 --skills-repo <path-to-skills-repo>
+The robot's onboard computer must already have the hardware-specific operating system/drivers and the correct robot-control software. Do not install the workstation's x86-64 Conda or CUDA packages on a Jetson/ARM computer.
 
-# on the workstation: keep a tunnel open in a spare terminal
-ssh -N -L 8766:127.0.0.1:8766 unitree
+The inspected workstation scripts expect:
 
-# then
-python scripts/robot_client.py health
-python scripts/robot_client.py image /tmp/frame.jpg
-python scripts/robot_client.py start-episode          # next motion plan gets check_robot_ready + stand
-python scripts/robot_client.py exec "The next action is move forward 50 cm."
-python scripts/robot_client.py stop                   # aborts between calls / stops if idle
+| On the robot | Requirement |
+|---|---|
+| `~/LLM_guided_RL/` | Approved robot-control checkout; preflight expects branch `offline-rl-vlm-policy` |
+| `scripts/run_skill.py` inside that checkout | Entry point for supported robot skills |
+| Hardware Python environment | Reference deployment uses `~/miniforge3/envs/walk/bin/python` with the robot SDK |
+| `~/unidog_nav_tools/` | Bridge program and its helper files |
+| Camera | Default in the current bridge is a USB RealSense D435i; built-in front camera is an explicit alternative |
+| Network interface | Reference scripts use `eth0`; this is a device name, not an IP address |
+
+Have the owner supply the commissioned robot image/environment and verify stop handling. **A complete fresh robot-image installation is not yet reproducible from the two workstation repositories alone.** The [handoff page](../getting-started/sources.md) lists the missing release artifacts. You can complete workstation and mock setup while this hardware preparation is arranged.
+
+## 2. Configure the SSH connection — on the workstation
+
+Obtain the robot's address and login account. Edit `~/.ssh/config` (create the directory/file if needed) and add:
+
+```sshconfig
+Host unitree
+    HostName <DOG_IP>
+    User <ROBOT_USER>
 ```
 
-`POST /plan` executes calls sequentially, prepends the safety prologue before an episode's first motion (`--real` mode only — the mock executor has no safety monitor), aborts on the first non-success `SkillResult`, and returns every per-call result for the replanning loop. Plumbing is testable anywhere with `python3 robot/primitive_server.py --mock` (mock camera serves `frames/`, mock executor returns successes).
+`unitree` is the alias the workstation scripts use. It need not match the robot's actual hostname. Your laptop's aliases are not automatically present on the new workstation.
 
-**Dog-side integration (deployed & verified live 2026-07-12).** The server does not import the executor library; it shells out to the sanctioned entry points of `~/LLM_guided_RL` (branch `offline-rl-vlm-policy`, the collaborator's repo — nothing in it is modified):
+```bash
+ssh unitree 'hostname'
+```
 
-- `scripts/grab_front_frame.py` — one 1920×1080 JPEG via the videohub RPC (~1.3 s; ~1.4 s workstation-to-workstation through the tunnel).
-- `scripts/run_skill.py NAME --params JSON` — any registered skill with the repo's own Go2Robot + SafetyMonitor + stand-prep + cleanup wiring; `--real --yes --ip eth0` only when the server runs with `--real`, otherwise their `--mock` (~3.5 s per call, robot untouched). `POST /stop` SIGTERMs the running skill subprocess, which `run_skill.py` converts into a safe abort + `robot.stop()` (same path as their voice-pipeline cancel).
+On first connection, confirm the host fingerprint with the owner. **Expected:** the robot computer's name. Configure your authorized SSH key with the owner, then check the noninteractive login used by the tunnel helper:
 
-Both subprocesses use the `walk` conda python (`~/miniforge3/envs/walk`, py3.8). Server start on the dog: `python3 ~/unidog_nav_tools/primitive_server.py` (mock executor, real camera) or `... --real` for actual motion.
+```bash
+ssh -o BatchMode=yes unitree 'hostname'
+```
 
-## Collecting frames (on the dog)
+If this fails, resolve login/key access before proceeding.
 
-Frames are captured by `~/unidog_nav_tools/collect_navila_images.py` on the Go2's onboard PC (host `ubuntu`), which reads the front camera via the Unitree videohub RPC: 8 frames at 0.3 s intervals per scene, saved with per-frame brightness/saturation stats in `metadata.json`. Copy the resulting folder into `frames/` in the workstation repo (`~/unidog_nav`).
+## 3. Install the matching bridge files
+
+**On the workstation, with the owner's approved robot checkout in place:**
+
+```bash
+cd ~/unidog_nav
+ssh unitree 'mkdir -p ~/unidog_nav_tools'
+scp robot/primitive_server.py robot/run_plan.py \
+  robot/grab_realsense_frame.py unitree:unidog_nav_tools/
+```
+
+Do this for a new installation or a coordinated update, not while another operator is running the robot. The bridge uses the companion skills repository; copying these files alone does not install that repository or its SDK.
+
+If the robot account, environment path, or network interface differs from the reference, the owner must adapt the bridge arguments and helper scripts consistently before continuing. `primitive_server.py --help` documents `--skills-repo`, `--walk-python`, `--iface`, and `--camera`.
+
+## 4. Start the bridge without real motion
+
+**On the workstation:**
+
+```bash
+cd ~/unidog_nav
+bash scripts/robot_tunnel.sh status
+bash scripts/robot_tunnel.sh up --start-server
+python3 scripts/robot_client.py health
+```
+
+The helper opens an SSH tunnel: requests to workstation port **8766** reach the robot's bridge. If no server is running, `--start-server` starts the default server with a real camera and pretend skills.
+
+!!! important "Check the actual mode"
+    The helper can reuse an existing server, including one already running in real mode. It does not turn real mode off. For this setup check, expect `"ok": true`, `"real": false`, and `"busy": false`. If `real` is true or the server is busy, coordinate with its operator before changing anything. Health and image requests themselves do not issue movement.
+
+## 5. Capture and inspect a live image
+
+```bash
+cd ~/unidog_nav
+python3 scripts/robot_client.py image /tmp/unidog-live.jpg
+```
+
+Open `/tmp/unidog-live.jpg` in the workstation's image viewer. **Expected:** the current view from the selected robot camera. Change something visible in the scene and capture again to confirm it is fresh.
+
+A healthy bridge does not guarantee that its camera works. The current default is RealSense; older notes describing the built-in camera refer to `--camera front`. Ask the owner to select the intended camera rather than swapping blindly between feeds.
+
+## If the connection fails
+
+| Symptom | Check |
+|---|---|
+| SSH hostname cannot be resolved | `Host unitree` exists in this workstation's SSH configuration |
+| SSH timeout | Robot power, network connection, and robot address |
+| `Permission denied` | Login account and authorized SSH key |
+| Local port 8766 occupied | Use `robot_tunnel.sh status`; do not kill an unknown process |
+| Server fails to start | Read `ssh unitree 'tail -50 ~/logs/primitive_server.log'` |
+| Image request fails | Camera selection, USB access, helper file, and robot Python dependencies |
+| `real: true` during a no-motion check | An existing real-mode server is running; coordinate with the owner |
+
+## Finish the camera-only session
+
+```bash
+cd ~/unidog_nav
+bash scripts/robot_tunnel.sh down
+```
+
+This closes the workstation tunnel. **It leaves the robot server running and does not stop motion.** If the owner wants the default background server shut down, they should stop that specific service/process after confirming no client needs it.
+
+**Next:** [First supervised movement](first-run.md).

@@ -1,39 +1,60 @@
-# Quick reference — everyday commands
+# Dog quick reference
 
-All run on the **workstation** from the repo root (`~/unidog_nav`). Robot commands need the dog powered on; the other pages in this manual have the details.
+Use this page **after** completing [workstation setup](setup.md) and [robot connection](robot-bridge.md). All commands below run on the workstation in `~/unidog_nav`.
+
+## Read status or view the camera
 
 ```bash
-# --- connection & dog-side server -------------------------------------------
-ssh -f -N -L 8766:127.0.0.1:8766 unitree            # open the tunnel (once per boot)
-python3 scripts/robot_client.py health              # is the bridge up? mock or real?
-ssh unitree 'tail -20 ~/logs/primitive_server.log'  # dog-side server log
-ssh unitree 'pkill -f "[s]kill_server"; true'       # stop the server (run alone, see note)
-ssh unitree 'nohup python3 ~/unidog_nav_tools/primitive_server.py > ~/logs/primitive_server.log 2>&1 < /dev/null &'         # start SAFE: real camera, mock executor
-ssh unitree 'nohup python3 ~/unidog_nav_tools/primitive_server.py --real > ~/logs/primitive_server.log 2>&1 < /dev/null &'  # start REAL: robot can move
-
-# --- one-off robot control (server in --real: robot MOVES) -------------------
-python3 scripts/robot_client.py image /tmp/frame.jpg     # grab a live camera frame (never moves)
-python3 scripts/robot_client.py start-episode            # next motion plan gets stand + ready-check
-python3 scripts/robot_client.py exec "The next action is turn left 15 degrees."
-python3 scripts/robot_client.py exec "The next action is move forward 25 cm."
-python3 scripts/robot_client.py stop                     # EMERGENCY STOP / abort current plan
-
-# --- autonomy (see "Closed-loop rollout" for the full runbook) ---------------
-conda activate navila
-python scripts/rollout.py --planner navila --max-steps 10 --continue-on-failure \
-    --tag my-test --instruction "Turn right and walk to the orange chair. Stop in front of it."
-
-# --- model diagnostics (GPU only, robot not needed) ---------------------------
-python scripts/vqa_probe.py <image.jpg> "Is there an orange chair? Left, center, or right?"
-python scripts/batch_navila_eval.py --images frames/real_conjested_room1 --history episode-start \
-    --query "Turn left."                                # single-shot action prediction
-python3 scripts/navila_to_skills.py "The next action is turn right 45 degree."  # parser only, no GPU
-python3 scripts/test_navila_to_skills.py                # parser test suite
-
-# --- Qwen server (GPU-exclusive with NaVILA) ---------------------------------
-~/unidog_nav/agent_ai/start_vllm.sh                     # serve Qwen3-VL on :8000 (~80 s)
-pkill -f "vllm serve"                                   # stop it; then GPU is free for NaVILA
-nvidia-smi --query-gpu=memory.used --format=csv,noheader   # ~15 MiB = GPU free
+cd ~/unidog_nav
+bash scripts/robot_tunnel.sh status
+python3 scripts/robot_client.py health
+python3 scripts/robot_client.py image /tmp/unidog-live.jpg
+ssh unitree 'tail -50 ~/logs/primitive_server.log'
 ```
 
-Note on the `pkill` lines: run them as shown, in their own command — combining them with a command that contains the literal text `primitive_server.py` makes `pkill -f` kill that shell itself.
+Health: `ok` means the bridge answered; `real` tells you whether physical actions are enabled; `busy` means a plan is running. Check the actual values.
+
+## Open a connection without requesting real mode
+
+```bash
+cd ~/unidog_nav
+bash scripts/robot_tunnel.sh up --start-server
+python3 scripts/robot_client.py health
+```
+
+This reuses an existing server if present, even if it is already in real mode. Inspect health before issuing any action.
+
+## Prepare a supervised real session
+
+```bash
+cd ~/unidog_nav
+bash scripts/prepare_real_robot.sh --check
+```
+
+Follow [First supervised movement](first-run.md) for the real-mode startup, dependencies, and operator checks. The preflight alone does not enable real mode or prove the whole platform ready.
+
+## Request a software stop
+
+```bash
+cd ~/unidog_nav
+python3 scripts/robot_client.py stop
+```
+
+For unexpected physical motion, use the robot's physical stop procedure. The command above requires the bridge connection to work.
+
+## Close your tunnel
+
+```bash
+cd ~/unidog_nav
+bash scripts/robot_tunnel.sh down
+```
+
+This does not stop the robot or shut down its server. Follow the [session shutdown steps](first-run.md#5-end-the-session).
+
+## Check a Qwen model server
+
+```bash
+curl --fail http://127.0.0.1:8000/v1/models
+```
+
+For installation and startup, see [model setup](setup.md#3-choose-which-model-you-need). Coordinate GPU use before switching between Qwen and NaVILA.

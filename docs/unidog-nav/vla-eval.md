@@ -1,8 +1,14 @@
-# Running the VLA eval
+# Offline model evaluation
 
-Main tool: `scripts/batch_navila_eval.py`. It loads the model once, then evaluates every (scene, instruction) pair, prints each prediction, and saves a JSON to `logs/`.
+!!! note "Advanced reference"
+    For an installed system. Historical results below describe earlier lab experiments, not validation of the new setup. Start with the [project guide](index.md) if you are installing for the first time.
+
+Use a [Blackwell-compatible NaVILA environment](setup.md#navila-installation-and-saved-image-check) and select the RTX PRO 6000 before running these examples.
+
+`scripts/batch_navila_eval.py` evaluates saved scene/instruction pairs without moving the robot. It loads the model once, prints predictions, and saves JSON results in `logs/`. Run on the workstation in `~/unidog_nav`; obtain the example image folders from the lab.
 
 ```bash
+cd ~/unidog_nav
 conda activate navila
 
 # Single scene, single instruction — the standard single-shot test
@@ -37,28 +43,30 @@ python scripts/vqa_probe.py frames/real_conjested_room1/0007.jpg \
     "Is there an orange chair in this image? Left, center, or right?"
 ```
 
-Verified 2026-07-09: on the lab scenes the model correctly finds the orange chair and reports which side it is on (tracks a horizontal mirror flip too), so wide-angle 1920x1080 Go2 frames are perceptually fine. Expect occasional label slips (e.g. a caster chair up close called a "wheelchair").
+The July 9 lab tests found that NaVILA could locate the orange chair in the supplied images, including mirrored views. This was a scene-specific result; inspect your own camera images and predictions.
 
-## The `--history` flag — read this before trusting results
+## Choose the image history
 
-NaVILA takes 8 images: 7 "history" frames + the current observation. What you put in the history changes everything:
+NaVILA takes eight images: seven history frames and the current view.
 
-- **`--history episode-start` (use this for single-shot tests)** — 7 black frames + the last captured frame as current observation. This exactly matches the official VLN-CE evaluator at t=0 (`sample_and_pad_images` in `repos/NaVILA/evaluation/vlnce_baselines/navila_trainer.py`), i.e. the in-distribution "start of episode" condition.
-- **`--history asis` (default)** — feeds all captured frames as history. Only meaningful if the frames actually contain motion (robot moving between frames).
+| Option | Use it for |
+|---|---|
+| `--history episode-start` | A single saved view; pads the history with seven black frames, matching the start of an episode |
+| `--history asis` (default) | A sequence containing actual robot movement |
 
-**Known failure mode (confirmed 2026-07-09):** feeding 8 near-identical frames from a standing-still robot is out-of-distribution and collapses the model to "move forward" for *every* instruction — even "Turn left." With `episode-start` on the same scenes, the model followed all turn instructions correctly (10/10 left/right) and chose actions scene-dependently for object-goal instructions (forward when the target was ahead, turn when facing a wall). If every prediction comes back "move forward", check the history before blaming the checkpoint.
+In the July 9 tests, eight nearly identical stationary frames biased the model toward “move forward.” Using `episode-start` restored the expected left/right predictions in those tests. If predictions repeat, check the history before changing the checkpoint.
 
 ## Phrasing instructions
 
-NaVILA was trained on R2R/RxR-style instructions, where turn directions are stated explicitly ("Turn right and walk past the desk..."). Confirmed with a mirror-image test (2026-07-09): at episode start the model does **not** turn toward an off-axis object from its position alone — "Walk to the orange chair" yields "move forward" whether the chair is on the left or the right. Explicit directions work reliably: "The orange chair is on your right. Turn right and walk to it." → turn right 45 degree. Practical rules:
+Use explicit directions, for example: “Turn right and walk toward the orange chair.” The earlier scene tests found that naming an off-center object alone did not reliably produce a turn.
 
-- State the turn direction in the instruction if you expect a turn at step 0.
-- Fine-grained referring expressions ("rightmost", "at a safe distance") are out-of-distribution; keep instructions in plain R2R style.
-- "Move forward" toward a target that is 20-30 degrees off-axis is not an error — in a closed-loop rollout the agent corrects heading on later steps. Judge object-goal behavior by rollouts, not single predictions.
+- State the direction if you expect a turn on the first step.
+- Avoid relying on qualifiers such as “rightmost” or “at a safe distance.”
+- Assess object-goal navigation across a supervised rollout, not a single prediction.
 
 ## Interpreting outputs
 
-The model emits text like `The next action is turn right 45 degree.`, parsed into `{action, value, unit}` in the log JSON. The action space is discrete — turn 15/30/45 degrees, move forward 25/50/75 cm, or stop — so e.g. "Turn around." yields a single 45-degree step, not 180: full maneuvers emerge over multiple steps in closed loop. Expect ~0.5 s per action on the 4090 after a one-time model load.
+The model emits text like `The next action is turn right 45 degree.`, parsed into `{action, value, unit}` in the log JSON. The action space is discrete — turn 15/30/45 degrees, move forward 25/50/75 cm, or stop — so e.g. "Turn around." yields a single 45-degree step, not 180: full maneuvers emerge over multiple steps in closed loop. Measure latency on the selected RTX PRO 6000 after validating the Blackwell-compatible environment; earlier timing measurements do not establish performance on this setup.
 
 ## VLA text → robot skill plans
 
@@ -68,7 +76,7 @@ validated plan format from [`vla_locomotion_skill_interface.md` §2](https://git
 
 ```bash
 python scripts/navila_to_skills.py "The next action is turn right 45 degree."   # one plan
-python scripts/navila_to_skills.py --log logs/navila_<...>.json                 # convert a whole eval log
+python scripts/navila_to_skills.py --log "<EVALUATION_LOG_JSON>"                 # convert a whole eval log
 python scripts/test_navila_to_skills.py                                        # test suite (no pytest needed)
 ```
 

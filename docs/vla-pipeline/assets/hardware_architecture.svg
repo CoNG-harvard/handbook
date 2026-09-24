@@ -63,9 +63,9 @@
   <rect class="chip" x="462" y="382" rx="10" ry="10" width="350" height="48"/>
   <text class="small" x="482" y="412">lerobot-record + imageclient cameras</text>
   <rect class="chip" x="462" y="444" rx="10" ry="10" width="350" height="48"/>
-  <text class="small" x="482" y="474">Training/inference GPUs</text>
+  <text class="small" x="482" y="474">Training/inference GPU</text>
   <text class="tiny" x="482" y="523">RTX PRO 6000 Blackwell 96 GB</text>
-  <text class="tiny" x="482" y="548">GeForce RTX 4090 24 GB</text>
+  <text class="tiny" x="482" y="548">Workstation Edition</text>
   <text class="tiny" x="482" y="573">Ryzen 9 7950X, 94 GiB RAM</text>
 
   <rect class="camera" x="965" y="112" rx="16" ry="16" width="240" height="112"/>

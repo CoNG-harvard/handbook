@@ -1,23 +1,51 @@
-# CoNG Handbook
+---
+hide:
+  - toc
+  - navigation
+---
 
-Manuals for CoNG lab projects: how to set up, run, and maintain each system. Pick a project below or from the tabs at the top.
+# Projects
 
-<div class="grid cards" markdown>
+Practical guides to the lab's robotics projects. Each guide covers equipment, installation, and a first working session, with explanations for new users.
 
--   **[VLA Pipeline](vla-pipeline/index.md)**
+<div class="project-grid" markdown="1">
 
-    ---
+<div class="project-card" markdown="1">
 
-    xArm + Meta Quest station: hardware, VR teleoperation, dataset recording, policy training and inference.
+<p class="project-kind">Robot arm · VR control</p>
 
--   **[UniDog Nav](unidog-nav/index.md)**
+## [VLA Pipeline](vla-pipeline/index.md)
 
-    ---
+Work with two xArm robots and Quest headsets to record demonstrations and run trained models.
 
-    Vision-language navigation on a Unitree Go2: robot bridge, NaVILA / Qwen planners, closed-loop rollouts and the voice pipeline.
+[View project guide →](vla-pipeline/index.md){ .project-link }
 
 </div>
 
-## Contributing
+<div class="project-card" markdown="1">
 
-Every page has an edit button (pencil icon) that opens it on GitHub. To add a project, follow the steps in the [repository README](https://github.com/CoNG-harvard/handbook#adding-a-project).
+<p class="project-kind">Robot dog · Navigation</p>
+
+## [Self Improvement Learning](unidog-nav/index.md)
+
+Set up a Unitree Go2 with a D1 arm, inspect its camera view, and test supported navigation commands.
+
+[View project guide →](unidog-nav/index.md){ .project-link }
+
+</div>
+
+</div>
+
+## Shared setup
+
+Both projects use **one RTX PRO 6000 workstation**, with separate robot hardware and software environments.
+
+- [Before you begin](getting-started/index.md) — equipment, lab access, and essential terms.
+- [Shared computer and hardware](getting-started/hardware.md) — equipment lists and workstation specifications.
+- [Prepare a new computer](getting-started/computer.md) — common tools to install once.
+
+## Quick links
+
+Go straight to [arm recording](vla-pipeline/teleop/setup.md), [arm model setup](vla-pipeline/inference/index.md), or the [dog quick reference](unidog-nav/quick-reference.md).
+
+*Source review: 24 September 2026. Fresh-computer installation and hardware acceptance tests remain to be completed. See [source handoff and verification](getting-started/sources.md).*

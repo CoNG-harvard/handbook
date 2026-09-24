@@ -1,54 +1,51 @@
 # Legacy closed-loop rollout
 
+!!! note "Advanced reference"
+    For an installed system. Historical results below describe earlier lab experiments, not validation of the new setup. Start with the [project guide](index.md) if you are installing for the first time.
+
+Before starting any model service or GPU evaluation here, select the RTX PRO 6000 using [computer preparation](../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs). NaVILA examples additionally require the [Blackwell-compatible environment](setup.md#navila-installation-and-saved-image-check).
+
 This loop remains for historical reproduction. The current V1
 planner-specific parser, safe-bin quantization, continuous capture and exact
 robot payload flow are documented in [`planner_benchmark/README.md`](https://github.com/CoNG-harvard/unidog_nav/blob/main/planner_benchmark/README.md#live-planner-to-robot-data-flow).
 
-`scripts/rollout.py` is **event-driven, not fixed-frequency**: each cycle
-blocks until the robot finishes moving. One cycle ("planning step") =
+## How the loop works
 
-1. fetch a fresh frame from the robot (`GET /image`, ~1.4 s) — saved as `step_NNN.jpg`
-2. build the 8-frame model input (faithful port of the official `sample_and_pad_images`: black-pad at episode start, then uniform sample + latest frame)
-3. planner predicts **one discrete action** as text (~0.6 s for NaVILA)
-4. `navigation_policy.navila_parser` parses/validates it into a skill plan
-5. `POST /plan` — the robot executes and the loop waits (currently ~13–22 s, setup-dominated)
-6. repeat until the planner says stop, a failure aborts, or `--max-steps`.
+`scripts/rollout.py` waits for each movement to finish before requesting the next prediction:
 
-NaVILA emits exactly one action per cycle by design (its trained action space: turn 15/30/45°, move 25/50/75 cm, stop) — execute-one-then-replan is what makes the loop self-correcting. A plan can still contain several calls: the episode's first motion plan gets the `stand` + `check_robot_ready` prologue, and a `move forward > 2 m` is chunked into multiple `move_forward` calls; all calls of one plan run in a single `run_plan.py` subprocess without replanning between them.
+1. Capture a fresh camera frame.
+2. Build the eight-frame model input from history and the current view.
+3. Predict one discrete action and parse it into a robot skill plan.
+4. Execute the plan, then capture the next view.
+5. End on a stop prediction, failure, or the step limit.
 
-Example trace (real episode, 2026-07-12, instruction *"Move forward, when seeing the orange chair, turn right and stop."*):
+The first motion plan can include standing and readiness checks. A plan may contain several skill calls; the model does not see a new image between calls within that plan.
 
-| cycle | robot saw (`step_N.jpg`) | model output | executed |
-|---|---|---|---|
-| 0 | path ahead blocked, orange chair far left | `turn left 45 degree` | stand + ready check + turn +45° |
-| 1 | (new heading) | `turn left 45 degree` | turn +45° |
-| 2 | open path | `move forward 75 cm` | forward 0.75 m |
-| 3–6 | chair passing to the right | `turn right 45/45/15/45` | turns −150° total |
-| 7 | chair no longer visible | "I think I should stop…" | stop → episode ends |
+??? info "Historical example: 12 July 2026"
+    Instruction: “Move forward, when seeing the orange chair, turn right and stop.” This trace describes one earlier experiment, not a recommended first test.
 
-## Running a real-robot rollout (full command log)
+    | Cycle | Model output | Execution |
+    |---|---|---|
+    | 0 | Turn left 45° | Stand, readiness check, left turn |
+    | 1 | Turn left 45° | Left turn |
+    | 2 | Move forward 75 cm | Forward 0.75 m |
+    | 3–6 | Right turns of 45/45/15/45° | Right turns totaling 150° |
+    | 7 | Stop | Episode ends |
+
+## Running a real-robot rollout
+
+First complete the current [supervised bring-up](first-run.md), including the real-mode health check. The current all-services preparation script starts Qwen and uses a per-call executor; the old batch-backend expectation from July is not the current startup contract.
+
+Before a NaVILA run, coordinate stopping Qwen so the GPU is available. Then, on the workstation:
 
 ```bash
-# [workstation] 1. read-only preflight: verifies SSH, deployed entry points,
-# robot branch offline-rl-vlm-policy, and a clean robot worktree
-bash scripts/prepare_real_robot.sh --check
-
-# [workstation] 2. interactively confirm, start REAL mode, open/reuse the tunnel,
-# and verify health (type the exact confirmation requested by the script)
-bash scripts/prepare_real_robot.sh
-
-# [workstation] 3. optional independent recheck:
-# expect backend "run_plan.py (batch)" and real: true
-python3 scripts/robot_client.py health
-
-# [workstation] 4. run the rollout (NaVILA planner; GPU must be free of the Qwen server)
+cd ~/unidog_nav
 conda activate navila
-python scripts/rollout.py --planner navila --max-steps 10 --continue-on-failure \
+python scripts/rollout.py --planner navila --max-steps 10 \
     --tag my-test --instruction "Turn right and walk to the orange chair. Stop in front of it."
-
-# Qwen3-VL as planner instead: start agent_ai/start_vllm.sh first (GPU-exclusive with NaVILA)
-python scripts/rollout.py --planner qwen --instruction "..."
 ```
+
+This can move the robot repeatedly. Use only as a supervised experiment after single-command tests succeed. For Qwen experiments, use the appropriate Qwen model server and avoid loading NaVILA alongside it.
 
 ## V1 structured Qwen live skill-interface test
 
@@ -58,12 +55,13 @@ semantic `speed_level`, safe-bin quantization, F3 image history, executed
 action history, operator gate, and robot execution together, use:
 
 ```bash
+cd ~/unidog_nav
 conda run -n navila python -m planner_benchmark.run_live \
   --scenario L1-QWEN-V1-NORMAL-1M \
   --planner qwen \
   --repeats 1 \
   --acting-policy F3 \
-  --operator <name>
+  --operator "<OPERATOR_NAME>"
 ```
 
 Run `L1-QWEN-V1-FAST-1M` only after the normal-speed trial passes in a
@@ -72,7 +70,7 @@ measured clear lane. Legacy scenarios retain their fixed-increment
 `--normalize` compatibility flag. V1 scenarios use `quantization:`
 and log the untouched proposal, executable action, and every transform record.
 
-`--continue-on-failure` is recommended: a partially completed skill (e.g. a small turn hitting its backstop) replans from the next frame instead of ending the episode (3 consecutive failures still abort). Emergency stop at any time: Ctrl-C (aborts the skill and stops the robot) or `python3 scripts/robot_client.py stop`.
+`--continue-on-failure` is an advanced experiment option that replans after a failed skill. Leave it off for commissioning so a failure ends the attempt. Ctrl+C and `python3 scripts/robot_client.py stop` request a software abort; use the physical stop procedure for unexpected motion.
 
 ## Where the results are
 
@@ -81,15 +79,10 @@ One folder per episode: `logs/rollouts/<planner>_<tag>_t<timestamp>/` (tag defau
 - `step_NNN.jpg` — the exact frame the planner saw at cycle N. **#frames = #planning steps.**
 - `episode.json` — per step: raw model output, parsed plan, full per-skill `SkillResult`s (measured progress, safety status), `planner_sec`/`robot_sec`, and the batch runner's `timing.setup_s`. Episode `status`: `stopped_by_planner` (planner said stop), `max_steps_reached`, `skill_failed`, `parse_error`, `robot_error`, `interrupted`.
 
-## Recommended instructions (NaVILA)
+## Writing instructions
 
-NaVILA is a trained VLN policy, not a literal command interpreter: it treats the instruction as a goal description and picks actions from instruction + current view. Phrase like R2R training data:
+NaVILA chooses actions from the instruction and current image; it is not a literal angle-command interpreter. Use explicit directions such as “Turn right and walk to the orange chair. Stop in front of it.” See [offline evaluation](vla-eval.md#phrasing-instructions) for the observed limitations.
 
-- Good: `"Turn right and walk to the orange chair. Stop in front of it."` / `"Walk straight ahead. Turn right at the orange chair. Stop."` — explicit direction words, sequential clauses.
-- Avoid: conditionals ("when seeing X, do Y"), literal angles ("turn right 15 degrees" — it turns until the goal looks right, not by your number), and fine-grained qualifiers ("at a safe distance", "the rightmost").
-- Start pose matters: if the path ahead is blocked, the policy will turn regardless of what the instruction says first. If the goal object is not in view at all, it explores.
-- In `scripts/rollout.py`, `--planner qwen` follows literal clauses better than NaVILA. In `planner_benchmark.run_live`, the same `qwen` planner uses the V1 structured interface by default; add `--normalize` only to reproduce the old benchmark contract.
+The legacy rollout uses a free-text action parser. The live benchmark uses the V1 structured Qwen interface by default; use `--normalize` only to reproduce the older benchmark behavior.
 
-Within legacy `scripts/rollout.py`, both planners emit the same discrete action grammar. Its Qwen regex constraint is separate from the V1 JSON-schema constraint used by the default live-benchmark Qwen path.
-
-Verified: mock loop 2026-07-11 (both planners); real robot 2026-07-12 (NaVILA, guarded motion). Note for launching the Qwen server from wrapper environments: `agent_ai/start_vllm.sh` pins `CC`/`CXX`/`PATH`/`LIBRARY_PATH` because triton/flashinfer JIT builds break if a conda cross-toolchain leaks in from the parent shell.
+*Historical checks: mock loop, 11 July 2026; supervised NaVILA robot experiment, 12 July 2026. These do not establish RTX PRO 6000 compatibility or performance.*

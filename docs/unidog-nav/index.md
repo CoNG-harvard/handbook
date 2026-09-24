@@ -1,47 +1,46 @@
-# UniDog Nav
+# Self Improvement Learning
 
-Workspace for testing vision-language navigation (VLN/VLA) models on a Unitree Go2 robot dog. The current focus is evaluating [NaVILA](https://github.com/AnjieCheng/NaVILA) (navila-llama3-8b-8f) on frames captured from the Go2's front camera, before moving to closed-loop control.
+**Your first goal:** install the workstation software, complete a pretend-hardware check, and retrieve a camera image from a Unitree Go2. A supervised movement test comes after those checks.
 
-Code: [CoNG-harvard/unidog_nav](https://github.com/CoNG-harvard/unidog_nav), cloned on the workstation at `~/unidog_nav`.
+<figure class="handbook-figure" markdown="1">
 
-!!! note "Placeholders"
-    Site-specific values are written as placeholders, e.g. `<DOG_IP>`. Keep the real values in a private note, **not** in this doc.
+![Self Improvement Learning platform photograph labeled with the Unitree Go2, Unitree D1 arm, and D435i camera.](assets/platform.png)
 
-## Layout
+<figcaption markdown="1">
 
-| Path | What it is |
+Self Improvement Learning platform with a D1 arm and D435i camera. The first navigation steps do not use arm control.
+
+[View full-size image](assets/platform.png) · [Source PDF](assets/platform.pdf)
+{ .figure-links }
+
+</figcaption>
+
+</figure>
+
+The system has **two computers**:
+
+| Computer | Job |
 |---|---|
-| `scripts/` | CLI entry points and the robot client; `navila_to_skills.py` is a compatibility wrapper |
-| `navigation_policy/` | Shared Qwen/NaVILA policy contracts and canonical NaVILA parser |
-| `planner_benchmark/` | Current live runner, safe-bin quantization, frame history and benchmark docs |
-| `robot/` | Code deployed to the Go2's onboard PC (`primitive_server.py`) |
-| `frames/` | Captured Go2 camera scenes — one folder per capture: 8 JPGs (1920x1080) + `metadata.json` |
-| `logs/` | Eval results, one JSON per run: `navila_<scene>_t<timestamp>.json` |
-| `models/navila-llama3-8b-8f/` | NaVILA checkpoint (VILA-style: `llm/`, `mm_projector/`, `vision_tower/`) |
-| `repos/NaVILA/` | Upstream NaVILA repo (provides `llava/` and the official VLN-CE evaluator) |
-| `agent_ai/` | Separate Qwen3-VL-8B vLLM server (OpenAI-compatible API on `:8000`, own `.venv`) — unrelated to NaVILA |
+| Shared Linux GPU workstation | Runs the model and sends requests; also serves VLA Pipeline |
+| Robot's onboard computer | Reads the camera and runs robot-control skills |
 
-## Environments
+The **bridge** is the small program that passes images and commands between the two computers. A **skill** is a supported action such as moving a short distance or turning.
 
-- **Real world experiments** run in the conda env `navila`. Either `conda activate navila` first, or use `scripts/eval_vla.sh`, which activates it for you.
-- **GPU is exclusive**: the model needs most of the RTX 4090's 24 GB. The Qwen vLLM server (`agent_ai/start_vllm.sh`) fills the card — stop it before running NaVILA, and vice versa.
+## Setup guide
 
-## Pages in this manual
+First complete [Before you begin](../getting-started/index.md) and [computer preparation](../getting-started/computer.md).
 
-- **[Quick reference](quick-reference.md)**: everyday commands.
-- **[Workstation ↔ robot bridge](robot-bridge.md)**: SSH tunnel, dog-side server, collecting frames.
-- **[Operator cookbook](operator-cookbook.md)**: voice pipeline, YAML benchmark scenarios, direct robot commands.
-- **[Running the VLA eval](vla-eval.md)**: offline NaVILA evaluation on captured frames, and parsing its output into skill plans.
-- **[Legacy closed-loop rollout](rollout.md)**: the original perceive → plan → act loop.
-- **[Status and roadmap](roadmap.md)**: findings so far and open design questions.
+| Step | Guide | You are finished when… |
+|---|---|---|
+| 1 | [Hardware and connections](hardware.md) | Robot equipment and shared workstation access are ready |
+| 2 | [Install the software](setup.md) | The mock bridge returns a saved image |
+| 3 | [Connect the robot](robot-bridge.md) | You can retrieve a live camera image |
+| 4 | [First supervised movement](first-run.md) | The dog completes one short command and the session ends |
 
-## More docs in the code repo
+After setup, use the [quick reference](quick-reference.md). The remaining pages describe advanced experiments: [offline model evaluation](vla-eval.md), [voice and benchmarks](operator-cookbook.md), and the [legacy rollout](rollout.md). They are not the initial installation path.
 
-These live next to the code and change with it:
+## What is required beyond this repository?
 
-- [planner_benchmark/README.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/planner_benchmark/README.md): live runner, safe-bin quantization, benchmark workflow
-- [navigation_policy/README.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/navigation_policy/README.md): NaVILA / Qwen-VL behind one interface
-- [agentic_planner/README.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/agentic_planner/README.md): task-level planning over the robot's live primitive registry
-- [finetune/FINETUNE_README.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/finetune/FINETUNE_README.md): Qwen3-VL-8B training on the RTX Pro 6000 box
-- [tasks/README.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/tasks/README.md), [ROUND1_CHECKLIST.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/tasks/ROUND1_CHECKLIST.md), [FLOOR_MARKERS.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/tasks/FLOOR_MARKERS.md): task design, operator checklist, floor layout
-- [vla_locomotion_skill_interface.md](https://github.com/CoNG-harvard/unidog_nav/blob/main/vla_locomotion_skill_interface.md): VLA → locomotion skill interface reference
+`unidog_nav` is the workstation project. The robot also needs the lab's **`LLM_guided_RL`** skill executor, its hardware environment, and a commissioned robot with a working stop procedure. The photographed platform includes a D1 arm. Manipulation requires additional calibration and services and is outside the first walking setup.
+
+The inspected preflight expects a robot checkout on branch `offline-rl-vlm-policy`. The workstation copy of the companion repository and its current README are not proof that an arbitrary new robot image is ready. See [source handoff and remaining gaps](../getting-started/sources.md).

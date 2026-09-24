@@ -1,65 +1,162 @@
-# Inference
+# Run a trained model on the arm
 
-Running a trained policy on the real xArm. The action source simply switches from the VR operator to the policy — everything else (robot driver, cameras, control loop) is the same plumbing as [teleoperation](../teleop/setup.md).
+**Goal:** first ask a model to predict actions from saved data, then perform a supervised live trial. You need the installed [arm client software](../install.md), the lab's openpi source, a compatible checkpoint, and a small processed dataset.
 
-!!! important "Match training and inference"
-    The robot type, camera names/resolutions, and observation/action layout must match what the policy was **trained** on. Reuse the same `--robot.*` and `--robot.cameras` settings you recorded with.
+The model server predicts actions. `run_xarm_inference.py` is the client that gathers input and, in live mode, sends the predictions to the arm. Both are needed for a live trial.
 
-## Method A — run the policy with `lerobot-record` (recommended)
+Configure the client through its YAML file and the **`--config`** option. Older command-line options such as `--task` and `--from-dataset` do not apply to this version.
 
-`lerobot-record` accepts a `--policy.path`. With a policy set, the arm is driven by the policy instead of the operator. This is the practical way to run on the real robot — LeRobot handles loading, normalization (pre/post-processing), device placement, and the control loop for you.
+## 1. Install the model server
+
+**On the arm workstation, in a new terminal:**
 
 ```bash
-lerobot-record \
-    --robot.type=xarm_robot \
-    --robot.xarm_ip=<ARM_IP> \
-    --robot.cameras='{ wrist_camera: {type: imageclient, host: "<IMG_SERVER_IP>", request_port: 60000, camera_name: wrist_camera, width: 640, height: 480, fps: 30}, right_3pv_camera: {type: imageclient, host: "<IMG_SERVER_IP>", request_port: 60000, camera_name: right_3pv_camera, width: 640, height: 480, fps: 30} }' \
-    --policy.path=<HF_USER>/my_policy \
-    --dataset.repo_id=<HF_USER>/eval_run \
-    --dataset.root=~/lerobot/xr_teleoperate/datasets/eval_$(date +%Y%m%d_%H%M%S) \
-    --dataset.single_task="Pick a red cube and put it in the basket" \
-    --dataset.fps=30 \
-    --dataset.num_episodes=10 \
-    --dataset.push_to_hub=false
+cd ~/robocoop/openpi
+uv venv --python 3.11
+GIT_LFS_SKIP_SMUDGE=1 uv sync --frozen
+GIT_LFS_SKIP_SMUDGE=1 uv pip install -e . --no-deps
 ```
 
-- **`--policy.path`** — a local checkpoint directory (e.g. from training) or a Hugging Face Hub repo id.
-- The run still records a dataset (the policy rollouts) under `--dataset.root` — useful for evaluation. Set `--dataset.num_episodes` to how many rollouts you want.
-- **Teleop is optional** alongside a policy: add the same `--teleop.*` flags from [Setup](../teleop/setup.md) if you want to take over between episodes (e.g. to reset the scene by hand). Without them, the arm is policy-only.
+Use the supplied lab checkout with its `uv.lock`, not a new upstream checkout with different settings. The selected GPU is **RTX PRO 6000 Blackwell 96 GB**. The maintainer must validate the locked JAX/CUDA/model stack on this card; a successful dependency install alone is not a GPU compatibility test. These commands create `.venv` inside `openpi`. If `uv sync` fails, keep the error and ask the maintainer to check the handed-off source/lockfile pair. Do not silently replace the lockfile with newer dependencies.
 
-!!! danger "First autonomous run"
-    Keep a hand on the **E-stop**. A freshly trained policy can move unexpectedly. Start with the workspace clear and be ready to stop — the same [recovery flow](../teleop/operation.md#when-the-arm-is-stuck) applies.
+Install the lightweight client into the **separate** recording environment:
 
-## Method B — load and call the policy in Python
-
-For custom loops (debugging, a non-LeRobot integration) you can load the checkpoint directly. Note: unlike Method A, you are responsible for building the observation batch and applying the policy's normalization.
-
-```python
-import torch
-from lerobot.policies.act.modeling_act import ACTPolicy   # use the class matching your policy
-
-# 1. Load the trained checkpoint (local dir or Hub repo id)
-policy = ACTPolicy.from_pretrained("<path_or_repo>")
-policy.eval()
-policy.to("cuda")
-
-# 2. Reset internal state at the start of each episode
-policy.reset()
-
-# 3. Per control step: build the observation batch, get an action
-#    `batch` keys must match the policy's expected features
-#    (camera images as float tensors + the robot state), already normalized
-#    and on the policy's device.
-with torch.no_grad():
-    action = policy.select_action(batch)   # -> action tensor
-
-# 4. Send `action` to the robot (de-normalized to the robot's units),
-#    then read the next observation and repeat.
+```bash
+conda activate lerobot
+python -m pip install -e ~/robocoop/openpi/packages/openpi-client
+python -c "from openpi_client import websocket_client_policy; print('Policy client found')"
 ```
 
-!!! tip "Use the record pipeline as the reference"
-    Building `batch` correctly (image preprocessing, state normalization, device) is fiddly. LeRobot's record script wires this up with `make_policy` / `make_pre_post_processors` and a `predict_action` helper — see `lerobot/scripts/lerobot_record.py` in the source. For running on the real xArm, **Method A is strongly preferred** because it reuses that exact, tested path.
+**Expected:** `Policy client found`.
 
-## Choosing the policy class
+## 2. Obtain a checkpoint that matches the arm
 
-`from_pretrained` is defined on each policy class. Use the one your checkpoint was trained with — e.g. `ACTPolicy` (`lerobot.policies.act.modeling_act`), or another from `lerobot.policies.*` (pi0, pi05, smolvla, vqbet, …). Method A figures this out from the checkpoint config automatically; in Method B you import the matching class yourself.
+Ask the model owner for the checkpoint, the openpi configuration name, its task, camera arrangement, image processing, action units, and matching sample dataset. A downloaded generic model is not automatically compatible with this robot. See the [model handoff checklist](../training/index.md).
+
+If the checkpoint is stored on Hugging Face, use the included downloader with the supplied repository and folder:
+
+```bash
+cd ~/robocoop
+conda activate lerobot
+python models/download_model.py \
+  --repo-id "<MODEL_REPOSITORY>" \
+  --folder "<CHECKPOINT_SUBFOLDER>"
+```
+
+**Expected:** a `Downloaded ... -> ...` message and a local checkpoint directory. Record the full destination path. Access-controlled downloads require your own account authorization. The inspected reference setup uses an xArm-finetuned model with the `pi05_droid_finetune` configuration; confirm that name for your checkpoint.
+
+## 3. Start the model server — Terminal A
+
+Use the full GPU identifier found in [computer preparation](../../getting-started/computer.md#select-the-rtx-pro-6000-for-model-programs).
+
+```bash
+cd ~/robocoop/openpi
+export CUDA_VISIBLE_DEVICES="<RTX_PRO_6000_GPU_UUID>"
+uv run scripts/serve_policy.py policy:checkpoint \
+  --policy.config="<POLICY_CONFIG_NAME>" \
+  --policy.dir="<FULL_CHECKPOINT_PATH>"
+```
+
+**Expected:** the model finishes loading and the server listens on port **8000**. Keep this terminal open. Model loading can take time; an error traceback is not a ready server. This server starts no arm controller by itself.
+
+The shared workstation also runs Self Improvement Learning. Its Qwen server uses port 8000 too. Finish that project's session and stop its model server before starting openpi. Follow the [shared-workstation handover](../../getting-started/hardware.md#using-the-shared-workstation); simultaneous operation needs distinct ports and separate resource validation.
+
+## 4. Make a saved-data configuration — Terminal B
+
+```bash
+cd ~/robocoop
+conda activate lerobot
+cp run_xarm_inference.yaml first-check.yaml
+nano first-check.yaml
+```
+
+Change these values in the **existing complete file**:
+
+| Field | Set it to |
+|---|---|
+| `policy.host` | `localhost` if Terminal A is on this workstation |
+| `policy.port` | `8000`, unless you deliberately changed the server port |
+| `run.task` | The instruction associated with the sample episode |
+| `mode.name` | `from_dataset` |
+| `mode.dataset_dir` | Full absolute path to the processed sample dataset; avoid `~` inside YAML |
+| `mode.episode` | A supplied valid episode number, often `0` |
+| `mode.sample_idx` | A valid frame number; use `0` for the first check |
+
+Leave the rest of the supplied file intact. Then run:
+
+```bash
+python run_xarm_inference.py --config first-check.yaml
+```
+
+**Expected:** the program identifies dataset comparison mode, connects to the policy, prints predicted/reference action error measures such as MAE and RMSE, then finishes with `Done.` This mode does **not** connect to the robot in the inspected code. It does not require live cameras.
+
+The numbers show a comparison, not a pass/fail safety threshold. Ask the model owner to review the predictions and action units before a live run.
+
+## 5. Prepare live cameras and settings
+
+Stop teleoperation and any other program controlling the arm. Start the camera server in **Terminal C** if none is running:
+
+```bash
+conda activate lerobot
+teleimager-server --rs
+```
+
+Check the live images as in [camera setup](../teleop/setup.md#3-test-the-cameras-before-moving-the-arm).
+
+Make a separate live configuration:
+
+```bash
+cd ~/robocoop
+cp first-check.yaml first-live.yaml
+nano first-live.yaml
+```
+
+With the operator, review:
+
+- `mode.name: live`.
+- `robot.xarm_ip`: this station's arm controller.
+- `robot.camera.host`, `request_port`, `wrist_name`, and `exterior_name`: this camera server and its matching topics.
+- `run.task`: the supported task for the checkpoint.
+- Camera orientation/crop, gripper settings, and action units: must match training.
+- `run.max_timesteps`: choose a short initial trial with the operator. At the reference 15 Hz, 30 steps is about two seconds of commanded control; model/network delays add time.
+- `control` settings: have the operator check movement limits for this arm and mounting arrangement.
+
+## 6. Perform the supervised trial
+
+!!! warning "This connects to real hardware"
+    Starting a live-mode client connects and configures the arm **before** the rollout prompt. The operator must already be at the stop control with the workspace clear.
+
+In **Terminal B**:
+
+```bash
+cd ~/robocoop
+conda activate lerobot
+python run_xarm_inference.py --config first-live.yaml
+```
+
+The inspected live loop asks `Enter to start rollout, Ctrl+C to quit...`. Begin only when the operator is ready. Answer `n` to the next-rollout prompt when finished. Use the physical stop for unexpected motion; Ctrl+C is the normal program exit, not a substitute for the physical stop.
+
+With `run.save_video: true`, rollout videos are written in the working directory. Review the trial with the model owner before increasing its duration.
+
+## Know which modes use hardware
+
+| `mode.name` | First-time use |
+|---|---|
+| `from_dataset` | Saved-data prediction; verified in source to avoid robot connection |
+| `live` | Uses live cameras and controls the arm |
+| `replay` | Sends recorded actions to the real arm; it is not a video player |
+| `predict_execute` | Predicts from saved observations and executes on the real arm |
+| Other diagnostic modes | Advanced only; several connect to hardware even when their names sound offline |
+
+## Troubleshooting and shutdown
+
+| Problem | First check |
+|---|---|
+| `unrecognized arguments: --task` | Use `--config` and edit the YAML settings |
+| Cannot connect to policy | Terminal A finished loading; host and port agree |
+| Dataset/frame not found | Absolute path, episode number, and frame index are valid |
+| Camera missing or wrong image | Topic names and physical serials agree; only one camera server owns the devices |
+| GPU out of memory | Check `nvidia-smi`; coordinate with the owner of other GPU processes |
+| Wrong-looking predictions | Stop before live testing; check model/config/data pairing and preprocessing |
+
+End the client before stopping its model server. Stop Terminal A and any camera server you started with Ctrl+C once no other user needs them. Park and shut down the arm according to the operator/manufacturer procedure.

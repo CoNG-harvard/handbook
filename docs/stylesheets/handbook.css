@@ -1,0 +1,156 @@
+/* Keep the handbook readable in both Material palettes and on small screens. */
+:root {
+  --handbook-radius: 0.65rem;
+  --handbook-radius-small: 0.35rem;
+  --handbook-text-small: 0.75rem;
+  --handbook-space: 1.25rem;
+}
+[data-md-color-scheme="slate"][data-md-color-primary] {
+  --md-typeset-a-color: #a7b8ff;
+  --md-accent-fg-color: #c0cbff;
+}
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  margin-bottom: 0.8em;
+}
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 1.8em;
+}
+.md-typeset h3 {
+  font-weight: 600;
+}
+.md-typeset :is(h1, h2, h3) .headerlink {
+  font-weight: 400;
+}
+.md-typeset table:not([class]) {
+  width: 100%;
+  font-size: var(--handbook-text-small);
+  line-height: 1.6;
+  border-radius: var(--handbook-radius-small);
+}
+.md-typeset table:not([class]) th {
+  background: var(--md-code-bg-color);
+}
+.md-typeset pre > code {
+  border-radius: var(--handbook-radius-small);
+}
+.md-typeset img {
+  display: block;
+  height: auto;
+  border-radius: var(--handbook-radius);
+}
+/* Shared figures: source images retain their original aspect ratios and labels. */
+.md-typeset figure.handbook-figure {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: var(--handbook-space) 0 1.75rem;
+  text-align: left;
+}
+.md-typeset .handbook-figure > p {
+  margin: 0;
+}
+.md-typeset .handbook-figure img {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-typeset .handbook-figure figcaption {
+  max-width: 100%;
+  margin: 0.65rem 0 0;
+  color: var(--md-default-fg-color--light);
+  font-size: var(--handbook-text-small);
+  font-style: normal;
+  line-height: 1.6;
+}
+.md-typeset .handbook-figure figcaption p {
+  margin: 0.4rem 0 0;
+}
+.md-typeset .handbook-figure .figure-links {
+  font-size: var(--handbook-text-small);
+}
+/* Same spacing and readable type for reference tables, code, and callouts. */
+.md-typeset .md-typeset__table {
+  display: block;
+}
+.md-typeset table:not([class]) :is(th, td) {
+  padding: 0.7em 0.9em;
+  vertical-align: top;
+}
+.md-typeset :is(.highlight, pre, .admonition, details) {
+  margin-top: var(--handbook-space);
+  margin-bottom: var(--handbook-space);
+}
+.md-typeset .highlight pre {
+  margin: 0;
+}
+.md-typeset :is(.admonition, details) {
+  font-size: var(--handbook-text-small);
+  line-height: 1.65;
+  border-radius: var(--handbook-radius-small);
+  box-shadow: none;
+}
+.md-typeset :is(.admonition-title, summary) {
+  font-weight: 600;
+}
+.md-typeset .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.6rem 0 2rem;
+}
+.md-typeset .project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--handbook-radius);
+  background: var(--md-code-bg-color);
+}
+.md-typeset .project-card h2 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.35rem;
+}
+.md-typeset .project-card h2 a {
+  color: var(--md-default-fg-color);
+}
+.md-typeset .project-card h2 a:hover {
+  color: var(--md-accent-fg-color);
+}
+.md-typeset .project-card > p {
+  margin: 0.4rem 0;
+}
+.md-typeset .project-card > .project-kind {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.md-typeset .project-card > p:last-child {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.md-typeset .project-link {
+  font-weight: 600;
+}
+.md-typeset a:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 4px;
+}
+@media (max-width: 40em) {
+  .md-typeset .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .md-typeset .project-card {
+    padding: 1rem;
+  }
+}

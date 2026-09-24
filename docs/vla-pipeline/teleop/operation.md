@@ -1,62 +1,78 @@
-# Operation
+# Record your first demonstration
 
-How to drive the arm and record episodes from the Meta Quest, once a session is launched ([Setup](setup.md)).
+**Goal:** save one short episode and find its folder. Complete [Configure and start](setup.md) first. Keep a second person beside the arm, watching the movement area and stop control.
 
-## Enter VR on the headset
+## 1. Check the view
 
-1. On the Quest, click **META**.
-2. Open the **browser** and go to:
-   ```
-   https://localhost:8012/?ws=wss://localhost:8012
-   ```
-3. Click **Enter VR** (to the right of the address bar).
+In the Quest browser, open `https://localhost:8012/?ws=wss://localhost:8012` and enter VR while looking forward. Confirm the camera images are live and correctly assigned. Before an episode begins, moving your hand should not start a recording.
 
-!!! warning "Use `localhost`, not the IP"
-    `localhost` routes over the USB `adb` forward (cable). The IP route goes over Wi-Fi, whose delay causes **jittery arm movement** during teleoperation.
+## 2. Learn the controls
 
-!!! note "Look forward when you enter VR"
-    Be looking **forward** the moment you enter VR — otherwise there will be an orientation offset during teleoperation.
+<figure class="handbook-figure" markdown="1">
 
-You should then see the wrist and third-person camera feeds.
+![Quest controllers with the main buttons labeled.](../assets/quest_controllers.png)
 
-## Controller mapping
+<figcaption markdown="1">
 
-![Meta Quest controllers with the Trigger, Side, A, and B buttons labeled.](../assets/quest_controllers.png)
+Quest controller buttons used during recording. The table below explains each control.
 
-Right controller unless noted:
+[View full-size image](../assets/quest_controllers.png)
+{ .figure-links }
 
-| Input | Effect |
+</figcaption>
+
+</figure>
+
+| Control | What happens |
 |---|---|
-| **B** | Start / end an episode |
-| **Side button (grip)** — during teleop | Close the gripper (release to open) |
-| **A** — after ending an episode | Reset arm to home |
-| **Right trigger** — after ending | **Save** the episode |
-| **Left trigger** — after ending | **Discard** the episode |
+| Right **B** | Starts an episode; press again to finish it |
+| Right **grip/side button** | Closes the gripper while held; release to open |
+| Right **trigger**, after ending | Saves the episode |
+| Left **trigger**, after ending | Discards the episode |
+| Right **A**, while waiting or at a recovery prompt | Resets the arm to home; this moves it |
 
-!!! note
-    With the default config the gripper stays pointing straight down, but it still rotates around the z axis (yaw follows your wrist).
+When you press B, the program connects your current hand position to the arm's current position. The arm then follows your **relative** hand movement. Start with a small, slow movement. In the lab implementation, holding the trigger during teleoperation can increase movement scaling; leave it released for your first trial.
 
-## Recording workflow (per episode)
+The gripper's orientation behavior depends on `record.teleop.fix_ee_angle`. It is not guaranteed to stay pointing down unless the selected configuration enables that behavior.
 
+## 3. Save one short episode
+
+1. With the operator's agreement, use **A** while waiting if the arm needs to return home.
+2. Hold your controller still, then press **B**.
+3. Make one small movement in a clear area. For the first trial, prioritize checking control rather than finishing a pick-and-place task.
+4. Press **B** again to end the episode.
+5. Use the **right trigger** at the confirmation prompt to save it.
+6. Read the terminal/headset confirmation before starting another episode.
+
+If you choose the left trigger, that episode is discarded. Previously saved episodes remain.
+
+## 4. Find the saved recording
+
+Use the dataset path printed when the launcher started. New sessions created by the inspected launcher go under `~/lerobot/datasets/test_a_<timestamp>/`; older sessions may be under `~/lerobot/xr_teleoperate/datasets/`.
+
+After ending the session normally, inspect the folder:
+
+```bash
+ls "<DATASET_FOLDER>"
+ls "<DATASET_FOLDER>/meta"
 ```
- Press A (reset) ─▶ Press B (start; arm follows your hand) ─▶ Press B (stop)
-        ▲                                                          │
-        │                                          Right trigger = save
-        └──────────── Press A (reset) ◀─────────── Left trigger  = discard
-```
 
-Press ++ctrl+c++ in the terminal to end the whole session (saved episodes are kept).
+Replace `<DATASET_FOLDER>` with the actual path. **Expected:** dataset metadata and recorded data, with video files according to the configured format. A directory existing by itself does not prove an episode was saved; check the recording confirmation and dataset metadata too.
 
-## When the arm is stuck
+## 5. End the session
 
-The xArm controller **latches into an error state** on collision, joint-limit, singularity, or overload. Once latched, it rejects every motion command until the error is cleared — and some errors cannot be cleared in software at all; they require a power-cycle of the arm.
+1. End/save or discard the current episode.
+2. Put the arm in the agreed resting pose while the area is clear.
+3. Press **Ctrl+C** in the recording terminal and allow it to finish writing files.
+4. The camera server may remain in the `teleop_imgserver` tmux session. If you started it and nobody else needs it, stop it with `tmux kill-session -t teleop_imgserver`.
+5. Follow the manufacturer's shutdown procedure for the arm. Disconnect the headset only after the session has ended.
 
-### Standard recovery
+## If something goes wrong
 
-1. **Press E-stop** on the right control box (the red button).
-2. **Release** it — lift up and turn clockwise.
-3. **Press A** on the right handle. This resets the xArm and **deletes the last (partial) episode**.
+For unexpected movement, use the physical stop control. For a normal end, use the application controls above.
 
-### Alternative recovery
+A collision or controller error can leave the arm unable to accept commands. Stop, inspect the cause with the operator, and follow the controller's recovery instructions. The modified recording program may display “Restart the arm, then press A to continue.” Only press A after the operator confirms the workspace and controller are ready: recovery can move the arm home.
 
-Sometimes **continuously pressing A** recovers the arm without needing the E-stop at all — try this first, and fall back to the E-stop sequence above if it stays stuck.
+The lab's recovery flow discards an interrupted partial episode and keeps previously saved episodes. Repeatedly pressing reset will not fix a mechanical obstruction or a fault that requires a power cycle.
+
+**Next:** [Prepare recordings](datasets.md), or [test a trained model](../inference/index.md).

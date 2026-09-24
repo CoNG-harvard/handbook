@@ -1,8 +1,23 @@
-# Status and roadmap
+# Historical findings and open work
 
-Findings so far (2026-07-09 diagnostics): NaVILA's perception and language-following are fine on real Go2 frames, but the policy only turns when the instruction *says* to turn — it accepts any text, yet behaves reliably only on R2R/RxR-style commands with explicit directions. Free-form goals ("move toward the rightmost orange chair at a safe distance") collapse to "move forward". That shapes the roadmap:
+These notes summarize lab experiments from **July 2026**. They are not acceptance tests for a new workstation or robot. Use the [current setup guide](index.md) for installation and operation.
 
-- [x] **Closed-loop rollout script.** Done: `scripts/rollout.py` (see [Legacy closed-loop rollout](rollout.md)), verified against the mock robot with both planners, and on 2026-07-12 **run on the real robot**: live frames → NaVILA → parser → real guarded motion (5 steps). Prefer `--continue-on-failure` for VLN runs — a partially completed skill (e.g. a small turn hitting its backstop) then replans from the next frame instead of ending the episode. After a robot reboot: restart the dog-side server with `--real` (expect `backend: "run_plan.py (batch)"` in health) and reopen the SSH tunnel. Known upstream tuning issue to raise with the skills repo: small-angle `turn_relative` starves on `backstop_factor` (gait engagement ~1 s eats the whole 3×0.5 s budget of a 15° turn).
-- [ ] **Instruction-grounding agent (translator in front of NaVILA).** NaVILA should not receive free-form user goals directly. A higher-level agent should (a) translate the user's goal into R2R-style commands with explicit directions ("Turn right and walk to the orange chair. Stop in front of it."), (b) re-ground every few steps: ask a VQA question about the target's bearing ("Is the orange chair left, center, or right?") and re-issue the command accordingly, and (c) decide task completion / safety stop. Both halves are already verified to work here: `scripts/vqa_probe.py` gets correct bearings from NaVILA itself, and direction-explicit commands produce correct turns 10/10.
-- [ ] **Decide who runs the agent.** Options: reuse NaVILA itself for the VQA re-grounding step (one model, fits the 4090 — proven to work); or use the Qwen3-VL server in `agent_ai/` — but it cannot share the 4090 with NaVILA, so it would need a second GPU, a remote endpoint, or an API model. This is the main open design question.
-- [ ] **Distance-aware stopping.** "Stop at a safe distance" is not something NaVILA can honor (stop is trained on VLN-CE goal radius). If precise standoff distance matters, the agent layer needs its own check (e.g. depth from the Go2, or VQA-based proximity estimate) to issue the stop.
+## What the earlier experiments found
+
+| Finding | Scope |
+|---|---|
+| Explicit turn directions improved NaVILA predictions | July 9 scene tests; free-form object goals often produced “move forward” |
+| Image history changed the result | Repeated stationary frames biased predictions; see [offline evaluation](vla-eval.md) |
+| Closed-loop rollout ran on the robot | July 12 navigation experiment; see [legacy rollout](rollout.md) |
+| Short turns exposed timing limits | Gait startup consumed much of the small-turn timeout; requires skills-side tuning |
+
+Historical backend names and restart instructions have been superseded. Use [bridge setup](robot-bridge.md) and [first supervised movement](first-run.md); leave failure-continuation options off during initial validation.
+
+## Open work
+
+- **Instruction grounding:** translate a goal into explicit directions, recheck the target after movement, and determine when the task is complete.
+- **Model compatibility:** validate openpi, Qwen, and NaVILA environments on the shared RTX PRO 6000; measure memory use before attempting concurrent models.
+- **Distance-aware stopping:** add a validated distance check when a task requires a specific stopping distance.
+- **Reproducible installation:** release the lab source bundles, dependency locks, and robot image, then complete a fresh-computer and supervised hardware test.
+
+See [source handoff and verification](../getting-started/sources.md) for the current release requirements.
