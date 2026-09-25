@@ -23,6 +23,15 @@ Choose simple folder names without spaces or quotation marks for compatibility w
 
 The Qwen launcher expects `agent_ai/.venv` **inside** `<NAV_DIR>`; the openpi environment belongs inside `<INFERENCE_DIR>/openpi`. Those internal locations are software conventions, not references to a particular desktop.
 
+## On the ABC Box recording computer
+
+| Placeholder | Your chosen location |
+|---|---|
+| `<ABC_DIR>` | I2RT `yam-abc-reproduce` checkout, with its own `.venv` |
+| `<ABC_DATA_DIR>` | Writable folder for demonstrations; keep mock recordings in a separate subfolder |
+
+`<ABC_SOURCE_REVISION>` is the approved Git revision, not a directory. See the [ABC source record](../abc-box/reference.md#what-was-checked).
+
 ## On the robot's onboard computer
 
 | Placeholder | Your chosen location |

@@ -125,3 +125,7 @@ On **24 September 2026**, the handbook was checked again against the original re
 - **D1:** the companion D1 interface and `unidog_nav/robot/arm_reach.py` establish the SDK, robot deployment, and camera-to-arm calibration dependencies. They do not supply a complete tested installation handoff. The [D1 readiness page](../unidog-nav/d1-arm.md) records the outstanding items.
 
 **Executed check:** copies of the original `primitive_server.py`, `primitive_specs_snapshot.json`, `robot_client.py`, and one supplied JPEG were used for a local mock test on port 18766. Health returned `ok: true`, `backend: mock`, `real: false`, and `busy: false`; the retrieved JPEG matched the input byte-for-byte. The test server was then stopped. No robot commands or model servers were started, and the remote working trees were not modified.
+
+## ABC Box sources
+
+ABC Box uses official public sources rather than the two remote lab workspaces. Its [source record](../abc-box/reference.md) identifies the reviewed I2RT revision, product documentation, and pending installation/hardware checks.

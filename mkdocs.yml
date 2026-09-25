@@ -1,5 +1,5 @@
 site_name: CoNG Handbook
-site_description: Lab projects and setup guides for VLA Pipeline and Self Improvement Learning
+site_description: Lab project guides for VLA Pipeline, Self Improvement Learning, and ABC Box
 site_url: https://cong-harvard.github.io/handbook/
 repo_url: https://github.com/CoNG-harvard/handbook
 repo_name: CoNG-harvard/handbook
@@ -57,7 +57,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - stylesheets/handbook.css?v=4
+  - stylesheets/handbook.css?v=5
 
 plugins:
   - search
@@ -101,3 +101,9 @@ nav:
           - Voice and benchmarks: unidog-nav/operator-cookbook.md
           - Legacy closed-loop rollout: unidog-nav/rollout.md
           - Historical findings: unidog-nav/roadmap.md
+  - ABC Box:
+      - Overview: abc-box/index.md
+      - "1. Hardware and connections": abc-box/hardware.md
+      - "2. Install and rehearse": abc-box/install.md
+      - "3. Configure and record": abc-box/operation.md
+      - Reference: abc-box/reference.md

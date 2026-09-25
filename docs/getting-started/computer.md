@@ -1,6 +1,6 @@
 # Prepare a new computer
 
-**Run these steps on the shared Linux workstation.** Do them once for both projects. The reference lab machines run Ubuntu 24.04 on x86-64 PCs. This guide does not cover installing the robot stack directly on macOS, Windows, or the dog's ARM computer.
+**Run these steps on the shared Linux workstation.** Do them once for VLA Pipeline and Self Improvement Learning. For ABC Box collection, use its [recording-computer installation](../abc-box/install.md). The reference lab machines run Ubuntu 24.04 on x86-64 PCs. This guide does not cover installing the robot stack directly on macOS, Windows, or the dog's ARM computer.
 
 ## 1. Prepare Ubuntu and the graphics card
 

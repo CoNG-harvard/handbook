@@ -8,6 +8,8 @@
 
 **Self Improvement Learning** uses a Unitree Go2 robot dog with a Unitree D1 arm. A workstation looks at camera images and sends commands to a separate computer carried by the dog. The dog also needs the lab's robot-control software. Installing the workstation software alone does not make an unconfigured dog ready to walk.
 
+**ABC Box** is a separate two-arm station controlled through hand-operated leader arms. Start with its [hardware and software guide](../abc-box/index.md). Its included recording computer handles the first collection session; shared GPU preparation is needed only for later model work.
+
 Use the [hardware checklist](hardware.md) to gather the full station, including the **RTX PRO 6000 Blackwell Workstation Edition, 96 GB**, in one workstation shared by both projects.
 
 ## 2. Get a setup handoff from the lab
@@ -37,6 +39,14 @@ A model checkpoint and matching sample dataset are needed only for **Run a train
 A new workstation can complete the mock check while robot preparation is pending. Qwen and NaVILA are [optional model installations](../unidog-nav/models.md). The D1 arm is included in the platform, but its [commissioning guide is pending](../unidog-nav/d1-arm.md).
 
 **Missing something?** Ask your lab contact for the items above before the affected step. The [maintainer's handoff inventory](sources.md) gives the exact folders and unresolved requirements. Keep credentials and device identities in the private setup note.
+
+### Before installing ABC Box
+
+- [ ] Confirm the full Box package, leader type, cameras, and supplied computer image.
+- [ ] Get the approved I2RT source revision, device configuration, and operator calibration procedure.
+- [ ] Choose `<ABC_DIR>` and `<ABC_DATA_DIR>` on the recording computer.
+
+Follow [Install and rehearse](../abc-box/install.md); the xArm and Go2 environments are not required.
 
 ## 3. Learn the few terms used in the steps
 
@@ -69,7 +79,7 @@ Choose your installation locations using [Choose your folders](paths.md). Direct
 - **Terminal A** and **Terminal B** mean separate terminal windows on the same workstation. Activate the stated environment in each one.
 - If a command reports an error, stop at that step. Later steps usually depend on it.
 
-A **workstation** is the Linux computer running the project software. Commands run there unless a step says **on the robot**. Your laptop can display this guide or connect to the workstation using SSH.
+A **workstation** is the Linux computer running the project software. VLA Pipeline and Self Improvement Learning commands run there unless a step says **on the robot**. ABC Box commands run on its **recording computer**, as identified on its pages. Your laptop can display this guide or connect to the workstation using SSH.
 
 Check which computer and folder you are using:
 

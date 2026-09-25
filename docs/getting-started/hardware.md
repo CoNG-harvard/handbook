@@ -1,6 +1,6 @@
 # Shared computer and project hardware
 
-Both projects use **one Linux workstation with one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Count the computer and its accessories once; keep each project's robot equipment on its own list.
+VLA Pipeline and Self Improvement Learning use **one Linux workstation with one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Count the computer and its accessories once; keep each project's robot equipment on its own list.
 
 ## Shared equipment — prepare once
 
@@ -17,7 +17,7 @@ Have the supplier include a compatible motherboard, power supply, case, cooling,
 
 ## What each platform needs
 
-Each project has its own equipment list. Both use the same shared workstation.
+Each project has its own equipment list. The two existing projects share the workstation; ABC Box includes a separate recording computer.
 
 ### VLA Pipeline: the arm station {#robocoop-the-arm-station}
 
@@ -59,7 +59,13 @@ Self Improvement Learning platform with a D1 arm and D435i camera. The first nav
 
 The dog still needs its onboard computer; the arm still needs its control box. Both remain on their project's equipment list.
 
-## Workstation specification for both platforms
+### ABC Box: leader-controlled teleoperation
+
+The [ABC Box equipment list](../abc-box/hardware.md) separates the full Box package from accessories to confirm with the supplier. Its recording computer is part of that station; count the shared RTX PRO 6000 only once if later used for ABC model work.
+
+[Start the ABC Box guide](../abc-box/index.md).
+
+## Workstation specification for VLA Pipeline and Self Improvement Learning
 
 | Component | Selected configuration or reference |
 |---|---|
