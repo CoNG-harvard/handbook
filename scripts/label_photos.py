@@ -45,19 +45,18 @@ def annotate(folder, stem, title, description, labels, extension='jpg', height=7
 
 annotate('vla-pipeline', 'xarm-station', 'VLA Pipeline — labeled xArm station',
          'The original lab photograph with callouts: both xArm robots; the visible foreground gripper; '
-         'all three D435 scene cameras on stands; the foreground task tray; the two D405 wrist-mounted cameras. Labels do not assign rig A/B identities.', [
+         'all three D435 scene cameras on stands; the two D405 wrist-mounted cameras. Labels do not assign rig A/B identities.', [
     ('xArm robots (2)', 28, 295, 222, [(90,337,112,410),(210,337,335,570)]),
     ('Gripper', 625, 505, 153, [(625,547,547,641)]),
-    ('D435 scene cameras (3)', 480, 55, 320, [(490,97,244,208),(585,97,465,183),(735,97,822,135)]),
-    ('Task tray', 746, 575, 174, [(760,617,718,685)]),
-    ('D405 wrist cameras (2)', 45, 495, 320, [(240,495,249,444),(365,516,550,518)]),
+    ('RealSense D435 (3)', 480, 55, 320, [(490,97,244,208),(585,97,465,183),(735,97,822,135)]),
+    ('RealSense D405 (2)', 45, 495, 320, [(240,495,249,444),(365,516,550,518)]),
 ])
 annotate('abc-box', 'abc-box-station', 'ABC Box — labeled lab station',
-         'The original lab photograph with callouts: both robot arms; the two wrist cameras; '
-         'the overhead camera; the camera support frame. Leader arms and stop controls are not identified in this view.', [
+         'The original lab photograph with callouts: both robot arms; the two D405 wrist cameras; '
+         'the overhead D405 camera; the camera support frame. Leader arms and stop controls are not identified in this view.', [
     ('Robot arms (2)', 475, 475, 224, [(485,517,300,603),(655,517,621,603)]),
-    ('Wrist cameras (2)', 500, 248, 256, [(515,290,373,403),(710,290,687,378)]),
-    ('Overhead camera', 184, 35, 256, [(184,56,106,32)]),
+    ('RealSense D405 (2)', 500, 248, 256, [(515,290,373,403),(710,290,687,378)]),
+    ('RealSense D405 (1)', 184, 35, 256, [(184,56,106,32)]),
     ('Camera frame', 35, 305, 221, [(230,347,309,415)]),
 ])
 

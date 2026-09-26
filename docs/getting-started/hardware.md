@@ -23,11 +23,11 @@ All three projects share the same desktop workstation. Gather the robot equipmen
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled xArm station: both xArm robots; foreground gripper; three D435 scene cameras; task tray; two D405 wrist cameras.](../vla-pipeline/assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled xArm station: both xArm robots; foreground gripper; three D435 scene cameras; two D405 wrist cameras.](../vla-pipeline/assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-Both xArm robots · Foreground gripper · Three D435 scene cameras · Task tray · Two D405 wrist cameras (one per arm).
+Both xArm robots · Foreground gripper · RealSense D435 (3) · RealSense D405 (2).
 
 Lab photograph provided in September 2026. Labels identify visible parts, not rig A/B assignments.
 
@@ -65,11 +65,11 @@ The dog still needs its onboard computer; the arm still needs its control box. B
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled ABC Box station: both robot arms; two wrist cameras; overhead camera; camera frame.](../abc-box/assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled ABC Box station: both robot arms; two RealSense D405 cameras at the wrists; one RealSense D405 overhead; camera frame.](../abc-box/assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-Both robot arms · Two wrist cameras · Overhead camera · Camera frame.
+Both robot arms · RealSense D405 (2 at the wrists, 1 overhead) · Camera frame.
 
 Lab photograph provided in September 2026. The leaders, computer, and stop control are not identified in this view.
 

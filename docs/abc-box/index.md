@@ -6,11 +6,11 @@ A two-arm platform from I2RT. The operator moves **leader arms** by hand; the **
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled ABC Box station: both robot arms; two wrist cameras; overhead camera; camera frame.](assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled ABC Box station: both robot arms; two RealSense D405 cameras at the wrists; one RealSense D405 overhead; camera frame.](assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-Both robot arms · Two wrist cameras · Overhead camera · Camera frame.
+Both robot arms · RealSense D405 (2 at the wrists, 1 overhead) · Camera frame.
 
 Lab photograph provided in September 2026. The leaders, computer, and stop control are not identified in this view.
 
