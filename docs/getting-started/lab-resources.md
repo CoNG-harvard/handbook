@@ -6,7 +6,7 @@ The [Robotics Lab Dropbox folder](https://www.dropbox.com/scl/fo/f30n7ry2f82y572
 
 | Where to look in Dropbox | Relevant material | How to use it |
 |---|---|---|
-| `Documentations` → `Real-sense Camera Setup.docx` | D405 identification, mounting-point information, and examples of live camera views | Background for the wrist cameras; confirm the exact camera and mounting instructions with the installer |
+| `Documentations` → `Real-sense Camera Setup.docx` | D405 identification, mounting-point information, and examples of live camera views | D405 background for VLA Pipeline wrist cameras and ABC Box cameras. Confirm model-specific mounting instructions with the installer |
 | Folder root → `Items to buy.xlsx` and `Addtional items to buy.xlsx` | Purchasing spreadsheets dated January 2023 in Dropbox | Historical records; use the handbook's [hardware lists](hardware.md) and supplier packing lists for the current platforms |
 | `Photos & Videos` | Lab media collection | Ask the project owner which files show the equipment being assembled |
 | `PushT` and `quadrupeds` | Earlier experiment media | Background only; confirm the robot and camera arrangement before using a video as a setup reference |

@@ -6,13 +6,13 @@ A mobile platform built around **one Unitree Go2**, **one Unitree D1 arm**, a fr
 
 <figure class="handbook-figure" markdown="1">
 
-![Self Improvement Learning platform photograph labeled with the Unitree Go2, Unitree D1 arm, and D435i camera.](assets/platform.png)
+![Self Improvement Learning platform photograph labeled with the Unitree Go2, Unitree D1 arm, front D435i camera, and D435 wrist camera.](assets/platform-labeled.svg)
 
 <figcaption markdown="1">
 
 The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
 
-[View full-size image](assets/platform.png) · [Source PDF](assets/platform.pdf)
+[View full-size image](assets/platform-labeled.svg) · [Source PDF](assets/platform.pdf)
 { .figure-links }
 
 </figcaption>

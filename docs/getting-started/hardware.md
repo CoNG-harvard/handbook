@@ -23,11 +23,11 @@ All three projects share the same desktop workstation. Gather the robot equipmen
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled xArm station: both xArm robots; foreground gripper; three scene cameras; task tray; two wrist cameras.](../vla-pipeline/assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled xArm station: both xArm robots; foreground gripper; three D435 scene cameras; task tray; two D405 wrist cameras.](../vla-pipeline/assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-Both xArm robots · Foreground gripper · Three scene cameras · Task tray · Two wrist cameras (one per arm).
+Both xArm robots · Foreground gripper · Three D435 scene cameras · Task tray · Two D405 wrist cameras (one per arm).
 
 Lab photograph provided in September 2026. Labels identify visible parts, not rig A/B assignments.
 
@@ -44,13 +44,13 @@ Lab photograph provided in September 2026. Labels identify visible parts, not ri
 
 <figure class="handbook-figure" markdown="1">
 
-![Self Improvement Learning platform photograph labeled with the Unitree Go2, Unitree D1 arm, and D435i camera.](../unidog-nav/assets/platform.png)
+![Self Improvement Learning platform photograph labeled with the Unitree Go2, Unitree D1 arm, front D435i camera, and D435 wrist camera.](../unidog-nav/assets/platform-labeled.svg)
 
 <figcaption markdown="1">
 
 The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
 
-[View full-size image](../unidog-nav/assets/platform.png) · [Source PDF](../unidog-nav/assets/platform.pdf)
+[View full-size image](../unidog-nav/assets/platform-labeled.svg) · [Source PDF](../unidog-nav/assets/platform.pdf)
 { .figure-links }
 
 </figcaption>
@@ -101,7 +101,7 @@ NVIDIA lists 96 GB GPU memory for the [RTX PRO 6000 Blackwell family](https://ww
 
 ## Choosing a new computer
 
-- **Cameras and headsets:** plan USB bandwidth for the active platform: VLA Pipeline has two D405 cameras, three D415 cameras, and up to two headsets; ABC Box has three D405 cameras and its arm-control interfaces. Extra sockets do not necessarily add bandwidth. The dog's camera connects to its onboard computer.
+- **Cameras and headsets:** plan USB bandwidth for the active platform: VLA Pipeline has two D405 wrist cameras, three D435 cameras, and up to two headsets; ABC Box has three D405 cameras and its arm-control interfaces. Extra sockets do not necessarily add bandwidth. The dog's camera connects to its onboard computer.
 - **Power and cooling:** have the supplier confirm the complete workstation supports the selected RTX PRO 6000 card.
 - **Memory and storage:** agree capacity with the project owner before ordering; the values above describe a reference machine rather than tested minimums.
 

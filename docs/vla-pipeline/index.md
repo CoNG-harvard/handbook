@@ -1,16 +1,16 @@
 # VLA Pipeline
 
-A tabletop platform with **two xArm 7 robots**, grippers, **two wrist cameras**, **three scene cameras**, and Quest headsets for operator control. It uses the workstation shared with Self Improvement Learning and ABC Box.
+A tabletop platform with **two xArm 7 robots**, grippers, **two D405 wrist cameras**, **three D435 scene cameras**, and Quest headsets for operator control. It uses the workstation shared with Self Improvement Learning and ABC Box.
 
 **Your goal:** assemble and identify both rigs, arrange clear camera views, and have an operator check the connections and stop controls.
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled xArm station: both xArm robots; foreground gripper; three scene cameras; task tray; two wrist cameras.](assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled xArm station: both xArm robots; foreground gripper; three D435 scene cameras; task tray; two D405 wrist cameras.](assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-Both xArm robots · Foreground gripper · Three scene cameras · Task tray · Two wrist cameras (one per arm).
+Both xArm robots · Foreground gripper · Three D435 scene cameras · Task tray · Two D405 wrist cameras (one per arm).
 
 Lab photograph provided in September 2026. Labels identify visible parts, not rig A/B assignments.
 
