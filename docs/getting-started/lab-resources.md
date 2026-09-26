@@ -15,7 +15,7 @@ Filenames retain the archive's spelling. If Dropbox returns you to the folder's 
 
 ## Camera-view checks {#check-a-realsense-camera-before-recording}
 
-The RealSense note illustrates connecting a D405 and checking a live image. During commissioning, ask the installer to show each camera view, match it to a physical camera, and record its serial and position. Check lighting, gripper visibility, cable slack, and all intended views together.
+The RealSense note illustrates connecting a [D405](https://www.realsenseai.com/product-family/d405-series/) and checking a live image. During commissioning, ask the installer to show each camera view, match it to a physical camera, and record its serial and position. Check lighting, gripper visibility, cable slack, and all intended views together.
 
 Use the current manufacturer's instructions for the delivered camera. The archived note dates from 2023; it does not establish that a new station is calibrated or ready.
 

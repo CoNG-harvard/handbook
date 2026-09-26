@@ -21,9 +21,9 @@ Have the installer follow the delivered station's calibration procedure and reco
 
 | Camera | What the installer should show |
 |---|---|
-| Overhead | The intended work area from above |
-| Left wrist | The left gripper and contact area |
-| Right wrist | The right gripper and contact area |
+| Overhead — [D405](https://www.realsenseai.com/product-family/d405-series/) | The intended work area from above |
+| Left wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The left gripper and contact area |
+| Right wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The right gripper and contact area |
 
 Record each serial and position, and check all views together on the shared workstation. Confirm lighting, focus/view coverage, cable slack, and stable USB connections.
 

@@ -4,7 +4,7 @@
 
 ## 1. Check the delivered computer
 
-Use the [workstation specification](hardware.md#workstation-specification-for-vla-pipeline-and-self-improvement-learning). Confirm the **RTX PRO 6000 Blackwell Workstation Edition, 96 GB**, plus the agreed CPU, system memory, storage, and network/USB connections.
+Use the [workstation specification](hardware.md#workstation-specification-for-vla-pipeline-and-self-improvement-learning). Confirm the **[RTX PRO 6000 Blackwell Workstation Edition, 96 GB](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/)**, plus the agreed CPU, system memory, storage, and network/USB connections.
 
 Have the supplier confirm that the case, motherboard, power supply, and cooling support the selected card. The reference inventory is not a complete list of compatible parts for a new computer.
 
@@ -22,13 +22,13 @@ Keep power strips, connectors, and loose cable loops away from the robots and wa
 
 | Device group | Connection to prepare |
 |---|---|
-| Two xArm control boxes | One Ethernet connection per controller to the shared network |
-| Five xArm cameras | USB data connections with enough bandwidth for the intended simultaneous views |
-| Quest headsets | One data-capable USB connection per headset used |
-| Three ABC Box cameras | USB data connections for two wrist views and one overhead view |
-| ABC Box followers and leaders | Supplier-approved control interfaces connected to the shared workstation |
-| Go2 onboard computer | The lab's approved Ethernet or wireless connection |
-| Monitor and input devices | Suitable display and USB connections |
+| [Two xArm control boxes](https://docs.xarm.ufactory.cc/2.hardware_installation.html) | One Ethernet connection per controller to the shared network |
+| [Five xArm cameras](../vla-pipeline/hardware/index.md#1-gather-the-equipment) | USB data connections with enough bandwidth for the intended simultaneous views |
+| [Quest headsets](https://www.meta.com/quest/quest-3/) | One data-capable USB connection per headset used |
+| Three [D405 cameras](https://www.realsenseai.com/product-family/d405-series/) for ABC Box | USB data connections for two wrist views and one overhead view |
+| [ABC Box followers and leaders](../abc-box/hardware.md) | Supplier-approved control interfaces connected to the shared workstation |
+| [Go2 onboard computer](../unidog-nav/hardware.md#1-core-equipment-for-navigation) | The lab's approved Ethernet or wireless connection |
+| [Monitor and input devices](hardware.md#shared-equipment-prepare-once) | Suitable display and USB connections |
 
 More USB sockets do not necessarily mean more bandwidth: several sockets can share one internal connection. Have the installer check all intended camera views for the active platform together, and use an approved powered hub only when the layout calls for one. The dog's D435i connects to the onboard computer, not to the desk workstation.
 

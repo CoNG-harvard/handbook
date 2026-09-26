@@ -4,7 +4,7 @@
 
 ## 1. Confirm the mounting and power plan
 
-Obtain the manufacturer's instructions and the project owner's approved arrangement for the exact Go2 and D1 units. Have the installer confirm:
+Obtain the [D1 supplier's](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) manufacturer instructions and the project owner's approved arrangement for the exact Go2 and D1 units. Have the installer confirm:
 
 - The mounting kit, fasteners, base attachment, and gripper are complete.
 - The payload and its placement are acceptable for the robot.
@@ -16,7 +16,7 @@ This handbook does not supply mounting torque, wiring pinouts, or load limits; u
 
 ## 2. Identify the camera and calibration
 
-The D1 wrist camera beside the gripper is a **RealSense D435**, confirmed by the project owner. It is separate from the front **D435i**. Record its serial, mounting position, and the calibration target specified by the owner. Calibration measures the camera's position relative to the arm. Moving the camera or mount can invalidate those measurements.
+The D1 wrist camera beside the gripper is a **[RealSense D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/)**, confirmed by the project owner. It is separate from the front **D435i**. Record its serial, mounting position, and the calibration target specified by the owner. Calibration measures the camera's position relative to the arm. Moving the camera or mount can invalidate those measurements.
 
 Use the [RichBird C-clamp camera mount](https://www.amazon.com/dp/B0GSR6883N) for the D435 wrist camera. Check that the clamp and ball head are secure and leave clearance for the gripper and camera cable before calibration.
 

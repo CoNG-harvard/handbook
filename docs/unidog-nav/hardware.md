@@ -21,21 +21,23 @@ The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 
 
 ## 1. Core platform hardware {#1-core-equipment-for-navigation}
 
-| Equipment | Quantity |
-|---|---|
-| Unitree Go2 research robot | 1 |
-| [Unitree Go2 Protective Bracket / Gantry for Go2 EDU](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) | 1 |
-| Unitree D1 arm and gripper | 1 set |
-| D1 mounting kit and power/data cables | 1 set |
-| Compatible onboard computer | 1 |
-| Robot battery and charger | 1 set |
-| Supported operator controller/stop interface | 1 |
-| RealSense D435i front camera, USB data cable, and mount | 1 set |
-| RealSense D435 wrist camera and USB data cable | 1 set |
-| [RichBird C-clamp camera mount, 60 mm, with ball head and 1/4-inch screw adapter](https://www.amazon.com/dp/B0GSR6883N) for the D1 wrist camera | 1 |
-| Robot network connection | 1 |
-| Approved accessory power, mounts, and cable restraints | As needed |
-| Clear test area and floor markings | 1 area |
+Product links identify known models. **Catalogs** and assembly **references** cover unspecified parts; confirm exact sizes, compatibility, and included accessories before ordering.
+
+| Equipment | Quantity | Product or reference |
+|---|---|---|
+| Unitree Go2 research robot | 1 | [Unitree Go2](https://www.unitree.com/go2/) — confirm EDU edition |
+| Unitree Go2 Protective Bracket / Gantry for Go2 EDU | 1 | [RobotShop listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) |
+| Unitree D1 arm and gripper | 1 set | [D1 arm — US Robot Store](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) — confirm exact package |
+| D1 mounting kit and power/data cables | 1 set | [D1 supplier](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) — request Go2 mounting kit and cable list |
+| Compatible onboard computer | 1 | [NVIDIA Jetson family](https://developer.nvidia.com/embedded/jetson-modules) — exact module/carrier board to confirm |
+| Robot battery and charger | 1 set | [Go2 battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) — match delivered variant |
+| Supported operator controller/stop interface | 1 | [Go2 controller](https://shop.unitree.com/products/go2-controller) — confirm supported stop function |
+| RealSense D435i front camera, USB data cable, and mount | 1 set | [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — mount to specify |
+| RealSense D435 wrist camera and USB data cable | 1 set | [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) |
+| RichBird 60 mm C-clamp mount with ball head and 1/4-inch screw for the D1 wrist camera | 1 | [RichBird mount](https://www.amazon.com/dp/B0GSR6883N) |
+| Robot network connection | 1 | [Ethernet cable catalog](https://www.startech.com/en-us/cables/network) — confirm wired/wireless arrangement |
+| Approved accessory power, mounts, and cable restraints | As needed | [Unitree accessories](https://shop.unitree.com/collections/all) · [cable ties](https://www.mcmaster.com/products/cable-ties/) — verify power and mounts |
+| Clear test area and floor markings | 1 area | [Floor-marking tape catalog](https://www.mcmaster.com/products/floor-marking-tape/) — follow the approved test layout |
 
 ### Photo count check
 
@@ -45,10 +47,10 @@ The supplied picture shows **1 Go2, 1 D1 arm, and 2 external cameras**: the labe
 
 - **Robot:** the lab reference specifies [Go2 Edu Plus](https://www.unitree.com/go2/). Confirm the exact edition, supported control interface, and included accessories with the owner/vendor.
 - **Protective gantry:** an external support frame for Go2 EDU posture and movement experiments. RobotShop lists one gantry per package (SKU **RB-Unt-97**, manufacturer part **Go2-Protective-Bracket**). It is not shown in the platform photo. Confirm the attachment arrangement, supported load, and clearance with the mounted D1 arm before use.
-- **D1 arm:** include its complete mounting and cable kit. **Arm commissioning is pending**; obtain the [D1 mounting and calibration plan](d1-arm.md) before manipulation.
+- **D1 arm:** use the [D1 supplier listing](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) to confirm the complete mounting and cable kit. **Arm commissioning is pending**; obtain the [D1 mounting and calibration plan](d1-arm.md) before manipulation.
 - **Onboard computer:** the lab reference identifies a Jetson, but its exact module, memory, and carrier board were not verified. Check whether it is included with the robot.
 - **Battery and controller:** confirm the approved charger, connectors, and demonstrated stop procedure. Keep the operator's stop interface accessible.
-- **Cameras:** use one front **D435i** and one **D435** at the D1 wrist. Record each camera's serial, mounting position, and USB connection separately.
+- **Cameras:** use one front [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) and one [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) at the D1 wrist. Record each camera's serial, mounting position, and USB connection separately.
 - **D1 wrist camera mount:** use the linked RichBird C-clamp mount selected for this platform. The listing specifies a 360° ball head and a 1/4"-20 camera screw. Have the installer confirm the attachment point, secure fit, cable slack, and clearance around the gripper and wrist.
 - **Connections and mounts:** use the approved Ethernet or wireless connection. Confirm accessory power, payload arrangement, cable strain relief, and space to stand and turn.
 
@@ -58,13 +60,13 @@ The Go2 also has a built-in front camera. It is a different device and view from
 
 The Go2 and D1 arm are both included in the main list above. Add the accessories below for the intended manipulation, voice, or recording workflow.
 
-| Additional equipment | Quantity |
-|---|---|
-| Manipulation calibration target | Specified by owner |
-| DJI Mic Mini transmitter/receiver with USB connection | 1 set for voice |
-| Robot audio output or approved speaker | 1 route for voice |
-| Spare battery and approved charging/storage accessories | As needed |
-| Extra logging and backup storage | As needed |
+| Additional equipment | Quantity | Product or reference |
+|---|---|---|
+| Manipulation calibration target | Specified by owner | [Calibration-target example](https://calib.io/products/kalibr-targets) — pattern and size to be specified by owner |
+| DJI Mic Mini transmitter/receiver with USB connection | 1 set for voice | [DJI Mic Mini](https://www.dji.com/mic-mini) — transmitter/receiver kit |
+| Robot audio output or approved speaker | 1 route for voice | [Speaker catalog](https://www.logitech.com/en-us/shop/c/speakers) — interface/model to specify |
+| Spare battery and approved charging/storage accessories | As needed | [Go2 battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) — match delivered variant |
+| Extra logging and backup storage | As needed | [Storage reference](../getting-started/hardware.md#workstation-specification-for-vla-pipeline-and-self-improvement-learning) |
 
 The manipulation handoff must record the D435 clamp position and calibration target. For a voice-equipped station, verify the USB microphone connection and audio output during setup. Size spare batteries and storage for the session length and recording volume.
 

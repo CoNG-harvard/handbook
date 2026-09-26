@@ -1,6 +1,6 @@
 # ABC Box
 
-A two-arm platform from I2RT. The operator moves **leader arms** by hand; the **follower arms** work at the table. Cameras observe the work area and each wrist.
+A two-arm platform from [I2RT](https://i2rt.com/products/abc-box). The operator moves **leader arms** by hand; the **follower arms** work at the table. Cameras observe the work area and each wrist.
 
 **Your goal:** confirm the delivered package, mount and pair the arms, connect the cameras and control interfaces to the shared workstation, and identify the physical stop.
 

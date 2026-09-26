@@ -23,21 +23,23 @@ Lab photograph provided in September 2026. Labels identify visible parts, not ri
 
 Quantities below describe the **two-arm lab station**. The [shared workstation, GPU, display/input devices, and network equipment](../../getting-started/hardware.md#shared-equipment-prepare-once) are shared by all three projects and counted once. The list allows one headset and two controllers per rig. Confirm the number of operators and headsets to use in the first session with the project owner.
 
-| Equipment | Quantity |
-|---|---|
-| UFACTORY xArm 7 robot | 2 |
-| Matching control box and cable/power set | 2 sets |
-| Compatible xArm gripper and mounting/cable set | 2 sets |
-| Rigid arm mount or stand | 2 |
-| Shared work table | 1 |
-| Meta Quest 3 headset | 2 |
-| Quest controller | 4 |
-| Headset USB data cable | 2 |
-| RealSense D405 wrist camera, bracket, and USB cable | 2 sets |
-| RealSense D435 scene camera, stand, and USB cable | 3 sets |
-| Arm-controller-to-switch Ethernet cable | 2 |
-| Task objects and tray/basket | 1 task set |
-| Cable labels, cable management, and suitable lighting | As needed |
+Product links identify known models. **Catalogs** and assembly **references** cover unspecified parts; confirm exact sizes, compatibility, and included accessories before ordering.
+
+| Equipment | Quantity | Product or reference |
+|---|---|---|
+| UFACTORY xArm 7 robot | 2 | [UFACTORY xArm](https://www.ufactory.cc/xarm-collaborative-robot/) — select xArm 7 |
+| Matching control box and cable/power set | 2 sets | [Control box and supplied cables](https://docs.xarm.ufactory.cc/2.hardware_installation.html) — installation reference |
+| Compatible xArm gripper and mounting/cable set | 2 sets | [UFACTORY grippers](https://www.ufactory.cc/solution-pickandplace/) — reference; lab fingers/adapters to specify |
+| Rigid arm mount or stand | 2 | [Base mounting requirements](https://docs.xarm.ufactory.cc/2.hardware_installation.html) — custom stand drawing needed |
+| Shared work table | 1 | [Workbench catalog](https://www.mcmaster.com/products/workbenches/) — size/load rating to specify |
+| Meta Quest 3 headset | 2 | [Meta Quest 3](https://www.meta.com/quest/quest-3/) |
+| Quest controller | 4 | [Touch Plus controllers](https://www.meta.com/quest/accessories/quest-touch-plus-controller/) — two pairs; check headset bundle |
+| Headset USB data cable | 2 | [Meta Link cable](https://www.meta.com/quest/accessories/link-cable/) — cable reference; equivalent data cable allowed |
+| RealSense D405 wrist camera, bracket, and USB cable | 2 sets | [D405](https://www.realsenseai.com/product-family/d405-series/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — wrist bracket to specify |
+| RealSense D435 scene camera, stand, and USB cable | 3 sets | [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — stand to specify |
+| Arm-controller-to-switch Ethernet cable | 2 | [Ethernet cable catalog](https://www.startech.com/en-us/cables/network) |
+| Task objects and tray/basket | 1 task set | [Tray catalog](https://www.mcmaster.com/products/trays/) — task objects chosen by project owner |
+| Cable labels, cable management, and suitable lighting | As needed | [Labels](https://www.mcmaster.com/products/labels/) · [cable ties](https://www.mcmaster.com/products/cable-ties/) · [lighting](https://www.mcmaster.com/products/work-lights/) — catalogs |
 
 ### Photo count check
 
@@ -45,10 +47,10 @@ The current photo shows **2 arms, 2 wrist cameras, and 3 scene cameras**: **5 ca
 
 ### Selection details
 
-- **Arms and controllers:** match the lab's [xArm 7](https://help.ufactory.cc/en/articles/4491842-the-difference-between-ufactory-xarm5-ufactory-xarm6-and-ufactory-xarm7). Confirm included power supplies, mains leads, and arm/controller cables against [UFACTORY's installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
+- **Arms and controllers:** match the lab's [xArm 7](https://www.ufactory.cc/xarm-collaborative-robot/). Confirm included power supplies, mains leads, and arm/controller cables against [UFACTORY's installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
 - **Grippers and stands:** obtain the approved finger geometry, adapters, calibration, base plates, and fasteners from the owner. Exact custom part numbers and the stand bill of materials remain to be specified.
 - **Headsets:** include [Quest 3](https://www.meta.com/quest/quest-3/) chargers, controller batteries, and data-capable USB cables long enough for the operator.
-- **Cameras:** use one [D405](https://www.realsenseai.com/product-family/d405-series/) per wrist and three [D435 scene cameras](https://www.realsenseai.com/products/) for the full station. Confirm mounting, view, and USB bandwidth before using all five.
+- **Cameras:** use one [D405](https://www.realsenseai.com/product-family/d405-series/) per wrist and three [D435 scene cameras](https://www.realsenseai.com/products/stereo-depth-camera-d435/) for the full station. Confirm mounting, view, and USB bandwidth before using all five.
 - **Network and task area:** the workstation cable and switch are counted in [shared equipment](../../getting-started/hardware.md#shared-equipment-prepare-once). Choose objects and camera positions for the intended task; keep cables away from moving joints.
 
 Both arms' stop controls must be accessible and clearly labeled. Confirm which button stops which arm before powering or resetting either robot.
@@ -57,7 +59,7 @@ Both arms' stop controls must be accessible and clearly labeled. Confirm which b
 
 The project owner confirmed **2 D405 wrist cameras**; the station also has **3 D435 scene cameras**. Record their serial numbers and physical positions before the first session. A first test can use just rig A's wrist and scene views; enable the remaining cameras as you validate the full station.
 
-Both arms belong to the platform even when only one is used for the first check. Extra storage, soft fingers, gripping tape, and custom adapters depend on the task; confirm their exact specifications with the owner.
+Both arms belong to the platform even when only one is used for the first check. Extra [storage](https://www.westerndigital.com/products/hdd/internal-hdd), soft fingers, [gripping tape](https://www.mcmaster.com/products/grip-tape/), and custom adapters depend on the task; confirm their exact specifications with the owner.
 
 ## 2. Mount and wire the station
 

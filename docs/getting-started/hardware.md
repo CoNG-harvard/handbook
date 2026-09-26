@@ -4,16 +4,18 @@ VLA Pipeline, Self Improvement Learning, and ABC Box use **one Linux workstation
 
 ## Shared equipment — prepare once
 
-| Shared equipment | Quantity |
-|---|---|
-| Complete Linux workstation with RTX PRO 6000 | 1 workstation, 1 GPU |
-| Monitor, keyboard, and mouse | 1 set, or arranged remote access |
-| Storage and backup destination | Capacity for recordings and backups across all three projects |
-| Network switch/router, power adapter, and workstation cable | 1 suitable set; reuse existing equipment |
+Product links identify known models. **Catalogs** and assembly **references** cover unspecified parts; confirm exact sizes, compatibility, and included accessories before ordering.
+
+| Shared equipment | Quantity | Product or reference |
+|---|---|---|
+| Complete Linux workstation with RTX PRO 6000 | 1 workstation, 1 GPU | [NVIDIA GPU and workstation partners](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/); complete build to specify |
+| Monitor, keyboard, and mouse | 1 set, or arranged remote access | [Monitors](https://www.dell.com/en-us/shop/pc-accessories/ar/computer-monitors) · [keyboards](https://www.logitech.com/en-us/shop/c/keyboards) · [mice](https://www.logitech.com/en-us/shop/c/mice) — catalogs |
+| Storage and backup destination | Capacity for recordings and backups across all three projects | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — catalog; backup device to specify |
+| Network switch/router, power adapter, and workstation cable | 1 suitable set; reuse existing equipment | [Switches](https://www.netgear.com/business/wired/switches/unmanaged/) · [Ethernet cables](https://www.startech.com/en-us/cables/network) — catalogs; use matching power adapter |
 
 The shared network connects the workstation to the selected robot equipment. Keep enough storage for the planned recordings and a separate backup destination.
 
-Have the supplier include a compatible motherboard, power supply, case, cooling, and mains lead. The inventory does not establish exact parts for these components.
+Have the [workstation supplier](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) include a compatible motherboard, power supply, case, cooling, and mains lead in the complete build quote. The inventory does not establish exact parts for these components.
 
 ## What each platform needs
 
@@ -86,14 +88,14 @@ The [ABC Box equipment list](../abc-box/hardware.md) separates the full Box pack
 
 ## Shared workstation specification {#workstation-specification-for-vla-pipeline-and-self-improvement-learning}
 
-| Component | Selected configuration or reference |
-|---|---|
-| GPU | **RTX PRO 6000 Blackwell Workstation Edition, 96 GB** |
-| Computer type | Linux workstation, x86-64; reference machine uses Ubuntu 24.04 |
-| CPU reference | AMD Ryzen 9 7950X, 16 cores / 32 threads |
-| System RAM reference | About 94 GiB reported by Linux; not a tested minimum |
-| Storage reference | Two WD_BLACK SN850X 2 TB SSDs and one WD 4 TB hard drive |
-| Connections | Ethernet for the xArm controllers and robot network; USB/data connections for the active platform's cameras, headsets, control interfaces, and input devices |
+| Component | Selected configuration or reference | Product or reference |
+|---|---|---|
+| GPU | **RTX PRO 6000 Blackwell Workstation Edition, 96 GB** | [NVIDIA product family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — select Workstation Edition |
+| Computer type | Linux workstation, x86-64; reference machine uses Ubuntu 24.04 | [NVIDIA workstation partners](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — complete build to specify |
+| CPU reference | AMD Ryzen 9 7950X, 16 cores / 32 threads | [AMD Ryzen 9 7950X](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7950x.html) |
+| System RAM reference | About 94 GiB reported by Linux; not a tested minimum | [Memory compatibility catalog](https://www.kingston.com/en/memory) — exact modules not recorded |
+| Storage reference | Two WD_BLACK SN850X 2 TB SSDs and one WD 4 TB hard drive | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [WD hard-drive catalog](https://www.westerndigital.com/products/hdd/internal-hdd) — HDD model not recorded |
+| Connections | Ethernet for the xArm controllers and robot network; USB/data connections for the active platform's cameras, headsets, control interfaces, and input devices | [Ethernet](https://www.startech.com/en-us/cables/network) · [USB cables](https://www.startech.com/en-us/cables/usb-30) — catalogs |
 
 CPU, RAM, storage, and GPU were inspected on the arm workstation on 24 September 2026. They provide a reference configuration for the desktop shared by all three projects. GPU memory and system RAM are separate. Choose storage capacity for the planned work, allowing room for recordings and backups.
 

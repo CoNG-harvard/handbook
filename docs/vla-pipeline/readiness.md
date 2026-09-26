@@ -19,9 +19,9 @@ Ask the installer to show each live view without moving an arm:
 
 | View | What to check |
 |---|---|
-| Rig A wrist — D405 | Gripper and intended contact area are visible |
-| Rig B wrist — D405 | The view belongs to the second arm and is clearly labeled |
-| Three D435 scene cameras | The intended table areas are visible with suitable lighting and no avoidable obstruction |
+| Rig A wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | Gripper and intended contact area are visible |
+| Rig B wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The view belongs to the second arm and is clearly labeled |
+| Three [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) scene cameras | The intended table areas are visible with suitable lighting and no avoidable obstruction |
 
 Record all five camera serials and positions. Check the views together to reveal USB bandwidth or power problems, then confirm the headset views correspond to the intended rig.
 

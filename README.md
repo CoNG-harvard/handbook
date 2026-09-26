@@ -9,9 +9,9 @@ The handbook helps readers with little robotics experience gather equipment, ide
 - [Before you begin](docs/getting-started/index.md), [shared equipment](docs/getting-started/hardware.md), and [workstation preparation](docs/getting-started/computer.md)
 - [VLA Pipeline](docs/vla-pipeline/index.md): two xArm robots, wrist/scene cameras, and Quest headsets
 - [Self Improvement Learning](docs/unidog-nav/index.md): Unitree Go2, D1 arm, D435i, and onboard computer
-- [ABC Box](docs/abc-box/index.md): followers, leaders, cameras, and a dedicated station computer
+- [ABC Box](docs/abc-box/index.md): followers, leaders, and cameras connected to the shared workstation
 
-VLA Pipeline and Self Improvement Learning share one workstation with **one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Equipment references distinguish observed inventory from parts still requiring confirmation. No hardware acceptance test was performed during the documentation update.
+All three projects share one workstation with **one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Equipment references distinguish observed inventory from parts still requiring confirmation. No hardware acceptance test was performed during the documentation update.
 
 ## Preview locally
 
@@ -67,6 +67,6 @@ Project display names are **VLA Pipeline**, **Self Improvement Learning**, and *
 
 Keep the same top-level navigation tabs on every page. Navigation remains in the header while scrolling. Desktop links separate shared setup from the projects; narrow screens use a native disclosure menu showing the current section. Both layouts are generated from the same navigation configuration. Each project sidebar begins with **Overview**, followed by equipment/connections and hardware readiness; include platform-specific checks such as D1 readiness where needed.
 
-Hardware inventories use short equipment-and-quantity tables with selection details below. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
+Hardware inventories use short equipment, quantity, and product/reference tables with selection details below. Link every equipment row to a verified product, supplier catalog, or relevant assembly reference; mark unspecified custom parts without inventing a purchase model. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
 
-The new station photographs use numbered vector callouts and matching text keys in their captions. Regenerate the annotated SVGs with `python3 scripts/label_photos.py`; the source JPEGs remain unchanged. Label only identifiable visible equipment, and do not infer rig A/B identities from position.
+The new station photographs use unnumbered vector callouts with camera model names and matching captions in their captions. Regenerate the annotated SVGs with `python3 scripts/label_photos.py`; the source JPEGs remain unchanged. Label only identifiable visible equipment, and do not infer rig A/B identities from position.
