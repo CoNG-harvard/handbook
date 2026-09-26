@@ -44,10 +44,8 @@ Use a stable surface and the manufacturer's mounting instructions. Arrange light
 
 Identify the physical stop control before enabling motion. During headset use, a second person must be able to watch the arms and reach their stops. For the Go2, plan an area where the robot can stand and turn without pulling a tether.
 
-## 5. Keep a station record
+## 5. Keep setup notes
 
 Record device models, serial numbers, cable labels, camera positions, network addresses, calibration dates, and the responsible operator in a private setup sheet. Use labels such as **rig A**, **rig B**, **left wrist**, and **overhead** consistently on the equipment and in the record.
-
-Use the printable [station record](station-record.md) to capture these details. Keep the completed copy privately with the equipment.
 
 **Next:** [Gather the shared equipment](hardware.md), then follow your project's hardware guide.

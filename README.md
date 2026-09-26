@@ -73,9 +73,9 @@ The new station photographs use unnumbered vector callouts with camera model nam
 
 ## Maintaining the setup aids
 
-Keep unknown connections explicitly marked; do not infer port maps from photographs. Connection maps are HTML/CSS so they remain readable on phones and in both themes. Shared setup covers only the shared equipment; project overview pages hold the full identification photographs. End each readiness page with the station record and a return to its own project.
+Keep unknown connections explicitly marked; do not infer port maps from photographs. Connection maps are HTML/CSS so they remain readable on phones and in both themes. Shared setup covers only the shared equipment; project overview pages hold the full identification photographs. End each readiness page with troubleshooting help and a return to its own project.
 
-The station record is a two-sheet print layout. It contains no storage or upload mechanism; completed records stay private. Checklists are static and intended for printing.
+Checklists are static and intended for printing. Readers keep their own setup notes privately.
 
 The labeled xArm and ABC SVGs embed checked-in 1800-pixel previews. Source JPEGs stay unchanged. To regenerate the previews on macOS, then rebuild vector labels:
 
@@ -85,4 +85,4 @@ sips -Z 1800 -s format jpeg -s formatOptions 82 docs/abc-box/assets/abc-box-stat
 python3 scripts/label_photos.py
 ```
 
-Verify mobile tables scroll without clipping, connection maps stack, and the station record prints with its two sections on separate sheets. Keep the source images and vector labels when optimizing image delivery.
+Verify mobile tables scroll without clipping, connection maps stack, and pages remain readable when printed. Keep the source images and vector labels when optimizing image delivery.

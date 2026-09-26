@@ -89,7 +89,7 @@ Both dashed boxes need the supplier's connection plan. Record the actual adapter
 2. **Pair:** label each leader and follower **left** or **right**. Confirm the pairing before enabling movement.
 3. **Control connections:** have the installer connect the arm interfaces and computers according to the supplier-approved plan. Label both cable ends and photograph the ports.
 4. **Cameras:** mount and label the left-wrist, right-wrist, and overhead D405s; connect their USB data cables to the host computer specified in that plan.
-5. **Inspect:** check cable clearance, power connections, and the stop location. Save the arrangement in the [station record](../getting-started/station-record.md).
+5. **Inspect:** check cable clearance, power connections, and the stop location. Save the arrangement in the private setup notes.
 
 **Check before continuing:** two identified leader/follower pairs, three labeled cameras, documented control interfaces, and an accessible stop. Complete the readiness checks before the first session.
 

@@ -92,7 +92,7 @@ This map shows data connections. Each control box also needs its matching mains 
 3. **Network:** connect both control boxes and the workstation to the shared switch/router with Ethernet.
 4. **Cameras:** mount one D405 per wrist and three D435s on stable stands. Label both ends of each USB cable with its camera position, then connect to the workstation.
 5. **Headsets:** connect each headset used for the session with a data-capable USB cable. Keep its controllers together.
-6. **Inspect:** have the installer check connections and cable clearance before power-on. Photograph the ports and cable labels for the [station record](../../getting-started/station-record.md).
+6. **Inspect:** have the installer check connections and cable clearance before power-on. Photograph the ports and cable labels for the private setup notes.
 
 **Check before continuing:** two arm/control-box pairs, five labeled camera cables, stable mounts, and accessible stop controls. An operator checks rig A and rig B separately before a combined session.
 
@@ -116,7 +116,7 @@ Keep separate records for rig A and rig B. Match each physical device with its c
 | Scene cameras | Serial number, stand position, and intended view for each of the three cameras |
 | Workstation/network | Connection method, cable labels, and assigned addresses |
 
-Ask the installer to confirm device identities. A label such as **rig A wrist** describes the camera's role; its serial identifies the physical unit. Keep actual network addresses in your private station record.
+Ask the installer to confirm device identities. A label such as **rig A wrist** describes the camera's role; its serial identifies the physical unit. Keep actual network addresses in your private setup notes.
 
 ## 5. Identify the headset controls
 

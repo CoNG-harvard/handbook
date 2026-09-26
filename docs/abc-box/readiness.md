@@ -41,11 +41,11 @@ The station photograph does not show the complete stop, leader, or computer arra
 
 ## 5. Record the handover
 
-Keep the packing list, device models/serials, leader/follower pairings, camera positions, calibration date, stop procedure, and installer/operator sign-off with the station record.
+Keep the packing list, device models/serials, leader/follower pairings, camera positions, calibration date, stop procedure, and installer/operator sign-off with the private setup notes.
 
 **Ready for handover:** the equipment matches the delivered instructions, calibration and views have been checked, and the operator has approved the stop and recovery procedure. The lab's complete ABC Box acceptance session remains to be recorded.
 
 
-**Finish:** complete the [station record](../getting-started/station-record.md), including any unresolved items. Use [hardware troubleshooting](../getting-started/troubleshooting.md) if a check fails.
+**If a check fails:** use [hardware troubleshooting](../getting-started/troubleshooting.md).
 
 [Return to this project](index.md) · [All projects](../index.md)

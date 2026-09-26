@@ -37,6 +37,6 @@ Save the robot, battery, controller, camera, arm, and onboard-computer identitie
 **Ready for handover:** the installer has approved the mounts and connections, both camera views are checked, and an experienced operator has signed off the complete platform for the planned session.
 
 
-**Finish:** complete the [station record](../getting-started/station-record.md), including any unresolved items. Use [hardware troubleshooting](../getting-started/troubleshooting.md) if a check fails.
+**If a check fails:** use [hardware troubleshooting](../getting-started/troubleshooting.md).
 
 [Return to this project](index.md) · [All projects](../index.md)

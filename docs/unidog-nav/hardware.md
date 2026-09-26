@@ -99,7 +99,7 @@ Use [Unitree’s connection diagram](https://support.unitree.com/home/en/develop
 1. **Identify:** record the Go2 EDU Plus serial, battery, controller, and D1 package.
 2. **Mount:** have the installer check the approved arm and camera mounts, gantry attachment, and clearance.
 3. **Connect:** follow the delivered power/control instructions. Connect the front D435i to the onboard computer; connect the D1 using Unitree’s diagram and the wrist camera using its confirmed USB arrangement.
-4. **Label:** mark both ends of camera and network cables. Photograph the ports for the [station record](../getting-started/station-record.md).
+4. **Label:** mark both ends of camera and network cables. Photograph the ports for the private setup notes.
 5. **Inspect:** check cable slack around the legs, wrist, and gripper before powered checks.
 
 **Check before continuing:** the robot and desk computers are clearly distinguished, both cameras are identified, and the installer has approved the D1 connections. Before a walking test, manage any network tether according to the operator's procedure.

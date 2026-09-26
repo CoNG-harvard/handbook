@@ -21,7 +21,7 @@ The D1 wrist camera beside the gripper is a **[RealSense D435](https://www.reals
 
 Use the [RichBird C-clamp camera mount](https://www.amazon.com/dp/B0GSR6883N) for the D435 wrist camera. Check that the clamp and ball head are secure and leave clearance for the gripper and camera cable before calibration.
 
-Keep the approved calibration record and its date with the station record. The pictured D435i does not establish which camera arrangement is approved for every manipulation task.
+Keep the approved calibration record and its date with the private setup notes. The pictured D435i does not establish which camera arrangement is approved for every manipulation task.
 
 ## 3. Arrange the arm's acceptance check
 

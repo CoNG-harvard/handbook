@@ -20,6 +20,6 @@ For a D405, also check working distance when the depth view is poor: RealSense g
 
 For xArm cable changes, UFACTORY requires external AC to be disconnected before plugging or unplugging arm cables. The delivered model's installation instructions take precedence. [UFACTORY hardware installation](https://docs.xarm.ufactory.cc/2.hardware_installation.html)
 
-If the connection, mount, or power arrangement is undocumented, obtain the missing instructions from the owner or supplier before changing it. Add the issue to the [station record](station-record.md).
+If the connection, mount, or power arrangement is undocumented, obtain the missing instructions from the owner or supplier before changing it. Add the issue to the private setup notes.
 
 **Return to readiness:** [VLA Pipeline](../vla-pipeline/readiness.md) · [Self Improvement Learning](../unidog-nav/readiness.md) · [ABC Box](../abc-box/readiness.md).

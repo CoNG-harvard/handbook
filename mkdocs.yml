@@ -75,7 +75,6 @@ nav:
       - Before you begin: getting-started/index.md
       - Shared computer and hardware: getting-started/hardware.md
       - Prepare the workstation: getting-started/computer.md
-      - Station record: getting-started/station-record.md
       - Hardware troubleshooting: getting-started/troubleshooting.md
       - Equipment references: getting-started/sources.md
   - VLA Pipeline:

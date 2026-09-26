@@ -58,4 +58,4 @@ VLA Pipeline, Self Improvement Learning, and ABC Box share **one RTX PRO 6000 wo
 - [Prepare the workstation](getting-started/computer.md) — workspace, power, network, and peripheral connections.
 - [Equipment references](getting-started/sources.md) — manufacturer guidance and the basis for the hardware lists.
 
-Setup tools: [Printable station record](getting-started/station-record.md) · [Hardware troubleshooting](getting-started/troubleshooting.md).
+Need help with a check? See [Hardware troubleshooting](getting-started/troubleshooting.md).
