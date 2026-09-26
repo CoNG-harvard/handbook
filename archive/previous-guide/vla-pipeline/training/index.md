@@ -21,3 +21,5 @@ The inspected VLA Pipeline setup serves a custom openpi model using `pi05_droid_
 Use [dataset preparation](../teleop/datasets.md), then work with the model owner on the lab openpi training configuration. The source includes general training examples, but the precise reproducible xArm training recipe, dataset release, and acceptance criteria have not been established by this handbook review.
 
 Do not substitute a generic `lerobot-train` command for the lab's custom openpi workflow. Record the chosen training configuration, data revision, normalization procedure, checkpoint, and successful saved-data check as part of the model handoff.
+
+The [lab archive](../../getting-started/lab-resources.md) includes PushT experiment videos and an older research-computing note. Use them for background; obtain a compatible dataset and model environment through the handoff above.

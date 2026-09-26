@@ -29,6 +29,8 @@ Leader zeroing writes calibration to the encoders. The operator must check the r
 
 ## 2. Identify the cameras
 
+If you need to check a camera image first, use the [RealSense Viewer walkthrough](../getting-started/lab-resources.md#check-a-realsense-camera-before-recording) on the recording computer. Close Viewer before starting the collection application.
+
 ```bash
 yam-abc-cameras
 nano configs/cameras.yaml

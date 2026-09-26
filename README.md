@@ -1,19 +1,17 @@
 # CoNG Handbook
 
-Source for the CoNG lab's project manuals, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published with GitHub Pages at <https://cong-harvard.github.io/handbook/>.
+Source for the CoNG lab's hardware platform setup manuals, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published with GitHub Pages at <https://cong-harvard.github.io/handbook/>.
 
 ## Read the setup manual
 
-The handbook is written for people preparing new Linux workstations with little prior robotics context.
+The handbook helps readers with little robotics experience gather equipment, identify parts, assemble and connect each platform, and complete an operator-led hardware readiness check.
 
-- [Before you begin](docs/getting-started/index.md), [hardware checklist](docs/getting-started/hardware.md), and [computer preparation](docs/getting-started/computer.md)
-- VLA Pipeline and Self Improvement Learning share **one workstation with one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Each project has its own robot hardware list.
-- [VLA Pipeline two-arm station](docs/vla-pipeline/index.md): hardware → installation → headset recording → model inference
-- [Self Improvement Learning robot dog](docs/unidog-nav/index.md): installation → mock check → camera bridge → supervised movement
-- [ABC Box](docs/abc-box/index.md): equipment → software rehearsal → configure and record, using its own recording computer
-- [Source handoff and verification limits](docs/getting-started/sources.md)
+- [Before you begin](docs/getting-started/index.md), [shared equipment](docs/getting-started/hardware.md), and [workstation preparation](docs/getting-started/computer.md)
+- [VLA Pipeline](docs/vla-pipeline/index.md): two xArm robots, wrist/scene cameras, and Quest headsets
+- [Self Improvement Learning](docs/unidog-nav/index.md): Unitree Go2, D1 arm, D435i, and onboard computer
+- [ABC Box](docs/abc-box/index.md): followers, leaders, cameras, and a dedicated station computer
 
-The September 2026 edition was checked against the lab working trees. It is not a claim of a completed fresh-machine installation or hardware acceptance test. Several custom sources, environments, and model assets require a lab handoff.
+VLA Pipeline and Self Improvement Learning share one workstation with **one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Equipment references distinguish observed inventory from parts still requiring confirmation. No hardware acceptance test was performed during the documentation update.
 
 ## Preview locally
 
@@ -28,8 +26,10 @@ mkdocs serve            # http://127.0.0.1:8000, reloads on save
 | Path | What it is |
 |---|---|
 | `docs/index.md` | Project directory with links to shared setup |
-| `docs/<project>/` | One folder per project; images go in `docs/<project>/assets/` |
+| `docs/<project>/` | Hardware guides and labeled photos in `assets/` |
+| `archive/previous-guide/` | Previous text retained for maintainers, outside the published site |
 | `mkdocs.yml` | Theme, navigation, and link validation |
+| `overrides/partials/tabs.html` | Shared desktop navigation and compact mobile menu |
 | `docs/stylesheets/handbook.css` | Typography, project cards, and responsive layout |
 | `.github/workflows/pages.yml` | Builds the site and publishes it to GitHub Pages |
 
@@ -49,11 +49,13 @@ One-time setup: **Settings → Pages → Build and deployment → Source: GitHub
 
 ## Writing setup instructions
 
-State which computer and folder each command uses, define unfamiliar terms, and give an expected result before the next step. Keep complete installation steps ahead of advanced experiments. Identify commands that connect to hardware or move a robot, including reset commands. Use source-verified CLI arguments and configuration layouts; distinguish observed versions from a tested dependency lock.
+Keep the published site focused on equipment, quantities, mounting, power/data connections, camera positions, device labels, calibration requirements, stop controls, and readiness. Explain unfamiliar hardware terms and state the expected result of each check. Use manufacturer instructions for exact mounting loads, fasteners, wiring, and electrical requirements rather than inventing specifications.
 
-Keep machine-specific values private. Record source provenance and unresolved installation dependencies in `docs/getting-started/sources.md`. Run `mkdocs build --strict` before review; link and anchor warnings are configured to fail that build. Building the site does not test the robot software or external web links.
+Software installation, environments, launch commands, model training/inference, datasets, source-transfer recipes, and software-release references do not belong in the published manual. The earlier material is retained in `archive/previous-guide/` for maintainers; do not include that directory in the site build or search index.
 
-Use real photographs for project equipment, with captions identifying the setup shown. If a photograph is unavailable, use an explicit photo placeholder. Do not substitute generated or schematic pictures for equipment photos.
+Keep actual device serials and network addresses in private station records. Record equipment evidence and unresolved physical requirements in `docs/getting-started/sources.md`. Run `mkdocs build --strict` before review; link and anchor warnings fail that build. Building the site does not validate hardware or external links.
+
+Use real photographs with accurate callouts and captions. If a photograph is unavailable, use an explicit photo placeholder. Never substitute generated equipment photos.
 
 ## Website style conventions
 
@@ -61,10 +63,10 @@ Keep visual rules in `docs/stylesheets/handbook.css`; avoid page-specific fonts,
 
 Wrap images in `figure.handbook-figure` with a plain-text `figcaption` and a `.figure-links` paragraph. Use **View full-size image** and, when available, **Source photograph** or **Source PDF**. Follow the markup in `docs/unidog-nav/index.md`. Preserve each real image's aspect ratio and existing labels.
 
-Project display names are **VLA Pipeline**, **Self Improvement Learning**, and **ABC Box**. Keep software identifiers (`robocoop`, `unidog_nav`), existing documentation paths, and the configured “Hey UniDog” wake word unchanged unless those underlying systems are renamed.
+Project display names are **VLA Pipeline**, **Self Improvement Learning**, and **ABC Box**. Preserve the existing project URL roots.
 
-Keep the same top-level navigation tabs on every page. Tabs remain in the header while scrolling and wrap into rows on narrow screens. Each project sidebar begins with **Overview**, followed by numbered setup pages and a **Reference** section.
+Keep the same top-level navigation tabs on every page. Navigation remains in the header while scrolling. Desktop links separate shared setup from the projects; narrow screens use a native disclosure menu showing the current section. Both layouts are generated from the same navigation configuration. Each project sidebar begins with **Overview**, followed by equipment/connections and hardware readiness; include platform-specific checks such as D1 readiness where needed.
 
-Keep required handoff items ahead of installation, and optional model setup outside the first camera/movement path. Hardware inventories use short equipment-and-quantity tables with selection details below. Mark incomplete commissioning procedures explicitly; existing source code alone does not establish a reproducible installation.
+Hardware inventories use short equipment-and-quantity tables with selection details below. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
 
-Use the directory placeholders defined in `docs/getting-started/paths.md` for installation roots, robot deployments, and custom output locations. Quote path placeholders in shell examples, preserve source-relative filenames, and explain any launcher defaults that must be adapted; do not imply that documentation placeholders automatically reconfigure the original scripts.
+The new station photographs use numbered vector callouts and matching text keys in their captions. Regenerate the annotated SVGs with `python3 scripts/label_photos.py`; the source JPEGs remain unchanged. Label only identifiable visible equipment, and do not infer rig A/B identities from position.

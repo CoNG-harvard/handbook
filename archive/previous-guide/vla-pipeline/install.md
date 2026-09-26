@@ -82,6 +82,8 @@ teleimager-server --cf --rs
 
 **Expected:** the connected cameras and their serial numbers are listed. Match each serial to its physical camera and record it. If a camera is missing, check the USB data cable, port, device permissions, and whether another application is using it.
 
+For a visual check before starting the camera server, use the [RealSense Viewer walkthrough](../getting-started/lab-resources.md#check-a-realsense-camera-before-recording), based on the lab’s archived camera note. Close Viewer before continuing.
+
 ## 4. Connect the headset
 
 Enable developer mode for your Quest account/headset through Meta's current developer setup flow. Download **Android SDK Platform Tools for Linux** from the [official Platform Tools page](https://developer.android.com/tools/releases/platform-tools). Extract the `platform-tools` folder to `<RECORDING_DIR>/platform-tools`.

@@ -1,6 +1,6 @@
 # ABC Box hardware
 
-**Goal:** identify and assemble one complete station. Use the delivered packing list to confirm inclusion; a camera mount is not a camera.
+**Goal:** identify one complete station before installing software. Use the delivered packing list to confirm inclusion; a camera mount is not a camera.
 
 <figure class="handbook-figure" markdown="1">
 
@@ -47,9 +47,9 @@ The product describes a hardware emergency stop. Ask the supplier to demonstrate
 
 **Leaders and cameras:** their inclusion is not explicit in the ABC Box package list. Get written confirmation before ordering extras. The [ABC assembly guide](https://abc.bot/hardware.html) uses two wrist D405s and one overhead D405. Follow the delivered Box's assembly instructions rather than buying all parts from that separate, build-your-own station list.
 
-**Leader choice matters:** passive GELLO leaders measure joint position without driving motors; powered YAM leaders need a different setup. Have the supplier confirm the actual leader model, its power requirements, calibration procedure, and compatibility with the followers. [I2RT hardware configuration](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md)
+**Leader choice matters:** the collection application's example configuration uses passive GELLO leaders, which measure joint position without driving motors. Powered YAM leaders use different drivers and configuration. Record the actual leader and gripper models; do not copy example settings blindly. [I2RT hardware configuration](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md)
 
-**Communication:** CAN is a communication link used by the arm control equipment. Have the supplier identify each supplied interface before purchasing adapters; do not assume all four require an additional external adapter.
+**Communication:** CAN is the control connection used by this software. Have the supplier identify each supplied interface before purchasing adapters; do not assume all four require an additional external adapter.
 
 ## 3. Connect and label the station
 
@@ -59,4 +59,4 @@ The product describes a hardware emergency stop. Ask the supplier to demonstrate
 4. Route power and data cables clear of joints and the work area.
 5. Record device identities, approved resting poses, and the stop procedure in your private setup note.
 
-**Next:** [Check hardware readiness](readiness.md) with the installer and operator.
+**Next:** [Install and rehearse](install.md) before enabling real teleoperation.

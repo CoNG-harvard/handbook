@@ -1,99 +1,51 @@
 # Before you begin
 
-**Goal:** know what you are setting up and have the information needed to finish. Read this page once before installing anything.
+**Goal:** choose a platform, gather its equipment, and arrange help for assembly and the first powered checks. You do not need prior robotics experience to use the equipment lists.
 
 ## 1. Choose a project
 
-**VLA Pipeline** is a tabletop setup with two xArm 7 robots. A person can guide it using a Meta Quest headset and controllers. The computer can save the camera images and movements as a demonstration. Later, a trained model can choose movements itself. The hardware list covers **both arms**. Validate rig A first, repeat for rig B, then configure the intended two-arm workflow.
+| Project | Physical setup | Computer |
+|---|---|---|
+| [VLA Pipeline](../vla-pipeline/index.md) | Two xArm 7 robots, grippers, five cameras, and Quest headsets | Shared workstation |
+| [Self Improvement Learning](../unidog-nav/index.md) | Unitree Go2, D1 arm, D435i camera, and onboard computer | Shared workstation plus the robot's onboard computer |
+| [ABC Box](../abc-box/index.md) | Two follower arms, paired leader arms, and three cameras | Dedicated station computer |
 
-**Self Improvement Learning** uses a Unitree Go2 robot dog with a Unitree D1 arm. A workstation looks at camera images and sends commands to a separate computer carried by the dog. The dog also needs the lab's robot-control software. Installing the workstation software alone does not make an unconfigured dog ready to walk.
+Use the [shared hardware list](hardware.md) to count the workstation and its accessories once.
 
-**ABC Box** is a separate two-arm station controlled through hand-operated leader arms. Start with its [hardware and software guide](../abc-box/index.md). Its included recording computer handles the first collection session; shared GPU preparation is needed only for later model work.
+## 2. Arrange the setup handoff {#2-get-a-setup-handoff-from-the-lab}
 
-Use the [hardware checklist](hardware.md) to gather the full station, including the **RTX PRO 6000 Blackwell Workstation Edition, 96 GB**, in one workstation shared by both projects.
+Ask the project owner for:
 
-## 2. Get a setup handoff from the lab
+- The packing list and manufacturer manuals for the exact delivered models.
+- Approved mounts, fasteners, cables, power supplies, and the planned equipment layout.
+- A named installer and an experienced operator for the first powered checks.
+- A demonstration of the stop controls, power-on sequence, and shutdown procedure.
+- Any existing calibration records and a place to keep the station's equipment record.
 
-Get these items **before starting the project installation**. Ask the project owner to check each item with you and save the details in a private setup note.
+Check quantities before assembly. Mark missing or unspecified parts and resolve them with the owner or supplier before the affected step.
 
-### For both projects
+## 3. Know the parts
 
-- [ ] A named lab contact who can provide files and help with the first session.
-- [ ] Access to the shared workstation, permission to install software, and access to the required code.
-- [ ] The [project equipment](hardware.md), network details, and an operator for the first hardware check.
-
-### Before installing VLA Pipeline
-
-- [ ] A dated bundle of the modified `lerobot` workspace, `robocoop` scripts, and lab `openpi` source, including its lockfile.
-- [ ] The recording environment's dependency snapshot and instructions for recreating it. A fresh installation is still pending validation.
-- [ ] Separate rig A/B settings: arm addresses, camera/headset serials, and reviewed home positions.
-
-A model checkpoint and matching sample dataset are needed only for **Run a trained model**, not for the first headset recording. There is no verified public clone command for the complete `robocoop` workspace.
-
-### Before installing Self Improvement Learning
-
-- [ ] Access to `unidog_nav`, its submodule, and a dated copy of intended local source changes.
-- [ ] A sample JPEG folder for the first mock check. This check needs no robot or model.
-- [ ] Before connecting real hardware: the owner-provided robot image/environment, `LLM_guided_RL` deployment, SSH access, camera settings, and demonstrated stop procedure.
-
-A new workstation can complete the mock check while robot preparation is pending. Qwen and NaVILA are [optional model installations](../unidog-nav/models.md). The D1 arm is included in the platform, but its [commissioning guide is pending](../unidog-nav/d1-arm.md).
-
-**Missing something?** Ask your lab contact for the items above before the affected step. The [maintainer's handoff inventory](sources.md) gives the exact folders and unresolved requirements. Keep credentials and device identities in the private setup note.
-
-### Before installing ABC Box
-
-- [ ] Confirm the full Box package, leader type, cameras, and supplied computer image.
-- [ ] Get the approved I2RT source revision, device configuration, and operator calibration procedure.
-- [ ] Choose `<ABC_DIR>` and `<ABC_DATA_DIR>` on the recording computer.
-
-Follow [Install and rehearse](../abc-box/install.md); the xArm and Go2 environments are not required.
-
-## 3. Learn the few terms used in the steps
-
-| Term | Meaning here |
+| Term | Meaning |
 |---|---|
-| Terminal | A window where you type commands. On Ubuntu, open the Terminal app. |
-| Repository / repo | A folder of source code, usually downloaded using Git. |
-| Environment | A separate collection of Python and its packages. Activating one selects the tools for that part of the system. |
-| Server | A program that stays running and waits for requests from another program. Keep its terminal open. |
-| IP address | A device's address on the network. Obtain yours from the person configuring the equipment. |
-| Port | A numbered connection used by a server, such as `8000`. |
-| `localhost` / `127.0.0.1` | The computer on which the command or browser runs. It changes meaning when you switch computers. |
-| SSH | A way to log into another computer. An SSH tunnel carries a connection through that login. |
-| YAML | A settings file. Indentation matters; use spaces rather than tabs. |
-| Policy / model | Software that predicts an action from images, robot state, and a task description. |
-| Checkpoint | The saved files containing a trained model. |
-| Episode / dataset | One recorded attempt / a collection of recorded attempts. |
-| Mock | A software rehearsal using pretend hardware. It does not establish that a real robot is ready. |
-| Inference | Asking a trained model to predict an action. Depending on the selected mode, the program may also execute it. |
+| Workstation | The desk computer shared by the arm and robot-dog projects |
+| Onboard computer | A separate computer carried by the robot |
+| Control box | The unit connecting an arm to its power and control cables |
+| Gripper | The device at the end of an arm that holds objects |
+| Wrist camera | A camera mounted near the gripper, moving with the arm |
+| Scene camera | A camera on a fixed stand, looking at the wider work area |
+| Leader / follower | An arm moved by the operator / an arm that follows that movement |
+| Calibration | Measurements that relate device positions or check their reference positions |
+| Commissioning | The installer and operator's checks before equipment is put into use |
 
-## 4. Read command blocks correctly
+## 4. Prepare the work area
 
-Choose your installation locations using [Choose your folders](paths.md). Directory placeholders such as `<RECORDING_DIR>` and `<NAV_DIR>` always refer to those choices, not the original lab desktops.
+Use a stable surface and the manufacturer's mounting instructions. Arrange lighting and camera views, leave room around moving parts, and keep cables clear of joints and walkways. Have the installer confirm power requirements before connecting equipment.
 
-- Copy one block at a time, then read the result before continuing.
-- `cd` changes the folder. `~` means your home folder on the current computer.
-- Text such as `<ARM_IP>` is a placeholder. Replace it, including the angle brackets, before running a command.
-- A line ending in `\` continues onto the next line. Copy the whole block.
-- A line beginning with `#` is an explanation.
-- **Terminal A** and **Terminal B** mean separate terminal windows on the same workstation. Activate the stated environment in each one.
-- If a command reports an error, stop at that step. Later steps usually depend on it.
+Identify the physical stop control before enabling motion. During headset use, a second person must be able to watch the arms and reach their stops. For the Go2, plan an area where the robot can stand and turn without pulling a tether.
 
-A **workstation** is the Linux computer running the project software. VLA Pipeline and Self Improvement Learning commands run there unless a step says **on the robot**. ABC Box commands run on its **recording computer**, as identified on its pages. Your laptop can display this guide or connect to the workstation using SSH.
+## 5. Keep a station record
 
-Check which computer and folder you are using:
+Record device models, serial numbers, cable labels, camera positions, network addresses, calibration dates, and the responsible operator in a private setup sheet. Use labels such as **rig A**, **rig B**, **left wrist**, and **overhead** consistently on the equipment and in the record.
 
-```bash
-hostname
-pwd
-```
-
-**Expected:** the intended computer name and working folder. To leave an SSH login, type `exit`.
-
-## 5. Arrange the first hardware session
-
-Have an experienced operator show you the physical stop control and the manufacturer's power-on/shutdown procedure for your exact robot. The arm's reset command itself moves the arm. The dog's first movement can include standing up. Keep people, cables, and loose objects out of the movement area.
-
-A software stop requires working software and a connection. Learn the physical stop procedure before enabling motion. During headset use, have a second person watch the arm and its surroundings.
-
-**Next:** [Gather the hardware](hardware.md), then [prepare the shared computer](computer.md).
+**Next:** [Gather the shared equipment](hardware.md), then follow your project's hardware guide.

@@ -14,7 +14,7 @@ In the Quest browser, open `https://localhost:8012/?ws=wss://localhost:8012` and
 
 <figcaption markdown="1">
 
-Quest controller buttons used during recording. The table below explains each control.
+Left controller: **X/Y** buttons. Right controller: **A/B** buttons, **trigger** (front), and **grip/side button**. The red callouts identify the trigger position and side button; the table below explains their recording actions.
 
 [View full-size image](../assets/quest_controllers.png)
 { .figure-links }

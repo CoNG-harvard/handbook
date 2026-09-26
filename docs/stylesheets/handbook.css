@@ -155,63 +155,128 @@
   }
 }
 
-/* Keep project navigation in the header at every screen width. */
+/* Main navigation: shared links first, followed by the three projects. */
 @media screen {
   .md-typeset :target {
-    --md-scroll-margin: 6rem;
+    --md-scroll-margin: 6.4rem;
   }
-  .md-header .md-tabs {
+  .md-header .handbook-nav {
     display: block;
+    overflow: visible;
     border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
   }
-  .md-tabs__list {
-    gap: 0.3rem;
+  .handbook-nav__inner {
+    padding: 0.4rem 0.6rem;
   }
-  .md-tabs__item {
-    height: auto;
+  .handbook-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-  .md-tabs__link {
+  .handbook-nav__desktop {
+    display: flex;
     align-items: center;
-    min-height: 2.4rem;
-    margin-top: 0;
-    border-bottom: 2px solid transparent;
-    font-weight: 500;
-    transition: none;
+    gap: 0.25rem;
   }
-  .md-tabs__item--active .md-tabs__link {
-    border-bottom-color: currentColor;
+  .handbook-nav__item a {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    min-height: 2.2rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: var(--handbook-radius-small);
+    color: var(--md-default-fg-color--light);
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .handbook-nav__item a:hover {
+    background: var(--md-code-bg-color);
+    color: var(--md-typeset-a-color);
+  }
+  .handbook-nav__item--active a {
+    background: var(--md-accent-fg-color--transparent);
+    color: var(--md-typeset-a-color);
+    font-weight: 650;
+    box-shadow: inset 0 -2px 0 var(--md-typeset-a-color);
+  }
+  .handbook-nav__desktop .handbook-nav__item:nth-child(3) {
+    border-left: 1px solid var(--md-default-fg-color--lightest);
+    margin-left: 0.35rem;
+    padding-left: 0.6rem;
+  }
+  .handbook-nav :is(a, summary):focus-visible {
+    outline: 2px solid var(--md-typeset-a-color);
+    outline-offset: 2px;
+  }
+  .handbook-nav__mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 47.99em) {
+  .handbook-nav__desktop {
+    display: none;
+  }
+  .handbook-nav__mobile {
+    display: block;
+    position: relative;
+  }
+  .handbook-nav__mobile summary {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 2.2rem;
+    padding: 0.45rem 0.5rem;
+    border-radius: var(--handbook-radius-small);
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+  .handbook-nav__mobile summary::-webkit-details-marker {
+    display: none;
+  }
+  .handbook-nav__hint {
+    color: var(--md-default-fg-color--light);
+  }
+  .handbook-nav__current {
+    flex: 1;
     font-weight: 600;
   }
-  .md-tabs__link:focus-visible {
-    outline: 2px solid var(--md-accent-fg-color);
-    outline-offset: -3px;
+  .handbook-nav__chevron {
+    width: 0.35rem;
+    height: 0.35rem;
+    margin: 0 0.25rem 0.2rem;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg);
   }
-}
-@media screen and (max-width: 40em) {
-  .md-typeset :target {
-    --md-scroll-margin: 10.8rem;
+  .handbook-nav__mobile[open] .handbook-nav__chevron {
+    transform: rotate(225deg);
+    margin-bottom: -0.15rem;
   }
-  .md-header .md-tabs__list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0;
-    margin: 0;
-    white-space: normal;
+  .handbook-nav .handbook-nav__menu {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - 6rem);
+    overflow-y: auto;
+    padding: 0.4rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: var(--handbook-radius);
+    background: var(--md-default-bg-color);
+    box-shadow: 0 0.5rem 1.5rem #0002;
   }
-  .md-tabs__item {
-    padding: 0 0.6rem;
-  }
-  .md-tabs__link {
-    justify-content: center;
-    height: 100%;
+  .handbook-nav__menu .handbook-nav__item a {
     min-height: 2.4rem;
-    font-size: 0.65rem;
-    text-align: center;
   }
-}
-
-@media screen and (max-width: 40em) {
-  .md-tabs__item:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
+  .handbook-nav__menu .handbook-nav__item:nth-child(3) {
+    margin-top: 0.35rem;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
   }
 }

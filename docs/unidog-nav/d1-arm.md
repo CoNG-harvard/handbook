@@ -1,25 +1,27 @@
 # D1 arm readiness
 
-**Status: arm setup instructions pending.** The Unitree D1 arm is part of the Self Improvement Learning platform. Completing the Go2 navigation guide does not make the arm ready to use. This page records what the project owner must supply before a beginner can set it up.
+**Status: platform-specific assembly and commissioning instructions are pending.** The D1 is part of the Go2 platform, but it needs its own mounting, calibration, and operator checks.
 
-## Get these from the project owner
+## 1. Confirm the mounting and power plan
 
-- [ ] **Physical installation:** the approved D1 mounting kit, power/data wiring, payload arrangement, and manufacturer instructions for the supplied Go2 and arm.
-- [ ] **Robot software:** the exact robot image, SDK versions, companion source revision, network interface, and reviewed local changes.
-- [ ] **Arm settings:** confirmed joint limits, gripper behavior, resting pose, and stop/recovery procedure for this physical unit.
-- [ ] **Camera and calibration:** the manipulation camera model, serial, mount, and the matching camera-to-arm calibration file, with its storage and restore instructions.
-- [ ] **Required services:** the selected manipulation workflow's perception services, model assets, and startup order.
-- [ ] **Acceptance record:** a supervised connection, camera, gripper, and bounded movement test, signed off by the operator before a pick/place trial.
+Obtain the manufacturer's instructions and the project owner's approved arrangement for the exact Go2 and D1 units. Have the installer confirm:
 
-Calibration describes where the camera is relative to the arm. A file from another camera mounting arrangement is not interchangeable. Keep a maintained copy of the approved calibration; a temporary `/tmp` file alone is not a durable installation handoff.
+- The mounting kit, fasteners, base attachment, and gripper are complete.
+- The payload and its placement are acceptable for the robot.
+- Power supplies, connectors, and data cables match the delivered equipment.
+- Cables cannot catch on the arm, legs, or camera mount.
+- The arm's resting position leaves the required clearance for the dog.
 
-## When to continue
+This handbook does not supply mounting torque, wiring pinouts, or load limits; use the exact manufacturer's instructions for those details.
 
-The project owner must turn that handoff into a tested installation procedure before this page can provide motion commands. The inspected companion README describes a newer Python environment than the bridge's deployed `walk` environment; that difference also needs resolution for the robot image.
+## 2. Identify the camera and calibration
 
-You can continue the [workstation mock check](setup.md) now. The [Go2 camera and navigation path](robot-bridge.md) requires its own commissioned robot and operator checks. See the [source verification record](../getting-started/sources.md#follow-up-source-check) for what was inspected.
+Record the manipulation camera model, serial, mounting position, and calibration target specified by the owner. Calibration measures the camera's position relative to the arm. Moving the camera or mount can invalidate those measurements.
 
-??? info "For maintainers: verified source files"
-    The inspected companion `LLM_guided_RL` workspace contains the D1 interface (`robot/d1_arm_interface.py`), message definitions, and kinematics. It uses the Unitree SDK to communicate with the arm. The interface can fall back to simulated hardware when the SDK is missing, so importing it successfully is not proof of a working arm connection.
+Keep the approved calibration record and its date with the station record. The pictured D435i does not establish which camera arrangement is approved for every manipulation task.
 
-    The active `unidog_nav` workspace also contains manipulation code, including `robot/arm_reach.py` and `robot/skill_pick_pipeline_v2.py`. The reach program expects the companion robot deployment and a camera-to-arm calibration file; use `--handeye "<HAND_EYE_FILE>"` to select your approved calibration file instead of relying on the deployment-specific default. These files are evidence of an existing lab workflow, not a complete fresh-install package.
+## 3. Arrange the arm's acceptance check
+
+An experienced operator must verify the gripper, limits, resting pose, and stop/recovery procedure before a pick-and-place session. Have the operator demonstrate which stop affects the arm and how the arm is supported if power is removed.
+
+**Ready only when:** the installer has approved the physical installation, the calibration matches the installed camera, and the supervised arm check is recorded. Return to [platform readiness](readiness.md) with any outstanding items listed.

@@ -1,5 +1,5 @@
 site_name: CoNG Handbook
-site_description: Lab project guides for VLA Pipeline, Self Improvement Learning, and ABC Box
+site_description: Hardware platform setup manuals for VLA Pipeline, Self Improvement Learning, and ABC Box
 site_url: https://cong-harvard.github.io/handbook/
 repo_url: https://github.com/CoNG-harvard/handbook
 repo_name: CoNG-harvard/handbook
@@ -7,6 +7,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Inter
     code: Roboto Mono
@@ -57,7 +58,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - stylesheets/handbook.css?v=5
+  - stylesheets/handbook.css?v=6
 
 plugins:
   - search
@@ -69,41 +70,23 @@ validation:
     unrecognized_links: warn
 
 nav:
-  - Projects: index.md
+  - All projects: index.md
   - Shared setup:
       - Before you begin: getting-started/index.md
       - Shared computer and hardware: getting-started/hardware.md
-      - Choose your folders: getting-started/paths.md
-      - Prepare a new computer: getting-started/computer.md
-      - Source files and handoff: getting-started/sources.md
+      - Prepare the workstation: getting-started/computer.md
+      - Equipment references: getting-started/sources.md
+      - Lab resources: getting-started/lab-resources.md
   - VLA Pipeline:
       - Overview: vla-pipeline/index.md
-      - "1. Hardware and connections": vla-pipeline/hardware/index.md
-      - "2. Install the software": vla-pipeline/install.md
-      - "3. Configure and start": vla-pipeline/teleop/setup.md
-      - "4. Record a demonstration": vla-pipeline/teleop/operation.md
-      - "5. Run a trained model": vla-pipeline/inference/index.md
-      - Reference:
-          - Teleoperation overview: vla-pipeline/teleop/index.md
-          - Prepare recordings: vla-pipeline/teleop/datasets.md
-          - Model handoff and training: vla-pipeline/training/index.md
+      - "1. Equipment and connections": vla-pipeline/hardware/index.md
+      - "2. Hardware readiness": vla-pipeline/readiness.md
   - Self Improvement Learning:
       - Overview: unidog-nav/index.md
-      - "1. Hardware and connections": unidog-nav/hardware.md
-      - "2. Install the software": unidog-nav/setup.md
-      - "3. Connect the robot": unidog-nav/robot-bridge.md
-      - "4. First supervised movement": unidog-nav/first-run.md
-      - Optional model setup: unidog-nav/models.md
-      - D1 arm readiness: unidog-nav/d1-arm.md
-      - Quick reference: unidog-nav/quick-reference.md
-      - Reference:
-          - Offline model evaluation: unidog-nav/vla-eval.md
-          - Voice and benchmarks: unidog-nav/operator-cookbook.md
-          - Legacy closed-loop rollout: unidog-nav/rollout.md
-          - Historical findings: unidog-nav/roadmap.md
+      - "1. Equipment and connections": unidog-nav/hardware.md
+      - "2. D1 arm readiness": unidog-nav/d1-arm.md
+      - "3. Hardware readiness": unidog-nav/readiness.md
   - ABC Box:
       - Overview: abc-box/index.md
-      - "1. Hardware and connections": abc-box/hardware.md
-      - "2. Install and rehearse": abc-box/install.md
-      - "3. Configure and record": abc-box/operation.md
-      - Reference: abc-box/reference.md
+      - "1. Equipment and connections": abc-box/hardware.md
+      - "2. Hardware readiness": abc-box/readiness.md

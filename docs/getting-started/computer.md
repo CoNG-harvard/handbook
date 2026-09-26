@@ -1,98 +1,42 @@
-# Prepare a new computer
+# Prepare the workstation
 
-**Run these steps on the shared Linux workstation.** Do them once for VLA Pipeline and Self Improvement Learning. For ABC Box collection, use its [recording-computer installation](../abc-box/install.md). The reference lab machines run Ubuntu 24.04 on x86-64 PCs. This guide does not cover installing the robot stack directly on macOS, Windows, or the dog's ARM computer.
+**Goal:** provide a stable, connected desk computer for VLA Pipeline and Self Improvement Learning. ABC Box uses its own station computer; follow its [equipment guide](../abc-box/hardware.md).
 
-## 1. Prepare Ubuntu and the graphics card
+## 1. Check the delivered computer
 
-Have your computer administrator install Ubuntu and the NVIDIA driver appropriate for the machine. GPU means graphics processor; the model uses its memory to process images. Use **NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 96 GB**, in the workstation shared by both projects. See the [hardware list](hardware.md) for the rest of the equipment.
+Use the [workstation specification](hardware.md#workstation-specification-for-vla-pipeline-and-self-improvement-learning). Confirm the **RTX PRO 6000 Blackwell Workstation Edition, 96 GB**, plus the agreed CPU, system memory, storage, and network/USB connections.
 
-Open Terminal:
+Have the supplier confirm that the case, motherboard, power supply, and cooling support the selected card. The reference inventory is not a complete list of compatible parts for a new computer.
 
-```bash
-uname -m
-nvidia-smi
-```
+## 2. Position and connect it
 
-**Expected:** `x86_64`, then a table showing the NVIDIA GPU, driver, and memory. If `nvidia-smi` fails, resolve the driver installation before installing model software. Arm teleoperation can be checked before a model is installed.
+1. Place the computer where its air vents remain clear and robot movement cannot reach it.
+2. Connect the monitor, keyboard, mouse, and the approved mains lead.
+3. Connect the workstation to the lab network switch/router with Ethernet.
+4. Label the workstation, its network cable, and the ports used by each platform.
+5. Arrange a backup destination and enough free storage for the expected recordings.
 
-### Select the RTX PRO 6000 for model programs
+Keep power strips, connectors, and loose cable loops away from the robots and walking area. Follow the supplier's electrical and ventilation requirements.
 
-List the graphics cards:
+## 3. Plan the device connections
 
-```bash
-nvidia-smi --query-gpu=name,uuid,memory.total --format=csv
-```
+| Device group | Connection to prepare |
+|---|---|
+| Two xArm control boxes | One Ethernet connection per controller to the shared network |
+| Five xArm cameras | USB data connections with enough bandwidth for the intended simultaneous views |
+| Quest headsets | One data-capable USB connection per headset used |
+| Go2 onboard computer | The lab's approved Ethernet or wireless connection |
+| Monitor and input devices | Suitable display and USB connections |
 
-Find the **RTX PRO 6000 Blackwell Workstation Edition** row and copy its identifier beginning with `GPU-`. In each terminal that will start a model, set:
+More USB sockets do not necessarily mean more bandwidth: several sockets can share one internal connection. Have the installer check all intended camera views together, and use an approved powered hub only when the layout calls for one. The dog's D435i connects to the onboard computer, not to the desk workstation.
 
-```bash
-export CUDA_VISIBLE_DEVICES="<RTX_PRO_6000_GPU_UUID>"
-```
+## 4. Check the workstation before handover
 
-Replace the placeholder with the full identifier, including `GPU-`. This tells CUDA programs to use that card even when another card is installed. The selection applies to that terminal and programs started from it; repeat it in other model terminals. See [NVIDIA's GPU-selection documentation](https://docs.nvidia.com/deploy/topics/topic_5_2_1.html).
+- [ ] Selected GPU and agreed CPU, memory, and storage are recorded.
+- [ ] Power, cooling, monitor, keyboard, and mouse work.
+- [ ] Network connections reach the intended equipment.
+- [ ] Cameras and headsets have labeled data-capable cables.
+- [ ] All required camera views can be checked together by the installer.
+- [ ] Storage, backup, and use of the shared computer are arranged.
 
-A working `nvidia-smi` does not prove an old Python environment supports Blackwell. The model's PyTorch/JAX/CUDA packages and compiled extensions must also support it. In particular, the legacy NaVILA Torch 2.3/CUDA 12.1 recipe is not a supported fresh-install path for this GPU. [PyTorch introduced Blackwell support in its 2.7 release with CUDA 12.8 builds](https://pytorch.org/blog/pytorch-2-7/); a compatible model environment still needs its own validation.
-
-## 2. Install common tools
-
-The following Ubuntu commands install download tools, Git, a text editor, and system libraries used by the camera software. `sudo` asks for your workstation password; nothing appears while you type it.
-
-```bash
-sudo apt update
-sudo apt install -y git git-lfs curl wget unzip rsync tmux nano \
-  build-essential python3-venv pkg-config ffmpeg openssl \
-  libusb-1.0-0-dev libturbojpeg-dev libgl1
-```
-
-```bash
-git lfs install
-git --version
-```
-
-**Expected:** Git reports its version without an error.
-
-## 3. Install Conda
-
-Conda lets the projects use different Python versions. Follow the [official Miniconda installation guide](https://www.anaconda.com/docs/getting-started/installation) and choose **Linux x86-64**. Choose an installation folder and record its full path as `<CONDA_DIR>` in the [folder guide](paths.md). The Self Improvement Learning evaluation wrapper contains a deployment-specific Conda path; have the maintainer update it to this location before using that wrapper. Allow the installer to initialize your shell, then close and reopen Terminal.
-
-```bash
-conda --version
-```
-
-**Expected:** a version number. If the command is missing but you installed in `<CONDA_DIR>`, run:
-
-```bash
-source "<CONDA_DIR>/etc/profile.d/conda.sh"
-```
-
-## 4. Install uv
-
-The arm model server and the dog's Qwen model use a separate environment manager called **uv**. Download its installer, then run it, following the [official uv instructions](https://docs.astral.sh/uv/getting-started/installation/):
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh -o /tmp/uv-install.sh
-sh /tmp/uv-install.sh
-```
-
-Reopen Terminal and check:
-
-```bash
-uv --version
-```
-
-## 5. Check access and storage
-
-Make sure you can download the lab repositories and model files using **your own account**. A `Repository not found`, `401`, or `403` error may mean missing access rather than a bad command. Obtain access from the project owner before retrying.
-
-```bash
-df -h ~
-```
-
-This shows available disk space. Ask for the checkpoint and sample dataset sizes, and leave additional space for environments, downloaded packages, and recordings. Do not copy the original workstation's entire model or video collection just to run a first test.
-
-## 6. Choose your next page
-
-- **Robot arm:** [assemble and connect the hardware](../vla-pipeline/hardware/index.md), then [install the arm software](../vla-pipeline/install.md).
-- **Robot dog:** check the [hardware and connections](../unidog-nav/hardware.md), [install Self Improvement Learning on the workstation](../unidog-nav/setup.md), then connect the robot through the bridge.
-
-Keep the environments separate. `lerobot` is the arm's recording/client environment; openpi has its own `.venv`; `navila` is the dog's older model environment; Qwen has a different `.venv`. A package upgrade in one does not belong in the others.
+**Next:** check the connections for [VLA Pipeline](../vla-pipeline/hardware/index.md) or [Self Improvement Learning](../unidog-nav/hardware.md).

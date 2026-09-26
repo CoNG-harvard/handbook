@@ -1,0 +1,29 @@
+{# One navigation source for desktop links and the compact mobile menu. #}
+{% macro destination(item) -%}
+  {%- if item.children -%}
+    {{- destination(item.children | first) -}}
+  {%- else -%}
+    {{- item.url | url -}}
+  {%- endif -%}
+{%- endmacro %}
+{% macro links() %}
+  {% for item in nav.items %}
+    <li class="handbook-nav__item{% if item.active %} handbook-nav__item--active{% endif %}">
+      <a href="{{ destination(item) }}"{% if item.active %} aria-current="location"{% endif %}>{{ item.title }}</a>
+    </li>
+  {% endfor %}
+{% endmacro %}
+{% set current = nav.items | selectattr("active") | first %}
+<nav class="md-tabs handbook-nav" aria-label="Main navigation" data-md-component="tabs">
+  <div class="md-grid handbook-nav__inner">
+    <ul class="handbook-nav__desktop">{{ links() }}</ul>
+    <details class="handbook-nav__mobile">
+      <summary>
+        <span class="handbook-nav__hint">Browse</span>
+        <span class="handbook-nav__current">{{ current.title if current else "Handbook" }}</span>
+        <span class="handbook-nav__chevron" aria-hidden="true"></span>
+      </summary>
+      <ul class="handbook-nav__menu">{{ links() }}</ul>
+    </details>
+  </div>
+</nav>
