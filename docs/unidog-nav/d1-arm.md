@@ -4,19 +4,16 @@ title: D1 arm readiness
 
 # D1 arm readiness
 
-**Status: platform-specific assembly and commissioning instructions are pending.** The D1 is part of the Go2 platform, but it needs its own mounting, calibration, and operator checks.
+The D1 uses Unitree's supported Go2 mounting arrangement. Follow the [official Go2 payload installation guide](https://support.unitree.com/home/en/developer/Payload), under **Installing the Small Servo Arm**, then complete the camera and operator checks below.
 
-## 1. Confirm the mounting and power plan
+## 1. Mount and connect the arm
 
-Obtain the [D1 supplier's](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) manufacturer instructions and the project owner's approved arrangement for the exact Go2 and D1 units. Have the installer confirm:
+1. **Check the kit:** identify the supplied arm, gripper, rail nuts, screws, and power/data cables against Unitree's guide.
+2. **Mount:** position the square nuts in the expansion dock's rail and secure the arm with the M4 × 10 hex-socket screws specified by Unitree. Follow the guide's illustrated orientation.
+3. **Connect:** use the supplied power and Ethernet cables between the dock and arm, following Unitree's connection diagram and the delivered equipment's port labels.
+4. **Inspect:** check that cables remain clear of the legs, arm joints, and wrist camera, and that the arm's resting position leaves the required clearance.
 
-- The mounting kit, fasteners, base attachment, and gripper are complete.
-- The payload and its placement are acceptable for the robot.
-- Power supplies, connectors, and data cables match the delivered equipment.
-- Cables cannot catch on the arm, legs, or camera mount.
-- The arm's resting position leaves the required clearance for the dog.
-
-This handbook does not supply mounting torque, wiring pinouts, or load limits; use the exact manufacturer's instructions for those details.
+Use the delivered manufacturer's instructions for power-off handling and fastening requirements. If the arm is already installed, check its mounting and cable routing without removing it. Check the added wrist-camera mount and gantry clearance separately.
 
 ## 2. Identify the camera and calibration
 

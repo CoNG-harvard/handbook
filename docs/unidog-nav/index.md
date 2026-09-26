@@ -4,14 +4,14 @@ title: Self Improvement Learning
 
 # Self Improvement Learning
 
-A mobile platform built around **one [Unitree Go2 Education Plus (EDU Plus)](https://www.unitree.com/go2/)**, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i camera](https://www.realsenseai.com/products/depth-camera-d435i/)**, a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)**, and an onboard **[NVIDIA Jetson Orin NX, 16 GB RAM](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/)** (100 TOPS configuration).
+A mobile platform built around **one [Unitree Go2 Education Plus (EDU Plus)](https://www.unitree.com/go2/)**, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i camera](https://www.realsenseai.com/products/depth-camera-d435i/)**, and a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)**. The Go2 EDU Plus includes its onboard computer.
 
 **Your goal:** identify the delivered equipment, confirm the mounting and connections, and arrange separate readiness checks for the dog and arm.
 
 !!! info "Before assembly"
-    **Confirmed:** Go2 EDU Plus with D1, front D435i, D435 wrist camera, Jetson Orin NX 16GB, and the shared desktop.
+    **Confirmed:** Go2 EDU Plus with D1, front D435i, D435 wrist camera, and the shared desktop.
 
-    **Still needed:** Jetson carrier board, D1 mounting and power plan, wrist-camera host connection, and gantry clearance. [D1 assembly instructions are pending](d1-arm.md).
+    **Before use:** follow the [official D1 mounting and connection guide](d1-arm.md), confirm the wrist-camera connection and gantry clearance, and complete the readiness checks.
 
 <figure class="handbook-figure" markdown="1">
 
@@ -33,7 +33,7 @@ The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 
 | Computer | Physical role |
 |---|---|
 | Shared workstation | Stays at the desk and connects to the robot over the lab's approved network |
-| Jetson Orin NX 16GB | Rides on the robot and connects to its camera and control interfaces |
+| Included onboard computer | Rides on the Go2 EDU Plus and connects to its camera and control interfaces |
 
 ## Set up the platform
 
@@ -43,4 +43,4 @@ The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 
 | 2 | [D1 arm readiness](d1-arm.md) | The mounting, cable routing, calibration, and stop procedure are approved |
 | 3 | [Hardware readiness](readiness.md) | An operator has checked the complete platform and recorded any outstanding work |
 
-The detailed D1 mounting and commissioning procedure must still be supplied for this platform. Completing checks on the dog does not establish that the arm is ready.
+Use Unitree’s official mounting instructions, then check the added wrist camera and complete the arm’s readiness checks. Completing checks on the dog does not establish that the arm is ready.

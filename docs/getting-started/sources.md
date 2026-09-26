@@ -17,9 +17,8 @@ Each hardware table includes a **Product or reference** column. Product pages id
 | xArm camera mount | [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) | Mount for the two D405 wrist cameras; D405 fit confirmed by the project owner |
 | Quest headsets | [Meta Quest 3](https://www.meta.com/quest/quest-3/) | Headset, controller, and accessory identification |
 | Go2 Education Plus (EDU Plus) | [Unitree Go2](https://www.unitree.com/go2/) | Edition confirmed by project owner; check included accessories against the delivered package |
-| D1 arm and mounting package | [D1 — US Robot Store](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) | Confirming the D1 variant, gripper, Go2 mounting parts, and cables |
+| D1 arm and mounting package | [Unitree payload installation](https://support.unitree.com/home/en/developer/Payload) · [D1 supplier](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) | Official Go2 rail mounting and arm power/Ethernet connections; supplied-kit check |
 | Go2 battery, charger, and controller | [Battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) · [controller](https://shop.unitree.com/products/go2-controller) | Matching accessories to the delivered Go2 |
-| Onboard Jetson Orin NX | [NVIDIA Jetson Orin NX](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/) | Owner-confirmed 16 GB RAM, 100 TOPS configuration; carrier board still to identify |
 | Go2 protective gantry | [RobotShop product listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) | Identifying the Go2 EDU support frame and package; confirm suitability with the mounted D1 |
 | D1 wrist camera mount | [RichBird C-clamp mount, 60 mm](https://www.amazon.com/dp/B0GSR6883N) | Project-owner-selected D435 mount; identifying the clamp, ball head, and camera screw |
 | RealSense cameras | [D405](https://www.realsenseai.com/product-family/d405-series/) · [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) | Matching camera models to wrist and scene positions |
@@ -30,7 +29,7 @@ Each hardware table includes a **Product or reference** column. Product pages id
 | ABC Box | [I2RT product and package information](https://i2rt.com/products/abc-box) | Distinguishing the full Box from the Research Kit and checking included parts |
 | ABC camera arrangement | [ABC assembly guide](https://abc.bot/hardware.html) | Understanding the separate build-your-own station; confirm details against the delivered Box instructions |
 
-For the D1 arm, obtain the unit's manufacturer manual and the project owner's approved Go2 mounting plan. Exact fasteners, payload limits, wiring, and calibration details remain to be supplied for this platform.
+Unitree’s [Go2 payload guide](https://support.unitree.com/home/en/developer/Payload) provides the arm mounting and connection procedure, plus front D435i installation. Use the delivered model’s instructions and record the added wrist camera’s calibration and cable arrangement.
 
 ## Basis for the equipment lists
 
@@ -45,11 +44,11 @@ The hardware tables link these items to relevant catalogs or assembly guidance. 
 
 - **Shared computer:** complete system, motherboard, RAM modules, power supply, case/cooling, HDD model, backup device, peripherals, and network equipment.
 - **VLA Pipeline:** custom arm stands, gripper fingers/adapters, scene-camera supports, cable lengths, and task objects.
-- **Go2/D1:** Jetson carrier board, storage/cooling/power arrangement, D1 mounting kit, front-camera mount, accessory power, calibration target pattern/size, and speaker.
+- **Go2/D1:** added wrist-camera cable arrangement, accessory power, calibration target pattern/size, and speaker.
 - **ABC Box:** leader variant, supplied control interfaces, and any parts missing from the delivered kit.
 
 ## Outstanding physical checks
 
-The Jetson carrier board, D1 installation details, custom xArm mounts/adapters, and complete ABC accessory package need owner or supplier confirmation. The project owner confirmed that all three projects share the same desktop. Each platform's physical connections and readiness checks still need to be verified at the station.
+The added D1 wrist-camera connection, custom xArm mounts/adapters, and complete ABC accessory package need owner or supplier confirmation. The project owner confirmed that all three projects share the same desktop. Each platform's physical connections and readiness checks still need to be verified at the station.
 
 No robot or camera was operated during the handbook update. Hardware readiness must be checked and recorded by the installer and operator at the actual station.

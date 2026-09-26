@@ -27,7 +27,7 @@ Two xArm 7 robots, two D405 wrist cameras, three D435 scene cameras, and Quest h
 
 ### Self Improvement Learning: the navigation robot {#unidog-the-navigation-robot}
 
-One Go2 EDU Plus, one D1 arm, a front D435i, a D435 wrist camera, and a Jetson Orin NX onboard computer (16 GB RAM, 100 TOPS configuration). [View the platform](../unidog-nav/index.md) · [Equipment and connections](../unidog-nav/hardware.md).
+One Go2 EDU Plus, one D1 arm, a front D435i, a D435 wrist camera, with the onboard computer included in the Go2 EDU Plus package. [View the platform](../unidog-nav/index.md) · [Equipment and connections](../unidog-nav/hardware.md).
 
 ### ABC Box: leader-controlled teleoperation
 
