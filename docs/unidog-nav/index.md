@@ -1,6 +1,6 @@
 # Self Improvement Learning
 
-A mobile platform built around **one Unitree Go2**, **one Unitree D1 arm**, a **RealSense D435i camera**, and an onboard computer.
+A mobile platform built around **one Unitree Go2**, **one Unitree D1 arm**, a front **RealSense D435i camera**, a **D435 wrist camera**, and an onboard computer.
 
 **Your goal:** identify the delivered equipment, confirm the mounting and connections, and arrange separate readiness checks for the dog and arm.
 
@@ -10,7 +10,7 @@ A mobile platform built around **one Unitree Go2**, **one Unitree D1 arm**, a **
 
 <figcaption markdown="1">
 
-Self Improvement Learning platform with a D1 arm and D435i camera. The arm requires its own mounting and calibration checks.
+The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
 
 [View full-size image](assets/platform.png) · [Source PDF](assets/platform.pdf)
 { .figure-links }

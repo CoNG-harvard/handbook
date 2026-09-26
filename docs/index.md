@@ -30,7 +30,7 @@ Two xArm robots with grippers, wrist and scene cameras, and Quest headsets.
 
 ## [Self Improvement Learning](unidog-nav/index.md)
 
-A Unitree Go2 with a D1 arm, D435i camera, and onboard computer.
+A Unitree Go2 with a D1 arm, D435i front camera, D435 wrist camera, and onboard computer.
 
 [View hardware guide →](unidog-nav/index.md){ .project-link }
 
@@ -42,7 +42,7 @@ A Unitree Go2 with a D1 arm, D435i camera, and onboard computer.
 
 ## [ABC Box](abc-box/index.md)
 
-Two follower arms, hand-operated leaders, cameras, and a dedicated station computer.
+Two follower arms, hand-operated leaders, and three cameras connected to the shared workstation.
 
 [View hardware guide →](abc-box/index.md){ .project-link }
 
@@ -52,7 +52,7 @@ Two follower arms, hand-operated leaders, cameras, and a dedicated station compu
 
 ## Shared setup
 
-VLA Pipeline and Self Improvement Learning share **one RTX PRO 6000 workstation**. ABC Box has its own station computer. Each project has a separate equipment list.
+VLA Pipeline, Self Improvement Learning, and ABC Box share **one RTX PRO 6000 workstation**. Each project has a separate equipment list.
 
 - [Shared computer and hardware](getting-started/hardware.md) — what to buy once and what belongs to each platform.
 - [Prepare the workstation](getting-started/computer.md) — workspace, power, network, and peripheral connections.

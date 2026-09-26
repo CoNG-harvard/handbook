@@ -1,14 +1,14 @@
 # VLA Pipeline hardware
 
-**Goal:** identify and connect the two-arm VLA Pipeline station. It has **two xArm 7 robots**, each with its own control box, gripper, and mounting stand. Both use the workstation shared with Self Improvement Learning. Check rig A first, then rig B, before using both together.
+**Goal:** identify and connect the two-arm VLA Pipeline station. It has **two xArm 7 robots**, each with its own control box, gripper, and mounting stand. Both use the workstation shared with Self Improvement Learning and ABC Box. Check rig A first, then rig B, before using both together.
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled xArm station: 1, both xArm robots; 2, foreground gripper; 3, three scene cameras; 4, task tray; 5, two wrist cameras.](../assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled xArm station: both xArm robots; foreground gripper; three scene cameras; task tray; two wrist cameras.](../assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-**1** Both xArm robots · **2** Foreground gripper · **3** Three scene cameras · **4** Task tray · **5** Two wrist cameras (one per arm).
+Both xArm robots · Foreground gripper · Three scene cameras · Task tray · Two wrist cameras (one per arm).
 
 Lab photograph provided in September 2026. Labels identify visible parts, not rig A/B assignments.
 
@@ -21,7 +21,7 @@ Lab photograph provided in September 2026. Labels identify visible parts, not ri
 
 ## 1. Gather the equipment
 
-Quantities below describe the **two-arm lab station**. The [shared workstation, GPU, display/input devices, and network equipment](../../getting-started/hardware.md#shared-equipment-prepare-once) are counted once for both projects. The full inventory includes one headset and two controllers per rig. Confirm the number of operators and headsets to use in the first session with the project owner.
+Quantities below describe the **two-arm lab station**. The [shared workstation, GPU, display/input devices, and network equipment](../../getting-started/hardware.md#shared-equipment-prepare-once) are shared by all three projects and counted once. The list allows one headset and two controllers per rig. Confirm the number of operators and headsets to use in the first session with the project owner.
 
 | Equipment | Quantity |
 |---|---|
@@ -38,6 +38,10 @@ Quantities below describe the **two-arm lab station**. The [shared workstation, 
 | Arm-controller-to-switch Ethernet cable | 2 |
 | Task objects and tray/basket | 1 task set |
 | Cable labels, cable management, and suitable lighting | As needed |
+
+### Photo count check
+
+The current photo shows **2 arms, 2 wrist cameras, and 3 scene cameras**: **5 cameras total**, matching the list. The earlier view also shows **2 grippers, 2 arm stands, 2 control boxes with stop buttons, and 2 headsets**. The controller illustration shows one pair; it does not verify the listed four controllers. Confirm loose cables and accessories against the station inventory.
 
 ### Selection details
 

@@ -13,7 +13,7 @@
 
 ## 2. Check the camera and network
 
-Ask the installer to confirm the robot's network connection and show the D435i's live view while the platform remains stationary. Check that the view is unobstructed and record the camera serial and mounting position.
+Ask the installer to confirm the robot's network connection and show the D435i's live view while the platform remains stationary. Check that the view is unobstructed and record the camera serial and mounting position. Check the D1 wrist **D435** view separately and record its serial and mounting position; it is a different camera from the front **D435i**.
 
 The desk workstation and onboard computer are separate devices. Confirm which network connection belongs to each. Any tether must be removed or managed according to the operator's procedure before the robot moves.
 

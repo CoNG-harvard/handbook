@@ -1,6 +1,6 @@
 # Prepare the workstation
 
-**Goal:** provide a stable, connected desk computer for VLA Pipeline and Self Improvement Learning. ABC Box uses its own station computer; follow its [equipment guide](../abc-box/hardware.md).
+**Goal:** prepare one shared desktop for VLA Pipeline, Self Improvement Learning, and ABC Box.
 
 ## 1. Check the delivered computer
 
@@ -25,10 +25,12 @@ Keep power strips, connectors, and loose cable loops away from the robots and wa
 | Two xArm control boxes | One Ethernet connection per controller to the shared network |
 | Five xArm cameras | USB data connections with enough bandwidth for the intended simultaneous views |
 | Quest headsets | One data-capable USB connection per headset used |
+| Three ABC Box cameras | USB data connections for two wrist views and one overhead view |
+| ABC Box followers and leaders | Supplier-approved control interfaces connected to the shared workstation |
 | Go2 onboard computer | The lab's approved Ethernet or wireless connection |
 | Monitor and input devices | Suitable display and USB connections |
 
-More USB sockets do not necessarily mean more bandwidth: several sockets can share one internal connection. Have the installer check all intended camera views together, and use an approved powered hub only when the layout calls for one. The dog's D435i connects to the onboard computer, not to the desk workstation.
+More USB sockets do not necessarily mean more bandwidth: several sockets can share one internal connection. Have the installer check all intended camera views for the active platform together, and use an approved powered hub only when the layout calls for one. The dog's D435i connects to the onboard computer, not to the desk workstation.
 
 ## 4. Check the workstation before handover
 
@@ -39,4 +41,4 @@ More USB sockets do not necessarily mean more bandwidth: several sockets can sha
 - [ ] All required camera views can be checked together by the installer.
 - [ ] Storage, backup, and use of the shared computer are arranged.
 
-**Next:** check the connections for [VLA Pipeline](../vla-pipeline/hardware/index.md) or [Self Improvement Learning](../unidog-nav/hardware.md).
+**Next:** check the connections for [VLA Pipeline](../vla-pipeline/hardware/index.md), [Self Improvement Learning](../unidog-nav/hardware.md), or [ABC Box](../abc-box/hardware.md).

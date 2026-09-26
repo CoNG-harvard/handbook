@@ -43,19 +43,19 @@ def annotate(folder, stem, title, description, labels):
 
 
 annotate('vla-pipeline', 'xarm-station', 'VLA Pipeline — labeled xArm station',
-         'The original lab photograph with callouts: 1, both xArm robots; 2, the visible foreground gripper; '
-         '3, all three scene cameras on stands; 4, the foreground task tray; 5, the two wrist-mounted cameras. Numbers do not assign rig A/B identities.', [
-    ('1  xArm robots (2)', 28, 295, 222, [(90,337,112,410),(210,337,335,570)]),
-    ('2  Gripper', 625, 505, 153, [(625,547,547,641)]),
-    ('3  Scene cameras (3)', 480, 55, 264, [(490,97,244,208),(585,97,465,183),(735,97,822,135)]),
-    ('4  Task tray', 746, 575, 174, [(760,617,718,685)]),
-    ('5  Wrist cameras (2)', 45, 495, 265, [(240,495,249,444),(310,516,550,518)]),
+         'The original lab photograph with callouts: both xArm robots; the visible foreground gripper; '
+         'all three scene cameras on stands; the foreground task tray; the two wrist-mounted cameras. Labels do not assign rig A/B identities.', [
+    ('xArm robots (2)', 28, 295, 222, [(90,337,112,410),(210,337,335,570)]),
+    ('Gripper', 625, 505, 153, [(625,547,547,641)]),
+    ('Scene cameras (3)', 480, 55, 264, [(490,97,244,208),(585,97,465,183),(735,97,822,135)]),
+    ('Task tray', 746, 575, 174, [(760,617,718,685)]),
+    ('Wrist cameras (2)', 45, 495, 265, [(240,495,249,444),(310,516,550,518)]),
 ])
 annotate('abc-box', 'abc-box-station', 'ABC Box — labeled lab station',
-         'The original lab photograph with callouts: 1, both robot arms; 2, the two wrist cameras; '
-         '3, the overhead camera; 4, the camera support frame. Leader arms and stop controls are not identified in this view.', [
-    ('1  Robot arms (2)', 475, 475, 224, [(485,517,300,603),(655,517,621,603)]),
-    ('2  Wrist cameras (2)', 500, 248, 256, [(515,290,373,403),(710,290,687,378)]),
-    ('3  Overhead camera', 184, 35, 256, [(184,56,106,32)]),
-    ('4  Camera frame', 35, 305, 221, [(230,347,309,415)]),
+         'The original lab photograph with callouts: both robot arms; the two wrist cameras; '
+         'the overhead camera; the camera support frame. Leader arms and stop controls are not identified in this view.', [
+    ('Robot arms (2)', 475, 475, 224, [(485,517,300,603),(655,517,621,603)]),
+    ('Wrist cameras (2)', 500, 248, 256, [(515,290,373,403),(710,290,687,378)]),
+    ('Overhead camera', 184, 35, 256, [(184,56,106,32)]),
+    ('Camera frame', 35, 305, 221, [(230,347,309,415)]),
 ])

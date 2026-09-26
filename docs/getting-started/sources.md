@@ -19,13 +19,13 @@ For the D1 arm, obtain the unit's manufacturer manual and the project owner's ap
 ## Basis for the equipment lists
 
 - **Lab inventory, 24 September 2026:** the arm workstation inventory reported the selected RTX PRO 6000, CPU/memory/storage reference, two D405 cameras, and three D415 cameras. Connected-device counts do not establish the completeness of mounts, cables, or other accessories.
-- **Project-owner requirements:** two xArm robots; a Go2 with D1 arm; one shared RTX PRO 6000 workstation; and ABC Box as a separate platform with its own equipment list.
-- **Supplied photographs:** the xArm and ABC Box photographs show visible arm and camera arrangements. The [Go2 platform PDF](../unidog-nav/assets/platform.pdf) identifies the Go2, D1 arm, and D435i. Hidden parts and precise rig identities still require inspection.
+- **Project-owner requirements:** two xArm robots; a Go2 with D1 arm; one RTX PRO 6000 desktop shared by all three projects; and ABC Box as a separate platform with its own equipment list.
+- **Supplied photographs:** the xArm and ABC Box photographs show visible arm and camera arrangements. The [Go2 platform PDF](../unidog-nav/assets/platform.pdf) identifies the Go2, D1 arm, and front D435i. The project owner confirmed the additional D1 wrist camera is a D435. Hidden parts and precise rig identities still require inspection.
 - **Supplier information:** ABC package details were reviewed on 24 September 2026. Confirm the current order and delivered packing list before purchasing additional parts.
 
 ## Outstanding physical checks
 
-The exact Go2 edition, onboard Jetson model, D1 installation details, custom xArm mounts/adapters, and complete ABC accessory package need owner or supplier confirmation. The shared-workstation arrangement is planned; a completed migration onto one machine has not been established.
+The exact Go2 edition, onboard Jetson model, D1 installation details, custom xArm mounts/adapters, and complete ABC accessory package need owner or supplier confirmation. The project owner confirmed that all three projects share the same desktop. Each platform's physical connections and readiness checks still need to be verified at the station.
 
 No robot or camera was operated during the handbook update. Hardware readiness must be checked and recorded by the installer and operator at the actual station.
 

@@ -7,7 +7,7 @@
 - [ ] The delivered Box/Research Kit variant and packing list are recorded.
 - [ ] Both follower arms and grippers are securely mounted.
 - [ ] Both leader arms are present, mounted, and labeled with their matching followers.
-- [ ] The station computer, touchscreen, and approved power supplies are connected.
+- [ ] The shared workstation, approved control interfaces, and robot power supplies are connected.
 - [ ] All three camera mounts and USB data cables are secured.
 - [ ] Control cables are labeled and clear of joints and the working area.
 
@@ -25,7 +25,7 @@ Have the installer follow the delivered station's calibration procedure and reco
 | Left wrist | The left gripper and contact area |
 | Right wrist | The right gripper and contact area |
 
-Record each serial and position, and check all views together on the station computer. Confirm lighting, focus/view coverage, cable slack, and stable USB connections.
+Record each serial and position, and check all views together on the shared workstation. Confirm lighting, focus/view coverage, cable slack, and stable USB connections.
 
 ## 4. Demonstrate the physical stop
 

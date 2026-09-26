@@ -1,6 +1,6 @@
 # Shared computer and project hardware
 
-VLA Pipeline and Self Improvement Learning use **one Linux workstation with one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Count the computer and its accessories once; keep each project's robot equipment on its own list.
+VLA Pipeline, Self Improvement Learning, and ABC Box use **one Linux workstation with one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Count the computer and its accessories once; keep each project's robot equipment on its own list.
 
 ## Shared equipment — prepare once
 
@@ -8,7 +8,7 @@ VLA Pipeline and Self Improvement Learning use **one Linux workstation with one 
 |---|---|
 | Complete Linux workstation with RTX PRO 6000 | 1 workstation, 1 GPU |
 | Monitor, keyboard, and mouse | 1 set, or arranged remote access |
-| Storage and backup destination | Capacity for both projects |
+| Storage and backup destination | Capacity for recordings and backups across all three projects |
 | Network switch/router, power adapter, and workstation cable | 1 suitable set; reuse existing equipment |
 
 The shared network connects the workstation to the selected robot equipment. Keep enough storage for the planned recordings and a separate backup destination.
@@ -17,17 +17,17 @@ Have the supplier include a compatible motherboard, power supply, case, cooling,
 
 ## What each platform needs
 
-VLA Pipeline and Self Improvement Learning share the workstation. ABC Box has its own station computer. Gather the robot equipment from the relevant list below.
+All three projects share the same desktop workstation. Gather the robot equipment from the relevant list below.
 
 ### VLA Pipeline: the arm station {#robocoop-the-arm-station}
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled xArm station: 1, both xArm robots; 2, foreground gripper; 3, three scene cameras; 4, task tray; 5, two wrist cameras.](../vla-pipeline/assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled xArm station: both xArm robots; foreground gripper; three scene cameras; task tray; two wrist cameras.](../vla-pipeline/assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-**1** Both xArm robots · **2** Foreground gripper · **3** Three scene cameras · **4** Task tray · **5** Two wrist cameras (one per arm).
+Both xArm robots · Foreground gripper · Three scene cameras · Task tray · Two wrist cameras (one per arm).
 
 Lab photograph provided in September 2026. Labels identify visible parts, not rig A/B assignments.
 
@@ -48,7 +48,7 @@ Lab photograph provided in September 2026. Labels identify visible parts, not ri
 
 <figcaption markdown="1">
 
-Self Improvement Learning platform with a D1 arm and D435i camera. The arm requires its own mounting and calibration checks.
+The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
 
 [View full-size image](../unidog-nav/assets/platform.png) · [Source PDF](../unidog-nav/assets/platform.pdf)
 { .figure-links }
@@ -65,11 +65,11 @@ The dog still needs its onboard computer; the arm still needs its control box. B
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled ABC Box station: 1, both robot arms; 2, two wrist cameras; 3, overhead camera; 4, camera frame.](../abc-box/assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled ABC Box station: both robot arms; two wrist cameras; overhead camera; camera frame.](../abc-box/assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-**1** Both robot arms · **2** Two wrist cameras · **3** Overhead camera · **4** Camera frame.
+Both robot arms · Two wrist cameras · Overhead camera · Camera frame.
 
 Lab photograph provided in September 2026. The leaders, computer, and stop control are not identified in this view.
 
@@ -80,11 +80,11 @@ Lab photograph provided in September 2026. The leaders, computer, and stop contr
 
 </figure>
 
-The [ABC Box equipment list](../abc-box/hardware.md) separates the full Box package from accessories to confirm with the supplier. Its recording computer is part of that station; it is separate from the shared RTX PRO 6000 workstation.
+The [ABC Box equipment list](../abc-box/hardware.md) separates the full Box package from accessories to confirm with the supplier. ABC Box uses the same RTX PRO 6000 workstation as the other two projects; count the desktop once.
 
 [Start the ABC Box guide](../abc-box/index.md).
 
-## Workstation specification for VLA Pipeline and Self Improvement Learning
+## Shared workstation specification {#workstation-specification-for-vla-pipeline-and-self-improvement-learning}
 
 | Component | Selected configuration or reference |
 |---|---|
@@ -93,21 +93,21 @@ The [ABC Box equipment list](../abc-box/hardware.md) separates the full Box pack
 | CPU reference | AMD Ryzen 9 7950X, 16 cores / 32 threads |
 | System RAM reference | About 94 GiB reported by Linux; not a tested minimum |
 | Storage reference | Two WD_BLACK SN850X 2 TB SSDs and one WD 4 TB hard drive |
-| Connections | Ethernet for both arm controllers; USB capacity for five arm cameras, up to two headsets, and input devices |
+| Connections | Ethernet for the xArm controllers and robot network; USB/data connections for the active platform's cameras, headsets, control interfaces, and input devices |
 
-CPU, RAM, storage, and GPU were inspected on the arm workstation on 24 September 2026. They provide a reference configuration; the projects have not yet been migrated onto one machine. GPU memory and system RAM are separate. Choose storage capacity for the planned work, allowing room for recordings and backups.
+CPU, RAM, storage, and GPU were inspected on the arm workstation on 24 September 2026. They provide a reference configuration for the desktop shared by all three projects. GPU memory and system RAM are separate. Choose storage capacity for the planned work, allowing room for recordings and backups.
 
 NVIDIA lists 96 GB GPU memory for the [RTX PRO 6000 Blackwell family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/). Specify the **Workstation Edition**, and have the supplier size power and cooling for it.
 
 ## Choosing a new computer
 
-- **Cameras and headsets:** plan USB bandwidth for two D405 cameras, three D415 cameras, and up to two headsets. Extra sockets do not necessarily add bandwidth. The dog's camera connects to its onboard computer.
+- **Cameras and headsets:** plan USB bandwidth for the active platform: VLA Pipeline has two D405 cameras, three D415 cameras, and up to two headsets; ABC Box has three D405 cameras and its arm-control interfaces. Extra sockets do not necessarily add bandwidth. The dog's camera connects to its onboard computer.
 - **Power and cooling:** have the supplier confirm the complete workstation supports the selected RTX PRO 6000 card.
 - **Memory and storage:** agree capacity with the project owner before ordering; the values above describe a reference machine rather than tested minimums.
 
 ## Using the shared workstation
 
-Arrange use of the workstation with the other project team. Before switching platforms, finish the current session with its operator, follow the equipment's shutdown procedure, and confirm nobody else is using the connected devices. Keep camera, controller, and network cables labeled by platform.
+Arrange use of the workstation with the other project teams. Before switching platforms, finish the current session with its operator, follow the equipment's shutdown procedure, and confirm nobody else is using the connected devices. Keep camera, controller, and network cables labeled by platform.
 
 ## Shared setup checklist
 

@@ -2,7 +2,7 @@
 
 **Goal:** assemble the Self Improvement Learning platform: **one Unitree Go2 robot with one Unitree D1 arm**, its cameras, onboard computer, and control equipment. Check the dog and the mounted arm separately before a combined session.
 
-The [workstation with RTX PRO 6000, display/input devices, storage, and shared network equipment](../getting-started/hardware.md#shared-equipment-prepare-once) also serve VLA Pipeline. Count them once in the shared setup; the list below contains **equipment specific to Self Improvement Learning**.
+The [workstation with RTX PRO 6000, display/input devices, storage, and shared network equipment](../getting-started/hardware.md#shared-equipment-prepare-once) also serve VLA Pipeline and ABC Box. Count them once in the shared setup; the list below contains **equipment specific to Self Improvement Learning**.
 
 <figure class="handbook-figure" markdown="1">
 
@@ -10,7 +10,7 @@ The [workstation with RTX PRO 6000, display/input devices, storage, and shared n
 
 <figcaption markdown="1">
 
-Self Improvement Learning platform with a D1 arm and D435i camera. The arm requires its own mounting and calibration checks.
+The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
 
 [View full-size image](assets/platform.png) · [Source PDF](assets/platform.pdf)
 { .figure-links }
@@ -29,10 +29,15 @@ Self Improvement Learning platform with a D1 arm and D435i camera. The arm requi
 | Compatible onboard computer | 1 |
 | Robot battery and charger | 1 set |
 | Supported operator controller/stop interface | 1 |
-| RealSense D435i, USB data cable, and mount | 1 set |
+| RealSense D435i front camera, USB data cable, and mount | 1 set |
+| RealSense D435 wrist camera, bracket, and USB data cable | 1 set |
 | Robot network connection | 1 |
 | Approved accessory power, mounts, and cable restraints | As needed |
 | Clear test area and floor markings | 1 area |
+
+### Photo count check
+
+The supplied picture shows **1 Go2, 1 D1 arm, and 2 external cameras**: the labeled front **D435i** and a **D435 wrist camera** beside the gripper. The wrist camera model was confirmed by the project owner; both cameras are included in the core list above. The built-in front camera is part of the Go2 and is not an extra purchase. Battery, charger, controller, and cable quantities cannot be verified from this view.
 
 ### Selection details
 
@@ -40,7 +45,7 @@ Self Improvement Learning platform with a D1 arm and D435i camera. The arm requi
 - **D1 arm:** include its complete mounting and cable kit. **Arm commissioning is pending**; obtain the [D1 mounting and calibration plan](d1-arm.md) before manipulation.
 - **Onboard computer:** the lab reference identifies a Jetson, but its exact module, memory, and carrier board were not verified. Check whether it is included with the robot.
 - **Battery and controller:** confirm the approved charger, connectors, and demonstrated stop procedure. Keep the operator's stop interface accessible.
-- **Camera:** the supplied photo identifies a [D435i](https://www.realsenseai.com/compare-all-cameras/), used on this platform. Record its serial and verify its USB connection on the robot.
+- **Cameras:** use one front **D435i** and one **D435** at the D1 wrist. Record each camera's serial, mounting position, and USB connection separately.
 - **Connections and mounts:** use the approved Ethernet or wireless connection. Confirm accessory power, payload arrangement, cable strain relief, and space to stand and turn.
 
 The Go2 also has a built-in front camera. It is a different device and view from the added D435i; confirm which camera the planned session uses. Check the robot package before purchasing additional sensing equipment.
@@ -51,13 +56,13 @@ The Go2 and D1 arm are both included in the main list above. Add the accessories
 
 | Additional equipment | Quantity |
 |---|---|
-| Manipulation camera and calibration target | Specified by owner |
+| Manipulation calibration target | Specified by owner |
 | DJI Mic Mini transmitter/receiver with USB connection | 1 set for voice |
 | Robot audio output or approved speaker | 1 route for voice |
 | Spare battery and approved charging/storage accessories | As needed |
 | Extra logging and backup storage | As needed |
 
-The manipulation handoff must specify the camera, bracket, and calibration target. For a voice-equipped station, verify the USB microphone connection and audio output during setup. Size spare batteries and storage for the session length and recording volume.
+The manipulation handoff must specify the D435 wrist camera bracket and calibration target. For a voice-equipped station, verify the USB microphone connection and audio output during setup. Size spare batteries and storage for the session length and recording volume.
 
 Microphones and speakers are task-specific accessories; a Quest headset is not part of this platform's core equipment. Complete the D1 mounting, calibration, and supervised checks before using the arm.
 
@@ -71,7 +76,7 @@ Shared workstation ── network link ── robot's onboard computer
                     Go2 control   USB camera   optional USB mic
 ```
 
-The shared workstation stays off the robot and also serves the arm project. Have the installer confirm the onboard computer's connections to the robot and accessories using the supplied wiring instructions. Connect the D1 through its approved power/data arrangement; the diagram shows the main network and camera connections only.
+The shared workstation stays off the robot and also serves VLA Pipeline and ABC Box. Have the installer confirm the onboard computer's connections to the robot and accessories using the supplied wiring instructions. Connect the D1 through its approved power/data arrangement; the diagram shows the main network and camera connections only.
 
 For an initial network check, use the approved connection method. Before a walking test, remove or manage any tether according to the operator's procedure so the robot cannot pull a workstation cable or trip over it.
 

@@ -16,7 +16,7 @@ This handbook does not supply mounting torque, wiring pinouts, or load limits; u
 
 ## 2. Identify the camera and calibration
 
-Record the manipulation camera model, serial, mounting position, and calibration target specified by the owner. Calibration measures the camera's position relative to the arm. Moving the camera or mount can invalidate those measurements.
+The D1 wrist camera beside the gripper is a **RealSense D435**, confirmed by the project owner. It is separate from the front **D435i**. Record its serial, mounting position, and the calibration target specified by the owner. Calibration measures the camera's position relative to the arm. Moving the camera or mount can invalidate those measurements.
 
 Keep the approved calibration record and its date with the station record. The pictured D435i does not establish which camera arrangement is approved for every manipulation task.
 

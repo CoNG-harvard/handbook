@@ -2,15 +2,15 @@
 
 A two-arm platform from I2RT. The operator moves **leader arms** by hand; the **follower arms** work at the table. Cameras observe the work area and each wrist.
 
-**Your goal:** confirm the delivered package, mount and pair the arms, connect the cameras and station computer, and identify the physical stop.
+**Your goal:** confirm the delivered package, mount and pair the arms, connect the cameras and control interfaces to the shared workstation, and identify the physical stop.
 
 <figure class="handbook-figure" markdown="1">
 
-![Labeled ABC Box station: 1, both robot arms; 2, two wrist cameras; 3, overhead camera; 4, camera frame.](assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
+![Labeled ABC Box station: both robot arms; two wrist cameras; overhead camera; camera frame.](assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
 
 <figcaption markdown="1">
 
-**1** Both robot arms · **2** Two wrist cameras · **3** Overhead camera · **4** Camera frame.
+Both robot arms · Two wrist cameras · Overhead camera · Camera frame.
 
 Lab photograph provided in September 2026. The leaders, computer, and stop control are not identified in this view.
 
@@ -28,8 +28,8 @@ Lab photograph provided in September 2026. The leaders, computer, and stop contr
 | 1 | [Equipment and connections](hardware.md) | The package, additional parts, mounts, and cables are checked |
 | 2 | [Hardware readiness](readiness.md) | The installer has confirmed pairings, calibration, camera views, and stop behavior |
 
-## Station computer
+## Shared workstation
 
-The **full ABC Box** includes a small computer and touchscreen. Confirm the delivered variant: the **ABC Research Kit** has a different package list. Use the [I2RT package information](https://i2rt.com/products/abc-box) and the supplier's packing list together.
+ABC Box uses the same [RTX PRO 6000 desktop](../getting-started/computer.md) as VLA Pipeline and Self Improvement Learning. Count the desktop, monitor, keyboard, mouse, and shared storage once.
 
-Count the station computer with ABC Box equipment. The shared RTX PRO 6000 workstation is not an additional requirement for assembling this station.
+The manufacturer's full Box package lists a small PC and touchscreen. These are package details, not a separate desktop requirement for this lab setup. Confirm the delivered variant and the connection arrangement for the shared workstation with the supplier. [I2RT package information](https://i2rt.com/products/abc-box)

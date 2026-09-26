@@ -7,8 +7,8 @@
 | Project | Physical setup | Computer |
 |---|---|---|
 | [VLA Pipeline](../vla-pipeline/index.md) | Two xArm 7 robots, grippers, five cameras, and Quest headsets | Shared workstation |
-| [Self Improvement Learning](../unidog-nav/index.md) | Unitree Go2, D1 arm, D435i camera, and onboard computer | Shared workstation plus the robot's onboard computer |
-| [ABC Box](../abc-box/index.md) | Two follower arms, paired leader arms, and three cameras | Dedicated station computer |
+| [Self Improvement Learning](../unidog-nav/index.md) | Unitree Go2, D1 arm, D435i front camera, D435 wrist camera, and onboard computer | Shared workstation plus the robot's onboard computer |
+| [ABC Box](../abc-box/index.md) | Two follower arms, paired leader arms, and three cameras | Shared workstation |
 
 Use the [shared hardware list](hardware.md) to count the workstation and its accessories once.
 
@@ -28,7 +28,7 @@ Check quantities before assembly. Mark missing or unspecified parts and resolve 
 
 | Term | Meaning |
 |---|---|
-| Workstation | The desk computer shared by the arm and robot-dog projects |
+| Workstation | The desk computer shared by all three projects |
 | Onboard computer | A separate computer carried by the robot |
 | Control box | The unit connecting an arm to its power and control cables |
 | Gripper | The device at the end of an arm that holds objects |
