@@ -19,7 +19,7 @@ Product links identify known models. **Catalogs** and assembly **references** co
 | UFACTORY xArm 7 robot | 2 | [UFACTORY xArm](https://www.ufactory.cc/xarm-collaborative-robot/) — select xArm 7 |
 | Matching control box and cable/power set | 2 sets | [Control box and supplied cables](https://docs.xarm.ufactory.cc/2.hardware_installation.html) — installation reference |
 | Compatible xArm gripper and mounting/cable set | 2 sets | [UFACTORY grippers](https://www.ufactory.cc/solution-pickandplace/) — reference; lab fingers/adapters to specify |
-| Rigid arm mount or stand | 2 | [Base mounting requirements](https://docs.xarm.ufactory.cc/2.hardware_installation.html) — custom stand drawing needed |
+| Vention arm stand | 2; one per xArm | [Vention stand design 506323](https://vention.com/machine-builder/506323) — Vention account/design access required |
 | Shared work table | 1 | [Workbench catalog](https://www.mcmaster.com/products/workbenches/) — size/load rating to specify |
 | Meta Quest 3 headset | 2 for the full station; 1 for one-operator, two-arm use | [Meta Quest 3](https://www.meta.com/quest/quest-3/) |
 | Quest controller | 2 per headset; 4 for the full station | [Touch Plus controllers](https://www.meta.com/quest/accessories/quest-touch-plus-controller/) — two pairs; check headset bundle |
@@ -38,7 +38,8 @@ The current photo shows **2 arms, 2 wrist cameras, and 3 scene cameras**: **5 ca
 ### Selection details
 
 - **Arms and controllers:** match the lab's [xArm 7](https://www.ufactory.cc/xarm-collaborative-robot/). Confirm included power supplies, mains leads, and arm/controller cables against [UFACTORY's installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
-- **Grippers and stands:** obtain the approved finger geometry, adapters, calibration, base plates, and fasteners from the owner. Exact custom part numbers and the stand bill of materials remain to be specified.
+- **Arm stands:** use the owner-selected [Vention design](https://vention.com/machine-builder/506323) for both arms. The shared link opens a Vention sign-up/sign-in page; readers need an account with design access to view it. Use the design’s assembly details together with [UFACTORY’s base-mounting requirements](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
+- **Grippers:** obtain the approved finger geometry, adapters, and calibration from the owner; exact custom part numbers remain to be specified.
 - **Headsets:** include [Quest 3](https://www.meta.com/quest/quest-3/) chargers, controller batteries, and data-capable USB cables long enough for the operator.
 - **Cameras:** use one [D405](https://www.realsenseai.com/product-family/d405-series/) per wrist and three [D435 scene cameras](https://www.realsenseai.com/products/stereo-depth-camera-d435/) for the full station. Confirm mounting, view, and USB bandwidth before using all five.
 - **Wrist-camera mounts:** use one [UFACTORY xArm camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) per D405 wrist camera. The project owner confirmed the D405 fit. The listing names D435 and includes a mounting plate and 2 m USB-C cable; the camera is separate. Count these mounts within the two wrist-camera sets above to avoid ordering duplicate brackets or cables.
