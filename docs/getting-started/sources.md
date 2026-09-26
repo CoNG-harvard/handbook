@@ -2,13 +2,15 @@
 
 Use the manufacturer's instructions for the exact delivered model when mounting, connecting, powering, or servicing equipment. The handbook provides an equipment checklist and explains the layout; it does not replace model-specific electrical or mechanical instructions.
 
-## Manufacturer references
+## Manufacturer and supplier references
 
 | Equipment | Reference | Use it for |
 |---|---|---|
 | xArm robots and control boxes | [UFACTORY installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html) and [model comparison](https://help.ufactory.cc/en/articles/4491842-the-difference-between-ufactory-xarm5-ufactory-xarm6-and-ufactory-xarm7) | Confirming the arm model and supplied installation requirements |
 | Quest headsets | [Meta Quest 3](https://www.meta.com/quest/quest-3/) | Headset, controller, and accessory identification |
 | Go2 | [Unitree Go2](https://www.unitree.com/go2/) | Confirming the delivered robot edition and package with the supplier |
+| Go2 protective gantry | [RobotShop product listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) | Identifying the Go2 EDU support frame and package; confirm suitability with the mounted D1 |
+| D1 wrist camera mount | [RichBird C-clamp mount, 60 mm](https://www.amazon.com/dp/B0GSR6883N) | Project-owner-selected D435 mount; identifying the clamp, ball head, and camera screw |
 | RealSense cameras | [D405 information](https://www.realsenseai.com/product-family/d405-series/) and [camera comparison](https://www.realsenseai.com/compare-all-cameras/) | Matching camera models to wrist and scene positions |
 | RTX PRO 6000 | [NVIDIA workstation GPU family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) | Specifying the Blackwell Workstation Edition with 96 GB |
 | ABC Box | [I2RT product and package information](https://i2rt.com/products/abc-box) | Distinguishing the full Box from the Research Kit and checking included parts |

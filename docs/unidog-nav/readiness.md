@@ -9,6 +9,7 @@
 - [ ] Camera, onboard computer, and accessory mounts are secure.
 - [ ] Cables have strain relief and remain clear of legs and arm joints.
 - [ ] The D1 mounting, resting pose, and payload arrangement have been reviewed.
+- [ ] The protective gantry is assembled according to its instructions; attachment points, supported load, and D1 clearance have been checked for supported tests.
 - [ ] The operator controller and the demonstrated stop interface are available.
 
 ## 2. Check the camera and network
