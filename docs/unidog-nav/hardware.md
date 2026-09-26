@@ -1,23 +1,14 @@
+---
+title: Self Improvement Learning hardware
+---
+
 # Self Improvement Learning hardware
 
 **Goal:** assemble the Self Improvement Learning platform: **one Unitree Go2 robot with one Unitree D1 arm**, its cameras, onboard computer, and control equipment. Check the dog and the mounted arm separately before a combined session.
 
 The [workstation with RTX PRO 6000, display/input devices, storage, and shared network equipment](../getting-started/hardware.md#shared-equipment-prepare-once) also serve VLA Pipeline and ABC Box. Count them once in the shared setup; the list below contains **equipment specific to Self Improvement Learning**.
 
-<figure class="handbook-figure" markdown="1">
-
-![Self Improvement Learning platform photograph labeled with the Unitree Go2, Unitree D1 arm, front D435i camera, and D435 wrist camera.](assets/platform-labeled.svg)
-
-<figcaption markdown="1">
-
-The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
-
-[View full-size image](assets/platform-labeled.svg) · [Source PDF](assets/platform.pdf)
-{ .figure-links }
-
-</figcaption>
-
-</figure>
+[Identify the parts in the labeled photograph](index.md) — the Go2, D1 arm, front D435i, and D435 wrist camera.
 
 ## 1. Core platform hardware {#1-core-equipment-for-navigation}
 
@@ -29,7 +20,7 @@ Product links identify known models. **Catalogs** and assembly **references** co
 | Unitree Go2 Protective Bracket / Gantry for Go2 EDU | 1 | [RobotShop listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) |
 | Unitree D1 arm and gripper | 1 set | [D1 arm — US Robot Store](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) — confirm exact package |
 | D1 mounting kit and power/data cables | 1 set | [D1 supplier](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) — request Go2 mounting kit and cable list |
-| Compatible onboard computer | 1 | [NVIDIA Jetson family](https://developer.nvidia.com/embedded/jetson-modules) — exact module/carrier board to confirm |
+| NVIDIA Jetson Orin NX onboard computer, 16 GB RAM, 100 TOPS configuration | 1 | [NVIDIA Jetson Orin NX](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/) — module confirmed by project owner; carrier board to identify |
 | Robot battery and charger | 1 set | [Go2 battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) — match delivered variant |
 | Supported operator controller/stop interface | 1 | [Go2 controller](https://shop.unitree.com/products/go2-controller) — confirm supported stop function |
 | RealSense D435i front camera, USB data cable, and mount | 1 set | [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — mount to specify |
@@ -48,7 +39,7 @@ The supplied picture shows **1 Go2, 1 D1 arm, and 2 external cameras**: the labe
 - **Robot:** the lab reference specifies [Go2 Edu Plus](https://www.unitree.com/go2/). Confirm the exact edition, supported control interface, and included accessories with the owner/vendor.
 - **Protective gantry:** an external support frame for Go2 EDU posture and movement experiments. RobotShop lists one gantry per package (SKU **RB-Unt-97**, manufacturer part **Go2-Protective-Bracket**). It is not shown in the platform photo. Confirm the attachment arrangement, supported load, and clearance with the mounted D1 arm before use.
 - **D1 arm:** use the [D1 supplier listing](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) to confirm the complete mounting and cable kit. **Arm commissioning is pending**; obtain the [D1 mounting and calibration plan](d1-arm.md) before manipulation.
-- **Onboard computer:** the lab reference identifies a Jetson, but its exact module, memory, and carrier board were not verified. Check whether it is included with the robot.
+- **Onboard computer:** the project owner confirmed **NVIDIA Jetson Orin NX, 16 GB RAM, 100 TOPS configuration**. TOPS describes AI processing capacity in trillions of operations per second, not a measured task speed. Record the carrier board (the board providing ports and power), storage, cooling, and power arrangement; check whether the complete computer is included with the robot.
 - **Battery and controller:** confirm the approved charger, connectors, and demonstrated stop procedure. Keep the operator's stop interface accessible.
 - **Cameras:** use one front [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) and one [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) at the D1 wrist. Record each camera's serial, mounting position, and USB connection separately.
 - **D1 wrist camera mount:** use the linked RichBird C-clamp mount selected for this platform. The listing specifies a 360° ball head and a 1/4"-20 camera screw. Have the installer confirm the attachment point, secure fit, cable slack, and clearance around the gripper and wrist.
@@ -74,17 +65,45 @@ Microphones and speakers are task-specific accessories; a Quest headset is not p
 
 ## 3. Understand the connections
 
-```text
-Shared workstation ── network link ── robot's onboard computer
-                                      │
-                         ┌────────────┼─────────────┐
-                         │            │             │
-                    Go2 control   USB camera   optional USB mic
-```
+<div class="connection-map" markdown="1">
+<div class="connection-hub" markdown="1">
 
-The shared workstation stays off the robot and also serves VLA Pipeline and ABC Box. Have the installer confirm the onboard computer's connections to the robot and accessories using the supplied wiring instructions. Connect the D1 through its approved power/data arrangement; the diagram shows the main network and camera connections only.
+**Shared workstation → approved network → onboard computer**
 
-For an initial network check, use the approved connection method. Before a walking test, remove or manage any tether according to the operator's procedure so the robot cannot pull a workstation cable or trip over it.
+The desktop stays at the desk; the onboard computer rides on the Go2.
+
+</div>
+<div class="connection-branches" markdown="1">
+<div class="connection-branch" markdown="1">
+
+**Onboard connections**
+
+- Front D435i → USB data → onboard computer
+- Go2 control → delivered robot interface
+- Optional microphone → approved USB connection
+
+</div>
+<div class="connection-branch connection-branch--pending" markdown="1">
+
+**D1 connections → confirm before assembly**
+
+- Arm power and control interface
+- D435 wrist-camera USB host and cable route
+- Stop control and recovery procedure
+
+</div>
+</div>
+</div>
+
+The dashed box has no verified port map yet. Use the [D1 readiness requirements](d1-arm.md) to obtain the missing connection plan. Do not infer the D1 power or wrist-camera host from the front camera's connection.
+
+1. **Identify:** record the Go2 edition, Jetson Orin NX 16GB and its carrier board, battery, controller, and D1 package.
+2. **Mount:** have the installer check the approved arm and camera mounts, gantry attachment, and clearance.
+3. **Connect:** follow the delivered power/control instructions. Connect the front D435i to the onboard computer; connect the D1 and wrist camera only after their arrangement is confirmed.
+4. **Label:** mark both ends of camera and network cables. Photograph the ports for the [station record](../getting-started/station-record.md).
+5. **Inspect:** check cable slack around the legs, wrist, and gripper before powered checks.
+
+**Check before continuing:** the robot and desk computers are clearly distinguished, both cameras are identified, and the installer has approved the D1 connections. Before a walking test, manage any network tether according to the operator's procedure.
 
 ## 4. Check the delivered package
 

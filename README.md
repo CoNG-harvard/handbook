@@ -8,8 +8,8 @@ The handbook helps readers with little robotics experience gather equipment, ide
 
 - [Before you begin](docs/getting-started/index.md), [shared equipment](docs/getting-started/hardware.md), and [workstation preparation](docs/getting-started/computer.md)
 - [VLA Pipeline](docs/vla-pipeline/index.md): two xArm robots, wrist/scene cameras, and Quest headsets
-- [Self Improvement Learning](docs/unidog-nav/index.md): Unitree Go2, D1 arm, D435i, and onboard computer
-- [ABC Box](docs/abc-box/index.md): followers, leaders, and cameras connected to the shared workstation
+- [Self Improvement Learning](docs/unidog-nav/index.md): Unitree Go2, D1 arm, front D435i, D435 wrist camera, and onboard computer
+- [ABC Box](docs/abc-box/index.md): followers, leaders, and three D405 cameras; shared-workstation connections require supplier confirmation
 
 All three projects share one workstation with **one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Equipment references distinguish observed inventory from parts still requiring confirmation. No hardware acceptance test was performed during the documentation update.
 
@@ -69,4 +69,20 @@ Keep the same top-level navigation tabs on every page. Navigation remains in the
 
 Hardware inventories use short equipment, quantity, and product/reference tables with selection details below. Link every equipment row to a verified product, supplier catalog, or relevant assembly reference; mark unspecified custom parts without inventing a purchase model. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
 
-The new station photographs use unnumbered vector callouts with camera model names and matching captions in their captions. Regenerate the annotated SVGs with `python3 scripts/label_photos.py`; the source JPEGs remain unchanged. Label only identifiable visible equipment, and do not infer rig A/B identities from position.
+The new station photographs use unnumbered vector callouts with camera model names and matching captions. Regenerate the annotated SVGs with `python3 scripts/label_photos.py`; the source JPEGs remain unchanged. Label only identifiable visible equipment, and do not infer rig A/B identities from position.
+
+## Maintaining the setup aids
+
+Keep unknown connections explicitly marked; do not infer port maps from photographs. Connection maps are HTML/CSS so they remain readable on phones and in both themes. Shared setup covers only the shared equipment; project overview pages hold the full identification photographs. End each readiness page with the station record and a return to its own project.
+
+The station record is a two-sheet print layout. It contains no storage or upload mechanism; completed records stay private. Checklists are static and intended for printing.
+
+The labeled xArm and ABC SVGs embed checked-in 1800-pixel previews. Source JPEGs stay unchanged. To regenerate the previews on macOS, then rebuild vector labels:
+
+```bash
+sips -Z 1800 -s format jpeg -s formatOptions 82 docs/vla-pipeline/assets/xarm-station.jpg --out docs/vla-pipeline/assets/xarm-station-preview.jpg
+sips -Z 1800 -s format jpeg -s formatOptions 82 docs/abc-box/assets/abc-box-station.jpg --out docs/abc-box/assets/abc-box-station-preview.jpg
+python3 scripts/label_photos.py
+```
+
+Verify mobile tables scroll without clipping, connection maps stack, and the station record prints with its two sections on separate sheets. Keep the source images and vector labels when optimizing image delivery.

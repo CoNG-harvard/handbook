@@ -1,8 +1,17 @@
+---
+title: VLA Pipeline
+---
+
 # VLA Pipeline
 
 A tabletop platform with **two [xArm 7 robots](https://www.ufactory.cc/xarm-collaborative-robot/)**, grippers, **two [D405 wrist cameras](https://www.realsenseai.com/product-family/d405-series/)**, **three [D435 scene cameras](https://www.realsenseai.com/products/stereo-depth-camera-d435/)**, and [Quest 3 headsets](https://www.meta.com/quest/quest-3/) for operator control. It uses the workstation shared with Self Improvement Learning and ABC Box.
 
 **Your goal:** assemble and identify both rigs, arrange clear camera views, and have an operator check the connections and stop controls.
+
+!!! info "Before assembly"
+    **Confirmed:** two xArm robots, two D405 wrist cameras, three D435 scene cameras, and the shared desktop.
+
+    **Still needed:** approved arm stands, gripper adapters, scene-camera supports, and cable lengths. Confirm how many headset/operator pairs will be used. [Equipment details](hardware/index.md#selection-details).
 
 <figure class="handbook-figure" markdown="1">
 
@@ -14,7 +23,7 @@ Both xArm robots · Foreground gripper · RealSense D435 (3) · RealSense D405 (
 
 Lab photograph provided in September 2026. Labels identify visible parts, not rig A/B assignments.
 
-[View full-size image](assets/xarm-station-labeled.svg) · [Source photograph](assets/xarm-station.jpg)
+[View full-size image](assets/xarm-station-labeled.svg) · [Source photograph](assets/xarm-station.jpg) · [Earlier labeled view](assets/system_overview-labeled.svg)
 { .figure-links }
 
 </figcaption>

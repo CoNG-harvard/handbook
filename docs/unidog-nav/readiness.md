@@ -1,3 +1,9 @@
+---
+title: Self Improvement Learning hardware readiness
+hide:
+  - footer
+---
+
 # Self Improvement Learning hardware readiness
 
 **Goal:** confirm the complete Go2/D1 platform is ready for an operator-led first session. Start with the [equipment list](hardware.md).
@@ -28,4 +34,9 @@ Complete [D1 readiness](d1-arm.md) separately. A successful camera check or a re
 
 Save the robot, battery, controller, camera, arm, and onboard-computer identities; the approved power/network arrangement; calibration records; and the operator's check date. List pending items explicitly.
 
-**Ready for handover:** the installer has approved the mounts and connections, the camera view is checked, and an experienced operator has signed off the complete platform for the planned session.
+**Ready for handover:** the installer has approved the mounts and connections, both camera views are checked, and an experienced operator has signed off the complete platform for the planned session.
+
+
+**Finish:** complete the [station record](../getting-started/station-record.md), including any unresolved items. Use [hardware troubleshooting](../getting-started/troubleshooting.md) if a check fails.
+
+[Return to this project](index.md) · [All projects](../index.md)

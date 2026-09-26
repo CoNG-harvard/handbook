@@ -1,8 +1,17 @@
+---
+title: Self Improvement Learning
+---
+
 # Self Improvement Learning
 
-A mobile platform built around **one [Unitree Go2](https://www.unitree.com/go2/)**, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i camera](https://www.realsenseai.com/products/depth-camera-d435i/)**, a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)**, and an onboard computer.
+A mobile platform built around **one [Unitree Go2](https://www.unitree.com/go2/)**, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i camera](https://www.realsenseai.com/products/depth-camera-d435i/)**, a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)**, and an onboard **[NVIDIA Jetson Orin NX, 16 GB RAM](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/)** (100 TOPS configuration).
 
 **Your goal:** identify the delivered equipment, confirm the mounting and connections, and arrange separate readiness checks for the dog and arm.
+
+!!! info "Before assembly"
+    **Confirmed:** Go2 with D1, front D435i, D435 wrist camera, Jetson Orin NX 16GB, and the shared desktop.
+
+    **Still needed:** exact Go2 edition, Jetson carrier board, D1 mounting and power plan, wrist-camera host connection, and gantry clearance. [D1 assembly instructions are pending](d1-arm.md).
 
 <figure class="handbook-figure" markdown="1">
 
@@ -24,7 +33,7 @@ The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 
 | Computer | Physical role |
 |---|---|
 | Shared workstation | Stays at the desk and connects to the robot over the lab's approved network |
-| Onboard computer | Rides on the robot and connects to its camera and control interfaces |
+| Jetson Orin NX 16GB | Rides on the robot and connects to its camera and control interfaces |
 
 ## Set up the platform
 

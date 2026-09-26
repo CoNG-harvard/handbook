@@ -1,3 +1,9 @@
+---
+title: VLA Pipeline hardware readiness
+hide:
+  - footer
+---
+
 # VLA Pipeline hardware readiness
 
 **Goal:** hand over two clearly identified rigs with secure mounts, usable camera views, and accessible stop controls. Complete the [equipment and connections](hardware/index.md) first.
@@ -36,3 +42,8 @@ The operator must approve resting/home poses for the actual mounting arrangement
 Keep the rig A/B identities, arm/controller addresses, camera and headset serials, approved poses, stop locations, operator name, and check date in the station record. Photograph the cable labels and camera arrangement.
 
 **Ready for handover:** all equipment is accounted for, connections and views are checked, and the operator has signed off the stops and clearance. Record unresolved items before the first working session.
+
+
+**Finish:** complete the [station record](../getting-started/station-record.md), including any unresolved items. Use [hardware troubleshooting](../getting-started/troubleshooting.md) if a check fails.
+
+[Return to this project](index.md) · [All projects](../index.md)

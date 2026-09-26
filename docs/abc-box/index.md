@@ -1,8 +1,17 @@
+---
+title: ABC Box
+---
+
 # ABC Box
 
 A two-arm platform from [I2RT](https://i2rt.com/products/abc-box). The operator moves **leader arms** by hand; the **follower arms** work at the table. Cameras observe the work area and each wrist.
 
-**Your goal:** confirm the delivered package, mount and pair the arms, connect the cameras and control interfaces to the shared workstation, and identify the physical stop.
+**Your goal:** confirm the delivered package, mount and pair the arms, confirm the computer and cable arrangement with the supplier, and identify the physical stop.
+
+!!! info "Before assembly"
+    **Hardware plan:** two followers, two leaders, three D405 cameras, and the shared desktop.
+
+    **Still needed:** delivered package contents, leader model, control interfaces, and stop arrangement. The photograph does not verify these parts. [Package checks](hardware.md#1-check-the-abc-box-package).
 
 <figure class="handbook-figure" markdown="1">
 
@@ -32,4 +41,4 @@ Lab photograph provided in September 2026. The leaders, computer, and stop contr
 
 ABC Box uses the same [RTX PRO 6000 desktop](../getting-started/computer.md) as VLA Pipeline and Self Improvement Learning. Count the desktop, monitor, keyboard, mouse, and shared storage once.
 
-The manufacturer's full Box package lists a small PC and touchscreen. These are package details, not a separate desktop requirement for this lab setup. Confirm the delivered variant and the connection arrangement for the shared workstation with the supplier. [I2RT package information](https://i2rt.com/products/abc-box)
+The manufacturer's full Box package lists a small PC and touchscreen. Keep these included components on the packing list; no additional desktop purchase is listed. The supplier must confirm how the shared workstation connects and which functions remain on the included PC. Do not bypass or remove it without that plan. [I2RT package information](https://i2rt.com/products/abc-box)

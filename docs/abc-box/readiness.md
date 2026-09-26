@@ -1,3 +1,9 @@
+---
+title: ABC Box hardware readiness
+hide:
+  - footer
+---
+
 # ABC Box hardware readiness
 
 **Goal:** confirm the delivered station is assembled and identified before an operator-led session. Complete the [equipment and connections](hardware.md) first.
@@ -7,7 +13,7 @@
 - [ ] The delivered Box/Research Kit variant and packing list are recorded.
 - [ ] Both follower arms and grippers are securely mounted.
 - [ ] Both leader arms are present, mounted, and labeled with their matching followers.
-- [ ] The shared workstation, approved control interfaces, and robot power supplies are connected.
+- [ ] The supplier-approved connections for the shared workstation, any included Box PC, control interfaces, and power supplies are recorded and checked.
 - [ ] All three camera mounts and USB data cables are secured.
 - [ ] Control cables are labeled and clear of joints and the working area.
 
@@ -25,7 +31,7 @@ Have the installer follow the delivered station's calibration procedure and reco
 | Left wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The left gripper and contact area |
 | Right wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The right gripper and contact area |
 
-Record each serial and position, and check all views together on the shared workstation. Confirm lighting, focus/view coverage, cable slack, and stable USB connections.
+Record each serial and position, and check all views together using the supplier-approved computer arrangement. Confirm lighting, focus/view coverage, cable slack, and stable USB connections.
 
 ## 4. Demonstrate the physical stop
 
@@ -38,3 +44,8 @@ The station photograph does not show the complete stop, leader, or computer arra
 Keep the packing list, device models/serials, leader/follower pairings, camera positions, calibration date, stop procedure, and installer/operator sign-off with the station record.
 
 **Ready for handover:** the equipment matches the delivered instructions, calibration and views have been checked, and the operator has approved the stop and recovery procedure. The lab's complete ABC Box acceptance session remains to be recorded.
+
+
+**Finish:** complete the [station record](../getting-started/station-record.md), including any unresolved items. Use [hardware troubleshooting](../getting-started/troubleshooting.md) if a check fails.
+
+[Return to this project](index.md) · [All projects](../index.md)

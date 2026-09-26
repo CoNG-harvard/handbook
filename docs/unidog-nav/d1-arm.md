@@ -1,3 +1,7 @@
+---
+title: D1 arm readiness
+---
+
 # D1 arm readiness
 
 **Status: platform-specific assembly and commissioning instructions are pending.** The D1 is part of the Go2 platform, but it needs its own mounting, calibration, and operator checks.

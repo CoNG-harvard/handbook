@@ -19,72 +19,19 @@ Have the [workstation supplier](https://www.nvidia.com/en-us/products/workstatio
 
 ## What each platform needs
 
-All three projects share the same desktop workstation. Gather the robot equipment from the relevant list below.
+Prepare the shared workstation below, then use one project guide. Robot equipment is counted separately from the desktop.
 
 ### VLA Pipeline: the arm station {#robocoop-the-arm-station}
 
-<figure class="handbook-figure" markdown="1">
-
-![Labeled xArm station: both xArm robots; foreground gripper; three D435 scene cameras; two D405 wrist cameras.](../vla-pipeline/assets/xarm-station-labeled.svg){ loading=lazy width=1000 height=750 }
-
-<figcaption markdown="1">
-
-Both xArm robots · Foreground gripper · RealSense D435 (3) · RealSense D405 (2).
-
-Lab photograph provided in September 2026. Labels identify visible parts, not rig A/B assignments.
-
-[View full-size image](../vla-pipeline/assets/xarm-station-labeled.svg) · [Source photograph](../vla-pipeline/assets/xarm-station.jpg)
-{ .figure-links }
-
-</figcaption>
-
-</figure>
-
-[Arm equipment list and wiring steps](../vla-pipeline/hardware/index.md)
+Two xArm 7 robots, two D405 wrist cameras, three D435 scene cameras, and Quest headsets. [View the station](../vla-pipeline/index.md) · [Equipment and connections](../vla-pipeline/hardware/index.md).
 
 ### Self Improvement Learning: the navigation robot {#unidog-the-navigation-robot}
 
-<figure class="handbook-figure" markdown="1">
-
-![Self Improvement Learning platform photograph labeled with the Unitree Go2, Unitree D1 arm, front D435i camera, and D435 wrist camera.](../unidog-nav/assets/platform-labeled.svg)
-
-<figcaption markdown="1">
-
-The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
-
-[View full-size image](../unidog-nav/assets/platform-labeled.svg) · [Source PDF](../unidog-nav/assets/platform.pdf)
-{ .figure-links }
-
-</figcaption>
-
-</figure>
-
-[Self Improvement Learning equipment list and connections](../unidog-nav/hardware.md) — includes one Unitree Go2 and one Unitree D1 arm.
-
-The dog still needs its onboard computer; the arm still needs its control box. Both remain on their project's equipment list.
+One Go2, one D1 arm, a front D435i, a D435 wrist camera, and a Jetson Orin NX onboard computer (16 GB RAM, 100 TOPS configuration). [View the platform](../unidog-nav/index.md) · [Equipment and connections](../unidog-nav/hardware.md).
 
 ### ABC Box: leader-controlled teleoperation
 
-<figure class="handbook-figure" markdown="1">
-
-![Labeled ABC Box station: both robot arms; two RealSense D405 cameras at the wrists; one RealSense D405 overhead; camera frame.](../abc-box/assets/abc-box-station-labeled.svg){ loading=lazy width=1000 height=750 }
-
-<figcaption markdown="1">
-
-Both robot arms · RealSense D405 (2 at the wrists, 1 overhead) · Camera frame.
-
-Lab photograph provided in September 2026. The leaders, computer, and stop control are not identified in this view.
-
-[View full-size image](../abc-box/assets/abc-box-station-labeled.svg) · [Source photograph](../abc-box/assets/abc-box-station.jpg)
-{ .figure-links }
-
-</figcaption>
-
-</figure>
-
-The [ABC Box equipment list](../abc-box/hardware.md) separates the full Box package from accessories to confirm with the supplier. ABC Box uses the same RTX PRO 6000 workstation as the other two projects; count the desktop once.
-
-[Start the ABC Box guide](../abc-box/index.md).
+Two follower arms, two leaders, and three D405 cameras. [View the station](../abc-box/index.md) · [Equipment and connections](../abc-box/hardware.md).
 
 ## Shared workstation specification {#workstation-specification-for-vla-pipeline-and-self-improvement-learning}
 
@@ -97,13 +44,13 @@ The [ABC Box equipment list](../abc-box/hardware.md) separates the full Box pack
 | Storage reference | Two WD_BLACK SN850X 2 TB SSDs and one WD 4 TB hard drive | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [WD hard-drive catalog](https://www.westerndigital.com/products/hdd/internal-hdd) — HDD model not recorded |
 | Connections | Ethernet for the xArm controllers and robot network; USB/data connections for the active platform's cameras, headsets, control interfaces, and input devices | [Ethernet](https://www.startech.com/en-us/cables/network) · [USB cables](https://www.startech.com/en-us/cables/usb-30) — catalogs |
 
-CPU, RAM, storage, and GPU were inspected on the arm workstation on 24 September 2026. They provide a reference configuration for the desktop shared by all three projects. GPU memory and system RAM are separate. Choose storage capacity for the planned work, allowing room for recordings and backups.
+The GPU is the project owner’s selected configuration. CPU, RAM, and storage are previously recorded lab references from 24 September 2026, not a newly verified build or tested minimum. GPU memory and system RAM are separate. Choose storage capacity for the planned work, allowing room for recordings and backups.
 
 NVIDIA lists 96 GB GPU memory for the [RTX PRO 6000 Blackwell family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/). Specify the **Workstation Edition**, and have the supplier size power and cooling for it.
 
 ## Choosing a new computer
 
-- **Cameras and headsets:** plan USB bandwidth for the active platform: VLA Pipeline has two D405 wrist cameras, three D435 cameras, and up to two headsets; ABC Box has three D405 cameras and its arm-control interfaces. Extra sockets do not necessarily add bandwidth. The dog's camera connects to its onboard computer.
+- **Cameras and headsets:** plan USB bandwidth for the active platform: VLA Pipeline has two D405 wrist cameras, three D435 cameras, and up to two headsets; ABC Box has three D405 cameras and arm-control interfaces; the supplier must confirm which connect to the shared desktop or included Box PC. Extra sockets do not necessarily add bandwidth. The dog's front D435i connects to its onboard computer; the D1 wrist-camera connection still needs confirmation.
 - **Power and cooling:** have the supplier confirm the complete workstation supports the selected RTX PRO 6000 card.
 - **Memory and storage:** agree capacity with the project owner before ordering; the values above describe a reference machine rather than tested minimums.
 

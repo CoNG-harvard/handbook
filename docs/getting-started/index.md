@@ -48,4 +48,6 @@ Identify the physical stop control before enabling motion. During headset use, a
 
 Record device models, serial numbers, cable labels, camera positions, network addresses, calibration dates, and the responsible operator in a private setup sheet. Use labels such as **rig A**, **rig B**, **left wrist**, and **overhead** consistently on the equipment and in the record.
 
+Use the printable [station record](station-record.md) to capture these details. Keep the completed copy privately with the equipment.
+
 **Next:** [Gather the shared equipment](hardware.md), then follow your project's hardware guide.

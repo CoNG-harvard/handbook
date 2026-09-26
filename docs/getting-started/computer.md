@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 # Prepare the workstation
 
 **Goal:** prepare one shared desktop for VLA Pipeline, Self Improvement Learning, and ABC Box.
@@ -25,8 +30,8 @@ Keep power strips, connectors, and loose cable loops away from the robots and wa
 | [Two xArm control boxes](https://docs.xarm.ufactory.cc/2.hardware_installation.html) | One Ethernet connection per controller to the shared network |
 | [Five xArm cameras](../vla-pipeline/hardware/index.md#1-gather-the-equipment) | USB data connections with enough bandwidth for the intended simultaneous views |
 | [Quest headsets](https://www.meta.com/quest/quest-3/) | One data-capable USB connection per headset used |
-| Three [D405 cameras](https://www.realsenseai.com/product-family/d405-series/) for ABC Box | USB data connections for two wrist views and one overhead view |
-| [ABC Box followers and leaders](../abc-box/hardware.md) | Supplier-approved control interfaces connected to the shared workstation |
+| Three [D405 cameras](https://www.realsenseai.com/product-family/d405-series/) for ABC Box | USB data connections for two wrist views and one overhead view; supplier confirms their host computer |
+| [ABC Box followers and leaders](../abc-box/hardware.md) | Supplier-approved connection plan for the shared workstation and any included Box PC |
 | [Go2 onboard computer](../unidog-nav/hardware.md#1-core-equipment-for-navigation) | The lab's approved Ethernet or wireless connection |
 | [Monitor and input devices](hardware.md#shared-equipment-prepare-once) | Suitable display and USB connections |
 

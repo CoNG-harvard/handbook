@@ -1,7 +1,8 @@
-"""Build vector callouts over the original, unmodified lab photographs.
+"""Build vector callouts over lab photographs; retain untouched source downloads.
 
 Coordinates use a 1000-unit-wide viewBox with the source aspect ratio. Regenerate from the repository root with
-python3 scripts/label_photos.py. Keep source JPEGs for the unannotated download.
+python3 scripts/label_photos.py. Use a checked-in preview JPEG when present;
+keep source JPEGs unchanged for the unannotated full-resolution download.
 """
 from base64 import b64encode
 from html import escape
@@ -12,14 +13,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def annotate(folder, stem, title, description, labels, extension='jpg', height=750):
     source = ROOT / 'docs' / folder / 'assets' / f'{stem}.{extension}'
-    photo = b64encode(source.read_bytes()).decode('ascii')
+    preview = source.with_name(f'{stem}-preview.jpg')
+    embedded = preview if extension == 'jpg' and preview.exists() else source
+    photo = b64encode(embedded.read_bytes()).decode('ascii')
     mime = 'image/png' if extension == 'png' else 'image/jpeg'
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="{height}" '
         f'viewBox="0 0 1000 {height}" role="img" aria-labelledby="title desc">',
         f'<title id="title">{escape(title)}</title>',
         f'<desc id="desc">{escape(description)}</desc>',
-        '<!-- Original image embedded unchanged; annotations are separate vectors. -->',
+        '<!-- Lab photo embedded; source download retained. Annotations are separate vectors. -->',
         f'<image width="1000" height="{height}" href="data:{mime};base64,{photo}"/>',
     ]
     # White halos keep the leaders visible against both dark and light equipment.

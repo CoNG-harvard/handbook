@@ -280,3 +280,135 @@
     border-top: 1px solid var(--md-default-fg-color--lightest);
   }
 }
+
+/* Tables remain readable and scroll within their own region on narrow screens. */
+.md-typeset table:not([class]) {
+  display: table;
+  min-width: 100%;
+  width: max-content;
+  max-width: 100%;
+  overflow: visible;
+}
+.md-typeset table:not([class]) :is(th, td) {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+}
+.md-typeset .md-typeset__scrollwrap {
+  overflow-x: auto;
+}
+
+/* Connection maps use the same type and palette as the equipment lists. */
+.md-typeset .connection-map {
+  margin: 1.25rem 0;
+}
+.md-typeset .connection-hub,
+.md-typeset .connection-branch {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--handbook-radius-small);
+}
+.md-typeset .connection-hub {
+  background: var(--md-code-bg-color);
+}
+.md-typeset .connection-branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.65rem;
+}
+.md-typeset .connection-branch--pending {
+  border-style: dashed;
+}
+.md-typeset .connection-map p {
+  margin: 0 0 0.4rem;
+}
+.md-typeset .connection-map p:last-child,
+.md-typeset .connection-map ul {
+  margin-bottom: 0;
+}
+.md-typeset .connection-map ul {
+  margin-top: 0.4rem;
+}
+.md-typeset .record-sheet {
+  margin: 1.5rem 0;
+}
+@media screen and (max-width: 40em) {
+  .md-typeset .connection-branches {
+    grid-template-columns: 1fr;
+  }
+  .md-typeset table:not([class]) {
+    min-width: 30rem;
+  }
+  .md-typeset .md-typeset__scrollwrap::before {
+    content: "Scroll table →";
+    display: block;
+    padding: 0 0.8rem 0.35rem;
+    font-size: 0.65rem;
+    color: var(--md-default-fg-color--light);
+  }
+}
+.md-typeset .record-blank {
+  display: inline-block;
+  width: 10em;
+  max-width: 100%;
+  min-height: 1.3em;
+  border-bottom: 1px solid var(--md-default-fg-color--light);
+  vertical-align: baseline;
+}
+.md-typeset .record-blank--short { width: 3em; }
+.md-typeset .record-blank--line { display: block; width: 100%; }
+.md-typeset .record-sheet table { table-layout: fixed; }
+.md-typeset .record-sheet th { white-space: normal; }
+.md-typeset .record-sheet td .record-blank { width: 100%; }
+.md-typeset .record-sheet td .record-blank--short { width: 3em; }
+@media print {
+  @page { margin: 14mm; }
+  body[data-md-color-scheme] {
+    background: white !important;
+    --md-default-bg-color: white !important;
+    --md-default-fg-color: #111 !important;
+    --md-default-fg-color--light: #444 !important;
+    --md-default-fg-color--lightest: #ccc !important;
+    --md-code-bg-color: #f4f4f4 !important;
+  }
+  .screen-only, .headerlink, .md-footer, .md-header,
+  .md-sidebar, .md-tabs, .md-top, .md-dialog {
+    display: none !important;
+  }
+  .md-main__inner, .md-content, .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .md-typeset {
+    font-size: 9pt;
+    line-height: 1.4;
+    color: #111;
+  }
+  .md-typeset table:not([class]) {
+    width: 100%;
+    min-width: 0;
+    font-size: 9pt;
+  }
+  .md-typeset table:not([class]) :is(th, td) {
+    padding: 0.45em 0.55em;
+  }
+  .md-typeset .md-typeset__scrollwrap {
+    overflow: visible;
+    margin: 0;
+  }
+  .md-typeset .md-typeset__table {
+    padding: 0;
+  }
+  .md-typeset .record-sheet + .record-sheet {
+    break-before: page;
+  }
+  .md-typeset .record-sheet h2 {
+    margin-top: 0;
+  }
+  .md-typeset tr, .md-typeset .connection-map {
+    break-inside: avoid;
+  }
+}

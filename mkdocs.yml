@@ -58,7 +58,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - stylesheets/handbook.css?v=6
+  - stylesheets/handbook.css?v=7
 
 plugins:
   - search
@@ -75,8 +75,9 @@ nav:
       - Before you begin: getting-started/index.md
       - Shared computer and hardware: getting-started/hardware.md
       - Prepare the workstation: getting-started/computer.md
+      - Station record: getting-started/station-record.md
+      - Hardware troubleshooting: getting-started/troubleshooting.md
       - Equipment references: getting-started/sources.md
-      - Lab resources: getting-started/lab-resources.md
   - VLA Pipeline:
       - Overview: vla-pipeline/index.md
       - "1. Equipment and connections": vla-pipeline/hardware/index.md

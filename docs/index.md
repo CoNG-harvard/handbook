@@ -42,7 +42,7 @@ A Unitree Go2 with a D1 arm, D435i front camera, D435 wrist camera, and onboard 
 
 ## [ABC Box](abc-box/index.md)
 
-Two follower arms, hand-operated leaders, and three cameras connected to the shared workstation.
+Two follower arms, hand-operated leaders, and three D405 cameras.
 
 [View hardware guide →](abc-box/index.md){ .project-link }
 
@@ -57,4 +57,5 @@ VLA Pipeline, Self Improvement Learning, and ABC Box share **one RTX PRO 6000 wo
 - [Shared computer and hardware](getting-started/hardware.md) — what to buy once and what belongs to each platform.
 - [Prepare the workstation](getting-started/computer.md) — workspace, power, network, and peripheral connections.
 - [Equipment references](getting-started/sources.md) — manufacturer guidance and the basis for the hardware lists.
-- [Lab resources](getting-started/lab-resources.md) — relevant camera notes and historical lab material.
+
+Setup tools: [Printable station record](getting-started/station-record.md) · [Hardware troubleshooting](getting-started/troubleshooting.md).
