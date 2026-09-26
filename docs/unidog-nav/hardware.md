@@ -4,7 +4,7 @@ title: Self Improvement Learning hardware
 
 # Self Improvement Learning hardware
 
-**Goal:** assemble the Self Improvement Learning platform: **one Unitree Go2 robot with one Unitree D1 arm**, its cameras, onboard computer, and control equipment. Check the dog and the mounted arm separately before a combined session.
+**Goal:** assemble the Self Improvement Learning platform: **one Unitree Go2 Education Plus (EDU Plus) robot with one Unitree D1 arm**, its cameras, onboard computer, and control equipment. Check the dog and the mounted arm separately before a combined session.
 
 The [workstation with RTX PRO 6000, display/input devices, storage, and shared network equipment](../getting-started/hardware.md#shared-equipment-prepare-once) also serve VLA Pipeline and ABC Box. Count them once in the shared setup; the list below contains **equipment specific to Self Improvement Learning**.
 
@@ -16,7 +16,7 @@ Product links identify known models. **Catalogs** and assembly **references** co
 
 | Equipment | Quantity | Product or reference |
 |---|---|---|
-| Unitree Go2 research robot | 1 | [Unitree Go2](https://www.unitree.com/go2/) — confirm EDU edition |
+| Unitree Go2 Education Plus (EDU Plus) robot | 1 | [Unitree Go2](https://www.unitree.com/go2/) — edition confirmed by project owner |
 | Unitree Go2 Protective Bracket / Gantry for Go2 EDU | 1 | [RobotShop listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) |
 | Unitree D1 arm and gripper | 1 set | [D1 arm — US Robot Store](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) — confirm exact package |
 | D1 mounting kit and power/data cables | 1 set | [D1 supplier](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) — request Go2 mounting kit and cable list |
@@ -36,7 +36,7 @@ The supplied picture shows **1 Go2, 1 D1 arm, and 2 external cameras**: the labe
 
 ### Selection details
 
-- **Robot:** the lab reference specifies [Go2 Edu Plus](https://www.unitree.com/go2/). Confirm the exact edition, supported control interface, and included accessories with the owner/vendor.
+- **Robot:** the project owner confirmed [Go2 Education Plus (EDU Plus)](https://www.unitree.com/go2/). Check the supported control interface and included accessories against the delivered package.
 - **Protective gantry:** an external support frame for Go2 EDU posture and movement experiments. RobotShop lists one gantry per package (SKU **RB-Unt-97**, manufacturer part **Go2-Protective-Bracket**). It is not shown in the platform photo. Confirm the attachment arrangement, supported load, and clearance with the mounted D1 arm before use.
 - **D1 arm:** use the [D1 supplier listing](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) to confirm the complete mounting and cable kit. **Arm commissioning is pending**; obtain the [D1 mounting and calibration plan](d1-arm.md) before manipulation.
 - **Onboard computer:** the project owner confirmed **NVIDIA Jetson Orin NX, 16 GB RAM, 100 TOPS configuration**. TOPS describes AI processing capacity in trillions of operations per second, not a measured task speed. Record the carrier board (the board providing ports and power), storage, cooling, and power arrangement; check whether the complete computer is included with the robot.
@@ -97,7 +97,7 @@ The desktop stays at the desk; the onboard computer rides on the Go2.
 
 The dashed box has no verified port map yet. Use the [D1 readiness requirements](d1-arm.md) to obtain the missing connection plan. Do not infer the D1 power or wrist-camera host from the front camera's connection.
 
-1. **Identify:** record the Go2 edition, Jetson Orin NX 16GB and its carrier board, battery, controller, and D1 package.
+1. **Identify:** record the Go2 EDU Plus serial, Jetson Orin NX 16GB and its carrier board, battery, controller, and D1 package.
 2. **Mount:** have the installer check the approved arm and camera mounts, gantry attachment, and clearance.
 3. **Connect:** follow the delivered power/control instructions. Connect the front D435i to the onboard computer; connect the D1 and wrist camera only after their arrangement is confirmed.
 4. **Label:** mark both ends of camera and network cables. Photograph the ports for the [station record](../getting-started/station-record.md).

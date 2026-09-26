@@ -16,7 +16,7 @@ Each hardware table includes a **Product or reference** column. Product pages id
 | xArm robots and control boxes | [UFACTORY installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html) and [xArm product family](https://www.ufactory.cc/xarm-collaborative-robot/) | Confirming the arm model and supplied installation requirements |
 | xArm camera mount | [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) | Mount for the two D405 wrist cameras; D405 fit confirmed by the project owner |
 | Quest headsets | [Meta Quest 3](https://www.meta.com/quest/quest-3/) | Headset, controller, and accessory identification |
-| Go2 | [Unitree Go2](https://www.unitree.com/go2/) | Confirming the delivered robot edition and package with the supplier |
+| Go2 Education Plus (EDU Plus) | [Unitree Go2](https://www.unitree.com/go2/) | Edition confirmed by project owner; check included accessories against the delivered package |
 | D1 arm and mounting package | [D1 — US Robot Store](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) | Confirming the D1 variant, gripper, Go2 mounting parts, and cables |
 | Go2 battery, charger, and controller | [Battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) · [controller](https://shop.unitree.com/products/go2-controller) | Matching accessories to the delivered Go2 |
 | Onboard Jetson Orin NX | [NVIDIA Jetson Orin NX](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/) | Owner-confirmed 16 GB RAM, 100 TOPS configuration; carrier board still to identify |
@@ -35,7 +35,7 @@ For the D1 arm, obtain the unit's manufacturer manual and the project owner's ap
 ## Basis for the equipment lists
 
 - **Previously recorded lab inventory, 24 September 2026:** CPU, memory, and storage values are references for planning; they have not been rechecked in this review. Connected-device counts do not establish the completeness of mounts, cables, or other accessories.
-- **Project-owner requirements:** two xArm robots with two D405 wrist cameras and three D435 scene cameras; a Go2 with D1 arm; one RTX PRO 6000 desktop shared by all three projects; and ABC Box as a separate platform with its own equipment list.
+- **Project-owner requirements:** two xArm robots with two D405 wrist cameras and three D435 scene cameras; a Go2 EDU Plus with D1 arm; one RTX PRO 6000 desktop shared by all three projects; and ABC Box as a separate platform with its own equipment list.
 - **Supplied photographs:** the xArm and ABC Box photographs show visible arm and camera arrangements. The [Go2 platform PDF](../unidog-nav/assets/platform.pdf) identifies the Go2, D1 arm, and front D435i. The project owner confirmed the additional D1 wrist camera is a D435. Hidden parts and precise rig identities still require inspection.
 - **Supplier information:** ABC package details were rechecked on 26 September 2026. Confirm the current order and delivered packing list before purchasing additional parts.
 
@@ -50,6 +50,6 @@ The hardware tables link these items to relevant catalogs or assembly guidance. 
 
 ## Outstanding physical checks
 
-The exact Go2 edition, Jetson carrier board, D1 installation details, custom xArm mounts/adapters, and complete ABC accessory package need owner or supplier confirmation. The project owner confirmed that all three projects share the same desktop. Each platform's physical connections and readiness checks still need to be verified at the station.
+The Jetson carrier board, D1 installation details, custom xArm mounts/adapters, and complete ABC accessory package need owner or supplier confirmation. The project owner confirmed that all three projects share the same desktop. Each platform's physical connections and readiness checks still need to be verified at the station.
 
 No robot or camera was operated during the handbook update. Hardware readiness must be checked and recorded by the installer and operator at the actual station.

@@ -7,7 +7,7 @@
 | Project | Physical setup | Computer |
 |---|---|---|
 | [VLA Pipeline](../vla-pipeline/index.md) | Two xArm 7 robots, grippers, five cameras, and Quest headsets | Shared workstation |
-| [Self Improvement Learning](../unidog-nav/index.md) | Unitree Go2, D1 arm, D435i front camera, D435 wrist camera, and onboard computer | Shared workstation plus the robot's onboard computer |
+| [Self Improvement Learning](../unidog-nav/index.md) | Unitree Go2 EDU Plus, D1 arm, D435i front camera, D435 wrist camera, and onboard computer | Shared workstation plus the robot's onboard computer |
 | [ABC Box](../abc-box/index.md) | Two follower arms, paired leader arms, and three cameras | Shared workstation |
 
 Use the [shared hardware list](hardware.md) to count the workstation and its accessories once.

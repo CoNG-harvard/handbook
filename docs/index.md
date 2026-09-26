@@ -30,7 +30,7 @@ Two xArm robots with grippers, wrist and scene cameras, and Quest headsets.
 
 ## [Self Improvement Learning](unidog-nav/index.md)
 
-A Unitree Go2 with a D1 arm, D435i front camera, D435 wrist camera, and onboard computer.
+A Unitree Go2 EDU Plus with a D1 arm, D435i front camera, D435 wrist camera, and onboard computer.
 
 [View hardware guide →](unidog-nav/index.md){ .project-link }
 
