@@ -12,6 +12,7 @@ Product links identify known models. **Catalogs** and assembly **references** co
 | Monitor, keyboard, and mouse | 1 set, or arranged remote access | [Monitors](https://www.dell.com/en-us/shop/pc-accessories/ar/computer-monitors) · [keyboards](https://www.logitech.com/en-us/shop/c/keyboards) · [mice](https://www.logitech.com/en-us/shop/c/mice) — catalogs |
 | Storage and backup destination | Capacity for recordings and backups across all three projects | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — catalog; backup device to specify |
 | Network switch/router, power adapter, and workstation cable | 1 suitable set; reuse existing equipment | [Switches](https://www.netgear.com/business/wired/switches/unmanaged/) · [Ethernet cables](https://www.startech.com/en-us/cables/network) — catalogs; use matching power adapter |
+| Assembly tools: hex key set and digital angle gauge | 1 each, shared by all platforms | [Amazon Basics 26-piece hex key set](https://www.amazon.com/dp/B0776C2D6H) · [PREXISO digital angle gauge with laser level](https://www.amazon.com/dp/B0D65VNWPH) — for arm-base, stand, and camera-mount fastening and leveling |
 
 The shared network connects the workstation to the selected robot equipment. Keep enough storage for the planned recordings and a separate backup destination.
 

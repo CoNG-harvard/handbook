@@ -39,7 +39,7 @@ The [ABC Box product page](https://i2rt.com/products/abc-box) describes a hardwa
 | Camera USB data cables | 3 | [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — match connectors, length, and bandwidth |
 | Working communication connection for each follower and leader | 4 channels | [I2RT interface reference](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) — confirm supplied adapters |
 | Matching grippers, power supplies, and mains leads | Confirm the complete supplied set | [I2RT package](https://i2rt.com/products/abc-box) · [assembly reference](https://abc.bot/hardware.html) — confirm included parts |
-| Stable work surface, cable restraints, and lighting | 1 station | [Workbench](https://www.mcmaster.com/products/workbenches/) · [cable ties](https://www.mcmaster.com/products/cable-ties/) · [lighting](https://www.mcmaster.com/products/work-lights/) — catalogs |
+| Stable work surface, cable restraints, and lighting | 1 station | [Workbench](https://www.mcmaster.com/products/workbenches/) · [zip ties, 400-pack assorted](https://www.amazon.com/dp/B08TVLYB3Q) (purchased) · [lighting](https://www.mcmaster.com/products/work-lights/) — catalogs |
 | Task objects and backup storage | As needed | [Task-area reference](https://abc.bot/hardware.html) · [shared storage](../getting-started/hardware.md#shared-equipment-prepare-once) |
 
 **Leaders and cameras:** their inclusion is not explicit in the ABC Box package list. Get written confirmation before ordering extras. The [ABC assembly guide](https://abc.bot/hardware.html) uses two wrist D405s and one overhead D405. Follow the delivered Box's assembly instructions rather than buying all parts from that separate, build-your-own station list.

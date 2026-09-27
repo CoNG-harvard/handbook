@@ -20,13 +20,14 @@ Product links identify known models. **Catalogs** and assembly **references** co
 | Unitree Go2 Protective Bracket / Gantry for Go2 EDU | 1 | [RobotShop listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) |
 | Unitree D1 arm and gripper | 1 set | [D1 arm — US Robot Store](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) — confirm exact package |
 | D1 mounting kit and power/data cables | 1 set | [Unitree mounting and connections](https://support.unitree.com/home/en/developer/Payload) — small servo arm section; check supplied kit |
+| Spare M4 screws for the D1 rail mounting | 1 assortment purchased | [M4 hex button screw kit, M4 × 6–30 mm](https://www.amazon.com/dp/B0GS8BT7XL) — use the M4 × 10 length Unitree specifies; hex keys in [shared tools](../getting-started/hardware.md#shared-equipment-prepare-once) |
 | Robot battery and charger | 1 set | [Go2 battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) — match delivered variant |
 | Supported operator controller/stop interface | 1 | [Go2 controller](https://shop.unitree.com/products/go2-controller) — confirm supported stop function |
 | RealSense D435i front camera, USB data cable, and mount | 1 set | [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — mount to specify |
 | RealSense D435 wrist camera and USB data cable | 1 set | [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) |
 | RichBird 60 mm C-clamp mount with ball head and 1/4-inch screw for the D1 wrist camera | 1 | [RichBird mount](https://www.amazon.com/dp/B0GSR6883N) |
 | Robot network connection | 1 | [Ethernet cable catalog](https://www.startech.com/en-us/cables/network) — confirm wired/wireless arrangement |
-| Approved accessory power, mounts, and cable restraints | As needed | [Unitree accessories](https://shop.unitree.com/collections/all) · [cable ties](https://www.mcmaster.com/products/cable-ties/) — verify power and mounts |
+| Approved accessory power, mounts, and cable restraints | As needed | [Unitree accessories](https://shop.unitree.com/collections/all) · [zip ties, 400-pack assorted](https://www.amazon.com/dp/B08TVLYB3Q) (purchased) — verify power and mounts |
 | Clear test area and floor markings | 1 area | [Floor-marking tape catalog](https://www.mcmaster.com/products/floor-marking-tape/) — follow the approved test layout |
 
 ### Photo count check

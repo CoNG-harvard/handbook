@@ -16,6 +16,10 @@ Each hardware table includes a **Product or reference** column. Product pages id
 | xArm robots and control boxes | [UFACTORY installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html) and [xArm product family](https://www.ufactory.cc/xarm-collaborative-robot/) | Confirming the arm model and supplied installation requirements |
 | xArm arm stands | [Vention stand design 506323](https://vention.com/machine-builder/506323) | Owner-selected design for two stands; Vention account/design access required |
 | xArm gripper fingers | [Finger STL](../vla-pipeline/assets/xarm-gripper-finger.stl) | Owner-supplied 3D-print file; two fingers per gripper, four total |
+| xArm scene-camera clamps and adapters | [CAMVATE widened C-clamp](https://www.amazon.com/dp/B0BYDH27WQ) · [CAMVATE screw adapter set](https://www.amazon.com/dp/B0DQNP61JC) | Purchased ball-head clamp and 1/4"–3/8" adapters seen on the scene-camera stands; stand model still to record |
+| xArm camera USB cables | [chenyang angled Micro-B USB 3.0, 3 m](https://www.amazon.com/dp/B07M99MC27) | Four on order; RealSense D400 cameras use USB Type-C, so the connector or adapter needs checking |
+| xArm task tubs | [Rubbermaid 7-gallon utility box](https://www.amazon.com/dp/B000BC5EP8) | Four purchased; the gray tub on the station table |
+| Station consumables and tools | [Zip ties](https://www.amazon.com/dp/B08TVLYB3Q) · [AA batteries](https://www.amazon.com/dp/B00NTCH52W) · [M4 screw kit](https://www.amazon.com/dp/B0GS8BT7XL) · [hex key set](https://www.amazon.com/dp/B0776C2D6H) · [digital angle gauge](https://www.amazon.com/dp/B0D65VNWPH) | Purchased July–September 2026 for cable management, Quest controllers, D1 rail screws, and assembly |
 | xArm camera mount | [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) | Mount for the two D405 wrist cameras; D405 fit confirmed by the project owner |
 | Quest headsets | [Meta Quest 3](https://www.meta.com/quest/quest-3/) | Headset, controller, and accessory identification |
 | Go2 Education Plus (EDU Plus) | [Unitree Go2](https://www.unitree.com/go2/) | Edition confirmed by project owner; check included accessories against the delivered package |
@@ -38,6 +42,7 @@ Unitree’s [Go2 payload guide](https://support.unitree.com/home/en/developer/Pa
 - **Previously recorded lab inventory, 24 September 2026:** CPU, memory, and storage values are references for planning; they have not been rechecked in this review. Connected-device counts do not establish the completeness of mounts, cables, or other accessories.
 - **Project-owner requirements:** two xArm robots with two D405 wrist cameras and three D435 scene cameras; a Go2 EDU Plus with D1 arm; one RTX PRO 6000 desktop shared by all three projects; and ABC Box as a separate platform with its own equipment list.
 - **Supplied photographs:** the xArm and ABC Box photographs show visible arm and camera arrangements. The [Go2 platform PDF](../unidog-nav/assets/platform.pdf) identifies the Go2, D1 arm, and front D435i. The project owner confirmed the additional D1 wrist camera is a D435. Hidden parts and precise rig identities still require inspection.
+- **Purchase record, July–September 2026:** the lab's order history confirms the RichBird wrist-camera mount, CAMVATE clamp and adapters, Rubbermaid tubs, zip ties, AA batteries, M4 screws, hex keys, angle gauge, and four pending camera USB cables. Items in that record not tied to these platforms (USB-C hubs, a table-cover roll, ECG electrodes) are not listed.
 - **Supplier information:** ABC package details were rechecked on 26 September 2026. Confirm the current order and delivered packing list before purchasing additional parts.
 
 ## Parts needing a final specification
@@ -45,7 +50,7 @@ Unitree’s [Go2 payload guide](https://support.unitree.com/home/en/developer/Pa
 The hardware tables link these items to relevant catalogs or assembly guidance. Exact purchase links still depend on the owner's build details:
 
 - **Shared computer:** complete system, motherboard, RAM modules, power supply, case/cooling, HDD model, backup device, peripherals, and network equipment.
-- **VLA Pipeline:** scene-camera supports, cable lengths, task objects, and print settings for the gripper fingers.
+- **VLA Pipeline:** scene-camera stand model, the connector for the pending camera USB cables, task objects, and print settings for the gripper fingers.
 - **Go2/D1:** added wrist-camera cable arrangement, accessory power, calibration target pattern/size, and speaker.
 - **ABC Box:** leader variant, supplied control interfaces, and any parts missing from the delivered kit.
 
