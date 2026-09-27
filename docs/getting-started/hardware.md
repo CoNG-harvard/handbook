@@ -1,73 +1,47 @@
-# Shared computer and project hardware
+# Shared computer and hardware
 
-VLA Pipeline, Self Improvement Learning, and ABC Box use **one Linux workstation with one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Count the computer and its accessories once; keep each project's robot equipment on its own list.
+VLA Pipeline, Self Improvement Learning, and ABC Box use **one Linux workstation with one RTX PRO 6000 Blackwell Workstation Edition GPU (96 GB)**. Count the computer and its accessories once; each project's robot equipment is on its own list.
 
-## Shared equipment — prepare once
+## Shared equipment
 
-Product links identify known models. **Catalogs** and assembly **references** cover unspecified parts; confirm exact sizes, compatibility, and included accessories before ordering.
-
-| Shared equipment | Quantity | Product or reference |
+| Equipment | Quantity | Product or reference |
 |---|---|---|
-| Complete Linux workstation with RTX PRO 6000 | 1 workstation, 1 GPU | [NVIDIA GPU and workstation partners](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/); complete build to specify |
-| Monitor, keyboard, and mouse | 1 set, or arranged remote access | [Monitors](https://www.dell.com/en-us/shop/pc-accessories/ar/computer-monitors) · [keyboards](https://www.logitech.com/en-us/shop/c/keyboards) · [mice](https://www.logitech.com/en-us/shop/c/mice) — catalogs |
-| Storage and backup destination | Capacity for recordings and backups across all three projects | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — catalog; backup device to specify |
-| Network switch/router, power adapter, and workstation cable | 1 suitable set; reuse existing equipment | [Switches](https://www.netgear.com/business/wired/switches/unmanaged/) · [Ethernet cables](https://www.startech.com/en-us/cables/network) — catalogs; use matching power adapter |
-| Assembly tools: hex key set and digital angle gauge | 1 each, shared by all platforms | [Amazon Basics 26-piece hex key set](https://www.amazon.com/dp/B0776C2D6H) · [PREXISO digital angle gauge with laser level](https://www.amazon.com/dp/B0D65VNWPH) — for arm-base, stand, and camera-mount fastening and leveling |
+| Linux workstation with RTX PRO 6000 | 1 | [NVIDIA RTX PRO 6000 family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — complete build to specify |
+| Monitor, keyboard, and mouse | 1 set, or remote access | [Monitors](https://www.dell.com/en-us/shop/pc-accessories/ar/computer-monitors) · [keyboards](https://www.logitech.com/en-us/shop/c/keyboards) · [mice](https://www.logitech.com/en-us/shop/c/mice) |
+| Storage and backup destination | Sized for all three projects' recordings | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — backup device to specify |
+| Network switch/router, power adapter, and workstation cable | 1 set | [Switches](https://www.netgear.com/business/wired/switches/unmanaged/) · [Ethernet cables](https://www.startech.com/en-us/cables/network) |
+| Assembly tools: hex key set and digital angle gauge | 1 each | [Hex key set](https://www.amazon.com/dp/B0776C2D6H) · [Digital angle gauge](https://www.amazon.com/dp/B0D65VNWPH) — for fastening and leveling arm bases, stands, and camera mounts |
 
-The shared network connects the workstation to the selected robot equipment. Keep enough storage for the planned recordings and a separate backup destination.
+The workstation supplier's quote should include a compatible motherboard, power supply, case, cooling, and mains lead sized for the GPU.
 
-Have the [workstation supplier](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) include a compatible motherboard, power supply, case, cooling, and mains lead in the complete build quote. The inventory does not establish exact parts for these components.
+## Workstation specification
 
-## What each platform needs
-
-Prepare the shared workstation below, then use one project guide. Robot equipment is counted separately from the desktop.
-
-### VLA Pipeline: the arm station {#robocoop-the-arm-station}
-
-Two xArm 7 robots, two D405 wrist cameras, three D435 scene cameras, and Quest headsets. [View the station](../vla-pipeline/index.md) · [Equipment and connections](../vla-pipeline/hardware/index.md).
-
-### Self Improvement Learning: the navigation robot {#unidog-the-navigation-robot}
-
-One Go2 EDU Plus, one D1 arm, a front D435i, a D435 wrist camera, with the onboard computer included in the Go2 EDU Plus package. [View the platform](../unidog-nav/index.md) · [Equipment and connections](../unidog-nav/hardware.md).
-
-### ABC Box: leader-controlled teleoperation
-
-Two follower arms, two leaders, and three D405 cameras. [View the station](../abc-box/index.md) · [Equipment and connections](../abc-box/hardware.md).
-
-## Shared workstation specification {#workstation-specification-for-vla-pipeline-and-self-improvement-learning}
-
-| Component | Selected configuration or reference | Product or reference |
+| Component | Configuration | Product or reference |
 |---|---|---|
 | GPU | **RTX PRO 6000 Blackwell Workstation Edition, 96 GB** | [NVIDIA product family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — select Workstation Edition |
-| Computer type | Linux workstation, x86-64; reference machine uses Ubuntu 24.04 | [NVIDIA workstation partners](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — complete build to specify |
-| CPU reference | AMD Ryzen 9 7950X, 16 cores / 32 threads | [AMD Ryzen 9 7950X](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7950x.html) |
-| System RAM reference | About 94 GiB reported by Linux; not a tested minimum | [Memory compatibility catalog](https://www.kingston.com/en/memory) — exact modules not recorded |
-| Storage reference | Two WD_BLACK SN850X 2 TB SSDs and one WD 4 TB hard drive | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [WD hard-drive catalog](https://www.westerndigital.com/products/hdd/internal-hdd) — HDD model not recorded |
-| Connections | Ethernet for the xArm controllers and robot network; USB/data connections for the active platform's cameras, headsets, control interfaces, and input devices | [Ethernet](https://www.startech.com/en-us/cables/network) · [USB cables](https://www.startech.com/en-us/cables/usb-30) — catalogs |
+| Computer type | Linux workstation; the reference machine runs Ubuntu 24.04 | Complete build to specify |
+| CPU (reference) | AMD Ryzen 9 7950X, 16 cores | [AMD Ryzen 9 7950X](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7950x.html) |
+| System memory (reference) | About 94 GB | [Memory compatibility catalog](https://www.kingston.com/en/memory) — exact modules not recorded |
+| Storage (reference) | Two 2 TB WD_BLACK SN850X SSDs and one 4 TB WD hard drive | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [WD hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — HDD model not recorded |
+| Connections | Ethernet for the xArm control boxes and robot network; USB for the active platform's cameras, headsets, and control interfaces | [Ethernet](https://www.startech.com/en-us/cables/network) · [USB cables](https://www.startech.com/en-us/cables/usb-30) |
 
-The GPU is the project owner’s selected configuration. CPU, RAM, and storage are previously recorded lab references from 24 September 2026, not a newly verified build or tested minimum. GPU memory and system RAM are separate. Choose storage capacity for the planned work, allowing room for recordings and backups.
-
-NVIDIA lists 96 GB GPU memory for the [RTX PRO 6000 Blackwell family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/). Specify the **Workstation Edition**, and have the supplier size power and cooling for it.
+The GPU is the selected configuration. CPU, memory, and storage describe the existing reference machine, not tested minimums; agree capacities with the project owner before ordering a new computer. GPU memory and system memory are separate.
 
 ## Choosing a new computer
 
-- **Cameras and headsets:** plan USB bandwidth for the active platform: VLA Pipeline has two D405 wrist cameras, three D435 cameras, and up to two headsets; ABC Box has three D405 cameras and arm-control interfaces; the supplier must confirm which connect to the shared desktop or included Box PC. Extra sockets do not necessarily add bandwidth. The dog's front D435i connects to its onboard computer; the D1 wrist-camera connection still needs confirmation.
-- **Power and cooling:** have the supplier confirm the complete workstation supports the selected RTX PRO 6000 card.
-- **Memory and storage:** agree capacity with the project owner before ordering; the values above describe a reference machine rather than tested minimums.
+- **USB bandwidth:** the workstation must stream every camera of the active platform at once — five cameras and up to two headsets for VLA Pipeline, three cameras plus arm interfaces for ABC Box. Several USB sockets can share one internal connection, so more sockets do not always mean more bandwidth. Have the installer check all intended views together.
+- **Power and cooling:** the supplier confirms the complete build supports the RTX PRO 6000.
+- **Memory and storage:** allow room for recordings and a separate backup destination.
 
 ## Using the shared workstation
 
-Arrange use of the workstation with the other project teams. Before switching platforms, finish the current session with its operator, follow the equipment's shutdown procedure, and confirm nobody else is using the connected devices. Keep camera, controller, and network cables labeled by platform.
+Arrange use with the other project teams. Before switching platforms, finish the current session with its operator, follow the equipment's shutdown procedure, and confirm nobody else is using the connected devices. Label camera, controller, and network cables by platform.
 
 ## Shared setup checklist
 
 - [ ] One complete workstation, its accessories, storage, and network connection are ready.
-- [ ] Equipment is checked against the [xArm](../vla-pipeline/hardware/index.md), [Go2/D1](../unidog-nav/hardware.md), or [ABC Box](../abc-box/hardware.md) list as applicable.
+- [ ] Equipment is checked against the [xArm](../vla-pipeline/hardware/index.md), [Go2/D1](../unidog-nav/hardware.md), or [ABC Box](../abc-box/hardware.md) list.
 - [ ] Cameras, cables, and device identities are labeled and recorded.
-- [ ] Workstation access and the equipment handover procedure are agreed.
+- [ ] Workstation access and the handover procedure are agreed.
 
-## Before placing an order
-
-Confirm robot editions, included accessories, cables, mounts, and power requirements with the owner/vendor. Mark unspecified custom parts **to be specified**; a product name alone is not a complete equipment package.
-
-**Next:** [Prepare the workstation](computer.md), then follow the selected project's equipment and connections guide.
+**Next:** [Prepare the workstation](computer.md)

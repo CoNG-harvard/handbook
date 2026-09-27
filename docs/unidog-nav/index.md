@@ -4,14 +4,14 @@ title: Self Improvement Learning
 
 # Self Improvement Learning
 
-A mobile platform built around **one [Unitree Go2 Education Plus (EDU Plus)](https://www.unitree.com/go2/)**, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i camera](https://www.realsenseai.com/products/depth-camera-d435i/)**, and a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)**. The Go2 EDU Plus includes its onboard computer.
+A mobile platform built around **one [Unitree Go2 EDU Plus](https://www.unitree.com/go2/)** with its onboard computer, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)**, and a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)** on the arm. The [shared workstation](../getting-started/hardware.md) stays at the desk and talks to the robot over the lab network.
 
-**Your goal:** identify the delivered equipment, confirm the mounting and connections, and arrange separate readiness checks for the dog and arm.
+**Your goal:** identify the delivered equipment, mount and connect the arm and cameras, and arrange separate readiness checks for the dog and the arm.
 
-!!! info "Before assembly"
-    **Confirmed:** Go2 EDU Plus with D1, front D435i, D435 wrist camera, and the shared desktop.
+!!! info "What you need"
+    **Core equipment:** Go2 EDU Plus with battery, charger, and controller · D1 arm with mounting kit · protective gantry · D435i front camera · D435 wrist camera with clamp mount.
 
-    **Before use:** follow the [official D1 mounting and connection guide](d1-arm.md), confirm the wrist-camera connection and gantry clearance, and complete the readiness checks.
+    **Open items:** wrist-camera USB host and cable route, gantry clearance with the arm mounted, calibration target. [Details](../getting-started/sources.md#open-items)
 
 <figure class="handbook-figure" markdown="1">
 
@@ -19,7 +19,7 @@ A mobile platform built around **one [Unitree Go2 Education Plus (EDU Plus)](htt
 
 <figcaption markdown="1">
 
-The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 D435 wrist camera beside the gripper**. The arm requires its own mounting and calibration checks.
+Unitree Go2 · Unitree D1 arm on the expansion dock · D435i in a printed bracket on the head · D435 wrist camera clamped beside the gripper. The gantry is not shown.
 
 [View full-size image](assets/platform-labeled.svg) · [Source PDF](assets/platform.pdf)
 { .figure-links }
@@ -28,19 +28,12 @@ The picture shows **1 Go2**, **1 D1 arm**, the labeled front **D435i**, and **1 
 
 </figure>
 
-## Which computer goes where?
-
-| Computer | Physical role |
-|---|---|
-| Shared workstation | Stays at the desk and connects to the robot over the lab's approved network |
-| Included onboard computer | Rides on the Go2 EDU Plus and connects to its camera and control interfaces |
-
 ## Set up the platform
 
-| Step | Guide | Ready when… |
+| Step | Guide | Ready when |
 |---|---|---|
-| 1 | [Equipment and connections](hardware.md) | Robot, battery, controller, camera, onboard computer, and arm equipment are accounted for |
-| 2 | [D1 arm readiness](d1-arm.md) | The mounting, cable routing, calibration, and stop procedure are approved |
-| 3 | [Hardware readiness](readiness.md) | An operator has checked the complete platform and recorded any outstanding work |
+| 1 | [Equipment and connections](hardware.md) | Robot, battery, controller, cameras, and arm equipment are accounted for and connected |
+| 2 | [Mount and check the D1 arm](d1-arm.md) | The arm mounting, cable routing, calibration, and stop procedure are approved |
+| 3 | [Hardware readiness](readiness.md) | An operator has checked the complete platform |
 
-Use Unitree’s official mounting instructions, then check the added wrist camera and complete the arm’s readiness checks. Completing checks on the dog does not establish that the arm is ready.
+A ready dog does not make the arm ready: complete the D1 checks separately.

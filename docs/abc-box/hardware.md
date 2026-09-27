@@ -4,66 +4,53 @@ title: ABC Box hardware
 
 # ABC Box hardware
 
-**Goal:** identify and assemble one complete station. Use the delivered packing list to confirm inclusion; a camera mount is not a camera.
+**Goal:** identify and assemble one complete station from the delivered package plus the parts listed below, and connect it to the [workstation](../getting-started/hardware.md).
 
-[Identify the parts in the labeled photograph](index.md) — the two follower arms and three D405 cameras.
+[Identify the parts in the labeled photograph](index.md).
 
-The [shared RTX PRO 6000 workstation and its accessories](../getting-started/hardware.md#shared-equipment-prepare-once) serve all three projects and are counted once. ABC Box does not require a separate desktop on this equipment list.
+## 1. Equipment
 
-## Photo count check
+Confirm the order is the full **ABC Box**, not the Research Kit. Cameras and leaders are not explicit in the package list, so check the packing list before ordering extras. Workstation, display, and network equipment are counted once in [shared equipment](../getting-started/hardware.md#shared-equipment).
 
-The photo shows **2 robot arms, 2 grippers, 2 wrist cameras, and 1 overhead camera**: **3 cameras total**, matching the camera quantity below. The support frame is also visible. Two small interface boards with power leads sit at the follower bases and a keyboard is on the table; the board type is not readable, so the adapter count still needs supplier confirmation. The picture does not verify the two leaders, touchscreen, shared workstation connections, or stop control; confirm those against the delivered equipment. Camera model names come from the equipment references, not readable model labels in this view.
+**Included in the Box package**
 
-## 1. Check the ABC Box package
-
-The robot equipment below comes from I2RT's full ABC Box package list. Confirm the order specifies **ABC Box**, rather than the Research Kit. [Manufacturer package list](https://i2rt.com/products/abc-box)
-
-Product links identify known models. **Catalogs** and assembly **references** cover unspecified parts; confirm exact sizes, compatibility, and included accessories before ordering.
-
-| Listed equipment | Quantity | Product or reference |
+| Equipment | Quantity | Product or reference |
 |---|---|---|
-| Follower arm with mounting hardware | 2 | [ABC Box package](https://i2rt.com/products/abc-box) |
-| D405 camera mount positions | 3: two wrist, one overhead | [ABC Box camera-mount kit](https://i2rt.com/products/abc-box) |
-| Control cable and quick-start guide | 1 package | [ABC Box package](https://i2rt.com/products/abc-box) |
+| Follower arm with gripper and mounting hardware | 2 | [ABC Box package](https://i2rt.com/products/abc-box) |
+| D405 camera mounts (2 wrist, 1 overhead) and camera frame | 1 kit | [ABC Box camera-mount kit](https://i2rt.com/products/abc-box) |
+| Small PC and touchscreen | 1 | [ABC Box package](https://i2rt.com/products/abc-box) — keep on the packing list; see connection map |
+| Power supplies, mains leads, control cable, and quick-start guide | 1 set | [ABC Box package](https://i2rt.com/products/abc-box) |
 
-The [full Box package](https://i2rt.com/products/abc-box) also lists a small PC and touchscreen. Keep these included components on the packing list; no additional desktop purchase is listed. Have the supplier confirm how the shared workstation connects, which computer receives the camera and arm cables, and which functions remain on the included PC. Do not bypass or remove it without that plan.
+**Added for this station**
 
-The [ABC Box product page](https://i2rt.com/products/abc-box) describes a hardware emergency stop. Ask the supplier to demonstrate which equipment it cuts off, and the procedure for restarting afterward.
-
-## 2. Confirm the additional equipment
-
-| Equipment needed for this workflow | Quantity | Product or reference |
+| Equipment | Quantity | Product or reference |
 |---|---|---|
-| Compatible leader arms and handles | 2 | [I2RT leader options](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) — hardware reference; model to confirm |
-| RealSense D405 cameras | 3 | [RealSense D405](https://www.realsenseai.com/product-family/d405-series/) |
-| Camera USB data cables | 3 | [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — match connectors, length, and bandwidth |
-| Working communication connection for each follower and leader | 4 channels | [I2RT interface reference](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) — confirm supplied adapters |
-| Matching grippers, power supplies, and mains leads | Confirm the complete supplied set | [I2RT package](https://i2rt.com/products/abc-box) · [assembly reference](https://abc.bot/hardware.html) — confirm included parts |
-| Stable work surface, cable restraints, and lighting | 1 station | [Workbench](https://www.mcmaster.com/products/workbenches/) · [zip ties, 400-pack assorted](https://www.amazon.com/dp/B08TVLYB3Q) (purchased) · [lighting](https://www.mcmaster.com/products/work-lights/) — catalogs |
-| Task objects and backup storage | As needed | [Task-area reference](https://abc.bot/hardware.html) · [shared storage](../getting-started/hardware.md#shared-equipment-prepare-once) |
+| Leader arm with handle | 2 | [I2RT leader options](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) — passive or powered; model to confirm |
+| RealSense D405 camera | 3 | [RealSense D405](https://www.realsenseai.com/product-family/d405-series/) |
+| Camera USB data cable | 3 | [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — match connector, length, and bandwidth |
+| CAN interface for each follower and leader | 4 channels | [I2RT interface reference](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) — two small adapter boards are fitted at the follower bases; count external adapters with the supplier |
+| Work surface, zip ties, and lighting | 1 station | [Workbench](https://www.mcmaster.com/products/workbenches/) · [zip ties](https://www.amazon.com/dp/B08TVLYB3Q) · [work lights](https://www.mcmaster.com/products/work-lights/) |
+| Task objects | As needed | [Task-area reference](https://abc.bot/hardware.html) |
 
-**Leaders and cameras:** their inclusion is not explicit in the ABC Box package list. Get written confirmation before ordering extras. The [ABC assembly guide](https://abc.bot/hardware.html) uses two wrist D405s and one overhead D405. Follow the delivered Box's assembly instructions rather than buying all parts from that separate, build-your-own station list.
+### Notes on selection
 
-**Leader choice matters:** passive GELLO leaders measure joint position without driving motors; powered YAM leaders need a different setup. Have the supplier confirm the actual leader model, its power requirements, calibration procedure, and compatibility with the followers. [I2RT hardware configuration](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md)
+- **Leaders:** a passive leader only measures joint position; a powered leader has motors and its own power supply and needs a different setup. Confirm the delivered model, its power, calibration procedure, and follower compatibility with the supplier.
+- **Cameras:** the layout follows the [ABC assembly guide](https://abc.bot/hardware.html) — one D405 at each wrist and one overhead. Follow the delivered Box's own instructions rather than buying the full build-your-own list from that guide.
+- **CAN interfaces:** each arm needs one CAN link to a computer (see [glossary](../getting-started/glossary.md)). Four channels do not necessarily mean four external adapters; identify what is already fitted first.
+- **Stop:** the [product page](https://i2rt.com/products/abc-box) describes a hardware emergency stop. Have the supplier demonstrate what it cuts and how to restart.
 
-**Communication:** CAN is a communication link used by the arm control equipment. Have the supplier identify each supplied interface before purchasing adapters; do not assume all four require an additional external adapter.
-
-## 3. Connect and label the station
-
-### Connection map
+## 2. Connection map
 
 <div class="connection-map" markdown="1">
 <div class="connection-hub" markdown="1">
 
-**Computer arrangement → supplier confirmation needed**
-
-Shared RTX PRO 6000 workstation + any included Box PC
+**Workstation + included Box PC — plan to confirm with the supplier**
 
 </div>
 <div class="connection-branches" markdown="1">
 <div class="connection-branch connection-branch--pending" markdown="1">
 
-**Camera USB → confirm host computer**
+**Camera USB → host computer to confirm**
 
 - Left-wrist D405
 - Right-wrist D405
@@ -72,7 +59,7 @@ Shared RTX PRO 6000 workstation + any included Box PC
 </div>
 <div class="connection-branch connection-branch--pending" markdown="1">
 
-**Control interfaces → confirm supplied connections**
+**CAN interfaces → connections to confirm**
 
 - Left leader and left follower
 - Right leader and right follower
@@ -81,16 +68,23 @@ Shared RTX PRO 6000 workstation + any included Box PC
 </div>
 </div>
 
-Both dashed boxes need the supplier's connection plan. Record the actual adapter, cable, and port for each arm; four communication channels do not necessarily mean four external adapters. Power supplies and the physical stop follow the delivered Box instructions.
+Both dashed boxes need the supplier's connection plan: which computer receives the cameras and arm interfaces, and which functions stay on the included PC. Do not bypass or remove the included PC without that plan. Record the actual adapter, cable, and port for each arm.
 
-### Assemble and connect
+## 3. Assemble and connect
 
-1. **Mount:** have the installer secure followers, leaders, and the camera frame using the delivered instructions.
-2. **Pair:** label each leader and follower **left** or **right**. Confirm the pairing before enabling movement.
-3. **Control connections:** have the installer connect the arm interfaces and computers according to the supplier-approved plan. Label both cable ends and photograph the ports.
-4. **Cameras:** mount and label the left-wrist, right-wrist, and overhead D405s; connect their USB data cables to the host computer specified in that plan.
-5. **Inspect:** check cable clearance, power connections, and the stop location. Save the arrangement in the private setup notes.
+1. **Mount:** secure the followers on the base plate, the leaders at the operator's position, and the camera frame, using the delivered instructions.
+2. **Pair and label:** label each leader and follower **left** or **right** and confirm the pairing before enabling movement.
+3. **Control connections:** connect the CAN interfaces and computers per the supplier's plan. Label both cable ends and photograph the ports.
+4. **Cameras:** mount and label the left-wrist, right-wrist, and overhead D405s and connect them to the host computer in that plan.
+5. **Inspect:** check cable clearance, power connections, and the stop location.
 
-**Check before continuing:** two identified leader/follower pairs, three labeled cameras, documented control interfaces, and an accessible stop. Complete the readiness checks before the first session.
+## 4. Record identities
 
-**Next:** [Check hardware readiness](readiness.md) with the installer and operator.
+| Item | What to record |
+|---|---|
+| Followers and leaders | Model, serial, left/right pairing, and interface used |
+| Cameras | Serial, position, and host computer |
+| Computers | Which functions run on the workstation and on the included PC |
+| Stop | Location, what it cuts, and the restart procedure |
+
+**Next:** [Hardware readiness](readiness.md)

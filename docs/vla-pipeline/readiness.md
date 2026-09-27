@@ -6,18 +6,18 @@ hide:
 
 # VLA Pipeline hardware readiness
 
-**Goal:** hand over two clearly identified rigs with secure mounts, usable camera views, and accessible stop controls. Complete the [equipment and connections](hardware/index.md) first.
+**Goal:** hand over two clearly identified rigs with secure mounts, usable camera views, and accessible stop controls. Complete [Equipment and connections](hardware/index.md) first and follow the [safety rules](../getting-started/safety.md).
 
 ## 1. Inspect before power-on
 
-- [ ] Both arm bases and grippers are secured with the approved mounting hardware.
-- [ ] Each arm is paired with its control box, power/data cables, and stop control.
-- [ ] Wrist-camera cables have enough slack for the intended movement without entering joints.
-- [ ] Scene-camera stands are stable and outside the arms' movement areas.
-- [ ] The shared table is stable; the two arms' overlapping work area is reviewed.
-- [ ] Headsets, controllers, chargers/batteries, and USB data cables are ready.
+- [ ] Both arm bases and grippers are secured with the approved fasteners; printed fingers are fitted.
+- [ ] Each arm is paired with its own control box, cables, and stop button, all labeled A or B.
+- [ ] Wrist-camera cables have slack through the movement range and do not enter joints.
+- [ ] Scene-camera stands are stable and outside the arms' reach.
+- [ ] The table is stable and the arms' overlapping work area is reviewed.
+- [ ] Headsets, controllers, batteries, and USB data cables are ready.
 
-Have the installer follow the manufacturer's power-on procedure for the delivered arms. Do not use a home/reset movement as the first way to check the wiring.
+Have the installer follow UFACTORY's power-on procedure.
 
 ## 2. Check the camera views
 
@@ -26,24 +26,21 @@ Ask the installer to show each live view without moving an arm:
 | View | What to check |
 |---|---|
 | Rig A wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | Gripper and intended contact area are visible |
-| Rig B wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The view belongs to the second arm and is clearly labeled |
-| Three [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) scene cameras | The intended table areas are visible with suitable lighting and no avoidable obstruction |
+| Rig B wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The view belongs to the second arm and is labeled |
+| Three [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) scene cameras | The intended table areas are visible, lit, and unobstructed |
 
-Record all five camera serials and positions. Check the views together to reveal USB bandwidth or power problems, then confirm the headset views correspond to the intended rig.
+Record all five camera serials and positions. Show the views together to reveal USB bandwidth or power problems, then confirm each headset shows the intended rig.
 
-## 3. Confirm stops and movement clearance
+## 3. Confirm stops and clearance
 
-An experienced operator must demonstrate which stop controls which arm, along with the approved recovery and shutdown procedure. Check each rig separately before using both together. Keep a second person watching the work area during headset use.
-
-The operator must approve resting/home poses for the actual mounting arrangement and cable routing. A pose from another station is not a substitute for that check.
+An experienced operator demonstrates which stop controls which arm, then the recovery and shutdown procedure, for each rig separately before a two-arm session. The operator approves the resting and home poses for the actual mounting and cable routing.
 
 ## 4. Record the handover
 
-Keep the rig A/B identities, arm/controller addresses, camera and headset serials, approved poses, stop locations, operator name, and check date in the private setup notes. Photograph the cable labels and camera arrangement.
+Keep rig A/B identities, addresses, camera and headset serials, approved poses, stop locations, operator name, and date in the setup notes. Photograph the cable labels and camera arrangement.
 
-**Ready for handover:** all equipment is accounted for, connections and views are checked, and the operator has signed off the stops and clearance. Record unresolved items before the first working session.
+**Ready for handover:** all equipment is accounted for, views are checked, and the operator has signed off the stops and clearance. Record any unresolved items before the first session.
 
-
-**If a check fails:** use [hardware troubleshooting](../getting-started/troubleshooting.md).
+**If a check fails:** [Hardware troubleshooting](../getting-started/troubleshooting.md)
 
 [Return to this project](index.md) · [All projects](../index.md)

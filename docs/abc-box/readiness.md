@@ -6,46 +6,38 @@ hide:
 
 # ABC Box hardware readiness
 
-**Goal:** confirm the delivered station is assembled and identified before an operator-led session. Complete the [equipment and connections](hardware.md) first.
+**Goal:** confirm the station is assembled and identified before an operator-led session. Complete [Equipment and connections](hardware.md) first and follow the [safety rules](../getting-started/safety.md).
 
-## 1. Check the assembled station
+## 1. Inspect before power-on
 
-- [ ] The delivered Box/Research Kit variant and packing list are recorded.
-- [ ] Both follower arms and grippers are securely mounted.
-- [ ] Both leader arms are present, mounted, and labeled with their matching followers.
-- [ ] The supplier-approved connections for the shared workstation, any included Box PC, control interfaces, and power supplies are recorded and checked.
-- [ ] All three camera mounts and USB data cables are secured.
-- [ ] Control cables are labeled and clear of joints and the working area.
+- [ ] The delivered variant and packing list are recorded.
+- [ ] Both followers and grippers are securely mounted; both leaders are mounted and labeled with their followers.
+- [ ] The supplier's connection plan for the workstation, included PC, CAN interfaces, and power supplies is recorded and followed.
+- [ ] All three camera mounts and USB cables are secured.
+- [ ] Control cables are labeled and clear of joints and the work area.
 
-## 2. Confirm leaders, pairings, and calibration
+Ask the installer to identify the leader and follower models, gripper types, and interfaces, then follow the delivered calibration procedure and record the approved resting positions. Enabling a pair can move the follower, so this stays part of the supervised session.
 
-Ask the supplier or installer to identify the leader and follower models, gripper types, and control interfaces. The number of devices does not establish how many external adapters are required.
+## 2. Check the camera views
 
-Have the installer follow the delivered station's calibration procedure and record the approved resting positions. Calibrating or enabling a leader/follower pair can move the follower; keep this part of the supervised commissioning session.
-
-## 3. Check the three camera views
-
-| Camera | What the installer should show |
+| Camera | What to check |
 |---|---|
 | Overhead — [D405](https://www.realsenseai.com/product-family/d405-series/) | The intended work area from above |
 | Left wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The left gripper and contact area |
 | Right wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The right gripper and contact area |
 
-Record each serial and position, and check all views together using the supplier-approved computer arrangement. Confirm lighting, focus/view coverage, cable slack, and stable USB connections.
+Record each serial and position and show all views together on the agreed computer. Check lighting, coverage, cable slack, and stable USB connections.
 
-## 4. Demonstrate the physical stop
+## 3. Confirm stops and clearance
 
-The supplier must identify the physical stop and demonstrate what it stops, what remains powered, and how to recover. Confirm how the arms are supported if power is removed. Keep the stop accessible from the operator's position.
+The supplier identifies the physical stop and demonstrates what it stops, what stays powered, and how to recover, including how the arms are supported if power is removed. Keep the stop within the operator's reach.
 
-The station photograph does not show the complete stop, leader, or computer arrangement; confirm these on the delivered equipment.
+## 4. Record the handover
 
-## 5. Record the handover
+Keep the packing list, device models and serials, left/right pairings, camera positions, calibration date, stop procedure, and installer and operator sign-off with the setup notes.
 
-Keep the packing list, device models/serials, leader/follower pairings, camera positions, calibration date, stop procedure, and installer/operator sign-off with the private setup notes.
+**Ready for handover:** the equipment matches the delivered instructions, calibration and views are checked, and the operator has approved the stop and recovery procedure.
 
-**Ready for handover:** the equipment matches the delivered instructions, calibration and views have been checked, and the operator has approved the stop and recovery procedure. The lab's complete ABC Box acceptance session remains to be recorded.
-
-
-**If a check fails:** use [hardware troubleshooting](../getting-started/troubleshooting.md).
+**If a check fails:** [Hardware troubleshooting](../getting-started/troubleshooting.md)
 
 [Return to this project](index.md) · [All projects](../index.md)

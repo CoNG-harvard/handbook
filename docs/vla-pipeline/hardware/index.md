@@ -4,67 +4,52 @@ title: VLA Pipeline hardware
 
 # VLA Pipeline hardware
 
-**Goal:** identify and connect the two-arm VLA Pipeline station. It has **two xArm 7 robots**, each with its own control box, gripper, and mounting stand. Both use the workstation shared with Self Improvement Learning and ABC Box. Check rig A first, then rig B, before using both together.
+**Goal:** identify and connect the two-arm station. Each xArm 7 has its own control box, gripper, and stand; both share the [workstation](../../getting-started/hardware.md). Set up rig A first, then rig B.
 
-[Identify the parts in the labeled photograph](../index.md) — both xArm robots, two D405 wrist cameras, and three D435 scene cameras.
+[Identify the parts in the labeled photograph](../index.md).
 
-## 1. Gather the equipment
+## 1. Equipment
 
-Quantities below describe the **two-arm lab station**. The [shared workstation, GPU, display/input devices, and network equipment](../../getting-started/hardware.md#shared-equipment-prepare-once) are shared by all three projects and counted once. The full station allows two headsets, each with two controllers. **One operator can control both arms with one headset and its controller pair** in the two-arm arrangement supported by the lab reference. Confirm the arrangement for the first session with the project owner.
-
-Product links identify known models. **Catalogs** and assembly **references** cover unspecified parts; confirm exact sizes, compatibility, and included accessories before ordering.
+Quantities are for the complete two-arm station. Workstation, display, and network equipment are counted once in [shared equipment](../../getting-started/hardware.md#shared-equipment).
 
 | Equipment | Quantity | Product or reference |
 |---|---|---|
 | UFACTORY xArm 7 robot | 2 | [UFACTORY xArm](https://www.ufactory.cc/xarm-collaborative-robot/) — select xArm 7 |
-| Matching control box and cable/power set | 2 sets | [Control box and supplied cables](https://docs.xarm.ufactory.cc/2.hardware_installation.html) — installation reference |
-| Compatible xArm gripper and mounting/cable set | 2 sets | [UFACTORY grippers](https://www.ufactory.cc/solution-pickandplace/) — reference; lab-printed fingers listed below |
-| 3D-printed gripper finger | 4; two per gripper | [Finger STL](../assets/xarm-gripper-finger.stl) — lab-designed part; print in-house, see selection details |
-| Vention arm stand | 2; one per xArm | [Vention stand design 506323](https://vention.com/machine-builder/506323) — Vention account/design access required |
-| Shared work table | 1 | [Workbench catalog](https://www.mcmaster.com/products/workbenches/) — size/load rating to specify |
-| Meta Quest 3 headset | 2 for the full station; 1 for one-operator, two-arm use | [Meta Quest 3](https://www.meta.com/quest/quest-3/) |
-| Quest controller | 2 per headset; 4 for the full station | [Touch Plus controllers](https://www.meta.com/quest/accessories/quest-touch-plus-controller/) — two pairs; check headset bundle |
-| AA batteries for the Quest controllers | 1 × 20-pack purchased | [Amazon Basics AA alkaline, 20-pack](https://www.amazon.com/dp/B00NTCH52W) — one AA per controller; keep spares in the station kit |
-| Headset USB data cable | 1 per headset used; up to 2 | [Meta Link cable](https://www.meta.com/quest/accessories/link-cable/) — cable reference; equivalent data cable allowed |
-| RealSense D405 wrist camera, bracket, and USB cable | 2 sets | [D405](https://www.realsenseai.com/product-family/d405-series/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — wrist mount listed below |
-| RealSense D435 scene camera, stand, and USB cable | 3 sets | [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — three articulated pole stands are in the photo, model not recorded; clamp, adapters, and cables listed below |
-| Scene-camera ball-head clamp and thread adapters | 1 CAMVATE clamp and 1 adapter set purchased; one clamp per camera in the photo | [CAMVATE widened C-clamp, 1/4"-20 and 3/8"-16](https://www.amazon.com/dp/B0BYDH27WQ) · [CAMVATE 1/4"–3/8" screw adapter set](https://www.amazon.com/dp/B0DQNP61JC) — confirm the clamp model on each of the three stands |
-| Camera USB 3.0 cable, 3 m, angled Micro-B with panel-mount screws | 4 ordered (order pending) | [chenyang U3-044-UP-3.0M](https://www.amazon.com/dp/B07M99MC27) — RealSense D400 cameras have USB Type-C ports; check the connector or adapter before relying on these |
-| UFACTORY xArm wrist-camera mount | 2; one per D405 wrist camera | [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) — D405 fit confirmed by project owner |
-| Arm-controller-to-switch Ethernet cable | 2 | [Ethernet cable catalog](https://www.startech.com/en-us/cables/network) |
-| Task objects, black tray, and utility tub | 4 tubs purchased; 1 black tray and task blocks in the photo | [Rubbermaid 7-gallon gray utility box FG335100GRAY](https://www.amazon.com/dp/B000BC5EP8) — the gray tub on the station table; black perforated tray model not recorded; task objects chosen by project owner |
-| Cable labels, cable management, and suitable lighting | As needed | [Labels](https://www.mcmaster.com/products/labels/) · [zip ties, 400-pack assorted](https://www.amazon.com/dp/B08TVLYB3Q) (purchased) · [lighting](https://www.mcmaster.com/products/work-lights/) — catalog |
+| Control box with arm cables and mains lead | 2 | [Control box and supplied cables](https://docs.xarm.ufactory.cc/2.hardware_installation.html) |
+| xArm gripper with mounting and cable set | 2 | [UFACTORY grippers](https://www.ufactory.cc/solution-pickandplace/) |
+| 3D-printed gripper finger | 4 (2 per gripper) | [Finger STL](../assets/xarm-gripper-finger.stl) — lab design, printed in-house |
+| Vention arm stand | 2 | [Vention design 506323](https://vention.com/machine-builder/506323) — account with design access required |
+| Work table | 1 | [Workbench catalog](https://www.mcmaster.com/products/workbenches/) — size and load rating to specify |
+| Meta Quest 3 headset | 2 | [Meta Quest 3](https://www.meta.com/quest/quest-3/) |
+| Quest Touch Plus controller | 4 (2 per headset) | [Touch Plus controllers](https://www.meta.com/quest/accessories/quest-touch-plus-controller/) — usually bundled with the headset |
+| AA batteries for the controllers | 1 pack | [AA alkaline, 20-pack](https://www.amazon.com/dp/B00NTCH52W) — one per controller plus spares |
+| Headset USB data cable | 1 per headset | [Meta Link cable](https://www.meta.com/quest/accessories/link-cable/) or an equivalent data-capable cable |
+| RealSense D405 wrist camera with USB cable | 2 | [D405](https://www.realsenseai.com/product-family/d405-series/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) |
+| xArm wrist-camera mount | 2 (1 per D405) | [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) — includes mounting plate and 2 m USB-C cable |
+| RealSense D435 scene camera with USB cable | 3 | [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) |
+| Articulated scene-camera stand | 3 | Model to record — see [open items](../../getting-started/sources.md#open-items) |
+| Scene-camera ball-head clamp and thread adapters | 3 clamps, 1 adapter set | [CAMVATE C-clamp](https://www.amazon.com/dp/B0BYDH27WQ) · [CAMVATE 1/4"–3/8" adapter set](https://www.amazon.com/dp/B0DQNP61JC) |
+| Ethernet cable, control box to switch | 2 | [Ethernet cable catalog](https://www.startech.com/en-us/cables/network) |
+| Task tub and task objects | 4 tubs, 1 task set | [Rubbermaid 7-gallon utility box](https://www.amazon.com/dp/B000BC5EP8) — task objects chosen by the project owner |
+| Cable labels, zip ties, and lighting | As needed | [Labels](https://www.mcmaster.com/products/labels/) · [zip ties](https://www.amazon.com/dp/B08TVLYB3Q) · [work lights](https://www.mcmaster.com/products/work-lights/) |
 
-### Photo count check
+A first session can run with one headset and its two controllers driving both arms; the full station supports two operators.
 
-The current photo shows **2 arms, 2 wrist cameras, and 3 scene cameras**: **5 cameras total**, matching the list. The earlier view also shows **2 grippers, 2 arm stands, 2 control boxes with stop buttons, and 2 headsets**. The gray tub behind the near arm is the listed Rubbermaid utility box, and each scene camera sits on a small ball-head clamp on an articulated stand. The controller illustration shows one pair; it does not verify the listed four controllers. Also visible but not inventoried: a black perforated tray, the wall pegboard, a foam-mat edge barrier, and gaffer tape on the camera clamps. Confirm loose cables and accessories against the station inventory.
+### Notes on selection
 
-### Selection details
+- **Arms and control boxes:** confirm the power supplies, mains leads, and arm cables against [UFACTORY's installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
+- **Stands:** the [Vention design](https://vention.com/machine-builder/506323) opens a sign-in page; ask the owner for access. Mount the arm bases per [UFACTORY's base-mounting requirements](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
+- **Gripper fingers:** print two per gripper from the [STL](../assets/xarm-gripper-finger.stl). The part is about 17 × 25 × 62 mm and fits a standard desktop printer bed. Agree material, infill, and orientation with the owner and check the fit before the first session.
+- **Wrist cameras:** the [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) is listed for the D435 but fits the D405; its 2 m USB-C cable covers the wrist camera, so do not order a second cable.
+- **Scene cameras:** each D435 sits in a small ball-head clamp with a 1/4"–3/8" adapter on an articulated stand clamped or bolted to the table. Position the three stands outside the arms' reach.
+- **Headsets:** keep chargers, spare AA batteries, and data-capable USB cables long enough for the operator with the station kit.
 
-- **Arms and controllers:** match the lab's [xArm 7](https://www.ufactory.cc/xarm-collaborative-robot/). Confirm included power supplies, mains leads, and arm/controller cables against [UFACTORY's installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
-- **Arm stands:** use the owner-selected [Vention design](https://vention.com/machine-builder/506323) for both arms. The shared link opens a Vention sign-up/sign-in page; readers need an account with design access to view it. Use the design’s assembly details together with [UFACTORY’s base-mounting requirements](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
-- **Grippers and printed fingers:** print two copies of the owner-supplied [gripper finger STL](../assets/xarm-gripper-finger.stl) per gripper (four total). The part is about 17 × 25 × 62 mm, so it fits a standard desktop printer bed; choose material, infill, and orientation with the owner and check the printed fit on the gripper before the first session. Obtain gripper calibration from the owner. The STL is the design source; no purchase link applies.
-- **Headsets:** include [Quest 3](https://www.meta.com/quest/quest-3/) chargers, [AA controller batteries](https://www.amazon.com/dp/B00NTCH52W), and data-capable USB cables long enough for the operator.
-- **Cameras:** use one [D405](https://www.realsenseai.com/product-family/d405-series/) per wrist and three [D435 scene cameras](https://www.realsenseai.com/products/stereo-depth-camera-d435/) for the full station. Confirm mounting, view, and USB bandwidth before using all five. The scene cameras in the photograph are held by small ball-head clamps with [1/4"–3/8" thread adapters](https://www.amazon.com/dp/B0DQNP61JC) on articulated stands; the stand model itself is not yet recorded. The four pending [angled Micro-B USB 3.0 cables](https://www.amazon.com/dp/B07M99MC27) do not match the D400 series' USB Type-C port directly, so confirm the intended camera or adapter before installation.
-- **Wrist-camera mounts:** use one [UFACTORY xArm camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) per D405 wrist camera. The project owner confirmed the D405 fit. The listing names D435 and includes a mounting plate and 2 m USB-C cable; the camera is separate. Count these mounts within the two wrist-camera sets above to avoid ordering duplicate brackets or cables.
-- **Network and task area:** the workstation cable and switch are counted in [shared equipment](../../getting-started/hardware.md#shared-equipment-prepare-once). Choose objects and camera positions for the intended task; keep cables away from moving joints.
-
-Both arms' stop controls must be accessible and clearly labeled. Confirm which button stops which arm before powering or resetting either robot.
-
-### Camera configuration and optional accessories
-
-The project owner confirmed **2 D405 wrist cameras**; the station also has **3 D435 scene cameras**. Record their serial numbers and physical positions before the first session. A first test can use just rig A's wrist and scene views; enable the remaining cameras as you validate the full station.
-
-Both arms belong to the platform even when only one is used for the first check. Extra [storage](https://www.westerndigital.com/products/hdd/internal-hdd), soft fingers, [gripping tape](https://www.mcmaster.com/products/grip-tape/), and custom adapters depend on the task; confirm their exact specifications with the owner.
-
-## 2. Mount and wire the station
-
-### Connection map
+## 2. Connection map
 
 <div class="connection-map" markdown="1">
 <div class="connection-hub" markdown="1">
 
-**Shared workstation** · RTX PRO 6000
+**Workstation** · RTX PRO 6000
 
 </div>
 <div class="connection-branches" markdown="1">
@@ -78,52 +63,26 @@ Both arms belong to the platform even when only one is used for the first check.
 </div>
 <div class="connection-branch" markdown="1">
 
-**USB data → workstation**
+**USB → workstation**
 
 - 2 × D405 wrist cameras
 - 3 × D435 scene cameras
-- Each Quest headset used for the session
+- Each headset in use
 
 </div>
 </div>
 </div>
 
-This map shows data connections. Each control box also needs its matching mains lead; connect power and arm cables using [UFACTORY's installation instructions](https://docs.xarm.ufactory.cc/2.hardware_installation.html). Identify the delivered controller's ports before attaching cables. Disconnect external AC before connecting or disconnecting arm cables.
+The map shows data connections. Each control box also has a mains lead; connect power and arm cables per [UFACTORY's instructions](https://docs.xarm.ufactory.cc/2.hardware_installation.html), with external AC disconnected while plugging arm cables. Ask the network administrator to place both control boxes and the workstation on the same network.
 
-### Assemble and connect
+## 3. Assemble and connect
 
-1. **Mount:** secure both arm bases and grippers using the approved drawings and fasteners. Check the two arms' overlapping work area.
-2. **Pair:** label arms and control boxes **A** and **B**. Attach each arm's supplied power and communication cables to its matching box.
-3. **Network:** connect both control boxes and the workstation to the shared switch/router with Ethernet.
-4. **Cameras:** mount one D405 per wrist and three D435s on stable stands. Label both ends of each USB cable with its camera position, then connect to the workstation.
-5. **Headsets:** connect each headset used for the session with a data-capable USB cable. Keep its controllers together.
-6. **Inspect:** have the installer check connections and cable clearance before power-on. Photograph the ports and cable labels for the private setup notes.
-
-**Check before continuing:** two arm/control-box pairs, five labeled camera cables, stable mounts, and accessible stop controls. An operator checks rig A and rig B separately before a combined session.
-
-A network switch adds wired connections; it does not necessarily assign IP addresses. Ask the person setting up the network to make the arm controller and workstation reachable on the same network. Keep the addresses in your private setup note.
-
-## 3. Identify the arm and stop control
-
-Label the robots **rig A** and **rig B**. Record each arm's IP address, and label its matching control box and stop button. Do not infer rig identity from left/right position in the photograph.
-
-Ask the operator to demonstrate stopping, restoring power, and returning to the home position. A **home position** is a predefined pose; the lab's home angles must be checked against your mounting arrangement before the first reset.
-
-## 4. Record device identities
-
-Keep separate records for rig A and rig B. Match each physical device with its cable label and its intended role.
-
-| Item | What to record |
-|---|---|
-| Arm and control box | Model, serial, network address, and matching stop control |
-| Headset and controllers | Device identities and arm assignments; record if one headset controls both arms |
-| Wrist cameras | Serial number and assigned arm; one camera per wrist |
-| Scene cameras | Serial number, stand position, and intended view for each of the three cameras |
-| Workstation/network | Connection method, cable labels, and assigned addresses |
-
-Ask the installer to confirm device identities. A label such as **rig A wrist** describes the camera's role; its serial identifies the physical unit. Keep actual network addresses in your private setup notes.
-
-## 5. Identify the headset controls
+1. **Mount:** bolt each arm base to its stand and each gripper to its arm with the approved fasteners. Fit the printed fingers. Check the two arms' overlapping work area.
+2. **Pair and label:** label arms, control boxes, and stop buttons **A** and **B**. Connect each arm's power and communication cables to its own box.
+3. **Network:** connect both control boxes and the workstation to the switch/router.
+4. **Cameras:** mount one D405 per wrist and the three D435s on their stands. Label both ends of each USB cable with the camera position, then connect them to the workstation.
+5. **Headsets:** connect each headset in use with a data-capable USB cable. Keep its two controllers with it.
+6. **Inspect:** have the installer check connections and cable clearance before power-on. Photograph the ports and labels for the setup notes.
 
 <figure class="handbook-figure" markdown="1">
 
@@ -131,7 +90,7 @@ Ask the installer to confirm device identities. A label such as **rig A wrist** 
 
 <figcaption markdown="1">
 
-Left controller: **X/Y** buttons. Right controller: **A/B** buttons, **trigger** (front), and **grip/side button**. The red callouts identify the trigger position and side button.
+Left controller: **X/Y** buttons. Right controller: **A/B** buttons, **trigger** (front), and **grip** (side). The red callouts mark the trigger and grip positions.
 
 [View full-size image](../assets/quest_controllers.png)
 { .figure-links }
@@ -140,6 +99,18 @@ Left controller: **X/Y** buttons. Right controller: **A/B** buttons, **trigger**
 
 </figure>
 
-Keep each controller pair with its headset, and include charging leads and spare controller batteries in the station kit.
+## 4. Record identities
 
-**Next:** [Check hardware readiness](../readiness.md).
+Keep separate records for rig A and rig B. Rig labels describe a device's role; its serial identifies the physical unit. Do not infer rig identity from left/right position in a photograph, and keep network addresses in the private setup notes.
+
+| Item | What to record |
+|---|---|
+| Arm and control box | Model, serial, network address, and matching stop button |
+| Headset and controllers | Device identities and arm assignment |
+| Wrist cameras | Serial and assigned arm |
+| Scene cameras | Serial, stand position, and intended view |
+| Network | Cable labels and assigned addresses |
+
+Ask the operator to demonstrate stopping, restoring power, and returning to the home position for each rig before any two-arm session. The lab's home angles must be checked against the actual mounting before the first reset.
+
+**Next:** [Hardware readiness](../readiness.md)

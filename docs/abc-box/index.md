@@ -4,14 +4,14 @@ title: ABC Box
 
 # ABC Box
 
-A two-arm platform from [I2RT](https://i2rt.com/products/abc-box). The operator moves **leader arms** by hand; the **follower arms** work at the table. Cameras observe the work area and each wrist.
+A two-arm teleoperation station from [I2RT](https://i2rt.com/products/abc-box). The operator moves two **leader arms** by hand; two **follower arms** copy the movement at the table. Three D405 cameras watch the wrists and the work area. It uses the [shared workstation](../getting-started/hardware.md) together with the small PC included in the Box package.
 
-**Your goal:** confirm the delivered package, mount and pair the arms, confirm the computer and cable arrangement with the supplier, and identify the physical stop.
+**Your goal:** confirm the delivered package, mount and pair the arms, agree the computer and cable plan with the supplier, and identify the physical stop.
 
-!!! info "Before assembly"
-    **Hardware plan:** two followers, two leaders, three D405 cameras, and the shared desktop.
+!!! info "What you need"
+    **Core equipment:** 2 follower arms with grippers · 2 leader arms · 3 D405 cameras with mounts · CAN interfaces and power supplies · included Box PC.
 
-    **Still needed:** delivered package contents, leader model, control interfaces, and stop arrangement. The photograph does not verify these parts. [Package checks](hardware.md#1-check-the-abc-box-package).
+    **Open items:** delivered variant and packing list, leader model, which computer receives each cable, and the stop arrangement. [Details](../getting-started/sources.md#open-items)
 
 <figure class="handbook-figure" markdown="1">
 
@@ -19,9 +19,7 @@ A two-arm platform from [I2RT](https://i2rt.com/products/abc-box). The operator 
 
 <figcaption markdown="1">
 
-Both robot arms · RealSense D405 (2 at the wrists, 1 overhead) · Camera frame.
-
-Lab photograph provided in September 2026. The leaders, computer, and stop control are not identified in this view.
+Both follower arms on the base plate · RealSense D405 at each wrist and one overhead on the camera frame. The leaders, computer, and stop are not in this view.
 
 [View full-size image](assets/abc-box-station-labeled.svg) · [Source photograph](assets/abc-box-station.jpg)
 { .figure-links }
@@ -32,13 +30,7 @@ Lab photograph provided in September 2026. The leaders, computer, and stop contr
 
 ## Set up the platform
 
-| Step | Guide | Ready when… |
+| Step | Guide | Ready when |
 |---|---|---|
-| 1 | [Equipment and connections](hardware.md) | The package, additional parts, mounts, and cables are checked |
+| 1 | [Equipment and connections](hardware.md) | The package, additional parts, mounts, and cables are checked and connected |
 | 2 | [Hardware readiness](readiness.md) | The installer has confirmed pairings, calibration, camera views, and stop behavior |
-
-## Shared workstation
-
-ABC Box uses the same [RTX PRO 6000 desktop](../getting-started/computer.md) as VLA Pipeline and Self Improvement Learning. Count the desktop, monitor, keyboard, mouse, and shared storage once.
-
-The manufacturer's full Box package lists a small PC and touchscreen. Keep these included components on the packing list; no additional desktop purchase is listed. The supplier must confirm how the shared workstation connects and which functions remain on the included PC. Do not bypass or remove it without that plan. [I2RT package information](https://i2rt.com/products/abc-box)

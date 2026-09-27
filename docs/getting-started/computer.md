@@ -5,45 +5,41 @@ hide:
 
 # Prepare the workstation
 
-**Goal:** prepare one shared desktop for VLA Pipeline, Self Improvement Learning, and ABC Box.
+**Goal:** prepare the one workstation shared by VLA Pipeline, Self Improvement Learning, and ABC Box.
 
 ## 1. Check the delivered computer
 
-Use the [workstation specification](hardware.md#workstation-specification-for-vla-pipeline-and-self-improvement-learning). Confirm the **[RTX PRO 6000 Blackwell Workstation Edition, 96 GB](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/)**, plus the agreed CPU, system memory, storage, and network/USB connections.
-
-Have the supplier confirm that the case, motherboard, power supply, and cooling support the selected card. The reference inventory is not a complete list of compatible parts for a new computer.
+Compare it with the [workstation specification](hardware.md#workstation-specification): the **RTX PRO 6000 Blackwell Workstation Edition (96 GB)** plus the agreed CPU, memory, storage, and network and USB connections. The supplier confirms that the case, motherboard, power supply, and cooling support the card.
 
 ## 2. Position and connect it
 
-1. Place the computer where its air vents remain clear and robot movement cannot reach it.
+1. Place the computer where its vents stay clear and no robot can reach it.
 2. Connect the monitor, keyboard, mouse, and the approved mains lead.
-3. Connect the workstation to the lab network switch/router with Ethernet.
+3. Connect the workstation to the lab switch/router with Ethernet.
 4. Label the workstation, its network cable, and the ports used by each platform.
 5. Arrange a backup destination and enough free storage for the expected recordings.
 
-Keep power strips, connectors, and loose cable loops away from the robots and walking area. Follow the supplier's electrical and ventilation requirements.
+Keep power strips, connectors, and loose cable loops away from the robots and walkways.
 
 ## 3. Plan the device connections
 
-| Device group | Connection to prepare |
+Each platform's guide has a connection map. In summary:
+
+| Platform | Connects to the workstation |
 |---|---|
-| [Two xArm control boxes](https://docs.xarm.ufactory.cc/2.hardware_installation.html) | One Ethernet connection per controller to the shared network |
-| [Five xArm cameras](../vla-pipeline/hardware/index.md#1-gather-the-equipment) | USB data connections with enough bandwidth for the intended simultaneous views |
-| [Quest headsets](https://www.meta.com/quest/quest-3/) | One data-capable USB connection per headset used |
-| Three [D405 cameras](https://www.realsenseai.com/product-family/d405-series/) for ABC Box | USB data connections for two wrist views and one overhead view; supplier confirms their host computer |
-| [ABC Box followers and leaders](../abc-box/hardware.md) | Supplier-approved connection plan for the shared workstation and any included Box PC |
-| [Go2 onboard computer](../unidog-nav/hardware.md#1-core-equipment-for-navigation) | The lab's approved Ethernet or wireless connection |
-| [Monitor and input devices](hardware.md#shared-equipment-prepare-once) | Suitable display and USB connections |
+| [VLA Pipeline](../vla-pipeline/hardware/index.md#2-connection-map) | Two control boxes by Ethernet through the shared switch; five cameras and up to two headsets by USB |
+| [Self Improvement Learning](../unidog-nav/hardware.md#2-connection-map) | The Go2's onboard computer over the lab network; cameras connect to the onboard computer, not the workstation |
+| [ABC Box](../abc-box/hardware.md#2-connection-map) | Three cameras and two arm interfaces, by the supplier's connection plan for the workstation and the included Box PC |
 
-More USB sockets do not necessarily mean more bandwidth: several sockets can share one internal connection. Have the installer check all intended camera views for the active platform together, and use an approved powered hub only when the layout calls for one. The dog's D435i connects to the onboard computer, not to the desk workstation.
+Have the installer test all of a platform's camera views together, and use a powered hub only where the layout calls for one.
 
-## 4. Check the workstation before handover
+## 4. Check before handover
 
-- [ ] Selected GPU and agreed CPU, memory, and storage are recorded.
+- [ ] GPU, CPU, memory, and storage are recorded.
 - [ ] Power, cooling, monitor, keyboard, and mouse work.
 - [ ] Network connections reach the intended equipment.
-- [ ] Cameras and headsets have labeled data-capable cables.
-- [ ] All required camera views can be checked together by the installer.
-- [ ] Storage, backup, and use of the shared computer are arranged.
+- [ ] Cameras and headsets have labeled, data-capable cables.
+- [ ] All required camera views can be shown together.
+- [ ] Storage, backup, and shared use of the computer are arranged.
 
-**Next:** check the connections for [VLA Pipeline](../vla-pipeline/hardware/index.md), [Self Improvement Learning](../unidog-nav/hardware.md), or [ABC Box](../abc-box/hardware.md).
+**Next:** [VLA Pipeline](../vla-pipeline/hardware/index.md) · [Self Improvement Learning](../unidog-nav/hardware.md) · [ABC Box](../abc-box/hardware.md)

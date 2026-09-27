@@ -6,37 +6,33 @@ hide:
 
 # Self Improvement Learning hardware readiness
 
-**Goal:** confirm the complete Go2/D1 platform is ready for an operator-led first session. Start with the [equipment list](hardware.md).
+**Goal:** confirm the complete Go2/D1 platform is ready for an operator-led first session. Complete [Equipment and connections](hardware.md) and [Mount and check the D1 arm](d1-arm.md) first, and follow the [safety rules](../getting-started/safety.md).
 
-## 1. Inspect the platform
+## 1. Inspect before power-on
 
 - [ ] Robot edition, onboard computer, and installed accessories are identified.
-- [ ] Battery and charger match the robot; charging and handling follow the manufacturer instructions.
-- [ ] Camera, onboard computer, and accessory mounts are secure.
-- [ ] Cables have strain relief and remain clear of legs and arm joints.
+- [ ] Battery and charger match the robot and are handled per the manufacturer's instructions.
+- [ ] Camera, arm, and accessory mounts are secure; cables have strain relief and stay clear of legs and joints.
 - [ ] The D1 mounting, resting pose, and payload arrangement have been reviewed.
-- [ ] The protective gantry is assembled according to its instructions; attachment points, supported load, and D1 clearance have been checked for supported tests.
-- [ ] The operator controller and the demonstrated stop interface are available.
+- [ ] The gantry is assembled per its instructions, with attachment, load, and D1 clearance checked.
+- [ ] The controller and its stop function are available.
 
-## 2. Check the camera and network
+## 2. Check the camera views
 
-Ask the installer to confirm the robot's network connection and show the [D435i](https://www.realsenseai.com/products/depth-camera-d435i/)'s live view while the platform remains stationary. Check that the view is unobstructed and record the camera serial and mounting position. Check the D1 wrist **[D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/)** view separately and record its serial and mounting position; it is a different camera from the front **D435i**.
+With the platform stationary, ask the installer to show the front [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) view and, separately, the wrist [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) view. Check each is unobstructed and record both serials and positions.
 
-The desk workstation and onboard computer are separate devices. Confirm which network connection belongs to each. Any tether must be removed or managed according to the operator's procedure before the robot moves.
+Confirm which network connection belongs to the workstation and which to the onboard computer.
 
-## 3. Prepare the supervised area
+## 3. Confirm stops and clearance
 
-Choose a clear area with suitable flooring and room for the robot to stand, turn, and stop. Keep charging leads and loose objects outside it. Have the operator explain the normal shutdown and stop/recovery procedures for both the Go2 and D1.
-
-Complete [D1 readiness](d1-arm.md) separately. A successful camera check or a ready robot dog does not establish arm readiness.
+Choose a clear area with suitable flooring and room for the robot to stand, turn, and stop; keep charging leads and loose objects outside it. The operator demonstrates the normal shutdown and the stop and recovery procedures for both the Go2 and the D1, and manages any tether before the robot moves.
 
 ## 4. Record the handover
 
-Save the robot, battery, controller, camera, arm, and onboard-computer identities; the approved power/network arrangement; calibration records; and the operator's check date. List pending items explicitly.
+Save the robot, battery, controller, camera, arm, and onboard-computer identities, the power and network arrangement, calibration records, and the operator's name and date. List pending items explicitly.
 
-**Ready for handover:** the installer has approved the mounts and connections, both camera views are checked, and an experienced operator has signed off the complete platform for the planned session.
+**Ready for handover:** the installer has approved the mounts and connections, both camera views are checked, and the operator has signed off the complete platform.
 
-
-**If a check fails:** use [hardware troubleshooting](../getting-started/troubleshooting.md).
+**If a check fails:** [Hardware troubleshooting](../getting-started/troubleshooting.md)
 
 [Return to this project](index.md) · [All projects](../index.md)

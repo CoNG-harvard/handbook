@@ -6,7 +6,7 @@ Source for the CoNG lab's hardware platform setup manuals, built with [MkDocs Ma
 
 The handbook helps readers with little robotics experience gather equipment, identify parts, assemble and connect each platform, and complete an operator-led hardware readiness check.
 
-- [Before you begin](docs/getting-started/index.md), [shared equipment](docs/getting-started/hardware.md), and [workstation preparation](docs/getting-started/computer.md)
+- [Before you begin](docs/getting-started/index.md), [shared equipment](docs/getting-started/hardware.md), [workstation preparation](docs/getting-started/computer.md), [safety](docs/getting-started/safety.md), and a [glossary](docs/getting-started/glossary.md)
 - [VLA Pipeline](docs/vla-pipeline/index.md): two xArm robots, wrist/scene cameras, and Quest headsets
 - [Self Improvement Learning](docs/unidog-nav/index.md): Unitree Go2, D1 arm, front D435i, D435 wrist camera, and onboard computer
 - [ABC Box](docs/abc-box/index.md): followers, leaders, and three D405 cameras; shared-workstation connections require supplier confirmation
@@ -49,7 +49,9 @@ One-time setup: **Settings → Pages → Build and deployment → Source: GitHub
 
 ## Writing setup instructions
 
-Keep the published site focused on equipment, quantities, mounting, power/data connections, camera positions, device labels, calibration requirements, stop controls, and readiness. Explain unfamiliar hardware terms and state the expected result of each check. Use manufacturer instructions for exact mounting loads, fasteners, wiring, and electrical requirements rather than inventing specifications.
+Keep the published site focused on equipment, quantities, mounting, power/data connections, camera positions, device labels, calibration requirements, stop controls, and readiness. Define hardware terms in `docs/getting-started/glossary.md` and put station-wide rules in `docs/getting-started/safety.md`. State the expected result of each check.
+
+Write as a manual, not an audit: state facts plainly and put every unresolved item in the **Open items** section of `docs/getting-started/sources.md` rather than hedging inside equipment rows. Provenance (who confirmed what, when, and what a photograph does or does not show) belongs in `validation/`, not in `docs/`. Use manufacturer instructions for exact mounting loads, fasteners, wiring, and electrical requirements rather than inventing specifications.
 
 Software installation, environments, launch commands, model training/inference, datasets, source-transfer recipes, and software-release references do not belong in the published manual. The earlier material is retained in `archive/previous-guide/` for maintainers; do not include that directory in the site build or search index.
 
@@ -65,9 +67,9 @@ Wrap images in `figure.handbook-figure` with a plain-text `figcaption` and a `.f
 
 Project display names are **VLA Pipeline**, **Self Improvement Learning**, and **ABC Box**. Preserve the existing project URL roots.
 
-Keep the same top-level navigation tabs on every page. Navigation remains in the header while scrolling. Desktop links separate shared setup from the projects; narrow screens use a native disclosure menu showing the current section. Both layouts are generated from the same navigation configuration. Each project sidebar begins with **Overview**, followed by equipment/connections and hardware readiness; include platform-specific checks such as D1 readiness where needed.
+Keep the same top-level navigation tabs on every page. Navigation remains in the header while scrolling. Desktop links separate shared setup from the projects; narrow screens use a native disclosure menu showing the current section. Both layouts are generated from the same navigation configuration. Each project sidebar begins with **Overview**, followed by equipment/connections and hardware readiness; include platform-specific pages such as the D1 mounting page where needed. Use straight apostrophes; use the word "workstation" (not desktop or desk computer) for the shared computer.
 
-Hardware inventories use short equipment, quantity, and product/reference tables with selection details below. Link every equipment row to a verified product, supplier catalog, or relevant assembly reference; mark unspecified custom parts without inventing a purchase model. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
+Every hardware page follows the same skeleton: **1. Equipment** (tables with the columns Equipment · Quantity · Product or reference, digits-only quantities such as `4 (2 per gripper)`, then **Notes on selection**), **2. Connection map**, **3. Assemble and connect**, **4. Record identities**. Every readiness page follows **1. Inspect before power-on · 2. Check the camera views · 3. Confirm stops and clearance · 4. Record the handover**. Overview pages open with a **What you need** box listing core equipment and open items. Link every equipment row to a verified product, supplier catalog, or relevant assembly reference; mark unspecified custom parts without inventing a purchase model. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
 
 The new station photographs use unnumbered vector callouts with camera model names and matching captions. Regenerate the annotated SVGs with `python3 scripts/label_photos.py`; the source JPEGs remain unchanged. Label only identifiable visible equipment, and do not infer rig A/B identities from position.
 

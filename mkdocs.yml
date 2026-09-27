@@ -75,6 +75,8 @@ nav:
       - Before you begin: getting-started/index.md
       - Shared computer and hardware: getting-started/hardware.md
       - Prepare the workstation: getting-started/computer.md
+      - Safety: getting-started/safety.md
+      - Glossary: getting-started/glossary.md
       - Hardware troubleshooting: getting-started/troubleshooting.md
       - Equipment references: getting-started/sources.md
   - VLA Pipeline:
@@ -84,7 +86,7 @@ nav:
   - Self Improvement Learning:
       - Overview: unidog-nav/index.md
       - "1. Equipment and connections": unidog-nav/hardware.md
-      - "2. D1 arm readiness": unidog-nav/d1-arm.md
+      - "2. Mount and check the D1 arm": unidog-nav/d1-arm.md
       - "3. Hardware readiness": unidog-nav/readiness.md
   - ABC Box:
       - Overview: abc-box/index.md
