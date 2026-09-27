@@ -15,6 +15,7 @@ Each hardware table includes a **Product or reference** column. Product pages id
 |---|---|---|
 | xArm robots and control boxes | [UFACTORY installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html) and [xArm product family](https://www.ufactory.cc/xarm-collaborative-robot/) | Confirming the arm model and supplied installation requirements |
 | xArm arm stands | [Vention stand design 506323](https://vention.com/machine-builder/506323) | Owner-selected design for two stands; Vention account/design access required |
+| xArm gripper fingers | [Finger STL](../vla-pipeline/assets/xarm-gripper-finger.stl) | Owner-supplied 3D-print file; two fingers per gripper, four total |
 | xArm camera mount | [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) | Mount for the two D405 wrist cameras; D405 fit confirmed by the project owner |
 | Quest headsets | [Meta Quest 3](https://www.meta.com/quest/quest-3/) | Headset, controller, and accessory identification |
 | Go2 Education Plus (EDU Plus) | [Unitree Go2](https://www.unitree.com/go2/) | Edition confirmed by project owner; check included accessories against the delivered package |
@@ -44,12 +45,12 @@ Unitree’s [Go2 payload guide](https://support.unitree.com/home/en/developer/Pa
 The hardware tables link these items to relevant catalogs or assembly guidance. Exact purchase links still depend on the owner's build details:
 
 - **Shared computer:** complete system, motherboard, RAM modules, power supply, case/cooling, HDD model, backup device, peripherals, and network equipment.
-- **VLA Pipeline:** gripper fingers/adapters, scene-camera supports, cable lengths, and task objects.
+- **VLA Pipeline:** scene-camera supports, cable lengths, task objects, and print settings for the gripper fingers.
 - **Go2/D1:** added wrist-camera cable arrangement, accessory power, calibration target pattern/size, and speaker.
 - **ABC Box:** leader variant, supplied control interfaces, and any parts missing from the delivered kit.
 
 ## Outstanding physical checks
 
-The added D1 wrist-camera connection, xArm gripper adapters and scene-camera supports, and complete ABC accessory package need owner or supplier confirmation. The project owner confirmed that all three projects share the same desktop. Each platform's physical connections and readiness checks still need to be verified at the station.
+The added D1 wrist-camera connection, printed xArm gripper-finger fit and scene-camera supports, and complete ABC accessory package need owner or supplier confirmation. The project owner confirmed that all three projects share the same desktop. Each platform's physical connections and readiness checks still need to be verified at the station.
 
 No robot or camera was operated during the handbook update. Hardware readiness must be checked and recorded by the installer and operator at the actual station.

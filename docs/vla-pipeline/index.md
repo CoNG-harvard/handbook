@@ -11,7 +11,7 @@ A tabletop platform with **two [xArm 7 robots](https://www.ufactory.cc/xarm-coll
 !!! info "Before assembly"
     **Confirmed:** two xArm robots, two D405 wrist cameras, three D435 scene cameras, and the shared desktop.
 
-    **Still needed:** gripper adapters, scene-camera supports, and cable lengths. Confirm how many headset/operator pairs will be used. [Equipment details](hardware/index.md#selection-details).
+    **Still needed:** scene-camera supports and cable lengths; print and fit-check the [gripper fingers](hardware/index.md#selection-details). Confirm how many headset/operator pairs will be used. [Equipment details](hardware/index.md#selection-details).
 
 <figure class="handbook-figure" markdown="1">
 
