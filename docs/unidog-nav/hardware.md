@@ -23,7 +23,7 @@ Product links identify known models. **Catalogs** and assembly **references** co
 | Spare M4 screws for the D1 rail mounting | 1 assortment purchased | [M4 hex button screw kit, M4 × 6–30 mm](https://www.amazon.com/dp/B0GS8BT7XL) — use the M4 × 10 length Unitree specifies; hex keys in [shared tools](../getting-started/hardware.md#shared-equipment-prepare-once) |
 | Robot battery and charger | 1 set | [Go2 battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) — match delivered variant |
 | Supported operator controller/stop interface | 1 | [Go2 controller](https://shop.unitree.com/products/go2-controller) — confirm supported stop function |
-| RealSense D435i front camera, USB data cable, and mount | 1 set | [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — mount to specify |
+| RealSense D435i front camera, USB data cable, and mount | 1 set | [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — printed head bracket in the photo; design file not recorded |
 | RealSense D435 wrist camera and USB data cable | 1 set | [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) |
 | RichBird 60 mm C-clamp mount with ball head and 1/4-inch screw for the D1 wrist camera | 1 | [RichBird mount](https://www.amazon.com/dp/B0GSR6883N) |
 | Robot network connection | 1 | [Ethernet cable catalog](https://www.startech.com/en-us/cables/network) — confirm wired/wireless arrangement |
@@ -41,7 +41,7 @@ The supplied picture shows **1 Go2, 1 D1 arm, and 2 external cameras**: the labe
 - **D1 arm:** follow [Unitree’s official mounting and connection instructions](https://support.unitree.com/home/en/developer/Payload) for the Go2 expansion dock. Check the supplied kit, then complete [D1 arm readiness](d1-arm.md) before manipulation.
 - **Onboard computer:** included with this Go2 EDU Plus setup; no separate purchase is needed. Use the supplied computer and its documented connections.
 - **Battery and controller:** confirm the approved charger, connectors, and demonstrated stop procedure. Keep the operator's stop interface accessible.
-- **Cameras:** use one front [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) and one [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) at the D1 wrist. Record each camera's serial, mounting position, and USB connection separately.
+- **Cameras:** use one front [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) and one [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) at the D1 wrist. The D435i sits in a 3D-printed vented bracket on the Go2 head; record or check in that design with the station notes. Record each camera's serial, mounting position, and USB connection separately.
 - **D1 wrist camera mount:** use the linked RichBird C-clamp mount selected for this platform. The listing specifies a 360° ball head and a 1/4"-20 camera screw. During installation, secure the clamp and ball head, leave cable slack, and check clearance around the gripper and wrist.
 - **Connections and mounts:** use the approved Ethernet or wireless connection. Confirm accessory power, payload arrangement, cable strain relief, and space to stand and turn.
 

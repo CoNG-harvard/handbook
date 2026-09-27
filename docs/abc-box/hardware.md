@@ -12,7 +12,7 @@ The [shared RTX PRO 6000 workstation and its accessories](../getting-started/har
 
 ## Photo count check
 
-The photo shows **2 robot arms, 2 grippers, 2 wrist cameras, and 1 overhead camera**: **3 cameras total**, matching the camera quantity below. The support frame is also visible. The picture does not verify the two leaders, shared workstation connections, or stop control; confirm those against the delivered equipment. Camera model names come from the equipment references, not readable model labels in this view.
+The photo shows **2 robot arms, 2 grippers, 2 wrist cameras, and 1 overhead camera**: **3 cameras total**, matching the camera quantity below. The support frame is also visible. Two small interface boards with power leads sit at the follower bases and a keyboard is on the table; the board type is not readable, so the adapter count still needs supplier confirmation. The picture does not verify the two leaders, touchscreen, shared workstation connections, or stop control; confirm those against the delivered equipment. Camera model names come from the equipment references, not readable model labels in this view.
 
 ## 1. Check the ABC Box package
 
