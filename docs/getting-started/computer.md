@@ -14,12 +14,12 @@ Compare it with the [workstation specification](hardware.md#workstation-specific
 ## 2. Position and connect it
 
 1. Place the computer where its vents stay clear and no robot can reach it.
-2. Connect the monitor, keyboard, mouse, and the approved mains lead.
+2. Connect the monitor, keyboard, mouse, and the approved power cord.
 3. Connect the workstation to the lab switch/router with Ethernet.
 4. Label the workstation, its network cable, and the ports used by each platform.
 5. Arrange a backup destination and enough free storage for the expected recordings.
 
-Keep power strips, connectors, and loose cable loops away from the robots and walkways.
+Keep power strips, connectors, and loose cable loops away from the robots and walkways, and follow the supplier's electrical and ventilation requirements.
 
 ## 3. Plan the device connections
 
@@ -28,10 +28,10 @@ Each platform's guide has a connection map. In summary:
 | Platform | Connects to the workstation |
 |---|---|
 | [VLA Pipeline](../vla-pipeline/hardware/index.md#2-connection-map) | Two control boxes by Ethernet through the shared switch; five cameras and up to two headsets by USB |
-| [Self Improvement Learning](../unidog-nav/hardware.md#2-connection-map) | The Go2's onboard computer over the lab network; cameras connect to the onboard computer, not the workstation |
+| [Self Improvement Learning](../unidog-nav/hardware.md#2-connection-map) | The Go2's onboard computer over the lab network; the front D435i connects to the onboard computer, and the wrist camera's host is to confirm |
 | [ABC Box](../abc-box/hardware.md#2-connection-map) | Three cameras and two arm interfaces, by the supplier's connection plan for the workstation and the included Box PC |
 
-Have the installer test all of a platform's camera views together, and use a powered hub only where the layout calls for one.
+Have the installer test all of a platform's camera views together, and use an approved powered hub only where the layout calls for one.
 
 ## 4. Check before handover
 
@@ -42,4 +42,4 @@ Have the installer test all of a platform's camera views together, and use a pow
 - [ ] All required camera views can be shown together.
 - [ ] Storage, backup, and shared use of the computer are arranged.
 
-**Next:** [VLA Pipeline](../vla-pipeline/hardware/index.md) · [Self Improvement Learning](../unidog-nav/hardware.md) · [ABC Box](../abc-box/hardware.md)
+**Next:** [VLA Pipeline hardware](../vla-pipeline/hardware/index.md) · [Self Improvement Learning hardware](../unidog-nav/hardware.md) · [ABC Box hardware](../abc-box/hardware.md)

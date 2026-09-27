@@ -17,6 +17,8 @@ hide:
 - [ ] The gantry is assembled per its instructions, with attachment, load, and D1 clearance checked.
 - [ ] The controller and its stop function are available.
 
+Have the installer follow Unitree's power-on procedure for the Go2 and the D1.
+
 ## 2. Check the camera views
 
 With the platform stationary, ask the installer to show the front [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) view and, separately, the wrist [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) view. Check each is unobstructed and record both serials and positions.

@@ -12,7 +12,7 @@ Use these checks with the installer while the equipment is stationary. Follow th
 | A camera view is missing | Match its serial and cable label; check the data cable and USB port. Compare the camera alone with all required views together. | Every required view is available together |
 | A camera shows the wrong area | Match the live view to the physical camera; check its angle and obstructions. Record any mount change and have the installer review calibration. | The intended gripper or work area is visible |
 | A wrist cable becomes tight | Stop and have the installer review slack and attachment points through the approved movement range. | The cable avoids joints, snag points, and strain at the connector |
-| An arm and controller do not match the labels | Compare serials, rig labels, and the supplied cable set with the packing list. Do not enable movement to identify an arm. | Each arm has an identified matching control box or interface |
+| An arm and its control box do not match the labels | Compare serials, rig labels, and the supplied cable set with the packing list. Do not enable movement to identify an arm. | Each arm has an identified matching control box or interface |
 | A mount or stand moves | Have the installer check the drawing, fasteners, and supporting surface. | The installer approves the corrected attachment |
 | An ABC leader/follower pairing is unclear | Compare the left/right labels and interface record with the supplier's connection plan. | Both pairs are identified before calibration or movement |
 

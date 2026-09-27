@@ -8,11 +8,11 @@ VLA Pipeline, Self Improvement Learning, and ABC Box use **one Linux workstation
 |---|---|---|
 | Linux workstation with RTX PRO 6000 | 1 | [NVIDIA RTX PRO 6000 family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — complete build to specify |
 | Monitor, keyboard, and mouse | 1 set, or remote access | [Monitors](https://www.dell.com/en-us/shop/pc-accessories/ar/computer-monitors) · [keyboards](https://www.logitech.com/en-us/shop/c/keyboards) · [mice](https://www.logitech.com/en-us/shop/c/mice) |
-| Storage and backup destination | Sized for all three projects' recordings | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — backup device to specify |
+| Storage and backup destination | 1 set, sized for all three projects | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — backup device to specify |
 | Network switch/router, power adapter, and workstation cable | 1 set | [Switches](https://www.netgear.com/business/wired/switches/unmanaged/) · [Ethernet cables](https://www.startech.com/en-us/cables/network) |
 | Assembly tools: hex key set and digital angle gauge | 1 each | [Hex key set](https://www.amazon.com/dp/B0776C2D6H) · [Digital angle gauge](https://www.amazon.com/dp/B0D65VNWPH) — for fastening and leveling arm bases, stands, and camera mounts |
 
-The workstation supplier's quote should include a compatible motherboard, power supply, case, cooling, and mains lead sized for the GPU.
+The workstation supplier's quote should include a compatible motherboard, power supply, case, cooling, and power cord sized for the GPU.
 
 ## Workstation specification
 
@@ -21,11 +21,11 @@ The workstation supplier's quote should include a compatible motherboard, power 
 | GPU | **RTX PRO 6000 Blackwell Workstation Edition, 96 GB** | [NVIDIA product family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — select Workstation Edition |
 | Computer type | Linux workstation; the reference machine runs Ubuntu 24.04 | Complete build to specify |
 | CPU (reference) | AMD Ryzen 9 7950X, 16 cores | [AMD Ryzen 9 7950X](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7950x.html) |
-| System memory (reference) | About 94 GB | [Memory compatibility catalog](https://www.kingston.com/en/memory) — exact modules not recorded |
-| Storage (reference) | Two 2 TB WD_BLACK SN850X SSDs and one 4 TB WD hard drive | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [WD hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — HDD model not recorded |
+| System memory (reference) | About 94 GiB as reported by Linux | [Memory compatibility catalog](https://www.kingston.com/en/memory) — modules to specify |
+| Storage (reference) | Two 2 TB WD_BLACK SN850X SSDs and one 4 TB WD hard drive | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [WD hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — confirm the SSD heatsink variant; HDD model to specify |
 | Connections | Ethernet for the xArm control boxes and robot network; USB for the active platform's cameras, headsets, and control interfaces | [Ethernet](https://www.startech.com/en-us/cables/network) · [USB cables](https://www.startech.com/en-us/cables/usb-30) |
 
-The GPU is the selected configuration. CPU, memory, and storage describe the existing reference machine, not tested minimums; agree capacities with the project owner before ordering a new computer. GPU memory and system memory are separate.
+The GPU is the selected configuration. CPU, memory, and storage describe the existing reference machine, not tested minimums; agree on capacities with the project owner before ordering a new computer. GPU memory and system memory are separate.
 
 ## Choosing a new computer
 
@@ -40,7 +40,7 @@ Arrange use with the other project teams. Before switching platforms, finish the
 ## Shared setup checklist
 
 - [ ] One complete workstation, its accessories, storage, and network connection are ready.
-- [ ] Equipment is checked against the [xArm](../vla-pipeline/hardware/index.md), [Go2/D1](../unidog-nav/hardware.md), or [ABC Box](../abc-box/hardware.md) list.
+- [ ] Equipment is checked against the [VLA Pipeline](../vla-pipeline/hardware/index.md), [Self Improvement Learning](../unidog-nav/hardware.md), or [ABC Box](../abc-box/hardware.md) list.
 - [ ] Cameras, cables, and device identities are labeled and recorded.
 - [ ] Workstation access and the handover procedure are agreed.
 

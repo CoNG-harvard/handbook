@@ -4,12 +4,12 @@ title: ABC Box
 
 # ABC Box
 
-A two-arm teleoperation station from [I2RT](https://i2rt.com/products/abc-box). The operator moves two **leader arms** by hand; two **follower arms** copy the movement at the table. Three D405 cameras watch the wrists and the work area. It uses the [shared workstation](../getting-started/hardware.md) together with the small PC included in the Box package.
+A two-arm teleoperation station from [I2RT](https://i2rt.com/products/abc-box). The operator moves two **leader arms** by hand; two **follower arms** copy the movement at the table. Three D405 cameras watch the wrists and the work area. It uses the [shared workstation](../getting-started/hardware.md) together with the included Box PC.
 
-**Your goal:** confirm the delivered package, mount and pair the arms, agree the computer and cable plan with the supplier, and identify the physical stop.
+**Goal:** confirm the delivered package, mount and pair the arms, agree on the computer and cable plan with the supplier, and identify the physical stop.
 
 !!! info "What you need"
-    **Core equipment:** 2 follower arms with grippers · 2 leader arms · 3 D405 cameras with mounts · CAN interfaces and power supplies · included Box PC.
+    **Core equipment:** 2 follower arms with grippers · 2 leader arms · 3 D405 cameras with mounts · [CAN](../getting-started/glossary.md) interfaces and power supplies · included Box PC.
 
     **Open items:** delivered variant and packing list, leader model, which computer receives each cable, and the stop arrangement. [Details](../getting-started/sources.md#open-items)
 

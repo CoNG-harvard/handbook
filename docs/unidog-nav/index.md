@@ -6,10 +6,10 @@ title: Self Improvement Learning
 
 A mobile platform built around **one [Unitree Go2 EDU Plus](https://www.unitree.com/go2/)** with its onboard computer, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)**, and a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)** on the arm. The [shared workstation](../getting-started/hardware.md) stays at the desk and talks to the robot over the lab network.
 
-**Your goal:** identify the delivered equipment, mount and connect the arm and cameras, and arrange separate readiness checks for the dog and the arm.
+**Goal:** identify the delivered equipment, mount and connect the arm and cameras, and arrange separate readiness checks for the dog and the arm.
 
 !!! info "What you need"
-    **Core equipment:** Go2 EDU Plus with battery, charger, and controller · D1 arm with mounting kit · protective gantry · D435i front camera · D435 wrist camera with clamp mount.
+    **Core equipment:** Go2 EDU Plus with battery, charger, and controller · D1 arm with mounting kit · protective gantry · D435i front camera in a printed head bracket · D435 wrist camera with clamp mount.
 
     **Open items:** wrist-camera USB host and cable route, gantry clearance with the arm mounted, calibration target. [Details](../getting-started/sources.md#open-items)
 

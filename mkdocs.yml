@@ -73,9 +73,9 @@ nav:
   - All projects: index.md
   - Shared setup:
       - Before you begin: getting-started/index.md
+      - Safety: getting-started/safety.md
       - Shared computer and hardware: getting-started/hardware.md
       - Prepare the workstation: getting-started/computer.md
-      - Safety: getting-started/safety.md
       - Glossary: getting-started/glossary.md
       - Hardware troubleshooting: getting-started/troubleshooting.md
       - Equipment references: getting-started/sources.md

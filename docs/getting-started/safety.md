@@ -17,13 +17,13 @@ These rules apply at every station. The delivered equipment's manual takes prece
 ## Power and cables
 
 - Disconnect external AC from an xArm control box before plugging or unplugging arm cables, as UFACTORY requires. [UFACTORY hardware installation](https://docs.xarm.ufactory.cc/2.hardware_installation.html)
-- Follow the equipment's shutdown procedure before changing robot power or control connections.
+- Follow the equipment's shutdown procedure (in the manufacturer's manual; ask the operator to demonstrate it) before changing robot power or control connections.
 - Keep cables clear of joints, legs, and walkways, with strain relief at the connectors. Keep power strips and loose loops away from the robots.
 
 ## During operation
 
 - Keep a second person watching the arms, with the stop within reach, whenever the operator is wearing a headset.
-- Calibrating or enabling an ABC Box leader–follower pair can move the follower; treat it as part of the supervised session.
+- Calibrating or enabling an ABC Box leader/follower pair can move the follower; treat it as part of the supervised session.
 - Give the Go2 a clear area to stand, turn, and stop. Remove or manage any network tether according to the operator's procedure before the robot moves.
 - Keep charging leads and loose objects outside the movement area.
 

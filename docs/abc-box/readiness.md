@@ -12,13 +12,15 @@ hide:
 
 - [ ] The delivered variant and packing list are recorded.
 - [ ] Both followers and grippers are securely mounted; both leaders are mounted and labeled with their followers.
-- [ ] The supplier's connection plan for the workstation, included PC, CAN interfaces, and power supplies is recorded and followed.
+- [ ] The supplier's connection plan for the workstation, included Box PC, CAN interfaces, and power supplies is recorded and followed.
 - [ ] All three camera mounts and USB cables are secured.
 - [ ] Control cables are labeled and clear of joints and the work area.
 
-Ask the installer to identify the leader and follower models, gripper types, and interfaces, then follow the delivered calibration procedure and record the approved resting positions. Enabling a pair can move the follower, so this stays part of the supervised session.
+Ask the installer to identify the leader and follower models, gripper types, and interfaces, then follow I2RT's power-on procedure.
 
 ## 2. Check the camera views
+
+With the arms stationary, ask the installer to show:
 
 | Camera | What to check |
 |---|---|
@@ -26,9 +28,11 @@ Ask the installer to identify the leader and follower models, gripper types, and
 | Left wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The left gripper and contact area |
 | Right wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The right gripper and contact area |
 
-Record each serial and position and show all views together on the agreed computer. Check lighting, coverage, cable slack, and stable USB connections.
+Record each serial and position and show all views together on the agreed computer. Check lighting, focus and coverage, cable slack, and stable USB connections.
 
 ## 3. Confirm stops and clearance
+
+Follow the delivered calibration procedure and record the approved resting positions. Enabling a leader/follower pair can move the follower, so this stays part of the supervised session.
 
 The supplier identifies the physical stop and demonstrates what it stops, what stays powered, and how to recover, including how the arms are supported if power is removed. Keep the stop within the operator's reach.
 

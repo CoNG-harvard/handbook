@@ -23,7 +23,7 @@ In every equipment table, a **product** link identifies a named model, a **catal
 | Go2 EDU Plus | [Unitree Go2](https://www.unitree.com/go2/) | Robot edition and included accessories |
 | D1 arm and mounting | [Unitree payload installation](https://support.unitree.com/home/en/developer/Payload) · [D1 supplier](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1) | Official rail mounting and arm power/Ethernet connections |
 | Go2 battery, charger, and controller | [Battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) · [controller](https://shop.unitree.com/products/go2-controller) | Matching accessories to the delivered Go2 |
-| Go2 protective gantry | [RobotShop listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) | The Go2 EDU support frame |
+| Go2 protective gantry | [RobotShop listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) | The Go2 EDU support frame; SKU RB-Unt-97, part Go2-Protective-Bracket |
 | D1 wrist-camera mount | [RichBird C-clamp mount](https://www.amazon.com/dp/B0GSR6883N) | Clamp, ball head, and 1/4"-20 screw for the D435 wrist camera |
 | RealSense cameras | [D405](https://www.realsenseai.com/product-family/d405-series/) · [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) | Matching camera models to wrist, scene, and front positions |
 | RTX PRO 6000 | [NVIDIA RTX PRO 6000 family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) | The Blackwell Workstation Edition with 96 GB |
@@ -35,7 +35,7 @@ In every equipment table, a **product** link identifies a named model, a **catal
 
 ## Basis for the equipment lists
 
-The lists combine the project owner's platform requirements, the station photographs on each overview page, the lab's purchase record, and the manufacturers' package lists. Quantities visible in the photographs were counted; hidden parts, cable lengths, and package contents were not, and no robot was operated while these guides were written. Serial numbers and network addresses stay in the private station record.
+The lists combine the project owner's platform requirements, the station photographs on each overview page, the lab's purchase record, and the manufacturers' package lists. Hidden parts, cable lengths, and package contents were not counted. Serial numbers and network addresses stay in the private station record.
 
 ## Open items
 
@@ -48,21 +48,22 @@ Resolve these with the owner or supplier before the step that needs them.
 **VLA Pipeline**
 
 - Model of the three articulated scene-camera stands.
-- Four angled Micro-B USB 3.0 cables are on order, but the D405 and D435 have USB Type-C ports. Do not connect them until the intended camera or adapter is confirmed.
+- Pending camera cables have Micro-B USB 3.0 connectors; the D405 and D435 have USB Type-C ports. Confirm the intended camera or adapter before connecting them.
+- Any gripper adapter needed beyond the printed fingers.
 - Print settings and fit check for the gripper fingers.
 - Task objects.
 
 **Self Improvement Learning**
 
 - USB host and cable route for the D435 wrist camera.
-- Design file for the printed D435i head bracket.
+- Design file for the printed D435i head bracket, and whether it replaces Unitree's official D435i mount.
 - Gantry clearance and load with the D1 mounted.
 - Calibration target pattern and size; accessory power; speaker.
 
 **ABC Box**
 
 - Delivered variant (Box or Research Kit) and packing list.
-- Leader model (passive or powered) and its power and calibration procedure.
+- Leader model (passive GELLO or powered YAM) and its power and calibration procedure.
 - Which computer receives each camera and arm interface, and how many external CAN adapters are needed.
 - Stop arrangement: what it cuts and how to recover.
 

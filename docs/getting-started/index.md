@@ -10,9 +10,9 @@
 | [Self Improvement Learning](../unidog-nav/index.md) | Unitree Go2 EDU Plus, D1 arm, D435i front camera, D435 wrist camera, and onboard computer | Shared workstation plus the robot's onboard computer |
 | [ABC Box](../abc-box/index.md) | Two follower arms, two leader arms, and three cameras | Shared workstation |
 
-Count the workstation and its accessories once, using the [shared hardware list](hardware.md).
+Use the [shared hardware list](hardware.md) for the workstation and its accessories.
 
-## 2. Arrange the setup handoff
+## 2. Arrange the setup handover
 
 Ask the project owner for:
 
@@ -22,7 +22,7 @@ Ask the project owner for:
 - A demonstration of the stop controls, power-on sequence, and shutdown procedure.
 - Existing calibration records and a place to keep the station's equipment record.
 
-Check quantities before assembly. Resolve missing or unspecified parts with the owner or supplier before the step that needs them. Each platform's [open items](sources.md#open-items) are listed in one place.
+Check quantities before assembly. Resolve missing or unspecified parts with the owner or supplier before the step that needs them. All [open items](sources.md#open-items) are listed in one place.
 
 ## 3. Prepare the work area
 
@@ -32,6 +32,6 @@ Read the [safety rules](safety.md) before enabling motion on any platform.
 
 ## 4. Keep setup notes
 
-Record device models, serial numbers, cable labels, camera positions, network addresses, calibration dates, and the responsible operator in a private setup sheet. Use the same labels on the equipment and in the record: **rig A** and **rig B** for the xArm robots, **left** and **right** for the ABC Box pairs, and **front** and **wrist** for cameras. Do not publish serials or network addresses.
+Record device models, serial numbers, cable labels, camera positions, network addresses, calibration dates, and the responsible operator in a private setup sheet. Use the same labels on the equipment and in the record: **rig A** and **rig B** for the xArm robots, **left** and **right** for the ABC Box pairs, and **front**, **wrist**, **scene**, and **overhead** for cameras. Do not publish serials or network addresses.
 
 **Next:** [Shared computer and hardware](hardware.md)
