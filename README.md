@@ -29,7 +29,6 @@ mkdocs serve            # http://127.0.0.1:8000, reloads on save
 | `docs/<project>/` | Hardware guides and labeled photos in `assets/` |
 | `archive/previous-guide/` | Previous text retained for maintainers, outside the published site |
 | `mkdocs.yml` | Theme, navigation, and link validation |
-| `overrides/partials/tabs.html` | Shared desktop navigation and compact mobile menu |
 | `docs/stylesheets/handbook.css` | Typography, project cards, and responsive layout |
 | `.github/workflows/pages.yml` | Builds the site and publishes it to GitHub Pages |
 
@@ -67,7 +66,7 @@ Wrap images in `figure.handbook-figure` with a plain-text `figcaption` and a `.f
 
 Project display names are **VLA Pipeline**, **Self Improvement Learning**, and **ABC Box**. Preserve the existing project URL roots.
 
-Keep the same top-level navigation tabs on every page. Navigation remains in the header while scrolling. Desktop links separate shared setup from the projects; narrow screens use a native disclosure menu showing the current section. Both layouts are generated from the same navigation configuration. Each project sidebar begins with **Overview**, followed by equipment/connections and hardware readiness; include platform-specific pages such as the D1 mounting page where needed. Use straight apostrophes; use the word "workstation" (not desktop or desk computer) for the shared computer.
+Keep the full handbook navigation in the left sidebar on every page, including the project directory. Group shared setup and all three projects in the same order and highlight the current page. On narrow screens, the header menu opens the same navigation in a drawer. Use MkDocs Material’s section and expansion features with the single `nav` configuration; do not restrict the sidebar to the active project. Each project sidebar begins with **Overview**, followed by equipment/connections and hardware readiness; include platform-specific pages such as the D1 mounting page where needed. Use straight apostrophes; use the word "workstation" (not desktop or desk computer) for the shared computer.
 
 Every hardware page follows the same skeleton: **1. Equipment** (tables with the columns Equipment · Quantity · Product or reference, digits-only quantities such as `4 (2 per gripper)`, then **Notes on selection**), **2. Connection map**, **3. Assemble and connect**, **4. Record identities**. Every readiness page follows **1. Inspect before power-on · 2. Check the camera views · 3. Confirm stops and clearance · 4. Record the handover**. Overview pages open with a **What you need** box listing core equipment and open items. Link every equipment row to a verified product, supplier catalog, or relevant assembly reference; mark unspecified custom parts without inventing a purchase model. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
 

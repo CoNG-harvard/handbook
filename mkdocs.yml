@@ -7,13 +7,12 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  custom_dir: overrides
   font:
     text: Inter
     code: Roboto Mono
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
+    - navigation.sections     # show every handbook section in the sidebar
+    - navigation.expand       # keep page links visible across projects
     - navigation.top            # back-to-top button
     - navigation.tracking       # URL tracks the scrolled section
     - navigation.footer         # prev/next links at the bottom of each page
@@ -58,7 +57,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - stylesheets/handbook.css?v=7
+  - stylesheets/handbook.css?v=8
 
 plugins:
   - search
