@@ -5,7 +5,7 @@ hide:
 
 # Projects
 
-Hardware setup guides for the lab's robotics projects: gather the equipment, identify each part, connect the platform, and check that it is ready for a supervised first session.
+Setup guides for the lab's robotics platforms: gather the equipment, connect it, install basic device software, and check readiness for a supervised first session.
 
 **New to the lab?** Start with [Before you begin](getting-started/index.md), then choose your project.
 
@@ -19,7 +19,7 @@ Hardware setup guides for the lab's robotics projects: gather the equipment, ide
 
 Two xArm 7 robots with grippers, wrist and scene cameras, and Quest headsets.
 
-[View hardware guide →](vla-pipeline/index.md){ .project-link }
+[View setup guide →](vla-pipeline/index.md){ .project-link }
 
 </div>
 
@@ -31,7 +31,7 @@ Two xArm 7 robots with grippers, wrist and scene cameras, and Quest headsets.
 
 A Unitree Go2 EDU Plus with a D1 arm, D435i front camera, D435 wrist camera, and onboard computer.
 
-[View hardware guide →](unidog-nav/index.md){ .project-link }
+[View setup guide →](unidog-nav/index.md){ .project-link }
 
 </div>
 
@@ -43,7 +43,7 @@ A Unitree Go2 EDU Plus with a D1 arm, D435i front camera, D435 wrist camera, and
 
 Two follower arms, hand-operated leaders, and three D405 cameras.
 
-[View hardware guide →](abc-box/index.md){ .project-link }
+[View setup guide →](abc-box/index.md){ .project-link }
 
 </div>
 
@@ -55,6 +55,7 @@ All three projects share **one workstation with an RTX PRO 6000 GPU**. Each proj
 
 - [Shared computer and hardware](getting-started/hardware.md) — what to buy once and what belongs to each platform.
 - [Prepare the workstation](getting-started/computer.md) — placement, power, network, and peripherals.
+- [Basic software](getting-started/software.md) — workstation drivers, camera tools, and device checks.
 - [Safety](getting-started/safety.md) — stop controls and the rules that apply at every station.
 - [Glossary](getting-started/glossary.md) — the hardware terms used in these guides.
 - [Equipment references](getting-started/sources.md) — manufacturer guidance, the basis for the lists, and open items.

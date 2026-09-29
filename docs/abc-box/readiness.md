@@ -8,6 +8,8 @@ hide:
 
 **Goal:** confirm the station is assembled and identified before an operator-led session. Complete [Equipment and connections](hardware.md) first and follow the [safety rules](../getting-started/safety.md).
 
+Complete the [basic software checks](software.md) before checking live views below.
+
 ## 1. Inspect before power-on
 
 - [ ] The delivered variant and packing list are recorded.

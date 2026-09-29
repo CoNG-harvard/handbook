@@ -8,6 +8,8 @@ hide:
 
 **Goal:** hand over two clearly identified rigs with secure mounts, usable camera views, and accessible stop controls. Complete [Equipment and connections](hardware/index.md) first and follow the [safety rules](../getting-started/safety.md).
 
+Complete the [basic software checks](software.md) before checking live views below.
+
 ## 1. Inspect before power-on
 
 - [ ] Both arm bases and grippers are secured with the approved fasteners; printed fingers are fitted.
@@ -29,7 +31,7 @@ Ask the installer to show each live view without moving an arm:
 | Rig B wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The view belongs to the second arm and is labeled |
 | Three [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) scene cameras | The intended table areas are visible, lit, and unobstructed |
 
-Record all five camera serials and positions. Show the views together to reveal USB bandwidth or power problems, then confirm each headset shows the intended rig.
+Record all five camera serials and positions. Show the views together to reveal USB bandwidth or power problems. Match each connected headset's serial to its assigned rig using the [USB connection check](software.md#3-check-quest-usb-connections).
 
 ## 3. Confirm stops and clearance
 

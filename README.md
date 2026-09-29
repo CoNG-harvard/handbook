@@ -1,12 +1,12 @@
 # CoNG Handbook
 
-Source for the CoNG lab's hardware platform setup manuals, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published with GitHub Pages at <https://cong-harvard.github.io/handbook/>.
+Source for the CoNG lab's hardware platform and basic software setup manuals, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published with GitHub Pages at <https://cong-harvard.github.io/handbook/>.
 
 ## Read the setup manual
 
-The handbook helps readers with little robotics experience gather equipment, identify parts, assemble and connect each platform, and complete an operator-led hardware readiness check.
+The handbook helps readers with little robotics experience gather equipment, identify parts, assemble and connect each platform, install basic device software, and complete an operator-led hardware readiness check.
 
-- [Before you begin](docs/getting-started/index.md), [shared equipment](docs/getting-started/hardware.md), [workstation preparation](docs/getting-started/computer.md), [safety](docs/getting-started/safety.md), and a [glossary](docs/getting-started/glossary.md)
+- [Before you begin](docs/getting-started/index.md), [shared equipment](docs/getting-started/hardware.md), [workstation preparation](docs/getting-started/computer.md), [basic software](docs/getting-started/software.md), [safety](docs/getting-started/safety.md), and a [glossary](docs/getting-started/glossary.md)
 - [VLA Pipeline](docs/vla-pipeline/index.md): two xArm robots, wrist/scene cameras, and Quest headsets
 - [Self Improvement Learning](docs/unidog-nav/index.md): Unitree Go2, D1 arm, front D435i, D435 wrist camera, and onboard computer
 - [ABC Box](docs/abc-box/index.md): followers, leaders, and three D405 cameras; shared-workstation connections require supplier confirmation
@@ -26,7 +26,7 @@ mkdocs serve            # http://127.0.0.1:8000, reloads on save
 | Path | What it is |
 |---|---|
 | `docs/index.md` | Project directory with links to shared setup |
-| `docs/<project>/` | Hardware guides and labeled photos in `assets/` |
+| `docs/<project>/` | Hardware and basic software guides, plus labeled photos in `assets/` |
 | `archive/previous-guide/` | Previous text retained for maintainers, outside the published site |
 | `mkdocs.yml` | Theme, navigation, and link validation |
 | `docs/stylesheets/handbook.css` | Typography, project cards, and responsive layout |
@@ -52,7 +52,7 @@ Keep the published site focused on equipment, quantities, mounting, power/data c
 
 Write as a manual, not an audit: state facts plainly and put every unresolved item in the **Open items** section of `docs/getting-started/sources.md` rather than hedging inside equipment rows. Provenance (who confirmed what, when, and what a photograph does or does not show) belongs in `validation/`, not in `docs/`. Use manufacturer instructions for exact mounting loads, fasteners, wiring, and electrical requirements rather than inventing specifications.
 
-Software installation, environments, launch commands, model training/inference, datasets, source-transfer recipes, and software-release references do not belong in the published manual. The earlier material is retained in `archive/previous-guide/` for maintainers; do not include that directory in the site build or search index.
+Include basic software that makes the hardware usable: operating-system preparation, supported drivers, manufacturer tools and SDKs, camera viewers, network/USB connections, and device checks with expected results. Keep installation instructions tied to official vendor guidance and identify the computer where each step runs. Research code, model training/inference, research datasets, experiment workflows, private source-transfer recipes, and research-release instructions do not belong in the published manual. The earlier material is retained in `archive/previous-guide/` for maintainers; do not include that directory in the site build or search index.
 
 Keep actual device serials and network addresses in private station records. Record equipment evidence and unresolved physical requirements in `docs/getting-started/sources.md`. Run `mkdocs build --strict` before review; link and anchor warnings fail that build. Building the site does not validate hardware or external links.
 
@@ -66,7 +66,7 @@ Wrap images in `figure.handbook-figure` with a plain-text `figcaption` and a `.f
 
 Project display names are **VLA Pipeline**, **Self Improvement Learning**, and **ABC Box**. Preserve the existing project URL roots.
 
-Keep the full handbook navigation in the left sidebar on every page, including the project directory. Group shared setup and all three projects in the same order and highlight the current page. On narrow screens, the header menu opens the same navigation in a drawer. Use MkDocs Material’s section and expansion features with the single `nav` configuration; do not restrict the sidebar to the active project. Each project sidebar begins with **Overview**, followed by equipment/connections and hardware readiness; include platform-specific pages such as the D1 mounting page where needed. Use straight apostrophes; use the word "workstation" (not desktop or desk computer) for the shared computer.
+Keep the full handbook navigation in the left sidebar on every page, including the project directory. Group shared setup and all three projects in the same order and highlight the current page. On narrow screens, the header menu opens the same navigation in a drawer. Use MkDocs Material’s section and expansion features with the single `nav` configuration; do not restrict the sidebar to the active project. Each project sidebar begins with **Overview**, followed by equipment/connections, basic software, and hardware readiness; include platform-specific pages such as the D1 mounting page where needed. Use straight apostrophes; use the word "workstation" (not desktop or desk computer) for the shared computer.
 
 Every hardware page follows the same skeleton: **1. Equipment** (tables with the columns Equipment · Quantity · Product or reference, digits-only quantities such as `4 (2 per gripper)`, then **Notes on selection**), **2. Connection map**, **3. Assemble and connect**, **4. Record identities**. Every readiness page follows **1. Inspect before power-on · 2. Check the camera views · 3. Confirm stops and clearance · 4. Record the handover**. Overview pages open with a **What you need** box listing core equipment and open items. Link every equipment row to a verified product, supplier catalog, or relevant assembly reference; mark unspecified custom parts without inventing a purchase model. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
 

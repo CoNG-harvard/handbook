@@ -33,4 +33,5 @@ Both follower arms on the base plate · RealSense D405 at each wrist and one ove
 | Step | Guide | Ready when |
 |---|---|---|
 | 1 | [Equipment and connections](hardware.md) | The package, additional parts, mounts, and cables are checked and connected |
-| 2 | [Hardware readiness](readiness.md) | The installer has confirmed pairings, calibration, camera views, and stop behavior |
+| 2 | [Basic software](software.md) | Vendor tools and device connections are checked |
+| 3 | [Hardware readiness](readiness.md) | The installer has confirmed pairings, calibration, camera views, and stop behavior |

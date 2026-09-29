@@ -116,4 +116,4 @@ Keep separate records for rig A and rig B. Rig labels describe a device's role; 
 
 Ask the operator to demonstrate stopping, restoring power, and returning to the home position for each rig before any two-arm session. The lab's home angles must be checked against the actual mounting before the first reset.
 
-**Next:** [Hardware readiness](../readiness.md)
+**Next:** [Basic software](../software.md)

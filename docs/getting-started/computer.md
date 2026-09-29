@@ -31,15 +31,15 @@ Each platform's guide has a connection map. In summary:
 | [Self Improvement Learning](../unidog-nav/hardware.md#2-connection-map) | The Go2's onboard computer over the lab network; the front D435i connects to the onboard computer, and the wrist camera's host is to confirm |
 | [ABC Box](../abc-box/hardware.md#2-connection-map) | Three cameras and two arm interfaces, by the supplier's connection plan for the workstation and the included Box PC |
 
-Have the installer test all of a platform's camera views together, and use an approved powered hub only where the layout calls for one.
+Plan to test all of a platform's camera views together after its equipment and software are ready. Use an approved powered hub only where the layout calls for one.
 
 ## 4. Check before handover
 
 - [ ] GPU, CPU, memory, and storage are recorded.
 - [ ] Power, cooling, monitor, keyboard, and mouse work.
-- [ ] Network connections reach the intended equipment.
-- [ ] Cameras and headsets have labeled, data-capable cables.
-- [ ] All required camera views can be shown together.
+- [ ] Workstation networking is available and device connections are planned.
+- [ ] Cameras and headsets have labeled, data-capable cables ready for assembly.
+- [ ] USB ports are allocated for all required camera views.
 - [ ] Storage, backup, and shared use of the computer are arranged.
 
-**Next:** [VLA Pipeline hardware](../vla-pipeline/hardware/index.md) · [Self Improvement Learning hardware](../unidog-nav/hardware.md) · [ABC Box hardware](../abc-box/hardware.md)
+**Next:** [Basic software](software.md), then your project's equipment and connections guide.

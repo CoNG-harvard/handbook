@@ -1,5 +1,5 @@
 site_name: CoNG Handbook
-site_description: Hardware platform setup manuals for VLA Pipeline, Self Improvement Learning, and ABC Box
+site_description: Hardware and basic software setup manuals for VLA Pipeline, Self Improvement Learning, and ABC Box
 site_url: https://cong-harvard.github.io/handbook/
 repo_url: https://github.com/CoNG-harvard/handbook
 repo_name: CoNG-harvard/handbook
@@ -75,19 +75,23 @@ nav:
       - Safety: getting-started/safety.md
       - Shared computer and hardware: getting-started/hardware.md
       - Prepare the workstation: getting-started/computer.md
+      - Basic software: getting-started/software.md
       - Glossary: getting-started/glossary.md
       - Hardware troubleshooting: getting-started/troubleshooting.md
       - Equipment references: getting-started/sources.md
   - VLA Pipeline:
       - Overview: vla-pipeline/index.md
       - "1. Equipment and connections": vla-pipeline/hardware/index.md
-      - "2. Hardware readiness": vla-pipeline/readiness.md
+      - "2. Basic software": vla-pipeline/software.md
+      - "3. Hardware readiness": vla-pipeline/readiness.md
   - Self Improvement Learning:
       - Overview: unidog-nav/index.md
       - "1. Equipment and connections": unidog-nav/hardware.md
       - "2. Mount and check the D1 arm": unidog-nav/d1-arm.md
-      - "3. Hardware readiness": unidog-nav/readiness.md
+      - "3. Basic software": unidog-nav/software.md
+      - "4. Hardware readiness": unidog-nav/readiness.md
   - ABC Box:
       - Overview: abc-box/index.md
       - "1. Equipment and connections": abc-box/hardware.md
-      - "2. Hardware readiness": abc-box/readiness.md
+      - "2. Basic software": abc-box/software.md
+      - "3. Hardware readiness": abc-box/readiness.md

@@ -87,4 +87,4 @@ Both dashed boxes need the supplier's connection plan: which computer receives t
 | Computers | Which functions run on the workstation and on the included Box PC |
 | Stop | Location, what it cuts, and the restart procedure |
 
-**Next:** [Hardware readiness](readiness.md)
+**Next:** [Basic software](software.md)

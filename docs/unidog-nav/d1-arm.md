@@ -27,4 +27,4 @@ An experienced operator verifies the gripper, joint limits, resting pose, and st
 
 **Ready when:** the installer has approved the installation, the calibration matches the installed camera, and the operator's check is recorded.
 
-**Next:** [Hardware readiness](readiness.md)
+**Next:** [Basic software](software.md)

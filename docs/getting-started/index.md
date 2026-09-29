@@ -30,7 +30,11 @@ Use a stable surface and the manufacturer's mounting instructions. Arrange light
 
 Read the [safety rules](safety.md) before enabling motion on any platform.
 
-## 4. Keep setup notes
+## 4. Follow the setup sequence
+
+Prepare the shared workstation and its [basic software](software.md) once. For your project, follow **equipment and connections → basic software → hardware readiness**, including the D1 mounting step for the Go2. Each software page identifies the computer to use and the expected result.
+
+## 5. Keep setup notes
 
 Record device models, serial numbers, cable labels, camera positions, network addresses, calibration dates, and the responsible operator in a private setup sheet. Use the same labels on the equipment and in the record: **rig A** and **rig B** for the xArm robots, **left** and **right** for the ABC Box pairs, and **front**, **wrist**, **scene**, and **overhead** for cameras. Do not publish serials or network addresses.
 

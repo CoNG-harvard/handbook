@@ -5,11 +5,16 @@ hide:
 
 # Glossary
 
-Hardware terms used throughout the setup guides.
+Hardware and software terms used throughout the setup guides.
 
 | Term | Meaning |
 |---|---|
 | Workstation | The shared computer with the RTX PRO 6000 GPU. Written as "workstation" everywhere in these guides |
+| Driver | Software that lets the operating system communicate with a device |
+| Firmware | Software stored inside a device, such as a robot control box or camera |
+| SDK | A manufacturer's software toolkit for communicating with its equipment |
+| Python environment | A separate folder of software packages, so one tool's installation does not change another's |
+| ADB | Android Debug Bridge, a tool used to check a Quest headset's USB connection |
 | Onboard computer | A computer carried by the robot; the Go2 EDU Plus includes one |
 | Control box | The unit that connects an xArm to its power and control cables and carries its stop button |
 | Gripper | The device at the end of an arm that holds objects |

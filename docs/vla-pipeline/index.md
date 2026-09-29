@@ -33,6 +33,7 @@ Both xArm robots · Foreground gripper with printed fingers · RealSense D435 (3
 | Step | Guide | Ready when |
 |---|---|---|
 | 1 | [Equipment and connections](hardware/index.md) | Both arms, cameras, and headsets are mounted, connected, and labeled |
-| 2 | [Hardware readiness](readiness.md) | The installer has checked the camera views, device identities, and stop controls |
+| 2 | [Basic software](software.md) | Vendor tools and device connections are checked |
+| 3 | [Hardware readiness](readiness.md) | The installer has checked the camera views, device identities, and stop controls |
 
 Prepare the [shared workstation](../getting-started/computer.md) first. Check rig A and rig B separately before a two-arm session.
