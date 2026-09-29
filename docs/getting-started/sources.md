@@ -17,7 +17,7 @@ In every equipment table, a **product** link identifies a named model, a **catal
 | xArm arm stands | [Vention design 506323](https://vention.com/machine-builder/506323) | The two stands; a Vention account with design access is required |
 | xArm gripper fingers | [Finger STL](../vla-pipeline/assets/xarm-gripper-finger.stl) | Lab-designed 3D-print file; two fingers per gripper |
 | xArm wrist-camera mount | [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) | Mount for the two D405 wrist cameras |
-| xArm scene-camera clamps | [CAMVATE C-clamp](https://www.amazon.com/dp/B0BYDH27WQ) · [CAMVATE screw adapters](https://www.amazon.com/dp/B0DQNP61JC) | Ball-head clamps and 1/4"–3/8" adapters on the scene-camera stands |
+| xArm scene-camera clamps | [CAMVATE C-clamp](https://www.amazon.com/dp/B0BYDH27WQ) · [CAMVATE screw adapters](https://www.amazon.com/dp/B0DQNP61JC) | Threaded C-clamps and screw adapters for the scene-camera supports; adjustable heads are separate |
 | xArm task tubs | [Rubbermaid 7-gallon utility box](https://www.amazon.com/dp/B000BC5EP8) | The gray tubs on the station table |
 | Quest headsets | [Meta Quest 3](https://www.meta.com/quest/quest-3/) | Headset, controller, and accessory identification |
 | Go2 EDU Plus | [Unitree Go2](https://www.unitree.com/go2/) | Robot edition and included accessories |
@@ -25,7 +25,7 @@ In every equipment table, a **product** link identifies a named model, a **catal
 | Go2 battery, charger, and controller | [Battery](https://shop.unitree.com/products/go2-battery) · [charger](https://shop.unitree.com/products/unitree-go2-charger) · [controller](https://shop.unitree.com/products/go2-controller) | Matching accessories to the delivered Go2 |
 | Go2 protective gantry | [RobotShop listing](https://www.robotshop.com/products/unitree-go2-protective-bracket-gantry-go2-edu) | The Go2 EDU support frame; SKU RB-Unt-97, part Go2-Protective-Bracket |
 | D1 wrist-camera mount | [RichBird C-clamp mount](https://www.amazon.com/dp/B0GSR6883N) | Clamp, ball head, and 1/4"-20 screw for the D435 wrist camera |
-| RealSense cameras | [D405](https://www.realsenseai.com/product-family/d405-series/) · [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) | Matching camera models to wrist, scene, and front positions |
+| RealSense cameras | [D405](https://www.realsenseai.com/product-family/d405-series/) · [D415](https://www.realsenseai.com/products/stereo-depth-camera-d415/) · [D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/) · [D435i](https://www.realsenseai.com/products/depth-camera-d435i/) | Matching camera models to wrist, scene, and front positions |
 | RTX PRO 6000 | [NVIDIA RTX PRO 6000 family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) | The Blackwell Workstation Edition with 96 GB |
 | CPU and SSD (reference machine) | [AMD Ryzen 9 7950X](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7950x.html) · [WD_BLACK SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) | Identifying the existing workstation's parts |
 | DJI Mic Mini | [DJI product page](https://www.dji.com/mic-mini) | Transmitter/receiver kit for voice input |
@@ -49,8 +49,8 @@ Resolve these with the owner or supplier before the step that needs them.
 
 **VLA Pipeline**
 
-- Model of the three articulated scene-camera stands.
-- Pending camera cables have Micro-B USB 3.0 connectors; the D405 and D435 have USB Type-C ports. Confirm the intended camera or adapter before connecting them.
+- Models of the three articulated scene-camera stands and their adjustable camera heads.
+- Pending camera cables have Micro-B USB 3.0 connectors; the D405 and D415 have USB Type-C ports. Confirm the intended camera or adapter before connecting them.
 - Any gripper adapter needed beyond the printed fingers.
 - Print settings and fit check for the gripper fingers.
 - Work table size and load rating, black tray model, and task objects.

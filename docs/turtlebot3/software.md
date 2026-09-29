@@ -7,6 +7,8 @@ hide:
 
 **Goal:** connect the operator computer to one robot and check sensor data without commanding motion. Complete [equipment and connections](hardware.md) first.
 
+Before powering the equipment, complete the [pre-power inspection](readiness.md#1-inspect-before-power-on) with the installer.
+
 ## 1. Choose the matching environment
 
 The documented lab installation uses **Ubuntu 20.04 and ROS 2 Foxy** on the robots. Confirm this on the actual unit before installing anything on the operator computer.
@@ -70,7 +72,7 @@ On the **Motive computer**, have the tracking-system operator create or select a
 
 For the documented VRPN route, enable the rigid-body stream in [Motive's streaming settings](https://docs.optitrack.com/motive/data-streaming). The receiving computer must use the same rigid-body name and the correct server address.
 
-The existing arrangement uses a ROS 1 client and a ROS 1-to-ROS 2 bridge. Use the maintained installation supplied by the owner; the bridge and its host must be identified before this optional step. VRPN itself is not restricted to ROS 1. Confirm fresh position readings in ROS and the correct robot identity, rather than merely checking that a topic exists.
+The existing arrangement uses a ROS 1 client and a ROS 1-to-ROS 2 bridge. Use the maintained installation supplied by the owner; the bridge and its host must be identified before this optional step. VRPN itself is not restricted to ROS 1. Confirm fresh position readings in ROS and the correct robot identity, rather than merely checking that a topic exists. Have the tracking operator verify that the coordinate axes and ground-plane origin match the receiving ROS environment; a live stream can still use the wrong reference frame.
 
 **Ready when:** the intended robot's live sensor readings are visible, software versions match, and optional tracking works if needed.
 

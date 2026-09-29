@@ -16,7 +16,7 @@ Use these checks with the installer while the equipment is stationary. Follow th
 | A mount or stand moves | Have the installer check the drawing, fasteners, and supporting surface. | The installer approves the corrected attachment |
 | An ABC leader/follower pairing is unclear | Compare the left/right labels and interface record with the supplier's connection plan. | Both pairs are identified before calibration or movement |
 
-**D405 depth is poor:** check the working distance. RealSense specifies an ideal range of **7–50 cm** for the D405; this does not apply to the D435 or D435i. [D405 specifications](https://www.realsenseai.com/product-family/d405-series/)
+**D405 depth is poor:** check the working distance. RealSense specifies an ideal range of **7–50 cm** for the D405; this does not apply to the D415, D435, or D435i. [D405 specifications](https://www.realsenseai.com/product-family/d405-series/)
 
 **xArm cable changes:** disconnect external AC first, as UFACTORY requires. [UFACTORY hardware installation](https://docs.xarm.ufactory.cc/2.hardware_installation.html)
 

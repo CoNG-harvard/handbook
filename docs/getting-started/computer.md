@@ -27,7 +27,7 @@ Keep power strips, connectors, and loose cable loops away from the robots and wa
 
 Each platform's guide has a connection map. In summary:
 
-| Platform | Connects to the workstation |
+| Platform | Data connections |
 |---|---|
 | [VLA Pipeline](../vla-pipeline/hardware/index.md#2-connection-map) | Two control boxes by Ethernet through the shared switch; five cameras and up to two headsets by USB |
 | [Self Improvement Learning](../unidog-nav/hardware.md#2-connection-map) | The Go2's onboard computer over the lab network; the front D435i connects to the onboard computer, and the wrist camera's host is to confirm |

@@ -7,6 +7,8 @@ hide:
 
 **Goal:** check the Go2's manufacturer interface, onboard-computer access, and both cameras. Finish [equipment and connections](hardware.md) and [D1 mounting](d1-arm.md) first. Have the operator handle power-on and keep the platform stationary during these checks.
 
+Before powering the equipment, complete the [pre-power inspection](readiness.md#1-inspect-before-power-on) with the installer.
+
 ## 1. Connect with Unitree's tools
 
 Install the app from [Unitree's Go2 download page](https://www.unitree.com/app/go2/) on the operator's phone. Follow the supplied Go2 instructions to pair with the intended robot and confirm its identity and connection status. Have the supplier identify the D1 control interface supported by the delivered arm and firmware; check its connection separately from the dog.

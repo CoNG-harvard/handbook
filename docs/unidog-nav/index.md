@@ -4,7 +4,7 @@ title: Self Improvement Learning
 
 # Self Improvement Learning
 
-A mobile platform built around **one [Unitree Go2 EDU Plus](https://www.unitree.com/go2/)** with its onboard computer, **one [Unitree D1 arm](https://www.usrobotstore.com/products/unitree-go2-servo-robotic-arm-d1)**, a front **[RealSense D435i](https://www.realsenseai.com/products/depth-camera-d435i/)**, and a **[D435 wrist camera](https://www.realsenseai.com/products/stereo-depth-camera-d435/)** on the arm. The [shared workstation](../getting-started/hardware.md) stays at the desk and talks to the robot over the lab network.
+A mobile platform combining a Go2 EDU Plus robot dog, a D1 arm, and front and wrist cameras. The robot carries its own computer; the [shared workstation](../getting-started/hardware.md) connects over the lab network.
 
 **Goal:** identify the delivered equipment, mount and connect the arm and cameras, and arrange separate readiness checks for the dog and the arm.
 

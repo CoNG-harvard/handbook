@@ -239,9 +239,16 @@
     grid-template-columns: 1fr;
   }
   .md-typeset table:not([class]) {
+    min-width: 100%;
+    width: 100%;
+  }
+  .md-typeset table:not([class]) th {
+    white-space: normal;
+  }
+  .md-typeset table:not([class]):has(tr > :nth-child(3)) {
     min-width: 30rem;
   }
-  .md-typeset .md-typeset__scrollwrap::before {
+  .md-typeset .md-typeset__scrollwrap:has(tr > :nth-child(3))::before {
     content: "Scroll table →";
     display: block;
     padding: 0 0.8rem 0.35rem;

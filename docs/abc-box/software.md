@@ -7,6 +7,8 @@ hide:
 
 **Goal:** identify the control computer, confirm that Linux detects its arm interfaces, and display the three cameras. Complete [equipment and connections](hardware.md) first. Keep the arms stationary and leave leader/follower control disabled.
 
+Before powering the equipment, complete the [pre-power inspection](readiness.md#1-inspect-before-power-on) with the installer.
+
 ## 1. Use the delivered configuration
 
 Ask the supplier to identify the installed software, its version, and which checks run on the **Box PC** and which run on the **shared workstation**. Preserve the delivered configuration and calibration.

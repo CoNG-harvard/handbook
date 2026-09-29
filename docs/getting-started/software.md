@@ -77,7 +77,7 @@ With the robot stationary:
 
 | Platform | Views to identify |
 |---|---|
-| VLA Pipeline | 2 D405 wrists and 3 D435 scene views |
+| VLA Pipeline | 2 D405 wrists and 3 D415 scene views |
 | Self Improvement Learning | D435i front and D435 wrist, on their connected hosts |
 | ABC Box | 3 D405 views: left wrist, right wrist, and overhead |
 

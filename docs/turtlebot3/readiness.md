@@ -5,7 +5,7 @@ hide:
 
 # TurtleBot3 hardware readiness
 
-**Goal:** hand over a clearly identified robot with working sensors and a demonstrated stop procedure. Complete [basic software](software.md) and read the shared [safety rules](../getting-started/safety.md) first.
+**Goal:** hand over a clearly identified robot with working sensors and a demonstrated stop procedure. Read the shared [safety rules](../getting-started/safety.md). Inspect before power-on, then complete [basic software](software.md) before the live sensor checks below.
 
 ## 1. Inspect before power-on
 
@@ -24,7 +24,7 @@ Use the demonstrated power-on procedure with no motion controller active.
 | Robot identity | The physical label matches the robot being viewed on the computer |
 | LiDAR | Scans refresh and show nearby stationary surroundings |
 | Odometry and status | Readings arrive with fresh timestamps and no reported device fault |
-| Optional OptiTrack | The correct rigid body is tracked, and fresh pose data reaches the receiving computer |
+| Optional OptiTrack | The correct rigid body is tracked; fresh pose data reaches the receiving computer with the agreed coordinate axes and origin |
 
 If a check fails, return to [basic software](software.md#3-check-robot-discovery-and-sensors). Do not use motion to discover which robot a controller addresses.
 

@@ -7,6 +7,8 @@ hide:
 
 **Goal:** see both xArm control boxes, all five cameras, and the connected Quest headsets from the workstation. Finish [equipment and connections](hardware/index.md) and [shared software setup](../getting-started/software.md) first. Keep motion disabled during these connection checks.
 
+Before powering the equipment, complete the [pre-power inspection](readiness.md#1-inspect-before-power-on) with the installer.
+
 ## 1. Open each arm in UFACTORY Studio
 
 UFACTORY Studio is the manufacturer's graphical control interface. Use a browser on the workstation; the control box serves the interface.
@@ -20,7 +22,7 @@ UFACTORY Studio is the manufacturer's graphical control interface. Use a browser
 
 ## 2. Identify the five cameras
 
-Follow the [RealSense Viewer check](../getting-started/software.md#4-check-each-camera). Record **rig A wrist — D405**, **rig B wrist — D405**, and the positions of the **three D435 scene cameras**. Confirm all five views are available together.
+Follow the [RealSense Viewer check](../getting-started/software.md#4-check-each-camera). Record **rig A wrist — D405**, **rig B wrist — D405**, and the positions of the **three D415 scene cameras**. Confirm all five views are available together.
 
 ## 3. Check Quest USB connections
 

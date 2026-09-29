@@ -31,7 +31,7 @@ The GPU is the selected configuration. CPU, memory, and storage describe the exi
 
 ## Choosing a new computer
 
-- **USB bandwidth:** the workstation must stream every camera of the active platform at once — five cameras and up to two headsets for VLA Pipeline, three cameras plus arm interfaces for ABC Box. Several USB sockets can share one internal connection, so more sockets do not always mean more bandwidth. Have the installer check all intended views together.
+- **USB bandwidth:** check each computer with all devices assigned to it connected. VLA Pipeline connects five cameras and up to two headsets to the workstation; ABC Box assigns its three cameras and arm interfaces to the workstation or Box PC according to the supplier's plan. Several USB sockets can share bandwidth. Have the installer check all intended views together.
 - **Power and cooling:** the supplier confirms the complete build supports the RTX PRO 6000.
 - **Memory and storage:** allow room for recordings and a separate backup destination.
 
