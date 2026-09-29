@@ -25,10 +25,11 @@ These rules apply at every station. The delivered equipment's manual takes prece
 - Keep a second person watching the arms, with the stop within reach, whenever the operator is wearing a headset.
 - Calibrating or enabling an ABC Box leader/follower pair can move the follower; treat it as part of the supervised session.
 - Give the Go2 a clear area to stand, turn, and stop. Remove or manage any network tether according to the operator's procedure before the robot moves.
+- Use TurtleBot3 on a level floor away from drops and stairs. Confirm robot identity and the stop procedure before driving; keep other robots inactive during the first check.
 - Keep charging leads and loose objects outside the movement area.
 
 ## Handover
 
-Do not hand a platform over until the installer has approved the mounts and connections, the camera views are checked, and the operator has demonstrated the stop and recovery procedure. Record the operator's name and the date in the setup notes.
+Do not hand a platform over until the installer has approved the mounts and connections, the required camera views or sensor readings are checked, and the operator has demonstrated the stop and recovery procedure. Record the operator's name and the date in the setup notes.
 
 [Return to Before you begin](index.md) · [All projects](../index.md)

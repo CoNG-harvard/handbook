@@ -31,11 +31,13 @@ In every equipment table, a **product** link identifies a named model, a **catal
 | DJI Mic Mini | [DJI product page](https://www.dji.com/mic-mini) | Transmitter/receiver kit for voice input |
 | ABC Box | [I2RT package information](https://i2rt.com/products/abc-box) · [I2RT hardware reference](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) | Package contents, leader options, and interfaces |
 | ABC camera arrangement | [ABC assembly guide](https://abc.bot/hardware.html) | The build-your-own station that the camera layout follows |
+| TurtleBot3 Burger | [ROBOTIS kit contents](https://emanual.robotis.com/docs/en/platform/turtlebot3/features/#components) · [assembly](https://emanual.robotis.com/docs/en/platform/turtlebot3/hardware_setup/) · [setup](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/) | Matching the delivered robot, parts, and software versions |
+| Optional OptiTrack system | [Rigid-body tracking](https://docs.optitrack.com/motive/rigid-body-tracking) · [streaming](https://docs.optitrack.com/motive/data-streaming) | Marker setup and external position data |
 | Consumables and tools | [Zip ties](https://www.amazon.com/dp/B08TVLYB3Q) · [AA batteries](https://www.amazon.com/dp/B00NTCH52W) · [M4 screw kit](https://www.amazon.com/dp/B0GS8BT7XL) · [hex key set](https://www.amazon.com/dp/B0776C2D6H) · [digital angle gauge](https://www.amazon.com/dp/B0D65VNWPH) | Cable management, Quest controllers, D1 rail screws, and assembly |
 
 ## Basis for the equipment lists
 
-The lists combine the project owner's platform requirements, the station photographs on each overview page, the lab's purchase record, and the manufacturers' package lists. Hidden parts, cable lengths, and package contents were not counted. Serial numbers and network addresses stay in the private station record.
+The lists combine the project owner's platform requirements, the available station photographs, the lab's purchase record, and the manufacturers' package lists. Hidden parts, cable lengths, and package contents were not counted. Serial numbers and network addresses stay in the private station record.
 
 ## Open items
 
@@ -66,5 +68,12 @@ Resolve these with the owner or supplier before the step that needs them.
 - Leader model (passive GELLO or powered YAM) and its power and calibration procedure.
 - Which computer receives each camera and arm interface, and how many external CAN adapters are needed.
 - Stop arrangement: what it cuts and how to recover.
+
+**TurtleBot3 Burger**
+
+- Fleet size and installed Raspberry Pi and LiDAR revisions; hardware quantities in the guide are per robot.
+- Current OS/ROS versions and the host for the matching operator environment.
+- A station photograph for the overview.
+- If OptiTrack is used: the installed room configuration, Motive version, receiving computer, and maintained pose bridge.
 
 [All projects](../index.md)

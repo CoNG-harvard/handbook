@@ -7,6 +7,9 @@ hide:
 
 **Goal:** prepare the one workstation shared by VLA Pipeline, Self Improvement Learning, and ABC Box.
 
+
+For TurtleBot3, first choose an [operator environment matching the robot](../turtlebot3/software.md#1-choose-the-matching-environment); this workstation specification does not establish ROS compatibility.
+
 ## 1. Check the delivered computer
 
 Compare it with the [workstation specification](hardware.md#workstation-specification): the **RTX PRO 6000 Blackwell Workstation Edition (96 GB)** plus the agreed CPU, memory, storage, and network and USB connections. The supplier confirms that the case, motherboard, power supply, and cooling support the card.

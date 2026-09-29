@@ -47,11 +47,23 @@ Two follower arms, hand-operated leaders, and three D405 cameras.
 
 </div>
 
+<div class="project-card" markdown="1">
+
+<p class="project-kind">Wheeled robot · LiDAR</p>
+
+## [TurtleBot3 Burger](turtlebot3/index.md)
+
+A compact mobile robot with onboard sensors and optional OptiTrack position tracking.
+
+[View setup guide →](turtlebot3/index.md){ .project-link }
+
+</div>
+
 </div>
 
 ## Shared setup
 
-All three projects share **one workstation with an RTX PRO 6000 GPU**. Each project has its own equipment list.
+VLA Pipeline, Self Improvement Learning, and ABC Box share **one workstation with an RTX PRO 6000 GPU**. TurtleBot3 needs a [ROS environment matching its robot](turtlebot3/software.md#1-choose-the-matching-environment). Each project has its own equipment list.
 
 - [Shared computer and hardware](getting-started/hardware.md) — what to buy once and what belongs to each platform.
 - [Prepare the workstation](getting-started/computer.md) — placement, power, network, and peripherals.

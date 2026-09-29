@@ -1,5 +1,5 @@
 site_name: CoNG Handbook
-site_description: Hardware and basic software setup manuals for VLA Pipeline, Self Improvement Learning, and ABC Box
+site_description: Hardware and basic software setup manuals for VLA Pipeline, Self Improvement Learning, ABC Box, and TurtleBot3 Burger
 site_url: https://cong-harvard.github.io/handbook/
 repo_url: https://github.com/CoNG-harvard/handbook
 repo_name: CoNG-harvard/handbook
@@ -57,7 +57,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - stylesheets/handbook.css?v=8
+  - stylesheets/handbook.css?v=9
 
 plugins:
   - search
@@ -95,3 +95,8 @@ nav:
       - "1. Equipment and connections": abc-box/hardware.md
       - "2. Basic software": abc-box/software.md
       - "3. Hardware readiness": abc-box/readiness.md
+  - TurtleBot3 Burger:
+      - Overview: turtlebot3/index.md
+      - "1. Equipment and connections": turtlebot3/hardware.md
+      - "2. Basic software": turtlebot3/software.md
+      - "3. Hardware readiness": turtlebot3/readiness.md

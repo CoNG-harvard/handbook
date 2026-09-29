@@ -34,4 +34,6 @@ If a connection, mount, or power arrangement is undocumented, get the missing in
 | Onboard-computer SSH fails | Check the agreed address and network for a timeout, or the authorized login/key for `Permission denied`; see [onboard-computer access](../unidog-nav/software.md#2-check-onboard-computer-access) |
 | ABC Box has missing interfaces | Check the computer receiving the adapters and the supplier's interface plan; see [ABC software](../abc-box/software.md#2-identify-the-arm-interfaces) |
 
-**Return to readiness:** [VLA Pipeline](../vla-pipeline/readiness.md) · [Self Improvement Learning](../unidog-nav/readiness.md) · [ABC Box](../abc-box/readiness.md)
+For missing TurtleBot3 nodes or sensor data, check the [matching ROS environment and network](../turtlebot3/software.md#3-check-robot-discovery-and-sensors). If the robot identity is unclear, leave motion disabled. For missing external poses, check [OptiTrack tracking and streaming](../turtlebot3/software.md#4-optional-check-optitrack).
+
+**Return to readiness:** [VLA Pipeline](../vla-pipeline/readiness.md) · [Self Improvement Learning](../unidog-nav/readiness.md) · [ABC Box](../abc-box/readiness.md) · [TurtleBot3](../turtlebot3/readiness.md)

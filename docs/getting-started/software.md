@@ -7,6 +7,8 @@ hide:
 
 **Goal:** prepare the shared workstation to recognize the GPU, connect to equipment, and display camera images. Complete [workstation preparation](computer.md) first. Each project's **Basic software** page then covers its device tools.
 
+**Using TurtleBot3?** Go to its [basic software guide](../turtlebot3/software.md). Its ROS environment is separate from these GPU and RealSense checks.
+
 Do steps 1–3 on the workstation first. Return to the camera check in step 4 after your platform's equipment is connected. Keep any working supplier installation; install only the tools that are missing.
 
 ## 1. Prepare Ubuntu
@@ -81,4 +83,4 @@ With the robot stationary:
 
 **Ready when:** the workstation recognizes its GPU and, after assembly, each connected camera produces a stable, correctly identified image.
 
-**Next:** follow your platform's setup sequence: [VLA Pipeline](../vla-pipeline/index.md#set-up-the-platform) · [Self Improvement Learning](../unidog-nav/index.md#set-up-the-platform) · [ABC Box](../abc-box/index.md#set-up-the-platform).
+**Next:** follow your platform's setup sequence: [VLA Pipeline](../vla-pipeline/index.md#set-up-the-platform) · [Self Improvement Learning](../unidog-nav/index.md#set-up-the-platform) · [ABC Box](../abc-box/index.md#set-up-the-platform) · [TurtleBot3](../turtlebot3/index.md#set-up-the-platform).

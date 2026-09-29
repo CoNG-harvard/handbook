@@ -15,6 +15,11 @@ Hardware and software terms used throughout the setup guides.
 | SDK | A manufacturer's software toolkit for communicating with its equipment |
 | Python environment | A separate folder of software packages, so one tool's installation does not change another's |
 | ADB | Android Debug Bridge, a tool used to check a Quest headset's USB connection |
+| ROS 2 | Software used to exchange robot sensor readings and commands; computers must use compatible releases and network settings |
+| Topic / namespace | A named stream of ROS data / a prefix used to group names, for example by robot |
+| LiDAR | A laser distance sensor that measures the surroundings |
+| Odometry | A robot's estimate of its movement, often derived from its wheels |
+| Motion capture / rigid body | External tracking of markers / a fixed arrangement of markers tracked as one object |
 | Onboard computer | A computer carried by the robot; the Go2 EDU Plus includes one |
 | Control box | The unit that connects an xArm to its power and control cables and carries its stop button |
 | Gripper | The device at the end of an arm that holds objects |

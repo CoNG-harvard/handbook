@@ -2,13 +2,15 @@
 
 VLA Pipeline, Self Improvement Learning, and ABC Box use **one Linux workstation with one RTX PRO 6000 Blackwell Workstation Edition GPU (96 GB)**. Count the computer and its accessories once; each project's robot equipment is on its own list.
 
+TurtleBot3 uses a [matching ROS operator environment](../turtlebot3/software.md#1-choose-the-matching-environment). Confirm how it will be hosted before changing this workstation or ordering another computer.
+
 ## Shared equipment
 
 | Equipment | Quantity | Product or reference |
 |---|---|---|
 | Linux workstation with RTX PRO 6000 | 1 | [NVIDIA RTX PRO 6000 family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — complete build to specify |
 | Monitor, keyboard, and mouse | 1 set, or remote access | [Monitors](https://www.dell.com/en-us/shop/pc-accessories/ar/computer-monitors) · [keyboards](https://www.logitech.com/en-us/shop/c/keyboards) · [mice](https://www.logitech.com/en-us/shop/c/mice) |
-| Storage and backup destination | 1 set, sized for all three projects | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — backup device to specify |
+| Storage and backup destination | 1 set, sized for the projects using it | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — backup device to specify |
 | Network switch/router, power adapter, and workstation cable | 1 set | [Switches](https://www.netgear.com/business/wired/switches/unmanaged/) · [Ethernet cables](https://www.startech.com/en-us/cables/network) |
 | Assembly tools: hex key set and digital angle gauge | 1 each | [Hex key set](https://www.amazon.com/dp/B0776C2D6H) · [Digital angle gauge](https://www.amazon.com/dp/B0D65VNWPH) — for fastening and leveling arm bases, stands, and camera mounts |
 
@@ -40,7 +42,7 @@ Arrange use with the other project teams. Before switching platforms, finish the
 ## Shared setup checklist
 
 - [ ] One complete workstation, its accessories, storage, and network connection are ready.
-- [ ] Equipment is checked against the [VLA Pipeline](../vla-pipeline/hardware/index.md), [Self Improvement Learning](../unidog-nav/hardware.md), or [ABC Box](../abc-box/hardware.md) list.
+- [ ] Equipment is checked against the [VLA Pipeline](../vla-pipeline/hardware/index.md), [Self Improvement Learning](../unidog-nav/hardware.md), [ABC Box](../abc-box/hardware.md), or [TurtleBot3](../turtlebot3/hardware.md) list.
 - [ ] Cameras, cables, and device identities are labeled and recorded.
 - [ ] Workstation access and the handover procedure are agreed.
 

@@ -11,7 +11,9 @@ The handbook helps readers with little robotics experience gather equipment, ide
 - [Self Improvement Learning](docs/unidog-nav/index.md): Unitree Go2, D1 arm, front D435i, D435 wrist camera, and onboard computer
 - [ABC Box](docs/abc-box/index.md): followers, leaders, and three D405 cameras; shared-workstation connections require supplier confirmation
 
-All three projects share one workstation with **one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. Equipment references distinguish observed inventory from parts still requiring confirmation. No hardware acceptance test was performed during the documentation update.
+- [TurtleBot3 Burger](docs/turtlebot3/index.md): wheeled robots, LiDAR, a matching ROS environment, and optional OptiTrack tracking
+
+VLA Pipeline, Self Improvement Learning, and ABC Box share one workstation with **one RTX PRO 6000 Blackwell Workstation Edition, 96 GB**. TurtleBot3 needs an operator environment matching the robot; compatibility with the shared Ubuntu 24.04 installation is not established. Equipment references distinguish observed inventory from parts still requiring confirmation. No hardware acceptance test was performed during the documentation update.
 
 ## Preview locally
 
@@ -66,7 +68,7 @@ Wrap images in `figure.handbook-figure` with a plain-text `figcaption` and a `.f
 
 Project display names are **VLA Pipeline**, **Self Improvement Learning**, and **ABC Box**. Preserve the existing project URL roots.
 
-Keep the full handbook navigation in the left sidebar on every page, including the project directory. Group shared setup and all three projects in the same order and highlight the current page. On narrow screens, the header menu opens the same navigation in a drawer. Use MkDocs Material’s section and expansion features with the single `nav` configuration; do not restrict the sidebar to the active project. Each project sidebar begins with **Overview**, followed by equipment/connections, basic software, and hardware readiness; include platform-specific pages such as the D1 mounting page where needed. Use straight apostrophes; use the word "workstation" (not desktop or desk computer) for the shared computer.
+Keep the full handbook navigation in the left sidebar on every page, including the project directory. Group shared setup and all projects in the same order and highlight the current page. On narrow screens, the header menu opens the same navigation in a drawer. Use MkDocs Material’s section and expansion features with the single `nav` configuration; do not restrict the sidebar to the active project. Each project sidebar begins with **Overview**, followed by equipment/connections, basic software, and hardware readiness; include platform-specific pages such as the D1 mounting page where needed. Use straight apostrophes; use the word "workstation" (not desktop or desk computer) for the shared computer.
 
 Every hardware page follows the same skeleton: **1. Equipment** (tables with the columns Equipment · Quantity · Product or reference, digits-only quantities such as `4 (2 per gripper)`, then **Notes on selection**), **2. Connection map**, **3. Assemble and connect**, **4. Record identities**. Every readiness page follows **1. Inspect before power-on · 2. Check the camera views · 3. Confirm stops and clearance · 4. Record the handover**. Overview pages open with a **What you need** box listing core equipment and open items. Link every equipment row to a verified product, supplier catalog, or relevant assembly reference; mark unspecified custom parts without inventing a purchase model. Clearly identify unverified custom parts and pending commissioning procedures. Keep each project's equipment separate and count the shared workstation only once.
 
