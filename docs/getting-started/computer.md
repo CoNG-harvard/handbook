@@ -7,7 +7,6 @@ hide:
 
 **Goal:** prepare the one workstation shared by VLA Pipeline, Self Improvement Learning, and ABC Box.
 
-
 For TurtleBot3, first choose an [operator environment matching the robot](../turtlebot3/software.md#1-choose-the-matching-environment); this workstation specification does not establish ROS compatibility.
 
 ## 1. Check the delivered computer
@@ -32,7 +31,7 @@ Each platform's guide has a connection map. In summary:
 |---|---|
 | [VLA Pipeline](../vla-pipeline/hardware/index.md#2-connection-map) | Two control boxes by Ethernet through the shared switch; five cameras and up to two headsets by USB |
 | [Self Improvement Learning](../unidog-nav/hardware.md#2-connection-map) | The Go2's onboard computer over the lab network; the front D435i connects to the onboard computer, and the wrist camera's host is to confirm |
-| [ABC Box](../abc-box/hardware.md#2-connection-map) | Three cameras and two arm interfaces, by the supplier's connection plan for the workstation and the included Box PC |
+| [ABC Box](../abc-box/hardware.md#2-connection-map) | Three cameras and four CAN channels (two followers, two leaders), assigned to the workstation or included Box PC by the supplier's connection plan |
 
 Plan to test all of a platform's camera views together after its equipment and software are ready. Use an approved powered hub only where the layout calls for one.
 

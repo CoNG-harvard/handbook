@@ -41,7 +41,7 @@ A first session can run with one headset and its two controllers driving both ar
 - **Arms and control boxes:** confirm the power supplies, power cords, and arm cables against [UFACTORY's installation guide](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
 - **Stands:** the [Vention design](https://vention.com/machine-builder/506323) opens a sign-in page; ask the owner for access. Mount the arm bases per [UFACTORY's base-mounting requirements](https://docs.xarm.ufactory.cc/2.hardware_installation.html).
 - **Gripper fingers:** print two per gripper from the [STL](../assets/xarm-gripper-finger.stl). The part is about 17 × 25 × 62 mm and fits a standard desktop printer bed. Agree on material, infill, and orientation with the owner and check the fit before the first session.
-- **Wrist cameras:** the [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) is listed for the D435 but fits the D405; its 2 m USB-C cable covers the wrist camera, so do not order a second cable.
+- **Wrist cameras:** the [UFACTORY camera stand](https://www.ufactory.us/product/ufactory-xarm-camera-stand) is listed for the D435 but fits the D405; it includes a 2 m USB-C cable. Use that cable if it reaches the host with enough slack through the approved arm movement; confirm the route before ordering a replacement or extension.
 - **Scene cameras:** each D435 sits in a small ball-head clamp with a 1/4"–3/8" adapter on an articulated stand clamped or bolted to the table. Position the three stands outside the arms' reach.
 - **Headsets:** keep chargers, spare AA batteries, and data-capable USB cables long enough for the operator with the station kit.
 

@@ -38,13 +38,13 @@ On the computer with the USB-CAN adapters, run:
 ip -details link show type can
 ```
 
-**Expected:** the CAN interfaces specified in the supplier's connection plan. No output means Linux currently lists no CAN interfaces on this computer. Match each interface to its physical arm and label; passive leaders may use a different interface. The supplier configures the bitrate and persistent names following [I2RT's CAN setup](https://doc.i2rt.com/getting-started/sw-setup). A listed interface does not confirm motor communication.
+**Expected:** the CAN interfaces specified in the supplier's connection plan. No output means Linux currently lists no CAN interfaces on this computer. The [referenced ABC configuration](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) uses four CAN channels, including its passive GELLO leaders. Match each channel to its physical arm and label; the delivered configuration determines the adapter count. The supplier configures the bitrate and persistent names following [I2RT's CAN setup](https://doc.i2rt.com/getting-started/sw-setup). A listed interface does not confirm motor communication.
 
 Powered YAM leaders and passive GELLO leaders need different setup. Do not assume the [four-CAN YAM Cell example](https://doc.i2rt.com/products/yam-cell) matches every ABC Box package. Resolve the delivered leader type before using its control examples.
 
 ## 3. Check the three cameras
 
-On each camera's connected host, follow the [RealSense Viewer check](../getting-started/software.md#3-install-realsense-viewer). Identify the **left wrist**, **right wrist**, and **overhead** D405 views by serial. Check them together on the agreed host arrangement, then close Viewer.
+On each camera's connected host, follow the [RealSense Viewer check](../getting-started/software.md#3-install-realsense-viewer). Identify the **left wrist**, **right wrist**, and **overhead** D405 views by serial. Check them together on the agreed host arrangement, then close Viewer. For the overhead view, check color coverage at the installed height; only require useful depth if the session needs it. The D405's [standard ideal depth range is 7–50 cm](https://www.realsenseai.com/product-family/d405-series/).
 
 **Ready when:** the software and interface assignments are recorded and all three views are stable. Calibration, motor checks, and enabling a leader/follower pair remain part of the supplier-led handover.
 

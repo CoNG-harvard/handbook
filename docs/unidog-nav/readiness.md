@@ -29,7 +29,9 @@ Confirm which network connection belongs to the workstation and which to the onb
 
 ## 3. Confirm stops and clearance
 
-Choose a clear area with suitable flooring and room for the robot to stand, turn, and stop; keep charging leads and loose objects outside it. The operator demonstrates the normal shutdown and the stop and recovery procedures for both the Go2 and the D1, and manages any tether before the robot moves.
+Choose a clear area with suitable flooring and room for the robot to stand, turn, and stop; keep charging leads and loose objects outside it. The operator checks the D1 gripper, joint limits, and approved resting pose, then demonstrates normal shutdown and the stop and recovery procedures for both the Go2 and the D1. Confirm how the arm is supported when power is removed, and manage any tether before the robot moves.
+
+For the wrist camera, verify that the calibration matches its installed position and the owner-specified target. Recalibrate after moving the mount; keep the result and date with the setup notes.
 
 ## 4. Record the handover
 

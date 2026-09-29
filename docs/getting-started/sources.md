@@ -37,7 +37,7 @@ In every equipment table, a **product** link identifies a named model, a **catal
 
 ## Basis for the equipment lists
 
-The lists combine the project owner's platform requirements, the available station photographs, the lab's purchase record, and the manufacturers' package lists. Hidden parts, cable lengths, and package contents were not counted. Serial numbers and network addresses stay in the private station record.
+The lists combine the project owner's platform requirements, the available station photographs, the lab's purchase record, and the manufacturers' package lists. Photographs establish only visible equipment; package inclusions come from supplier lists. Cable lengths and hidden connections still need checking on the station. Serial numbers and network addresses stay in the private station record.
 
 ## Open items
 
@@ -53,7 +53,7 @@ Resolve these with the owner or supplier before the step that needs them.
 - Pending camera cables have Micro-B USB 3.0 connectors; the D405 and D435 have USB Type-C ports. Confirm the intended camera or adapter before connecting them.
 - Any gripper adapter needed beyond the printed fingers.
 - Print settings and fit check for the gripper fingers.
-- Task objects.
+- Work table size and load rating, black tray model, and task objects.
 
 **Self Improvement Learning**
 
@@ -64,7 +64,7 @@ Resolve these with the owner or supplier before the step that needs them.
 
 **ABC Box**
 
-- Delivered variant (Box or Research Kit) and packing list.
+- Delivered variant (Box or Research Kit), packing list, and matching power supplies and power cords.
 - Leader model (passive GELLO or powered YAM) and its power and calibration procedure.
 - Which computer receives each camera and arm interface, and how many external CAN adapters are needed.
 - Stop arrangement: what it cuts and how to recover.

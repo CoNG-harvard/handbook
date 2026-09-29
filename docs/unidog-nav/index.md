@@ -33,7 +33,7 @@ Unitree Go2 · Unitree D1 arm on the expansion dock · D435i in a printed bracke
 | Step | Guide | Ready when |
 |---|---|---|
 | 1 | [Equipment and connections](hardware.md) | Robot, battery, controller, cameras, and arm equipment are accounted for and connected |
-| 2 | [Mount and check the D1 arm](d1-arm.md) | The arm mounting, cable routing, calibration, and stop procedure are approved |
+| 2 | [Mount and check the D1 arm](d1-arm.md) | The arm and wrist camera are secured and their cable routing is checked |
 | 3 | [Basic software](software.md) | Vendor tools and device connections are checked |
 | 4 | [Hardware readiness](readiness.md) | An operator has checked the complete platform |
 

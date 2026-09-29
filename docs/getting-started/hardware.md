@@ -21,7 +21,7 @@ The workstation supplier's quote should include a compatible motherboard, power 
 | Component | Configuration | Product or reference |
 |---|---|---|
 | GPU | **RTX PRO 6000 Blackwell Workstation Edition, 96 GB** | [NVIDIA product family](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/) — select Workstation Edition |
-| Computer type | Linux workstation; the reference machine runs Ubuntu 24.04 | Complete build to specify |
+| Computer type | Linux workstation; the reference machine runs Ubuntu 24.04 | [Build details to specify](sources.md#open-items) |
 | CPU (reference) | AMD Ryzen 9 7950X, 16 cores | [AMD Ryzen 9 7950X](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7950x.html) |
 | System memory (reference) | About 94 GiB as reported by Linux | [Memory compatibility catalog](https://www.kingston.com/en/memory) — modules to specify |
 | Storage (reference) | Two 2 TB WD_BLACK SN850X SSDs and one 4 TB WD hard drive | [SN850X](https://www.sandisk.com/en-us/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd) · [WD hard drives](https://www.westerndigital.com/products/hdd/internal-hdd) — confirm the SSD heatsink variant; HDD model to specify |

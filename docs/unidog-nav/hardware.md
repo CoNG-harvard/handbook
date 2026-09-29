@@ -69,7 +69,7 @@ The workstation stays at the desk; the onboard computer rides on the Go2.
 </div>
 <div class="connection-branch connection-branch--pending" markdown="1">
 
-**D1 arm and wrist camera — to confirm**
+**D1 arm and wrist camera**
 
 - Arm power and Ethernet → expansion dock, per Unitree's diagram
 - D435 wrist camera → USB host and cable route to record
@@ -78,7 +78,7 @@ The workstation stays at the desk; the onboard computer rides on the Go2.
 </div>
 </div>
 
-The dashed box needs the arm's connection details recorded before use.
+The arm connections follow Unitree's guide. The dashed box marks the remaining wrist-camera USB host and cable route to record before use.
 
 ## 3. Assemble and connect
 

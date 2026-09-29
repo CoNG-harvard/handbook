@@ -70,7 +70,7 @@ For the Go2's onboard computer, use the supplier's installed tools or the [RealS
 With the robot stationary:
 
 1. Close other camera applications, select one camera in Viewer, and note its model and serial.
-2. Start its color and depth streams with settings supported by that camera. For the D405, use matching resolution and frame rate for both streams, following [RealSense's guidance](https://github.com/realsenseai/librealsense/discussions/11689).
+2. Start its color stream and, where needed, its depth stream with settings supported by that camera. Check depth at the intended working distance. When using both on the D405, use matching resolution and frame rate, following [RealSense's guidance](https://github.com/realsenseai/librealsense/discussions/11689).
 3. Match the image to the physical camera. Repeat for each camera, then show the required views together on their connected hosts.
 4. Record resolution and frame rate along with each serial. Check for frozen images or repeated disconnects. A pass applies to the tested settings, not every possible streaming rate.
 5. Close Viewer before another application opens the cameras.

@@ -291,3 +291,54 @@
     break-inside: avoid;
   }
 }
+
+/* Keep the complete handbook outline visible in the mobile drawer too. */
+@media screen and (max-width: 76.234375em) {
+  .md-nav--primary {
+    overflow-y: auto;
+  }
+  .md-nav--primary > .md-nav__list {
+    overflow: visible;
+    flex-shrink: 0;
+    scroll-snap-type: none;
+  }
+  .md-nav--primary .md-nav[data-md-level="1"] {
+    display: block;
+    position: static;
+    height: auto;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: none;
+  }
+  .md-nav--primary .md-nav[data-md-level="1"] > .md-nav__title {
+    display: none;
+  }
+  .md-nav--primary .md-nav[data-md-level="1"] > .md-nav__list {
+    overflow: visible;
+    box-shadow: none;
+  }
+  .md-nav--primary .md-nav__item--section > .md-nav__link {
+    margin-top: 0.65rem;
+    color: var(--md-default-fg-color);
+    font-weight: 600;
+    pointer-events: none;
+  }
+  .md-nav--primary .md-nav__item--section > .md-nav__link .md-nav__icon {
+    display: none;
+  }
+  .md-nav--primary .md-nav--secondary {
+    position: static;
+    height: auto;
+    transform: none;
+    transition: none;
+  }
+  .md-nav--primary .md-nav__toggle ~ .md-nav--secondary,
+  .md-nav--primary .md-nav--secondary > .md-nav__title {
+    display: none;
+  }
+  .md-nav--primary .md-nav__toggle:checked ~ .md-nav--secondary {
+    display: block;
+    opacity: 1;
+  }
+}

@@ -23,7 +23,7 @@ These basic checks need neither the workstation GPU nor RealSense Viewer. Confir
 
 ## 2. Check access and versions
 
-On the **operator computer**, open Terminal. Replace the placeholders with the login and address supplied privately by the owner:
+On the **operator computer**, open Terminal. Check that `ssh -V` shows an OpenSSH version; if it is missing on Ubuntu, install the client with `sudo apt update` followed by `sudo apt install openssh-client` ([Ubuntu instructions](https://ubuntu.com/server/docs/how-to/security/openssh-server/)). Replace both placeholders, including the angle brackets, with the login and address supplied privately by the owner:
 
 ```bash
 ssh <ROBOT_USER>@<ROBOT_IP>
@@ -49,7 +49,7 @@ printenv ROS_DISTRO
 
 ## 3. Check robot discovery and sensors
 
-Have the installer check the [ROBOTIS network and bringup requirements](https://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/): both ends need the agreed ROS domain and communication settings, and the network must allow discovery traffic. Being on the same Wi-Fi alone is not sufficient.
+Have the installer check the [ROBOTIS network and bringup requirements](https://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/): both ends need the agreed ROS domain (discovery group) and compatible communication settings, and the network must allow discovery traffic. Being on the same Wi-Fi alone is not sufficient.
 
 Start with **one robot** and no active motion controller. The owner starts the installed device services; for an unmodified kit, follow the matching ROS version of ROBOTIS bringup. Preserve existing lab robot configuration.
 

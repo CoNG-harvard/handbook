@@ -57,7 +57,7 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - stylesheets/handbook.css?v=9
+  - stylesheets/handbook.css?v=10
 
 plugins:
   - search

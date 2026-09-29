@@ -30,7 +30,7 @@ With the arms stationary, ask the installer to show:
 | Left wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The left gripper and contact area |
 | Right wrist — [D405](https://www.realsenseai.com/product-family/d405-series/) | The right gripper and contact area |
 
-Record each serial and position and show all views together on the agreed computer. Check lighting, focus and coverage, cable slack, and stable USB connections.
+Record each serial and position and show all views together on their agreed hosts. Check lighting, focus and coverage, cable slack, and stable USB connections.
 
 ## 3. Confirm stops and clearance
 

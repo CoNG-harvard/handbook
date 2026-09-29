@@ -19,12 +19,12 @@ If the arm is already installed, check its mounting and cable routing without re
 
 The wrist camera is a **[RealSense D435](https://www.realsenseai.com/products/stereo-depth-camera-d435/)** (not the front D435i). Clamp it beside the gripper with the [RichBird C-clamp mount](https://www.amazon.com/dp/B0GSR6883N), tighten the clamp and ball head, and leave clearance for the gripper and its cable.
 
-Calibration measures the camera's position relative to the arm, so moving the camera or clamp invalidates it. Record the camera's serial, position, and the calibration target the owner specifies, and keep the calibration record and date with the setup notes.
+Calibration measures the camera's position relative to the arm, so moving the camera or clamp invalidates it. Record the camera's serial and mounting position now; verify calibration after the [basic software checks](software.md), during hardware readiness.
 
 ## 3. Arrange the arm's acceptance check
 
-An experienced operator verifies the gripper, joint limits, resting pose, and stop and recovery procedure before any pick-and-place session, and demonstrates which stop affects the arm and how the arm is supported if power is removed.
+Arrange an experienced operator for the [hardware readiness check](readiness.md#3-confirm-stops-and-clearance). After the software and camera checks, the operator verifies calibration, the gripper, joint limits, resting pose, and stop and recovery procedure. This includes which stop affects the arm and how it is supported if power is removed.
 
-**Ready when:** the installer has approved the installation, the calibration matches the installed camera, and the operator's check is recorded.
+**Ready for software checks:** the installer has approved the arm and camera mounting and cable routing. Powered acceptance checks follow on the readiness page.
 
 **Next:** [Basic software](software.md)

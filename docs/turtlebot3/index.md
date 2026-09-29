@@ -13,6 +13,8 @@ A compact wheeled robot with a laser distance sensor (**LiDAR**), an onboard Ras
 
     **Optional:** the room's OptiTrack system and markers for external position tracking. See [equipment and connections](hardware.md).
 
+    **Open items:** installed hardware revisions, current OS/ROS versions, and the operator environment. [Details](../getting-started/sources.md#open-items)
+
 !!! note "Station photograph"
     A photograph of the lab's TurtleBot3 setup is not yet available for this guide.
 

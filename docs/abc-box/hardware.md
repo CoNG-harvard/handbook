@@ -10,21 +10,25 @@ title: ABC Box hardware
 
 ## 1. Equipment
 
-Confirm the order is the full **ABC Box**, not the Research Kit. The package list does not state whether cameras and leaders are included, so get written confirmation from the supplier before ordering extras. Workstation, display, and network equipment are counted once in [shared equipment](../getting-started/hardware.md#shared-equipment).
+Confirm the order is the full **ABC Box**, not the Research Kit. The package list does not explicitly include cameras, leaders, or power supplies. Check the delivered packing list before ordering extras. Workstation, display, and network equipment are counted once in [shared equipment](../getting-started/hardware.md#shared-equipment).
 
 ### Included in the Box package
 
 | Equipment | Quantity | Product or reference |
 |---|---|---|
 | Follower arm with gripper and mounting hardware | 2 | [ABC Box package](https://i2rt.com/products/abc-box) |
-| D405 camera mounts (2 wrist, 1 overhead) and camera frame | 1 kit | [ABC Box camera-mount kit](https://i2rt.com/products/abc-box) |
+| D405 camera mounts (2 wrist, 1 overhead) | 1 kit | [ABC Box camera-mount kit](https://i2rt.com/products/abc-box) |
 | Included Box PC and touchscreen | 1 | [ABC Box package](https://i2rt.com/products/abc-box) — keep on the packing list; see connection map |
-| Power supplies, power cords, control cable, and quick-start guide | 1 set | [ABC Box package](https://i2rt.com/products/abc-box) — confirm the complete set against the packing list |
+| Control interface cable and quick-start guide | 1 set | [ABC Box package](https://i2rt.com/products/abc-box) |
 
-### Added for this station
+### Additional equipment to account for
+
+These are station requirements; obtain only what is missing from the delivered package.
 
 | Equipment | Quantity | Product or reference |
 |---|---|---|
+| Camera support frame | 1 | [ABC assembly reference](https://abc.bot/hardware.html) — match the delivered station; check whether it is supplied |
+| Power supplies and power cords | Supplier-specified set | [I2RT hardware guidance](https://doc.i2rt.com/products/yam-cell) — match the follower and leader models; verify ratings and inclusion |
 | Leader arm with handle | 2 | [I2RT leader options](https://github.com/i2rt-robotics/yam-abc-reproduce/blob/main/docs/hardware.md) — passive or powered; model to confirm |
 | RealSense D405 camera | 3 | [RealSense D405](https://www.realsenseai.com/product-family/d405-series/) |
 | Camera USB data cable | 3 | [USB cable catalog](https://www.startech.com/en-us/cables/usb-30) — match connector, length, and bandwidth |
